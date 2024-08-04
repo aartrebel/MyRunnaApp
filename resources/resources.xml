@@ -1,0 +1,106 @@
+<resources>
+    <properties>
+
+        <!-- properties for the warm-up -->
+        <property id="wuExType" type="number">1</property>
+        <property id="wuExValue" type="number">10</property>
+        <property id="wuReType" type="number">0</property>
+        <property id="wuReValue" type="number">10</property>
+
+        <!-- properties for the exercise -->
+        <property id="ruExType" type="number">01</property>
+        <property id="ruExValue" type="number">10</property>
+        <property id="ruReType" type="number">1</property>
+        <property id="ruReValue" type="number">10</property>
+        <property id="ruRepeats" type="number">3</property>
+
+        <!-- properties for the warm-down -->
+        <property id="cdExType" type="number">1</property>
+        <property id="cdExValue" type="number">10</property>
+        <property id="cdReType" type="number">0</property>
+        <property id="cdReValue" type="number">10</property>
+    </properties>
+
+    <settings>
+
+        <!-- settings for the warm-up -->
+        <setting propertyKey="@Properties.wuExType" title="@Strings.exTypeTitle">
+            <settingConfig type="list">
+                <listEntry value="1">@Strings.typeDur</listEntry>
+                <listEntry value="2">@Strings.typeDist</listEntry>
+                <listEntry value="0">@Strings.typeNone</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.wuExValue" title="Strings.exValueTitle">
+            <settingConfig type="numeric"/>
+        </setting>
+
+        <setting propertyKey="@Properties.wuReType" title="@Strings.reTypeTitle">
+            <settingConfig type="list">
+                <listEntry value="1">@Strings.typeDur</listEntry>
+                <listEntry value="2">@Strings.typeDist</listEntry>
+                <listEntry value="0">@Strings.typeNone</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.wuReValue" title="Strings.reValueTitle">
+            <settingConfig type="numeric"/>
+        </setting>
+
+        <!-- settings for the exercise -->
+        <setting propertyKey="@Properties.ruExType" title="@Strings.exTypeTitle">
+            <settingConfig type="list">
+                <listEntry value="1">@Strings.typeDur</listEntry>
+                <listEntry value="2">@Strings.typeDist</listEntry>
+                <listEntry value="0">@Strings.typeNone</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.ruExValue" title="Strings.exValueTitle">
+            <settingConfig type="numeric"/>
+        </setting>
+
+        <setting propertyKey="@Properties.ruReType" title="@Strings.reTypeTitle">
+            <settingConfig type="list">
+                <listEntry value="1">@Strings.typeDur</listEntry>
+                <listEntry value="2">@Strings.typeDist</listEntry>
+                <listEntry value="0">@Strings.typeNone</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.ruReValue" title="Strings.reValueTitle">
+            <settingConfig type="numeric"/>
+        </setting>
+
+        <setting propertyKey="@Properties.ruRepeats" title="Strings.repeatsTitle">
+            <settingConfig type="numeric"/>
+        </setting>
+
+        <!-- settings for the cool down -->
+        <setting propertyKey="@Properties.cdExType" title="@Strings.exTypeTitle">
+            <settingConfig type="list">
+                <listEntry value="1">@Strings.typeDur</listEntry>
+                <listEntry value="2">@Strings.typeDist</listEntry>
+                <listEntry value="0">@Strings.typeNone</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.cdExValue" title="Strings.exValueTitle">
+            <settingConfig type="numeric"/>
+        </setting>
+
+        <setting propertyKey="@Properties.cdReType" title="@Strings.reTypeTitle">
+            <settingConfig type="list">
+                <listEntry value="1">@Strings.typeDur</listEntry>
+                <listEntry value="2">@Strings.typeDist</listEntry>
+                <listEntry value="0">@Strings.typeNone</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.cdReValue" title="Strings.reValueTitle">
+            <settingConfig type="numeric"/>
+        </setting>
+
+    </settings>
+</resources>

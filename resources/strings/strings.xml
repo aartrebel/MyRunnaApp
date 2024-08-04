@@ -5,4 +5,18 @@
 
     <string id="menu_label_1">Item 1</string>
     <string id="menu_label_2">Item 2</string>
+
+    <!-- strings for the exercise type settings -->
+    <string id="exTypeTitle">Run value type</string>
+    <string id="reTypeTitle">Rest value type</string>
+    <string id="typeDur">Duration (s)</string>
+    <string id="typeDist">Distance (m)</string>
+    <string id="typeNone">None</string>
+
+    <!-- string for the exercise value settings -->
+    <string id="exValueTitle">Run value (m or s)</string>
+    <string id="reValueTitle">Rest value (m or s)</string>
+    
+    <!-- string for the repeats settings -->
+    <string id="repeatsTitle">Repeats</string>
 </strings>
