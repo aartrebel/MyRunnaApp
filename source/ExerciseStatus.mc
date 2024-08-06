@@ -44,6 +44,7 @@ class ExerciseStatus {
     public var totDist as Lang.Number = 0;
     public var lapTime as Lang.Number = 0;
     public var lapDist as Lang.Number = 0;
+    public var pace as Lang.Number = 0;
 
     public var exState as ExState = WARMUP;
     public var isRun as Lang.Boolean = true;
@@ -59,7 +60,7 @@ class ExerciseStatus {
         // initialise settings for debugging only - should be set vir Garmin Connect
         Properties.setValue("wuExType",DURATION);
         Properties.setValue("wuExValue",20);
-        Properties.setValue("wuReType",DURATION);
+        Properties.setValue("wuReType",DISTANCE);
         Properties.setValue("wuReValue",10);
 
         Properties.setValue("ruExType",DURATION);
@@ -127,6 +128,37 @@ class ExerciseStatus {
     public function printStatus() as Void {
         System.println ("Status: state=" + exState + ", run=" + isRun + ", count=" + exCount + ", pause=" + isPaused + 
             ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime));
+    }
+
+
+    // test if distance or duration is a priority
+    public function isPriority(exType as ExType) as Boolean {
+        switch (exState) {
+            case WARMUP:
+                if (isRun) {
+                    return (wuExType == exType);
+                }
+                else {
+                    return (wuReType == exType);
+                }
+            case EXERCISE:
+                if (isRun) {
+                    return (ruExType == exType);
+                }
+                else {
+                    return (ruReType == exType);
+                }
+            case COOLDOWN:
+                if (isRun) {
+                    return (cdExType == exType);
+                }
+                else {
+                    return (cdReType == exType);
+                }
+            case EXTEND:
+            default:
+                return false;
+        }
     }
 
 

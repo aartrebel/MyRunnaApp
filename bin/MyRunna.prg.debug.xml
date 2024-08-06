@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\manifest.xml"/>
+<pcToLineNum>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="1" lineNum="5" parent="globals/MyRunnaView" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="2" lineNum="117" parent="globals" pc="268435479" symbol="getApp"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="2" lineNum="118" parent="globals" pc="268435489" symbol="getApp"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="4" lineNum="31" parent="globals/MyRunnaApp" pc="268435529" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="5" lineNum="5" parent="globals/MyRunnaMenuDelegate" pc="268435548" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="6" lineNum="5" parent="globals/MyRunnaDelegate" pc="268435567" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="7" lineNum="4" parent="globals/SettingsErrorView" pc="268435586" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="8" lineNum="51" parent="globals/MyRunnaView" pc="268435605" symbol="formatDistance"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="8" lineNum="52" parent="globals/MyRunnaView" pc="268435609" symbol="formatDistance"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="8" lineNum="53" parent="globals/MyRunnaView" pc="268435619" symbol="formatDistance"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="9" lineNum="107" parent="globals/MyRunnaView" pc="268435636" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayTime&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="9" lineNum="108" parent="globals/MyRunnaView" pc="268435638" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayTime&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="9" lineNum="109" parent="globals/MyRunnaView" pc="268435643" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayTime&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="9" lineNum="112" parent="globals/MyRunnaView" pc="268435668" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayTime&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="9" lineNum="114" parent="globals/MyRunnaView" pc="268435690" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayTime&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="10" lineNum="119" parent="globals/MyRunnaView" pc="268435736" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayPace&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="10" lineNum="120" parent="globals/MyRunnaView" pc="268435738" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayPace&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="10" lineNum="121" parent="globals/MyRunnaView" pc="268435760" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayPace&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="10" lineNum="122" parent="globals/MyRunnaView" pc="268435805" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayPace&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="12" lineNum="43" parent="globals/MyRunnaView" pc="268435843" symbol="formatPace"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="12" lineNum="44" parent="globals/MyRunnaView" pc="268435847" symbol="formatPace"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="12" lineNum="45" parent="globals/MyRunnaView" pc="268435863" symbol="formatPace"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="12" lineNum="46" parent="globals/MyRunnaView" pc="268435879" symbol="formatPace"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="13" lineNum="94" parent="globals/MyRunnaView" pc="268435940" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="13" lineNum="95" parent="globals/MyRunnaView" pc="268435942" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="13" lineNum="96" parent="globals/MyRunnaView" pc="268435947" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="13" lineNum="99" parent="globals/MyRunnaView" pc="268435972" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="13" lineNum="101" parent="globals/MyRunnaView" pc="268435994" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="13" lineNum="102" parent="globals/MyRunnaView" pc="268436039" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="14" lineNum="58" parent="globals/MyRunnaView" pc="268436077" symbol="setExerciseStatus"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="14" lineNum="59" parent="globals/MyRunnaView" pc="268436079" symbol="setExerciseStatus"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="16" lineNum="146" parent="globals/MyRunnaView" pc="268436090" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="16" lineNum="179" parent="globals/MyRunnaView" pc="268436092" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="16" lineNum="180" parent="globals/MyRunnaView" pc="268436114" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="17" lineNum="34" parent="globals/MyRunnaView" pc="268436127" symbol="formatTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="17" lineNum="35" parent="globals/MyRunnaView" pc="268436131" symbol="formatTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="17" lineNum="36" parent="globals/MyRunnaView" pc="268436141" symbol="formatTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="17" lineNum="37" parent="globals/MyRunnaView" pc="268436157" symbol="formatTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="17" lineNum="38" parent="globals/MyRunnaView" pc="268436173" symbol="formatTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="70" parent="globals/MyRunnaView" pc="268436272" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="72" parent="globals/MyRunnaView" pc="268436276" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="73" parent="globals/MyRunnaView" pc="268436278" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="76" parent="globals/MyRunnaView" pc="268436298" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="79" parent="globals/MyRunnaView" pc="268436318" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="82" parent="globals/MyRunnaView" pc="268436338" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="85" parent="globals/MyRunnaView" pc="268436358" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="74" parent="globals/MyRunnaView" pc="268436361" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="75" parent="globals/MyRunnaView" pc="268436368" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="77" parent="globals/MyRunnaView" pc="268436371" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="78" parent="globals/MyRunnaView" pc="268436401" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="80" parent="globals/MyRunnaView" pc="268436404" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="81" parent="globals/MyRunnaView" pc="268436411" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="83" parent="globals/MyRunnaView" pc="268436414" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="84" parent="globals/MyRunnaView" pc="268436421" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="86" parent="globals/MyRunnaView" pc="268436424" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="88" parent="globals/MyRunnaView" pc="268436432" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="18" lineNum="89" parent="globals/MyRunnaView" pc="268436454" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="127" parent="globals/MyRunnaView" pc="268436489" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="129" parent="globals/MyRunnaView" pc="268436493" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="130" parent="globals/MyRunnaView" pc="268436498" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="133" parent="globals/MyRunnaView" pc="268436508" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="134" parent="globals/MyRunnaView" pc="268436513" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="137" parent="globals/MyRunnaView" pc="268436523" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="140" parent="globals/MyRunnaView" pc="268436530" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="19" lineNum="141" parent="globals/MyRunnaView" pc="268436552" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="20" lineNum="64" parent="globals/MyRunnaView" pc="268436587" symbol="callback"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="20" lineNum="65" parent="globals/MyRunnaView" pc="268436589" symbol="callback"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="21" lineNum="28" parent="globals/MyRunnaView" pc="268436606" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="21" lineNum="29" parent="globals/MyRunnaView" pc="268436608" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="22" lineNum="200" parent="globals/MyRunnaView" pc="268436627" symbol="onUpdate"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="22" lineNum="204" parent="globals/MyRunnaView" pc="268436629" symbol="onUpdate"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="22" lineNum="205" parent="globals/MyRunnaView" pc="268436657" symbol="onUpdate"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="22" lineNum="206" parent="globals/MyRunnaView" pc="268436707" symbol="onUpdate"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="22" lineNum="207" parent="globals/MyRunnaView" pc="268436757" symbol="onUpdate"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaView.mc" id="22" lineNum="208" parent="globals/MyRunnaView" pc="268436805" symbol="onUpdate"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="23" lineNum="252" parent="globals/ExerciseStatus" pc="268436848" symbol="startPauseExercise"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="23" lineNum="253" parent="globals/ExerciseStatus" pc="268436850" symbol="startPauseExercise"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="25" lineNum="246" parent="globals/ExerciseStatus" pc="268436868" symbol="updatePosition"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="26" lineNum="128" parent="globals/ExerciseStatus" pc="268436871" symbol="printStatus"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="26" lineNum="129" parent="globals/ExerciseStatus" pc="268436873" symbol="printStatus"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="59" parent="globals/ExerciseStatus" pc="268437021" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="61" parent="globals/ExerciseStatus" pc="268437023" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="62" parent="globals/ExerciseStatus" pc="268437049" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="63" parent="globals/ExerciseStatus" pc="268437075" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="64" parent="globals/ExerciseStatus" pc="268437101" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="66" parent="globals/ExerciseStatus" pc="268437127" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="67" parent="globals/ExerciseStatus" pc="268437153" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="68" parent="globals/ExerciseStatus" pc="268437179" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="69" parent="globals/ExerciseStatus" pc="268437205" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="70" parent="globals/ExerciseStatus" pc="268437231" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="72" parent="globals/ExerciseStatus" pc="268437257" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="73" parent="globals/ExerciseStatus" pc="268437283" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="74" parent="globals/ExerciseStatus" pc="268437309" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="75" parent="globals/ExerciseStatus" pc="268437335" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="27" lineNum="77" parent="globals/ExerciseStatus" pc="268437361" symbol="presetSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="81" parent="globals/ExerciseStatus" pc="268437383" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="83" parent="globals/ExerciseStatus" pc="268437387" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="84" parent="globals/ExerciseStatus" pc="268437415" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="85" parent="globals/ExerciseStatus" pc="268437443" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="86" parent="globals/ExerciseStatus" pc="268437471" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="88" parent="globals/ExerciseStatus" pc="268437499" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="89" parent="globals/ExerciseStatus" pc="268437527" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="90" parent="globals/ExerciseStatus" pc="268437555" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="91" parent="globals/ExerciseStatus" pc="268437583" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="92" parent="globals/ExerciseStatus" pc="268437611" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="94" parent="globals/ExerciseStatus" pc="268437639" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="95" parent="globals/ExerciseStatus" pc="268437667" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="96" parent="globals/ExerciseStatus" pc="268437695" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="97" parent="globals/ExerciseStatus" pc="268437723" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="100" parent="globals/ExerciseStatus" pc="268437751" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="116" parent="globals/ExerciseStatus" pc="268438247" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="117" parent="globals/ExerciseStatus" pc="268438252" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="121" parent="globals/ExerciseStatus" pc="268438258" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="28" lineNum="122" parent="globals/ExerciseStatus" pc="268438280" symbol="loadSettings"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="135" parent="globals/ExerciseStatus" pc="268438284" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="136" parent="globals/ExerciseStatus" pc="268438286" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="137" parent="globals/ExerciseStatus" pc="268438294" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="144" parent="globals/ExerciseStatus" pc="268438314" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="151" parent="globals/ExerciseStatus" pc="268438334" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="158" parent="globals/ExerciseStatus" pc="268438354" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="159" parent="globals/ExerciseStatus" pc="268438374" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="138" parent="globals/ExerciseStatus" pc="268438377" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="139" parent="globals/ExerciseStatus" pc="268438388" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="142" parent="globals/ExerciseStatus" pc="268438403" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="145" parent="globals/ExerciseStatus" pc="268438415" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="146" parent="globals/ExerciseStatus" pc="268438426" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="149" parent="globals/ExerciseStatus" pc="268438441" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="152" parent="globals/ExerciseStatus" pc="268438453" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="153" parent="globals/ExerciseStatus" pc="268438464" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="156" parent="globals/ExerciseStatus" pc="268438479" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="29" lineNum="160" parent="globals/ExerciseStatus" pc="268438491" symbol="isPriority"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="167" parent="globals/ExerciseStatus" pc="268438496" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="168" parent="globals/ExerciseStatus" pc="268438498" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="169" parent="globals/ExerciseStatus" pc="268438510" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="170" parent="globals/ExerciseStatus" pc="268438526" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="171" parent="globals/ExerciseStatus" pc="268438542" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="172" parent="globals/ExerciseStatus" pc="268438550" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="192" parent="globals/ExerciseStatus" pc="268438570" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="221" parent="globals/ExerciseStatus" pc="268438590" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="238" parent="globals/ExerciseStatus" pc="268438610" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="239" parent="globals/ExerciseStatus" pc="268438630" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="173" parent="globals/ExerciseStatus" pc="268438633" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="174" parent="globals/ExerciseStatus" pc="268438644" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="175" parent="globals/ExerciseStatus" pc="268438681" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="176" parent="globals/ExerciseStatus" pc="268438694" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="177" parent="globals/ExerciseStatus" pc="268438711" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="180" parent="globals/ExerciseStatus" pc="268438724" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="185" parent="globals/ExerciseStatus" pc="268438743" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="186" parent="globals/ExerciseStatus" pc="268438780" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="187" parent="globals/ExerciseStatus" pc="268438793" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="188" parent="globals/ExerciseStatus" pc="268438806" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="191" parent="globals/ExerciseStatus" pc="268438831" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="193" parent="globals/ExerciseStatus" pc="268438834" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="194" parent="globals/ExerciseStatus" pc="268438845" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="195" parent="globals/ExerciseStatus" pc="268438882" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="196" parent="globals/ExerciseStatus" pc="268438895" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="197" parent="globals/ExerciseStatus" pc="268438912" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="200" parent="globals/ExerciseStatus" pc="268438925" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="201" parent="globals/ExerciseStatus" pc="268438944" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="202" parent="globals/ExerciseStatus" pc="268438964" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="208" parent="globals/ExerciseStatus" pc="268438986" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="209" parent="globals/ExerciseStatus" pc="268439023" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="210" parent="globals/ExerciseStatus" pc="268439036" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="211" parent="globals/ExerciseStatus" pc="268439055" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="212" parent="globals/ExerciseStatus" pc="268439075" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="213" parent="globals/ExerciseStatus" pc="268439088" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="216" parent="globals/ExerciseStatus" pc="268439113" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="220" parent="globals/ExerciseStatus" pc="268439138" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="222" parent="globals/ExerciseStatus" pc="268439141" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="223" parent="globals/ExerciseStatus" pc="268439152" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="224" parent="globals/ExerciseStatus" pc="268439189" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="225" parent="globals/ExerciseStatus" pc="268439202" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="226" parent="globals/ExerciseStatus" pc="268439212" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="227" parent="globals/ExerciseStatus" pc="268439229" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="232" parent="globals/ExerciseStatus" pc="268439251" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="233" parent="globals/ExerciseStatus" pc="268439288" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="234" parent="globals/ExerciseStatus" pc="268439301" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\ExerciseStatus.mc" id="30" lineNum="237" parent="globals/ExerciseStatus" pc="268439317" symbol="incrementTime"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="32" lineNum="43" parent="globals/MyRunnaApp" pc="268439325" symbol="onSecond"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="32" lineNum="44" parent="globals/MyRunnaApp" pc="268439327" symbol="onSecond"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="32" lineNum="45" parent="globals/MyRunnaApp" pc="268439348" symbol="onSecond"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="32" lineNum="46" parent="globals/MyRunnaApp" pc="268439371" symbol="onSecond"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="32" lineNum="47" parent="globals/MyRunnaApp" pc="268439389" symbol="onSecond"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="73" parent="globals/MyRunnaApp" pc="268439406" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="75" parent="globals/MyRunnaApp" pc="268439408" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="78" parent="globals/MyRunnaApp" pc="268439429" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="81" parent="globals/MyRunnaApp" pc="268439466" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="82" parent="globals/MyRunnaApp" pc="268439500" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="83" parent="globals/MyRunnaApp" pc="268439518" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="85" parent="globals/MyRunnaApp" pc="268439538" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="86" parent="globals/MyRunnaApp" pc="268439572" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="87" parent="globals/MyRunnaApp" pc="268439606" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="88" parent="globals/MyRunnaApp" pc="268439632" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="89" parent="globals/MyRunnaApp" pc="268439666" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="91" parent="globals/MyRunnaApp" pc="268439700" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="94" parent="globals/MyRunnaApp" pc="268439721" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="33" lineNum="95" parent="globals/MyRunnaApp" pc="268439755" symbol="onStart"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="34" lineNum="52" parent="globals/MyRunnaApp" pc="268439765" symbol="onPosition"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="34" lineNum="53" parent="globals/MyRunnaApp" pc="268439767" symbol="onPosition"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="57" parent="globals/MyRunnaApp" pc="268439812" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="58" parent="globals/MyRunnaApp" pc="268439814" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="59" parent="globals/MyRunnaApp" pc="268439835" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="60" parent="globals/MyRunnaApp" pc="268439852" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="63" parent="globals/MyRunnaApp" pc="268439896" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="65" parent="globals/MyRunnaApp" pc="268439914" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="67" parent="globals/MyRunnaApp" pc="268439932" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="35" lineNum="68" parent="globals/MyRunnaApp" pc="268439950" symbol="onButton"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="36" lineNum="106" parent="globals/MyRunnaApp" pc="268439967" symbol="getInitialView"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="36" lineNum="107" parent="globals/MyRunnaApp" pc="268439969" symbol="getInitialView"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="36" lineNum="108" parent="globals/MyRunnaApp" pc="268439982" symbol="getInitialView"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="36" lineNum="111" parent="globals/MyRunnaApp" pc="268440024" symbol="getInitialView"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="37" lineNum="37" parent="globals/MyRunnaApp" pc="268440048" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="37" lineNum="38" parent="globals/MyRunnaApp" pc="268440050" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="38" lineNum="100" parent="globals/MyRunnaApp" pc="268440069" symbol="onStop"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaApp.mc" id="38" lineNum="101" parent="globals/MyRunnaApp" pc="268440071" symbol="onStop"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="39" lineNum="11" parent="globals/MyRunnaMenuDelegate" pc="268440109" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="39" lineNum="12" parent="globals/MyRunnaMenuDelegate" pc="268440111" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="39" lineNum="13" parent="globals/MyRunnaMenuDelegate" pc="268440122" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="39" lineNum="14" parent="globals/MyRunnaMenuDelegate" pc="268440146" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="39" lineNum="15" parent="globals/MyRunnaMenuDelegate" pc="268440157" symbol="onMenuItem"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="40" lineNum="7" parent="globals/MyRunnaMenuDelegate" pc="268440182" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaMenuDelegate.mc" id="40" lineNum="8" parent="globals/MyRunnaMenuDelegate" pc="268440184" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="41" lineNum="8" parent="globals/MyRunnaDelegate" pc="268440203" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="41" lineNum="9" parent="globals/MyRunnaDelegate" pc="268440205" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="42" lineNum="14" parent="globals/MyRunnaDelegate" pc="268440224" symbol="setButtonHandler"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="42" lineNum="15" parent="globals/MyRunnaDelegate" pc="268440226" symbol="setButtonHandler"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="43" lineNum="25" parent="globals/MyRunnaDelegate" pc="268440237" symbol="onKeyPressed"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="43" lineNum="26" parent="globals/MyRunnaDelegate" pc="268440239" symbol="onKeyPressed"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="43" lineNum="27" parent="globals/MyRunnaDelegate" pc="268440252" symbol="onKeyPressed"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\MyRunnaDelegate.mc" id="43" lineNum="29" parent="globals/MyRunnaDelegate" pc="268440273" symbol="onKeyPressed"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="45" lineNum="12" parent="globals/SettingsErrorView" pc="268440276" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="45" lineNum="13" parent="globals/SettingsErrorView" pc="268440278" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="45" lineNum="14" parent="globals/SettingsErrorView" pc="268440300" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="45" lineNum="15" parent="globals/SettingsErrorView" pc="268440312" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="45" lineNum="16" parent="globals/SettingsErrorView" pc="268440334" symbol="onLayout"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="46" lineNum="6" parent="globals/SettingsErrorView" pc="268440372" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="46" lineNum="7" parent="globals/SettingsErrorView" pc="268440374" symbol="initialize"/>
+<entry filename="C:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\source\\SettingsErrorView.mc" id="48" lineNum="28" parent="globals/SettingsErrorView" pc="268440393" symbol="onUpdate"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="49" lineNum="14" parent="globals/Rez/Layouts" pc="268440396" symbol="mainLayout"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="49" lineNum="15" parent="globals/Rez/Layouts" pc="268440408" symbol="mainLayout"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="49" lineNum="17" parent="globals/Rez/Layouts" pc="268440539" symbol="mainLayout"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="49" lineNum="18" parent="globals/Rez/Layouts" pc="268440644" symbol="mainLayout"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="49" lineNum="20" parent="globals/Rez/Layouts" pc="268440684" symbol="mainLayout"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="50" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268440711" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="51" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268440730" symbol="initialize"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="51" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268440732" symbol="initialize"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="51" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268440750" symbol="initialize"/>
+<entry filename="c:\\Users\\aartr\\OneDrive\\Documents\\Garmin IQ\\MyRunna\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="51" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268440806" symbol="initialize"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry field="true" id="54" symbol="wuReType"/>
+<entry field="true" id="53" symbol="wuExValue"/>
+<entry id="8389346" symbol="text"/>
+<entry field="true" id="47" symbol="ruRepeats"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="6" module="true" symbol="globals/Rez/Menus"/>
+<entry field="true" id="75" symbol="reTypeTitle"/>
+<entry field="true" id="80" symbol="typeNone"/>
+<entry field="true" id="40" symbol="pace"/>
+<entry field="true" id="34" symbol="isPaused"/>
+<entry field="true" id="14" symbol="&lt;globals/MyRunnaView/&lt;&gt;_status&gt;"/>
+<entry field="true" id="31" symbol="exState"/>
+<entry id="61" method="true" symbol="onPosition"/>
+<entry field="true" id="55" symbol="wuReValue"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="27" symbol="cdExValue"/>
+<entry id="48" method="true" symbol="startPauseExercise"/>
+<entry id="17" method="true" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;"/>
+<entry id="42" method="true" symbol="printStatus"/>
+<entry id="11" object="true" symbol="MyRunnaMenuDelegate"/>
+<entry field="true" id="52" symbol="wuExType"/>
+<entry id="12" object="true" symbol="MyRunnaView"/>
+<entry field="true" id="69" symbol="AppName"/>
+<entry field="true" id="49" symbol="totDist"/>
+<entry field="true" id="57" symbol="&lt;globals/MyRunnaApp/&lt;&gt;_myRunnaDelegate&gt;"/>
+<entry id="7" module="true" symbol="globals/Rez/Strings"/>
+<entry id="23" method="true" symbol="formatTime"/>
+<entry id="8389345" symbol="rezId"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry field="true" id="38" symbol="lapTime"/>
+<entry id="64" method="true" symbol="setButtonHandler"/>
+<entry id="3" module="true" symbol="globals/Rez"/>
+<entry field="true" id="74" symbol="prompt"/>
+<entry field="true" id="66" symbol="id_monkey"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8389553" method="true" symbol="onKeyPressed"/>
+<entry field="true" id="29" symbol="cdReValue"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389348" symbol="font"/>
+<entry id="82" symbol="item_2"/>
+<entry id="81" symbol="item_1"/>
+<entry id="25" module="true" symbol="Menus"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="10" object="true" symbol="MyRunnaDelegate"/>
+<entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="28" symbol="cdReType"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry field="true" id="36" symbol="isRun"/>
+<entry field="true" id="71" symbol="exValueTitle"/>
+<entry id="8389349" symbol="justification"/>
+<entry field="true" id="46" symbol="ruReValue"/>
+<entry id="9" object="true" symbol="MyRunnaApp"/>
+<entry field="true" id="44" symbol="ruExValue"/>
+<entry field="true" id="63" symbol="_buttonHandler"/>
+<entry field="true" id="78" symbol="typeDist"/>
+<entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="68" object="true" symbol="MainMenu"/>
+<entry id="13" object="true" symbol="SettingsErrorView"/>
+<entry id="51" method="true" symbol="updatePosition"/>
+<entry id="18" method="true" symbol="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;"/>
+<entry id="20" method="true" symbol="setExerciseStatus"/>
+<entry field="true" id="76" symbol="reValueTitle"/>
+<entry id="2" module="true" symbol="globals/MyRunnaView/&lt;statics&gt;"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="35" method="true" symbol="isPriority"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="56" symbol="&lt;globals/MyRunnaApp/&lt;&gt;_exStatus&gt;"/>
+<entry field="true" id="45" symbol="ruReType"/>
+<entry id="62" method="true" symbol="onSecond"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="41" method="true" symbol="presetSettings"/>
+<entry field="true" id="65" symbol="LauncherIcon"/>
+<entry id="60" method="true" symbol="onButton"/>
+<entry id="16" method="true" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayPace&gt;"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="21" method="true" symbol="formatDistance"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="50" symbol="totTime"/>
+<entry field="true" id="30" symbol="exCount"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry field="true" id="70" symbol="exTypeTitle"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="32" method="true" symbol="incrementTime"/>
+<entry id="33" method="true" symbol="initialise"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389109" method="true" symbol="onMenuItem"/>
+<entry id="8389347" symbol="color"/>
+<entry field="true" id="77" symbol="repeatsTitle"/>
+<entry field="true" id="79" symbol="typeDur"/>
+<entry id="67" method="true" symbol="mainLayout"/>
+<entry id="8" object="true" symbol="ExerciseStatus"/>
+<entry field="true" id="43" symbol="ruExType"/>
+<entry field="true" id="37" symbol="lapDist"/>
+<entry field="true" id="26" symbol="cdExType"/>
+<entry field="true" id="58" symbol="&lt;globals/MyRunnaApp/&lt;&gt;_myRunnaView&gt;"/>
+<entry id="8388646" module="true" object="true" symbol="Timer"/>
+<entry id="24" module="true" symbol="Layouts"/>
+<entry id="39" method="true" symbol="loadSettings"/>
+<entry id="15" method="true" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;"/>
+<entry id="8388642" module="true" symbol="Position"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry field="true" id="59" symbol="&lt;globals/MyRunnaApp/&lt;&gt;_timer&gt;"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry id="22" method="true" symbol="formatPace"/>
+<entry id="8388705" method="true" symbol="callback"/>
+<entry field="true" id="73" symbol="menu_label_2"/>
+<entry field="true" id="72" symbol="menu_label_1"/>
+<entry id="19" method="true" symbol="&lt;globals/MyRunnaView/&lt;&gt;displayTime&gt;"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435635" name="meters" stackId="1" startPc="268435605"/>
+<entry endPc="268435635" name="kilometers" stackId="2" startPc="268435609"/>
+<entry arg="true" endPc="268435735" name="time" stackId="1" startPc="268435636"/>
+<entry arg="true" endPc="268435735" name="isPriority" stackId="2" startPc="268435636"/>
+<entry arg="true" endPc="268435735" name="dc" stackId="3" startPc="268435636"/>
+<entry arg="true" endPc="268435842" name="pace" stackId="1" startPc="268435736"/>
+<entry arg="true" endPc="268435842" name="dc" stackId="2" startPc="268435736"/>
+<entry arg="true" endPc="268435939" name="pace" stackId="1" startPc="268435843"/>
+<entry endPc="268435939" name="minutes" stackId="2" startPc="268435847"/>
+<entry endPc="268435939" name="seconds" stackId="3" startPc="268435847"/>
+<entry arg="true" endPc="268436076" name="distance" stackId="1" startPc="268435940"/>
+<entry arg="true" endPc="268436076" name="isPriority" stackId="2" startPc="268435940"/>
+<entry arg="true" endPc="268436076" name="dc" stackId="3" startPc="268435940"/>
+<entry arg="true" endPc="268436089" name="status" stackId="1" startPc="268436077"/>
+<entry arg="true" endPc="268436126" name="dc" stackId="1" startPc="268436090"/>
+<entry arg="true" endPc="268436271" name="time" stackId="1" startPc="268436127"/>
+<entry endPc="268436271" name="hours" stackId="2" startPc="268436131"/>
+<entry endPc="268436271" name="minutes" stackId="3" startPc="268436131"/>
+<entry endPc="268436271" name="seconds" stackId="4" startPc="268436131"/>
+<entry arg="true" endPc="268436488" name="state" stackId="1" startPc="268436272"/>
+<entry arg="true" endPc="268436488" name="count" stackId="2" startPc="268436272"/>
+<entry arg="true" endPc="268436488" name="dc" stackId="3" startPc="268436272"/>
+<entry endPc="268436487" name="stateText" stackId="4" startPc="268436276"/>
+<entry arg="true" endPc="268436586" name="isRun" stackId="1" startPc="268436489"/>
+<entry arg="true" endPc="268436586" name="isPaused" stackId="2" startPc="268436489"/>
+<entry arg="true" endPc="268436586" name="dc" stackId="3" startPc="268436489"/>
+<entry endPc="268436585" name="subStateText" stackId="4" startPc="268436493"/>
+<entry arg="true" endPc="268436847" name="dc" stackId="1" startPc="268436627"/>
+<entry endPc="268438282" name="isSettingsError" stackId="1" startPc="268437387"/>
+<entry arg="true" endPc="268438495" name="exType" stackId="1" startPc="268438284"/>
+<entry arg="true" endPc="268439324" name="duration" stackId="1" startPc="268438496"/>
+<entry arg="true" endPc="268439764" name="state" stackId="1" startPc="268439406"/>
+<entry arg="true" endPc="268439811" name="info" stackId="1" startPc="268439765"/>
+<entry arg="true" endPc="268440108" name="state" stackId="1" startPc="268440069"/>
+<entry arg="true" endPc="268440181" name="item" stackId="1" startPc="268440109"/>
+<entry arg="true" endPc="268440236" name="handler" stackId="1" startPc="268440224"/>
+<entry arg="true" endPc="268440275" name="evt" stackId="1" startPc="268440237"/>
+<entry arg="true" endPc="268440371" name="dc" stackId="1" startPc="268440276"/>
+<entry arg="true" endPc="268440710" name="dc" stackId="1" startPc="268440396"/>
+<entry endPc="268440710" name="rez_cmp_local_text_1679689230" stackId="2" startPc="268440408"/>
+<entry endPc="268440710" name="rez_cmp_local_bitmap_id_monkey" stackId="3" startPc="268440408"/>
+</localVars>
+<deviceInfo partNumber="006-B2700-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="typeNone"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="reTypeTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="exValueTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="typeDur"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="exTypeTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="typeDist"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="repeatsTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="reValueTitle"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="79" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/MyRunnaView" offset="182" parentId="globals" symbolId="MyRunnaView" type="class"/>
+<dataEntry label="globals/MyRunnaView/&lt;statics&gt;" offset="325" parentId="MyRunnaView" symbolId="&lt;statics&gt;" type="module"/>
+<dataEntry label="globals/Rez" offset="380" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/ExerciseStatus" offset="443" parentId="globals" symbolId="ExerciseStatus" type="class"/>
+<dataEntry label="globals/MyRunnaApp" offset="730" parentId="globals" symbolId="MyRunnaApp" type="class"/>
+<dataEntry label="globals/MyRunnaMenuDelegate" offset="857" parentId="globals" symbolId="MyRunnaMenuDelegate" type="class"/>
+<dataEntry label="globals/MyRunnaDelegate" offset="912" parentId="globals" symbolId="MyRunnaDelegate" type="class"/>
+<dataEntry label="globals/SettingsErrorView" offset="983" parentId="globals" symbolId="SettingsErrorView" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="1062" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="1109" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="1148" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="1187" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/Menus/MainMenu" offset="1314" parentId="Menus" symbolId="MainMenu" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="MyRunnaView" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="globals/MyRunnaView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435504" name="getApp" startPc="268435479">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435528" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="ExerciseStatus">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435547" name="&lt;init&gt;" parent="MyRunnaApp" startPc="268435529">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435566" name="&lt;init&gt;" parent="MyRunnaMenuDelegate" startPc="268435548">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435585" name="&lt;init&gt;" parent="MyRunnaDelegate" startPc="268435567">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435604" name="&lt;init&gt;" parent="SettingsErrorView" startPc="268435586">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435635" name="formatDistance" parent="MyRunnaView" startPc="268435605">
+<param id="meters"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268435735" name="&lt;globals/MyRunnaView/&lt;&gt;displayTime&gt;" parent="MyRunnaView" startPc="268435636">
+<param id="time"/>
+<param id="isPriority"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268435842" name="&lt;globals/MyRunnaView/&lt;&gt;displayPace&gt;" parent="MyRunnaView" startPc="268435736">
+<param id="pace"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="MyRunnaView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435939" name="formatPace" parent="MyRunnaView" startPc="268435843">
+<param id="pace"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436076" name="&lt;globals/MyRunnaView/&lt;&gt;displayDistance&gt;" parent="MyRunnaView" startPc="268435940">
+<param id="distance"/>
+<param id="isPriority"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436089" name="setExerciseStatus" parent="MyRunnaView" startPc="268436077">
+<param id="status"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="MyRunnaView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436126" name="onLayout" parent="MyRunnaView" startPc="268436090">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436271" name="formatTime" parent="MyRunnaView" startPc="268436127">
+<param id="time"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436488" name="&lt;globals/MyRunnaView/&lt;&gt;displayState&gt;" parent="MyRunnaView" startPc="268436272">
+<param id="state"/>
+<param id="count"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436586" name="&lt;globals/MyRunnaView/&lt;&gt;displaySubState&gt;" parent="MyRunnaView" startPc="268436489">
+<param id="isRun"/>
+<param id="isPaused"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436605" name="callback" parent="MyRunnaView" startPc="268436587">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436626" name="initialize" parent="MyRunnaView" startPc="268436606">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436847" name="onUpdate" parent="MyRunnaView" startPc="268436627">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436867" name="startPauseExercise" parent="ExerciseStatus" startPc="268436848">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialise" parent="ExerciseStatus">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436870" name="updatePosition" parent="ExerciseStatus" startPc="268436868">
+<param id="position"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437020" name="printStatus" parent="ExerciseStatus" startPc="268436871">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437382" name="presetSettings" parent="ExerciseStatus" startPc="268437021">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438283" name="loadSettings" parent="ExerciseStatus" startPc="268437383">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438495" name="isPriority" parent="ExerciseStatus" startPc="268438284">
+<param id="exType"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439324" name="incrementTime" parent="ExerciseStatus" startPc="268438496">
+<param id="duration"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="ExerciseStatus">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439405" name="onSecond" parent="MyRunnaApp" startPc="268439325">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439764" name="onStart" parent="MyRunnaApp" startPc="268439406">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439811" name="onPosition" parent="MyRunnaApp" startPc="268439765">
+<param id="info"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439966" name="onButton" parent="MyRunnaApp" startPc="268439812">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440047" name="getInitialView" parent="MyRunnaApp" startPc="268439967">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440068" name="initialize" parent="MyRunnaApp" startPc="268440048">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440108" name="onStop" parent="MyRunnaApp" startPc="268440069">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440181" name="onMenuItem" parent="MyRunnaMenuDelegate" startPc="268440109">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440202" name="initialize" parent="MyRunnaMenuDelegate" startPc="268440182">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440223" name="initialize" parent="MyRunnaDelegate" startPc="268440203">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440236" name="setButtonHandler" parent="MyRunnaDelegate" startPc="268440224">
+<param id="handler"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440275" name="onKeyPressed" parent="MyRunnaDelegate" startPc="268440237">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="SettingsErrorView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440371" name="onLayout" parent="SettingsErrorView" startPc="268440276">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440392" name="initialize" parent="SettingsErrorView" startPc="268440372">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="SettingsErrorView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440395" name="onUpdate" parent="SettingsErrorView" startPc="268440393">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440710" name="mainLayout" parent="Layouts" startPc="268440396">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440729" name="&lt;init&gt;" parent="MainMenu" startPc="268440711">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440862" name="initialize" parent="MainMenu" startPc="268440730">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

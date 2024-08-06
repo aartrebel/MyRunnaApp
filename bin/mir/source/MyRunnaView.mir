@@ -1,43 +1,177 @@
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 1; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 1; ]
 import Toybox.Graphics;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 2; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 2; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 3; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 3; ]
 import Toybox.Lang;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 5; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 5; ]
 class MyRunnaView extends WatchUi.View{
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 5; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 5; ]
     <init> {
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 13 18 ]
+        %tmp.2 = getv ? :SCR_H_SIZE;
+        %tmp.3 = 2;
+        %tmp.4 = div %tmp.2 %tmp.3;
+        putv self :TIME_H_POS %tmp.4;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 14 18 ]
+        %tmp.6 = getv ? :SCR_V_SIZE;
+        %tmp.7 = 2;
+        %tmp.8 = div %tmp.6 %tmp.7;
+        putv self :TIME_V_POS %tmp.8;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 15 18 ]
+        %tmp.10 = getv ? :SCR_H_SIZE;
+        %tmp.11 = 2;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        putv self :STATE_H_POS %tmp.12;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 16 18 ]
+        %tmp.14 = getv ? :SCR_V_SIZE;
+        %tmp.15 = 2;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        %tmp.17 = 105;
+        %tmp.18 = sub %tmp.16 %tmp.17;
+        putv self :STATE_V_POS %tmp.18;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 17 18 ]
+        %tmp.20 = getv ? :SCR_H_SIZE;
+        %tmp.21 = 2;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        putv self :SUBSTATE_H_POS %tmp.22;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 18 18 ]
+        %tmp.24 = getv ? :SCR_V_SIZE;
+        %tmp.25 = 2;
+        %tmp.26 = div %tmp.24 %tmp.25;
+        %tmp.27 = 105;
+        %tmp.28 = add %tmp.26 %tmp.27;
+        putv self :SUBSTATE_V_POS %tmp.28;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 19 18 ]
+        %tmp.30 = getv ? :SCR_H_SIZE;
+        %tmp.32 = getv ? :DIST_VAL_SIZE;
+        %tmp.33 = add %tmp.30 %tmp.32;
+        %tmp.35 = getv ? :DIST_UNIT_SIZE;
+        %tmp.36 = sub %tmp.33 %tmp.35;
+        %tmp.37 = 2;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        %tmp.39 = 10;
+        %tmp.40 = add %tmp.38 %tmp.39;
+        putv self :DIST_H_POS %tmp.40;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 20 18 ]
+        %tmp.42 = getv ? :SCR_V_SIZE;
+        %tmp.43 = 2;
+        %tmp.44 = div %tmp.42 %tmp.43;
+        %tmp.45 = 60;
+        %tmp.46 = sub %tmp.44 %tmp.45;
+        putv self :DIST_V_POS %tmp.46;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 21 18 ]
+        %tmp.48 = getv ? :DIST_V_POS;
+        %tmp.49 = 15;
+        %tmp.50 = add %tmp.48 %tmp.49;
+        putv self :DIST_UNIT_V_POS %tmp.50;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 22 18 ]
+        %tmp.52 = getv ? :SCR_H_SIZE;
+        %tmp.54 = getv ? :PACE_VAL_SIZE;
+        %tmp.55 = add %tmp.52 %tmp.54;
+        %tmp.57 = getv ? :PACE_UNIT_SIZE;
+        %tmp.58 = sub %tmp.55 %tmp.57;
+        %tmp.59 = 2;
+        %tmp.60 = div %tmp.58 %tmp.59;
+        %tmp.61 = 10;
+        %tmp.62 = add %tmp.60 %tmp.61;
+        putv self :PACE_H_POS %tmp.62;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 23 18 ]
+        %tmp.64 = getv ? :SCR_V_SIZE;
+        %tmp.65 = 2;
+        %tmp.66 = div %tmp.64 %tmp.65;
+        %tmp.67 = 60;
+        %tmp.68 = add %tmp.66 %tmp.67;
+        putv self :PACE_V_POS %tmp.68;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 24 18 ]
+        %tmp.70 = getv ? :PACE_V_POS;
+        %tmp.71 = 10;
+        %tmp.72 = sub %tmp.70 %tmp.71;
+        putv self :PACE_UNIT_V_POS %tmp.72;
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 5; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 5; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 7; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 7; @position = 18; ]
+    private
+    const SCR_H_SIZE = 240;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 8; @position = 18; ]
+    private
+    const SCR_V_SIZE = 240;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 9; @position = 18; ]
+    private
+    const PACE_VAL_SIZE = 144;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 10; @position = 18; ]
+    private
+    const PACE_UNIT_SIZE = 45;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 11; @position = 18; ]
+    private
+    const DIST_VAL_SIZE = 144;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 12; @position = 18; ]
+    private
+    const DIST_UNIT_SIZE = 36;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 13; @position = 18; ]
+    private
+    const TIME_H_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 14; @position = 18; ]
+    private
+    const TIME_V_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 15; @position = 18; ]
+    private
+    const STATE_H_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 16; @position = 18; ]
+    private
+    const STATE_V_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 17; @position = 18; ]
+    private
+    const SUBSTATE_H_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 18; @position = 18; ]
+    private
+    const SUBSTATE_V_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 19; @position = 18; ]
+    private
+    const DIST_H_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 20; @position = 18; ]
+    private
+    const DIST_V_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 21; @position = 18; ]
+    private
+    const DIST_UNIT_V_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 22; @position = 18; ]
+    private
+    const PACE_H_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 23; @position = 18; ]
+    private
+    const PACE_V_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 24; @position = 18; ]
+    private
+    const PACE_UNIT_V_POS;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 26; @position = 16; ]
     private
     var _status as ExerciseStatus or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 9; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 28; ]
     function initialize() as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_9_26_11_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 10 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_28_26_30_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 29 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_9_26_11_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_28_26_30_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 15; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 34; ]
     public static
     function formatTime(time as Number) as String {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 16 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_stop" ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 35 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_stop" ]
         %hours.1 = local;
         %tmp.2 = lgetv %time;
         %tmp.3 = 3600;
         %tmp.4 = div %tmp.2 %tmp.3;
         lputv %hours.1 %tmp.4;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 17 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_stop" ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 36 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_stop" ]
         %minutes.2 = local;
         %tmp.6 = lgetv %time;
         %tmp.7 = 3600;
@@ -45,8 +179,8 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.9 = 60;
         %tmp.10 = div %tmp.8 %tmp.9;
         lputv %minutes.2 %tmp.10;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 18 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_stop" ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 37 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_stop" ]
         %seconds.3 = local;
         %tmp.12 = lgetv %time;
         %tmp.13 = 3600;
@@ -54,7 +188,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.15 = 60;
         %tmp.16 = mod %tmp.14 %tmp.15;
         lputv %seconds.3 %tmp.16;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 19 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 38 8 ]
         %tmp.17 = getm $.Toybox.Lang;
         %tmp.18 = getv function %tmp.17 :format;
         %tmp.19 = "$1$:$2$:$3$";
@@ -79,14 +213,14 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.38 = aputv %tmp.37 2 %tmp.36;
         %tmp.39 = invoke %tmp.17 %tmp.18(%tmp.19, %tmp.38);
         ret %tmp.39;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_15_64_20_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_34_64_39_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 43; ]
     public static
     function formatPace(pace as Number) as String {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_24_64_28_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 25 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_24_64_28_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_24_64_28_4_stop" ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_43_64_47_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 44 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_43_64_47_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_43_64_47_4_stop" ]
         %minutes.1 = local;
         %tmp.2 = lgetv %pace;
         %tmp.3 = 3600;
@@ -94,8 +228,8 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.5 = 60;
         %tmp.6 = div %tmp.4 %tmp.5;
         lputv %minutes.1 %tmp.6;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 26 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_24_64_28_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_24_64_28_4_stop" ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 45 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_43_64_47_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_43_64_47_4_stop" ]
         %seconds.2 = local;
         %tmp.8 = lgetv %pace;
         %tmp.9 = 3600;
@@ -103,7 +237,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.11 = 60;
         %tmp.12 = mod %tmp.10 %tmp.11;
         lputv %seconds.2 %tmp.12;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 27 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 46 8 ]
         %tmp.13 = getm $.Toybox.Lang;
         %tmp.14 = getv function %tmp.13 :format;
         %tmp.15 = "$1$:$2$";
@@ -119,93 +253,93 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.26 = aputv %tmp.25 1 %tmp.24;
         %tmp.27 = invoke %tmp.13 %tmp.14(%tmp.15, %tmp.26);
         ret %tmp.27;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_24_64_28_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_43_64_47_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 32; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 51; ]
     public static
     function formatDistance(meters as Number) as String {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_32_70_35_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 33 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_32_70_35_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_32_70_35_4_stop" ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_51_70_54_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 52 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_51_70_54_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_51_70_54_4_stop" ]
         %kilometers.1 = local;
         %tmp.2 = lgetv %meters;
         %tmp.3 = 1000.0;
         %tmp.4 = div %tmp.2 %tmp.3;
         lputv %kilometers.1 %tmp.4;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 34 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 53 8 ]
         %tmp.5 = lgetv %kilometers.1;
         %tmp.6 = getv function %tmp.5 :format;
         %tmp.7 = "%1.2f";
         %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
         ret %tmp.8;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_32_70_35_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_51_70_54_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 39; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 58; ]
     public
     function setExerciseStatus(status as ExerciseStatus) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_39_72_41_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 40 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_58_72_60_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 59 8 ]
         %tmp.2 = lgetv %status;
         putv self :_status %tmp.2;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_39_72_41_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_58_72_60_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 45; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 64; ]
     public
     function callback() as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_45_39_47_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 46 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_64_39_66_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 65 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :requestUpdate;
         invoke %tmp.1 %tmp.2();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_45_39_47_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_64_39_66_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 51; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 70; ]
     private
     function displayState(state as ExState, count as Number, dc as Dc) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_51_87_71_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 52 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_51_87_71_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_51_87_71_4_stop" ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_70_87_90_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 71 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_70_87_90_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_70_87_90_4_stop" ]
         %stateText.1 = local;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 53 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 72 8 ]
         %tmp.2 = lgetv %state;
         push %tmp.2;
-        switch %tmp.2 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtEnd;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtBegin:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 54 12 ]
+        switch %tmp.2 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtEnd;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtBegin:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 73 12 ]
         %tmp.3 = dup %tmp.2;
         %tmp.5 = getv ? :WARMUP;
         %tmp.6 = getv function %tmp.3 :equals;
         %tmp.7 = invoke %tmp.3 %tmp.6 (%tmp.5);
-        bt %tmp.7 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_54_12_56_21_switchCase;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 57 12 ]
+        bt %tmp.7 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_73_12_75_21_switchCase;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 76 12 ]
         %tmp.8 = dup %tmp.2;
         %tmp.10 = getv ? :EXERCISE;
         %tmp.11 = getv function %tmp.8 :equals;
         %tmp.12 = invoke %tmp.8 %tmp.11 (%tmp.10);
-        bt %tmp.12 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_57_12_59_21_switchCase;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 60 12 ]
+        bt %tmp.12 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_76_12_78_21_switchCase;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 79 12 ]
         %tmp.13 = dup %tmp.2;
         %tmp.15 = getv ? :COOLDOWN;
         %tmp.16 = getv function %tmp.13 :equals;
         %tmp.17 = invoke %tmp.13 %tmp.16 (%tmp.15);
-        bt %tmp.17 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_60_12_62_21_switchCase;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 63 12 ]
+        bt %tmp.17 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_79_12_81_21_switchCase;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 82 12 ]
         %tmp.18 = dup %tmp.2;
         %tmp.20 = getv ? :EXTEND;
         %tmp.21 = getv function %tmp.18 :equals;
         %tmp.22 = invoke %tmp.18 %tmp.21 (%tmp.20);
-        bt %tmp.22 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_63_12_65_21_switchCase;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 66 12 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtDefault:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_defaultCodeBegin;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_54_12_56_21_switchCase:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 55 16 ]
+        bt %tmp.22 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_82_12_84_21_switchCase;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 85 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtDefault:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_defaultCodeBegin;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_73_12_75_21_switchCase:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 74 16 ]
         %tmp.23 = " WARM ";
         lputv %stateText.1 %tmp.23;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 56 16 ]
-        goto break @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtEnd;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_57_12_59_21_switchCase:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 58 16 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 75 16 ]
+        goto break @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtEnd;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_76_12_78_21_switchCase:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 77 16 ]
         %tmp.24 = "   EX";
         %tmp.25 = lgetv %count;
         %tmp.26 = getv function %tmp.25 :format;
@@ -215,28 +349,28 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.30 = "   ";
         %tmp.31 = add %tmp.29 %tmp.30;
         lputv %stateText.1 %tmp.31;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 59 16 ]
-        goto break @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtEnd;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_60_12_62_21_switchCase:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 61 16 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 78 16 ]
+        goto break @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtEnd;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_79_12_81_21_switchCase:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 80 16 ]
         %tmp.32 = " COOL ";
         lputv %stateText.1 %tmp.32;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 62 16 ]
-        goto break @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtEnd;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_63_12_65_21_switchCase:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 64 16 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 81 16 ]
+        goto break @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtEnd;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_82_12_84_21_switchCase:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 83 16 ]
         %tmp.33 = " DONE ";
         lputv %stateText.1 %tmp.33;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 65 16 ]
-        goto break @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtEnd;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_66_12_67_37_switchCase:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_defaultCodeBegin:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 67 16 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 84 16 ]
+        goto break @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtEnd;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_85_12_86_37_switchCase:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_defaultCodeBegin:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 86 16 ]
         %tmp.34 = "  ???  ";
         lputv %stateText.1 %tmp.34;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_53_8_68_8_switchStmtEnd:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_72_8_87_8_switchStmtEnd:
         pop;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 69 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 88 8 ]
         %tmp.35 = lgetv %dc;
         %tmp.36 = getv function %tmp.35 :setColor;
         %tmp.37 = getm $.Toybox.Graphics;
@@ -244,13 +378,11 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.39 = getm $.Toybox.Graphics;
         %tmp.40 = getv %tmp.39 :COLOR_BLACK;
         invoke %tmp.35 %tmp.36(%tmp.38, %tmp.40);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 70 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 89 8 ]
         %tmp.41 = lgetv %dc;
         %tmp.42 = getv function %tmp.41 :drawText;
-        %tmp.43 = 120;
-        %tmp.44 = 120;
-        %tmp.45 = 105;
-        %tmp.46 = sub %tmp.44 %tmp.45;
+        %tmp.44 = getv ? :STATE_H_POS;
+        %tmp.46 = getv ? :STATE_V_POS;
         %tmp.47 = getm $.Toybox.Graphics;
         %tmp.48 = getv %tmp.47 :FONT_MEDIUM;
         %tmp.50 = lgetv %stateText.1;
@@ -259,14 +391,130 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.53 = getm $.Toybox.Graphics;
         %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_VCENTER;
         %tmp.55 = bitor %tmp.52 %tmp.54;
-        invoke %tmp.41 %tmp.42(%tmp.43, %tmp.46, %tmp.48, %tmp.50, %tmp.55);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_51_87_71_4_stop:
+        invoke %tmp.41 %tmp.42(%tmp.44, %tmp.46, %tmp.48, %tmp.50, %tmp.55);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_70_87_90_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 74; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 94; ]
     private
-    function displayTime(time as Number, dc as Dc) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_74_67_77_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 75 8 ]
+    function displayDistance(distance as Number, isPriority, dc as Dc) as Void {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_94_87_103_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 95 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_8_100_8_if_stmt:
+        %tmp.2 = lgetv %isPriority;
+        bf %tmp.2 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_8_100_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_8_100_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_24_97_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 96 12 ]
+        %tmp.3 = lgetv %dc;
+        %tmp.4 = getv function %tmp.3 :setColor;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_YELLOW;
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_BLACK;
+        invoke %tmp.3 %tmp.4(%tmp.6, %tmp.8);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_24_97_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_8_100_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_8_100_8_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_98_13_100_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 99 12 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setColor;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_BLACK;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_98_13_100_8_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_95_8_100_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 101 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :drawText;
+        %tmp.18 = getv ? :DIST_H_POS;
+        %tmp.20 = getv ? :DIST_V_POS;
+        %tmp.21 = getm $.Toybox.Graphics;
+        %tmp.22 = getv %tmp.21 :FONT_NUMBER_HOT;
+        %tmp.23 = self;
+        %tmp.24 = getv function %tmp.23 :formatDistance;
+        %tmp.26 = lgetv %distance;
+        %tmp.27 = invoke %tmp.23 %tmp.24(%tmp.26);
+        %tmp.28 = getm $.Toybox.Graphics;
+        %tmp.29 = getv %tmp.28 :TEXT_JUSTIFY_RIGHT;
+        %tmp.30 = getm $.Toybox.Graphics;
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_VCENTER;
+        %tmp.32 = bitor %tmp.29 %tmp.31;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20, %tmp.22, %tmp.27, %tmp.32);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 102 8 ]
+        %tmp.33 = lgetv %dc;
+        %tmp.34 = getv function %tmp.33 :drawText;
+        %tmp.36 = getv ? :DIST_H_POS;
+        %tmp.38 = getv ? :DIST_UNIT_V_POS;
+        %tmp.39 = getm $.Toybox.Graphics;
+        %tmp.40 = getv %tmp.39 :FONT_TINY;
+        %tmp.41 = "km";
+        %tmp.42 = getm $.Toybox.Graphics;
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_LEFT;
+        %tmp.44 = getm $.Toybox.Graphics;
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_VCENTER;
+        %tmp.46 = bitor %tmp.43 %tmp.45;
+        invoke %tmp.33 %tmp.34(%tmp.36, %tmp.38, %tmp.40, %tmp.41, %tmp.46);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_94_87_103_4_stop:
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 107; ]
+    private
+    function displayTime(time as Number, isPriority as Boolean, dc as Dc) as Void {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_107_90_115_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 108 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_8_113_8_if_stmt:
+        %tmp.2 = lgetv %isPriority;
+        bf %tmp.2 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_8_113_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_8_113_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_24_110_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 109 12 ]
+        %tmp.3 = lgetv %dc;
+        %tmp.4 = getv function %tmp.3 :setColor;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_YELLOW;
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_BLACK;
+        invoke %tmp.3 %tmp.4(%tmp.6, %tmp.8);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_24_110_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_8_113_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_8_113_8_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_111_13_113_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 112 12 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setColor;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_BLACK;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_111_13_113_8_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_108_8_113_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 114 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :drawText;
+        %tmp.18 = getv ? :TIME_H_POS;
+        %tmp.20 = getv ? :TIME_V_POS;
+        %tmp.21 = getm $.Toybox.Graphics;
+        %tmp.22 = getv %tmp.21 :FONT_NUMBER_HOT;
+        %tmp.23 = self;
+        %tmp.24 = getv function %tmp.23 :formatTime;
+        %tmp.26 = lgetv %time;
+        %tmp.27 = invoke %tmp.23 %tmp.24(%tmp.26);
+        %tmp.28 = getm $.Toybox.Graphics;
+        %tmp.29 = getv %tmp.28 :TEXT_JUSTIFY_CENTER;
+        %tmp.30 = getm $.Toybox.Graphics;
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_VCENTER;
+        %tmp.32 = bitor %tmp.29 %tmp.31;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20, %tmp.22, %tmp.27, %tmp.32);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_107_90_115_4_stop:
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 119; ]
+    private
+    function displayPace(pace as Number, dc as Dc) {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_119_59_123_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 120 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -274,66 +522,80 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_BLACK;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 76 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 121 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :drawText;
-        %tmp.9 = 120;
-        %tmp.10 = 120;
-        %tmp.11 = getm $.Toybox.Graphics;
-        %tmp.12 = getv %tmp.11 :FONT_NUMBER_HOT;
-        %tmp.13 = self;
-        %tmp.14 = getv function %tmp.13 :formatTime;
-        %tmp.16 = lgetv %time;
-        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
-        %tmp.18 = getm $.Toybox.Graphics;
-        %tmp.19 = getv %tmp.18 :TEXT_JUSTIFY_CENTER;
+        %tmp.10 = getv ? :PACE_H_POS;
+        %tmp.12 = getv ? :PACE_V_POS;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :FONT_NUMBER_HOT;
+        %tmp.15 = self;
+        %tmp.16 = getv function %tmp.15 :formatPace;
+        %tmp.18 = lgetv %pace;
+        %tmp.19 = invoke %tmp.15 %tmp.16(%tmp.18);
         %tmp.20 = getm $.Toybox.Graphics;
-        %tmp.21 = getv %tmp.20 :TEXT_JUSTIFY_VCENTER;
-        %tmp.22 = bitor %tmp.19 %tmp.21;
-        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.17, %tmp.22);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_74_67_77_4_stop:
+        %tmp.21 = getv %tmp.20 :TEXT_JUSTIFY_RIGHT;
+        %tmp.22 = getm $.Toybox.Graphics;
+        %tmp.23 = getv %tmp.22 :TEXT_JUSTIFY_VCENTER;
+        %tmp.24 = bitor %tmp.21 %tmp.23;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12, %tmp.14, %tmp.19, %tmp.24);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 122 8 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :drawText;
+        %tmp.28 = getv ? :PACE_H_POS;
+        %tmp.30 = getv ? :PACE_UNIT_V_POS;
+        %tmp.31 = getm $.Toybox.Graphics;
+        %tmp.32 = getv %tmp.31 :FONT_TINY;
+        %tmp.33 = "/km";
+        %tmp.34 = getm $.Toybox.Graphics;
+        %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_LEFT;
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_VCENTER;
+        %tmp.38 = bitor %tmp.35 %tmp.37;
+        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30, %tmp.32, %tmp.33, %tmp.38);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_119_59_123_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 80; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 127; ]
     private
     function displaySubState(isRun as Boolean, isPaused as Boolean, dc as Dc) {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_80_86_95_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 81 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_80_86_95_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_80_86_95_4_stop" ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_127_86_142_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 128 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_127_86_142_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_127_86_142_4_stop" ]
         %subStateText.1 = local;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 82 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_8_92_8_if_stmt:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 129 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_8_139_8_if_stmt:
         %tmp.2 = lgetv %isPaused;
-        bf %tmp.2 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_8_92_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_8_92_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_22_84_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 83 12 ]
+        bf %tmp.2 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_8_139_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_8_139_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_22_131_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 130 12 ]
         %tmp.3 = " STOP ";
         lputv %subStateText.1 %tmp.3;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_22_84_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_8_92_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_8_92_8_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_85_13_92_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 86 12 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_12_91_12_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_22_131_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_8_139_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_8_139_8_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_132_13_139_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 133 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_12_138_12_if_stmt:
         %tmp.5 = lgetv %isRun;
-        bf %tmp.5 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_12_91_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_12_91_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_23_88_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 87 16 ]
+        bf %tmp.5 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_12_138_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_12_138_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_23_135_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 134 16 ]
         %tmp.6 = "  RUN  ";
         lputv %subStateText.1 %tmp.6;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_23_88_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_12_91_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_12_91_12_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_89_17_91_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 90 16 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_23_135_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_12_138_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_12_138_12_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_136_17_138_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 137 16 ]
         %tmp.7 = " WALK ";
         lputv %subStateText.1 %tmp.7;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_89_17_91_12_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_86_12_91_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_85_13_92_8_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_82_8_92_8_if_end:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 93 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_136_17_138_12_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_133_12_138_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_132_13_139_8_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_129_8_139_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 140 8 ]
         %tmp.8 = lgetv %dc;
         %tmp.9 = getv function %tmp.8 :setColor;
         %tmp.10 = getm $.Toybox.Graphics;
@@ -341,13 +603,11 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.12 = getm $.Toybox.Graphics;
         %tmp.13 = getv %tmp.12 :COLOR_BLACK;
         invoke %tmp.8 %tmp.9(%tmp.11, %tmp.13);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 94 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 141 8 ]
         %tmp.14 = lgetv %dc;
         %tmp.15 = getv function %tmp.14 :drawText;
-        %tmp.16 = 120;
-        %tmp.17 = 120;
-        %tmp.18 = 105;
-        %tmp.19 = add %tmp.17 %tmp.18;
+        %tmp.17 = getv ? :SUBSTATE_H_POS;
+        %tmp.19 = getv ? :SUBSTATE_V_POS;
         %tmp.20 = getm $.Toybox.Graphics;
         %tmp.21 = getv %tmp.20 :FONT_MEDIUM;
         %tmp.23 = lgetv %subStateText.1;
@@ -356,13 +616,13 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.26 = getm $.Toybox.Graphics;
         %tmp.27 = getv %tmp.26 :TEXT_JUSTIFY_VCENTER;
         %tmp.28 = bitor %tmp.25 %tmp.27;
-        invoke %tmp.14 %tmp.15(%tmp.16, %tmp.19, %tmp.21, %tmp.23, %tmp.28);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_80_86_95_4_stop:
+        invoke %tmp.14 %tmp.15(%tmp.17, %tmp.19, %tmp.21, %tmp.23, %tmp.28);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_127_86_142_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 99; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 146; ]
     function onLayout(dc as Dc) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_99_40_149_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 121 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_146_40_189_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 179 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -370,224 +630,73 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_BLACK;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 122 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 180 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :clear;
         invoke %tmp.7 %tmp.8();
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 125 8 ]
-        %tmp.9 = lgetv %dc;
-        %tmp.10 = getv function %tmp.9 :setColor;
-        %tmp.11 = getm $.Toybox.Graphics;
-        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
-        %tmp.13 = getm $.Toybox.Graphics;
-        %tmp.14 = getv %tmp.13 :COLOR_TRANSPARENT;
-        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 129 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_99_40_149_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_99_40_149_4_stop" ]
-        %paceText.1 = local;
-        %tmp.15 = "00:00";
-        lputv %paceText.1 %tmp.15;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 130 8 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_99_40_149_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_99_40_149_4_stop" ]
-        %distText.2 = local;
-        %tmp.16 = "0.00";
-        lputv %distText.2 %tmp.16;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 131 8 ]
-        %tmp.17 = lgetv %dc;
-        %tmp.18 = getv function %tmp.17 :drawText;
-        %tmp.19 = 120;
-        %tmp.20 = 120;
-        %tmp.21 = 60;
-        %tmp.22 = add %tmp.20 %tmp.21;
-        %tmp.23 = getm $.Toybox.Graphics;
-        %tmp.24 = getv %tmp.23 :FONT_NUMBER_HOT;
-        %tmp.26 = lgetv %paceText.1;
-        %tmp.27 = getm $.Toybox.Graphics;
-        %tmp.28 = getv %tmp.27 :TEXT_JUSTIFY_CENTER;
-        %tmp.29 = getm $.Toybox.Graphics;
-        %tmp.30 = getv %tmp.29 :TEXT_JUSTIFY_VCENTER;
-        %tmp.31 = bitor %tmp.28 %tmp.30;
-        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.22, %tmp.24, %tmp.26, %tmp.31);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 133 8 ]
-        %tmp.32 = lgetv %dc;
-        %tmp.33 = getv function %tmp.32 :drawText;
-        %tmp.34 = 120;
-        %tmp.35 = 120;
-        %tmp.36 = 60;
-        %tmp.37 = sub %tmp.35 %tmp.36;
-        %tmp.38 = getm $.Toybox.Graphics;
-        %tmp.39 = getv %tmp.38 :FONT_NUMBER_HOT;
-        %tmp.41 = lgetv %distText.2;
-        %tmp.42 = getm $.Toybox.Graphics;
-        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_CENTER;
-        %tmp.44 = getm $.Toybox.Graphics;
-        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_VCENTER;
-        %tmp.46 = bitor %tmp.43 %tmp.45;
-        invoke %tmp.32 %tmp.33(%tmp.34, %tmp.37, %tmp.39, %tmp.41, %tmp.46);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 135 8 ]
-        %tmp.47 = lgetv %dc;
-        %tmp.48 = getv function %tmp.47 :drawText;
-        %tmp.49 = 120;
-        %tmp.50 = 144;
-        %tmp.51 = 2;
-        %tmp.52 = div %tmp.50 %tmp.51;
-        %tmp.53 = add %tmp.49 %tmp.52;
-        %tmp.54 = 120;
-        %tmp.55 = 60;
-        %tmp.56 = add %tmp.54 %tmp.55;
-        %tmp.57 = getm $.Toybox.Graphics;
-        %tmp.58 = getv %tmp.57 :FONT_MEDIUM;
-        %tmp.59 = " P";
-        %tmp.60 = getm $.Toybox.Graphics;
-        %tmp.61 = getv %tmp.60 :TEXT_JUSTIFY_LEFT;
-        %tmp.62 = getm $.Toybox.Graphics;
-        %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_VCENTER;
-        %tmp.64 = bitor %tmp.61 %tmp.63;
-        invoke %tmp.47 %tmp.48(%tmp.53, %tmp.56, %tmp.58, %tmp.59, %tmp.64);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 136 8 ]
-        %tmp.65 = lgetv %dc;
-        %tmp.66 = getv function %tmp.65 :drawText;
-        %tmp.67 = 120;
-        %tmp.68 = 192;
-        %tmp.69 = 2;
-        %tmp.70 = div %tmp.68 %tmp.69;
-        %tmp.71 = add %tmp.67 %tmp.70;
-        %tmp.72 = 120;
-        %tmp.73 = getm $.Toybox.Graphics;
-        %tmp.74 = getv %tmp.73 :FONT_MEDIUM;
-        %tmp.75 = " T";
-        %tmp.76 = getm $.Toybox.Graphics;
-        %tmp.77 = getv %tmp.76 :TEXT_JUSTIFY_LEFT;
-        %tmp.78 = getm $.Toybox.Graphics;
-        %tmp.79 = getv %tmp.78 :TEXT_JUSTIFY_VCENTER;
-        %tmp.80 = bitor %tmp.77 %tmp.79;
-        invoke %tmp.65 %tmp.66(%tmp.71, %tmp.72, %tmp.74, %tmp.75, %tmp.80);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 137 8 ]
-        %tmp.81 = lgetv %dc;
-        %tmp.82 = getv function %tmp.81 :drawText;
-        %tmp.83 = 120;
-        %tmp.84 = 112;
-        %tmp.85 = 2;
-        %tmp.86 = div %tmp.84 %tmp.85;
-        %tmp.87 = add %tmp.83 %tmp.86;
-        %tmp.88 = 120;
-        %tmp.89 = 60;
-        %tmp.90 = sub %tmp.88 %tmp.89;
-        %tmp.91 = getm $.Toybox.Graphics;
-        %tmp.92 = getv %tmp.91 :FONT_MEDIUM;
-        %tmp.93 = " D";
-        %tmp.94 = getm $.Toybox.Graphics;
-        %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_LEFT;
-        %tmp.96 = getm $.Toybox.Graphics;
-        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_VCENTER;
-        %tmp.98 = bitor %tmp.95 %tmp.97;
-        invoke %tmp.81 %tmp.82(%tmp.87, %tmp.90, %tmp.92, %tmp.93, %tmp.98);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 138 8 ]
-        %tmp.99 = lgetv %dc;
-        %tmp.100 = getv function %tmp.99 :drawText;
-        %tmp.101 = 120;
-        %tmp.102 = 192;
-        %tmp.103 = 2;
-        %tmp.104 = div %tmp.102 %tmp.103;
-        %tmp.105 = sub %tmp.101 %tmp.104;
-        %tmp.106 = 120;
-        %tmp.107 = getm $.Toybox.Graphics;
-        %tmp.108 = getv %tmp.107 :FONT_MEDIUM;
-        %tmp.109 = "> ";
-        %tmp.110 = getm $.Toybox.Graphics;
-        %tmp.111 = getv %tmp.110 :TEXT_JUSTIFY_RIGHT;
-        %tmp.112 = getm $.Toybox.Graphics;
-        %tmp.113 = getv %tmp.112 :TEXT_JUSTIFY_VCENTER;
-        %tmp.114 = bitor %tmp.111 %tmp.113;
-        invoke %tmp.99 %tmp.100(%tmp.105, %tmp.106, %tmp.108, %tmp.109, %tmp.114);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 139 8 ]
-        %tmp.115 = lgetv %dc;
-        %tmp.116 = getv function %tmp.115 :drawText;
-        %tmp.117 = 120;
-        %tmp.118 = 112;
-        %tmp.119 = 2;
-        %tmp.120 = div %tmp.118 %tmp.119;
-        %tmp.121 = sub %tmp.117 %tmp.120;
-        %tmp.122 = 120;
-        %tmp.123 = 60;
-        %tmp.124 = sub %tmp.122 %tmp.123;
-        %tmp.125 = getm $.Toybox.Graphics;
-        %tmp.126 = getv %tmp.125 :FONT_MEDIUM;
-        %tmp.127 = "> ";
-        %tmp.128 = getm $.Toybox.Graphics;
-        %tmp.129 = getv %tmp.128 :TEXT_JUSTIFY_RIGHT;
-        %tmp.130 = getm $.Toybox.Graphics;
-        %tmp.131 = getv %tmp.130 :TEXT_JUSTIFY_VCENTER;
-        %tmp.132 = bitor %tmp.129 %tmp.131;
-        invoke %tmp.115 %tmp.116(%tmp.121, %tmp.124, %tmp.126, %tmp.127, %tmp.132);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 146 8 ]
-        %tmp.133 = self;
-        %tmp.134 = getv function %tmp.133 :displayState;
-        %tmp.136 = getv ? :_status;
-        %tmp.137 = getv %tmp.136 :exState;
-        %tmp.139 = getv ? :_status;
-        %tmp.140 = getv %tmp.139 :exCount;
-        %tmp.141 = 1;
-        %tmp.142 = add %tmp.140 %tmp.141;
-        %tmp.144 = lgetv %dc;
-        invoke %tmp.133 %tmp.134(%tmp.137, %tmp.142, %tmp.144);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 147 8 ]
-        %tmp.145 = self;
-        %tmp.146 = getv function %tmp.145 :displayTime;
-        %tmp.148 = getv ? :_status;
-        %tmp.149 = getv %tmp.148 :lapTime;
-        %tmp.151 = lgetv %dc;
-        invoke %tmp.145 %tmp.146(%tmp.149, %tmp.151);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 148 8 ]
-        %tmp.152 = self;
-        %tmp.153 = getv function %tmp.152 :displaySubState;
-        %tmp.155 = getv ? :_status;
-        %tmp.156 = getv %tmp.155 :isRun;
-        %tmp.158 = getv ? :_status;
-        %tmp.159 = getv %tmp.158 :isPaused;
-        %tmp.161 = lgetv %dc;
-        invoke %tmp.152 %tmp.153(%tmp.156, %tmp.159, %tmp.161);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_99_40_149_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_146_40_189_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 155; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 195; ]
     function onShow() as Void {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 160; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 200; ]
     function onUpdate(dc as Dc) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_160_40_167_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 164 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_200_40_209_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 204 8 ]
         %tmp.1 = self;
-        %tmp.2 = getv function %tmp.1 :displayState;
+        %tmp.2 = getv function %tmp.1 :displayPace;
         %tmp.4 = getv ? :_status;
-        %tmp.5 = getv %tmp.4 :exState;
-        %tmp.7 = getv ? :_status;
-        %tmp.8 = getv %tmp.7 :exCount;
-        %tmp.9 = 1;
-        %tmp.10 = add %tmp.8 %tmp.9;
-        %tmp.12 = lgetv %dc;
-        invoke %tmp.1 %tmp.2(%tmp.5, %tmp.10, %tmp.12);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 165 8 ]
-        %tmp.13 = self;
-        %tmp.14 = getv function %tmp.13 :displayTime;
-        %tmp.16 = getv ? :_status;
-        %tmp.17 = getv %tmp.16 :lapTime;
-        %tmp.19 = lgetv %dc;
-        invoke %tmp.13 %tmp.14(%tmp.17, %tmp.19);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc" 166 8 ]
-        %tmp.20 = self;
-        %tmp.21 = getv function %tmp.20 :displaySubState;
-        %tmp.23 = getv ? :_status;
-        %tmp.24 = getv %tmp.23 :isRun;
-        %tmp.26 = getv ? :_status;
-        %tmp.27 = getv %tmp.26 :isPaused;
-        %tmp.29 = lgetv %dc;
-        invoke %tmp.20 %tmp.21(%tmp.24, %tmp.27, %tmp.29);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaView_mc_160_40_167_4_stop:
+        %tmp.5 = getv %tmp.4 :pace;
+        %tmp.7 = lgetv %dc;
+        invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 205 8 ]
+        %tmp.8 = self;
+        %tmp.9 = getv function %tmp.8 :displayTime;
+        %tmp.11 = getv ? :_status;
+        %tmp.12 = getv %tmp.11 :lapTime;
+        %tmp.14 = getv ? :_status;
+        %tmp.15 = getv function %tmp.14 :isPriority;
+        %tmp.17 = getv ? :DURATION;
+        %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
+        %tmp.20 = lgetv %dc;
+        invoke %tmp.8 %tmp.9(%tmp.12, %tmp.18, %tmp.20);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 206 8 ]
+        %tmp.21 = self;
+        %tmp.22 = getv function %tmp.21 :displayDistance;
+        %tmp.24 = getv ? :_status;
+        %tmp.25 = getv %tmp.24 :lapDist;
+        %tmp.27 = getv ? :_status;
+        %tmp.28 = getv function %tmp.27 :isPriority;
+        %tmp.30 = getv ? :DISTANCE;
+        %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.30);
+        %tmp.33 = lgetv %dc;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.31, %tmp.33);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 207 8 ]
+        %tmp.34 = self;
+        %tmp.35 = getv function %tmp.34 :displayState;
+        %tmp.37 = getv ? :_status;
+        %tmp.38 = getv %tmp.37 :exState;
+        %tmp.40 = getv ? :_status;
+        %tmp.41 = getv %tmp.40 :exCount;
+        %tmp.42 = 1;
+        %tmp.43 = add %tmp.41 %tmp.42;
+        %tmp.45 = lgetv %dc;
+        invoke %tmp.34 %tmp.35(%tmp.38, %tmp.43, %tmp.45);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc" 208 8 ]
+        %tmp.46 = self;
+        %tmp.47 = getv function %tmp.46 :displaySubState;
+        %tmp.49 = getv ? :_status;
+        %tmp.50 = getv %tmp.49 :isRun;
+        %tmp.52 = getv ? :_status;
+        %tmp.53 = getv %tmp.52 :isPaused;
+        %tmp.55 = lgetv %dc;
+        invoke %tmp.46 %tmp.47(%tmp.50, %tmp.53, %tmp.55);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaView_mc_200_40_209_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 173; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 215; ]
     function onHide() as Void {
     }
 }
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaView.mc"; @line = 1; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaView.mc"; @line = 1; ]
 <init> {
 }
