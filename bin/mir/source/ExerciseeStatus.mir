@@ -1,0 +1,1024 @@
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 1; ]
+import Toybox.System;
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 2; ]
+import Toybox.Application;
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 4; ]
+import Toybox.Position;
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 6; ]
+enum ExState {
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 7; @position = 4; ]
+    WARMUP = 1,
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 8; @position = 4; ]
+    EXERCISE = 2,
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 9; @position = 4; ]
+    COOLDOWN = 3,
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 10; @position = 4; ]
+    EXTEND = 4
+}
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 13; ]
+enum ExSubState {
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 14; @position = 4; ]
+    RUN = 1,
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 15; @position = 4; ]
+    WALK = 2
+}
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 18; ]
+enum ExType {
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 19; @position = 4; ]
+    NONE = 0,
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 20; @position = 4; ]
+    DURATION = 1,
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 21; @position = 4; ]
+    DISTANCE = 2
+}
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 24; ]
+class ExerciseStatus{
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 24; ]
+    <init> {
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 26 15 ]
+        %tmp.2 = getv ? :NONE;
+        putv self :wuExType %tmp.2;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 28 15 ]
+        %tmp.4 = getv ? :NONE;
+        putv self :wuReType %tmp.4;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 31 15 ]
+        %tmp.6 = getv ? :NONE;
+        putv self :ruExType %tmp.6;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 33 15 ]
+        %tmp.8 = getv ? :NONE;
+        putv self :ruReType %tmp.8;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 37 15 ]
+        %tmp.10 = getv ? :NONE;
+        putv self :cdExType %tmp.10;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 39 15 ]
+        %tmp.12 = getv ? :NONE;
+        putv self :cdReType %tmp.12;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 48 15 ]
+        %tmp.14 = getv ? :WARMUP;
+        putv self :exState %tmp.14;
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 24; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 26; @position = 15; ]
+    public
+    var wuExType as ExType;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 27; @position = 15; ]
+    public
+    var wuExValue as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 28; @position = 15; ]
+    public
+    var wuReType as ExType;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 29; @position = 15; ]
+    public
+    var wuReValue as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 31; @position = 15; ]
+    public
+    var ruExType as ExType;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 32; @position = 15; ]
+    public
+    var ruExValue as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 33; @position = 15; ]
+    public
+    var ruReType as ExType;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 34; @position = 15; ]
+    public
+    var ruReValue as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 35; @position = 15; ]
+    public
+    var ruRepeats as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 37; @position = 15; ]
+    public
+    var cdExType as ExType;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 38; @position = 15; ]
+    public
+    var cdExValue as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 39; @position = 15; ]
+    public
+    var cdReType as ExType;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 40; @position = 15; ]
+    public
+    var cdReValue as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 43; @position = 15; ]
+    public
+    var totTime as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 44; @position = 15; ]
+    public
+    var totDist as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 45; @position = 15; ]
+    public
+    var lapTime as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 46; @position = 15; ]
+    public
+    var lapDist as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 48; @position = 15; ]
+    public
+    var exState as ExState;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 49; @position = 15; ]
+    public
+    var isRun as Lang.Boolean = true;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 50; @position = 15; ]
+    public
+    var isPaused as Lang.Boolean = true;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 52; @position = 15; ]
+    public
+    var exCount as Lang.Number = 0;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 54; ]
+    public
+    function initialise() {
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 58; ]
+    public
+    function presetSettings() {
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_58_37_77_4_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 60 8 ]
+        %tmp.2 = getv ? :Properties;
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.4 = "wuExType";
+        %tmp.6 = getv ? :DURATION;
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.6);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 61 8 ]
+        %tmp.8 = getv ? :Properties;
+        %tmp.9 = getv function %tmp.8 :setValue;
+        %tmp.10 = "wuExValue";
+        %tmp.11 = 20;
+        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 62 8 ]
+        %tmp.13 = getv ? :Properties;
+        %tmp.14 = getv function %tmp.13 :setValue;
+        %tmp.15 = "wuReType";
+        %tmp.17 = getv ? :DURATION;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.17);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 63 8 ]
+        %tmp.19 = getv ? :Properties;
+        %tmp.20 = getv function %tmp.19 :setValue;
+        %tmp.21 = "wuReValue";
+        %tmp.22 = 10;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 65 8 ]
+        %tmp.24 = getv ? :Properties;
+        %tmp.25 = getv function %tmp.24 :setValue;
+        %tmp.26 = "ruExType";
+        %tmp.28 = getv ? :DURATION;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.28);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 66 8 ]
+        %tmp.30 = getv ? :Properties;
+        %tmp.31 = getv function %tmp.30 :setValue;
+        %tmp.32 = "ruExValue";
+        %tmp.33 = 21;
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.33);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 67 8 ]
+        %tmp.35 = getv ? :Properties;
+        %tmp.36 = getv function %tmp.35 :setValue;
+        %tmp.37 = "ruReType";
+        %tmp.39 = getv ? :DURATION;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.39);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 68 8 ]
+        %tmp.41 = getv ? :Properties;
+        %tmp.42 = getv function %tmp.41 :setValue;
+        %tmp.43 = "ruReValue";
+        %tmp.44 = 11;
+        invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 69 8 ]
+        %tmp.46 = getv ? :Properties;
+        %tmp.47 = getv function %tmp.46 :setValue;
+        %tmp.48 = "ruRepeats";
+        %tmp.49 = 2;
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 71 8 ]
+        %tmp.51 = getv ? :Properties;
+        %tmp.52 = getv function %tmp.51 :setValue;
+        %tmp.53 = "cdExType";
+        %tmp.55 = getv ? :DURATION;
+        invoke %tmp.51 %tmp.52(%tmp.53, %tmp.55);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 72 8 ]
+        %tmp.57 = getv ? :Properties;
+        %tmp.58 = getv function %tmp.57 :setValue;
+        %tmp.59 = "cdExValue";
+        %tmp.60 = 22;
+        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.60);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 73 8 ]
+        %tmp.62 = getv ? :Properties;
+        %tmp.63 = getv function %tmp.62 :setValue;
+        %tmp.64 = "cdReType";
+        %tmp.66 = getv ? :DURATION;
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.66);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 74 8 ]
+        %tmp.68 = getv ? :Properties;
+        %tmp.69 = getv function %tmp.68 :setValue;
+        %tmp.70 = "cdReValue";
+        %tmp.71 = 12;
+        invoke %tmp.68 %tmp.69(%tmp.70, %tmp.71);
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 76 8 ]
+        %tmp.72 = getm $.Toybox.System;
+        %tmp.73 = getv function %tmp.72 :println;
+        %tmp.74 = "Setting preset";
+        invoke %tmp.72 %tmp.73(%tmp.74);
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_58_37_77_4_stop:
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 80; ]
+    public
+    function loadSettings() as Boolean {
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_80_46_124_4_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 82 8 ]
+        %tmp.2 = getv ? :Properties;
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "wuExType";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = as %tmp.5 ExType;
+        putv self :wuExType %tmp.6;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 83 8 ]
+        %tmp.8 = getv ? :Properties;
+        %tmp.9 = getv function %tmp.8 :getValue;
+        %tmp.10 = "wuExValue";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        putv self :wuExValue %tmp.11;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 84 8 ]
+        %tmp.13 = getv ? :Properties;
+        %tmp.14 = getv function %tmp.13 :getValue;
+        %tmp.15 = "wuReType";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = as %tmp.16 ExType;
+        putv self :wuReType %tmp.17;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 85 8 ]
+        %tmp.19 = getv ? :Properties;
+        %tmp.20 = getv function %tmp.19 :getValue;
+        %tmp.21 = "wuReValue";
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        putv self :wuReValue %tmp.22;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 87 8 ]
+        %tmp.24 = getv ? :Properties;
+        %tmp.25 = getv function %tmp.24 :getValue;
+        %tmp.26 = "ruExType";
+        %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
+        %tmp.28 = as %tmp.27 ExType;
+        putv self :ruExType %tmp.28;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 88 8 ]
+        %tmp.30 = getv ? :Properties;
+        %tmp.31 = getv function %tmp.30 :getValue;
+        %tmp.32 = "ruExValue";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        putv self :ruExValue %tmp.33;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 89 8 ]
+        %tmp.35 = getv ? :Properties;
+        %tmp.36 = getv function %tmp.35 :getValue;
+        %tmp.37 = "ruReType";
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        %tmp.39 = as %tmp.38 ExType;
+        putv self :ruReType %tmp.39;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 90 8 ]
+        %tmp.41 = getv ? :Properties;
+        %tmp.42 = getv function %tmp.41 :getValue;
+        %tmp.43 = "ruReValue";
+        %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+        putv self :ruReValue %tmp.44;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 91 8 ]
+        %tmp.46 = getv ? :Properties;
+        %tmp.47 = getv function %tmp.46 :getValue;
+        %tmp.48 = "ruRepeats";
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        putv self :ruRepeats %tmp.49;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 93 8 ]
+        %tmp.51 = getv ? :Properties;
+        %tmp.52 = getv function %tmp.51 :getValue;
+        %tmp.53 = "cdExType";
+        %tmp.54 = invoke %tmp.51 %tmp.52(%tmp.53);
+        %tmp.55 = as %tmp.54 ExType;
+        putv self :cdExType %tmp.55;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 94 8 ]
+        %tmp.57 = getv ? :Properties;
+        %tmp.58 = getv function %tmp.57 :getValue;
+        %tmp.59 = "cdExValue";
+        %tmp.60 = invoke %tmp.57 %tmp.58(%tmp.59);
+        putv self :cdExValue %tmp.60;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 95 8 ]
+        %tmp.62 = getv ? :Properties;
+        %tmp.63 = getv function %tmp.62 :getValue;
+        %tmp.64 = "cdReType";
+        %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+        %tmp.66 = as %tmp.65 ExType;
+        putv self :cdReType %tmp.66;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 96 8 ]
+        %tmp.68 = getv ? :Properties;
+        %tmp.69 = getv function %tmp.68 :getValue;
+        %tmp.70 = "cdReValue";
+        %tmp.71 = invoke %tmp.68 %tmp.69(%tmp.70);
+        putv self :cdReValue %tmp.71;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 99 8 ]
+        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_80_46_124_4_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_80_46_124_4_stop" ]
+        %isSettingsError.1 = local;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_114_39_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_113_38_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_112_38_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_111_38_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_110_38_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_109_38_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_108_38_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_107_63_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_106_63_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_105_63_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_104_63_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_103_63_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_102_63_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_101_65_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_100_65_begin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_33_99_72_begin:
+        %tmp.73 = getv ? :wuExType;
+        %tmp.75 = getv ? :NONE;
+        %tmp.76 = eq %tmp.73 %tmp.75;
+        %tmp.77 = dup %tmp.76;
+        bf %tmp.77 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_55_99_72_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_55_99_72_true:
+        %tmp.79 = getv ? :wuReType;
+        %tmp.81 = getv ? :NONE;
+        %tmp.82 = eq %tmp.79 %tmp.81;
+        %tmp.83 = and %tmp.76 %tmp.82;
+        push %tmp.83;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_55_99_72_end:
+        %tmp.84 = phi [%tmp.77 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_33_99_72_begin] [%tmp.83 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_55_99_72_true] [%tmp.84 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_55_99_72_end];
+        %tmp.85 = dup %tmp.84;
+        bt %tmp.85 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_24_100_65_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_24_100_65_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_25_100_64_begin:
+        %tmp.87 = getv ? :ruExType;
+        %tmp.89 = getv ? :NONE;
+        %tmp.90 = eq %tmp.87 %tmp.89;
+        %tmp.91 = dup %tmp.90;
+        bf %tmp.91 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_47_100_64_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_47_100_64_true:
+        %tmp.93 = getv ? :ruReType;
+        %tmp.95 = getv ? :NONE;
+        %tmp.96 = eq %tmp.93 %tmp.95;
+        %tmp.97 = and %tmp.90 %tmp.96;
+        push %tmp.97;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_47_100_64_end:
+        %tmp.98 = phi [%tmp.91 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_25_100_64_begin] [%tmp.97 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_47_100_64_true] [%tmp.98 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_47_100_64_end];
+        %tmp.99 = or %tmp.84 %tmp.98;
+        push %tmp.99;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_24_100_65_end:
+        %tmp.100 = phi [%tmp.85 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_100_65_begin] [%tmp.99 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_24_100_65_false] [%tmp.100 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_100_24_100_65_end];
+        %tmp.101 = dup %tmp.100;
+        bt %tmp.101 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_24_101_65_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_24_101_65_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_25_101_64_begin:
+        %tmp.103 = getv ? :cdExType;
+        %tmp.105 = getv ? :NONE;
+        %tmp.106 = eq %tmp.103 %tmp.105;
+        %tmp.107 = dup %tmp.106;
+        bf %tmp.107 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_47_101_64_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_47_101_64_true:
+        %tmp.109 = getv ? :cdReType;
+        %tmp.111 = getv ? :NONE;
+        %tmp.112 = eq %tmp.109 %tmp.111;
+        %tmp.113 = and %tmp.106 %tmp.112;
+        push %tmp.113;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_47_101_64_end:
+        %tmp.114 = phi [%tmp.107 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_25_101_64_begin] [%tmp.113 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_47_101_64_true] [%tmp.114 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_47_101_64_end];
+        %tmp.115 = or %tmp.100 %tmp.114;
+        push %tmp.115;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_24_101_65_end:
+        %tmp.116 = phi [%tmp.101 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_101_65_begin] [%tmp.115 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_24_101_65_false] [%tmp.116 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_101_24_101_65_end];
+        %tmp.117 = dup %tmp.116;
+        bt %tmp.117 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_24_102_63_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_24_102_63_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_25_102_62_begin:
+        %tmp.119 = getv ? :wuExType;
+        %tmp.121 = getv ? :NONE;
+        %tmp.122 = ne %tmp.119 %tmp.121;
+        %tmp.123 = dup %tmp.122;
+        bf %tmp.123 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_47_102_62_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_47_102_62_true:
+        %tmp.125 = getv ? :wuExValue;
+        %tmp.126 = 0;
+        %tmp.127 = eq %tmp.125 %tmp.126;
+        %tmp.128 = and %tmp.122 %tmp.127;
+        push %tmp.128;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_47_102_62_end:
+        %tmp.129 = phi [%tmp.123 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_25_102_62_begin] [%tmp.128 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_47_102_62_true] [%tmp.129 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_47_102_62_end];
+        %tmp.130 = or %tmp.116 %tmp.129;
+        push %tmp.130;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_24_102_63_end:
+        %tmp.131 = phi [%tmp.117 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_102_63_begin] [%tmp.130 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_24_102_63_false] [%tmp.131 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_102_24_102_63_end];
+        %tmp.132 = dup %tmp.131;
+        bt %tmp.132 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_24_103_63_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_24_103_63_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_25_103_62_begin:
+        %tmp.134 = getv ? :wuReType;
+        %tmp.136 = getv ? :NONE;
+        %tmp.137 = ne %tmp.134 %tmp.136;
+        %tmp.138 = dup %tmp.137;
+        bf %tmp.138 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_47_103_62_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_47_103_62_true:
+        %tmp.140 = getv ? :wuReValue;
+        %tmp.141 = 0;
+        %tmp.142 = eq %tmp.140 %tmp.141;
+        %tmp.143 = and %tmp.137 %tmp.142;
+        push %tmp.143;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_47_103_62_end:
+        %tmp.144 = phi [%tmp.138 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_25_103_62_begin] [%tmp.143 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_47_103_62_true] [%tmp.144 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_47_103_62_end];
+        %tmp.145 = or %tmp.131 %tmp.144;
+        push %tmp.145;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_24_103_63_end:
+        %tmp.146 = phi [%tmp.132 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_103_63_begin] [%tmp.145 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_24_103_63_false] [%tmp.146 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_103_24_103_63_end];
+        %tmp.147 = dup %tmp.146;
+        bt %tmp.147 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_24_104_63_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_24_104_63_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_25_104_62_begin:
+        %tmp.149 = getv ? :ruExType;
+        %tmp.151 = getv ? :NONE;
+        %tmp.152 = ne %tmp.149 %tmp.151;
+        %tmp.153 = dup %tmp.152;
+        bf %tmp.153 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_47_104_62_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_47_104_62_true:
+        %tmp.155 = getv ? :ruExValue;
+        %tmp.156 = 0;
+        %tmp.157 = eq %tmp.155 %tmp.156;
+        %tmp.158 = and %tmp.152 %tmp.157;
+        push %tmp.158;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_47_104_62_end:
+        %tmp.159 = phi [%tmp.153 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_25_104_62_begin] [%tmp.158 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_47_104_62_true] [%tmp.159 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_47_104_62_end];
+        %tmp.160 = or %tmp.146 %tmp.159;
+        push %tmp.160;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_24_104_63_end:
+        %tmp.161 = phi [%tmp.147 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_104_63_begin] [%tmp.160 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_24_104_63_false] [%tmp.161 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_104_24_104_63_end];
+        %tmp.162 = dup %tmp.161;
+        bt %tmp.162 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_24_105_63_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_24_105_63_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_25_105_62_begin:
+        %tmp.164 = getv ? :ruReType;
+        %tmp.166 = getv ? :NONE;
+        %tmp.167 = ne %tmp.164 %tmp.166;
+        %tmp.168 = dup %tmp.167;
+        bf %tmp.168 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_47_105_62_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_47_105_62_true:
+        %tmp.170 = getv ? :ruReValue;
+        %tmp.171 = 0;
+        %tmp.172 = eq %tmp.170 %tmp.171;
+        %tmp.173 = and %tmp.167 %tmp.172;
+        push %tmp.173;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_47_105_62_end:
+        %tmp.174 = phi [%tmp.168 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_25_105_62_begin] [%tmp.173 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_47_105_62_true] [%tmp.174 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_47_105_62_end];
+        %tmp.175 = or %tmp.161 %tmp.174;
+        push %tmp.175;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_24_105_63_end:
+        %tmp.176 = phi [%tmp.162 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_105_63_begin] [%tmp.175 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_24_105_63_false] [%tmp.176 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_105_24_105_63_end];
+        %tmp.177 = dup %tmp.176;
+        bt %tmp.177 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_24_106_63_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_24_106_63_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_25_106_62_begin:
+        %tmp.179 = getv ? :cdExType;
+        %tmp.181 = getv ? :NONE;
+        %tmp.182 = ne %tmp.179 %tmp.181;
+        %tmp.183 = dup %tmp.182;
+        bf %tmp.183 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_47_106_62_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_47_106_62_true:
+        %tmp.185 = getv ? :cdExValue;
+        %tmp.186 = 0;
+        %tmp.187 = eq %tmp.185 %tmp.186;
+        %tmp.188 = and %tmp.182 %tmp.187;
+        push %tmp.188;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_47_106_62_end:
+        %tmp.189 = phi [%tmp.183 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_25_106_62_begin] [%tmp.188 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_47_106_62_true] [%tmp.189 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_47_106_62_end];
+        %tmp.190 = or %tmp.176 %tmp.189;
+        push %tmp.190;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_24_106_63_end:
+        %tmp.191 = phi [%tmp.177 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_106_63_begin] [%tmp.190 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_24_106_63_false] [%tmp.191 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_106_24_106_63_end];
+        %tmp.192 = dup %tmp.191;
+        bt %tmp.192 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_24_107_63_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_24_107_63_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_25_107_62_begin:
+        %tmp.194 = getv ? :cdReType;
+        %tmp.196 = getv ? :NONE;
+        %tmp.197 = ne %tmp.194 %tmp.196;
+        %tmp.198 = dup %tmp.197;
+        bf %tmp.198 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_47_107_62_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_47_107_62_true:
+        %tmp.200 = getv ? :cdReValue;
+        %tmp.201 = 0;
+        %tmp.202 = eq %tmp.200 %tmp.201;
+        %tmp.203 = and %tmp.197 %tmp.202;
+        push %tmp.203;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_47_107_62_end:
+        %tmp.204 = phi [%tmp.198 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_25_107_62_begin] [%tmp.203 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_47_107_62_true] [%tmp.204 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_47_107_62_end];
+        %tmp.205 = or %tmp.191 %tmp.204;
+        push %tmp.205;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_24_107_63_end:
+        %tmp.206 = phi [%tmp.192 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_107_63_begin] [%tmp.205 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_24_107_63_false] [%tmp.206 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_107_24_107_63_end];
+        %tmp.207 = dup %tmp.206;
+        bt %tmp.207 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_108_24_108_38_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_108_24_108_38_false:
+        %tmp.209 = getv ? :wuExValue;
+        %tmp.210 = 0;
+        %tmp.211 = lt %tmp.209 %tmp.210;
+        %tmp.212 = or %tmp.206 %tmp.211;
+        push %tmp.212;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_108_24_108_38_end:
+        %tmp.213 = phi [%tmp.207 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_108_38_begin] [%tmp.212 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_108_24_108_38_false] [%tmp.213 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_108_24_108_38_end];
+        %tmp.214 = dup %tmp.213;
+        bt %tmp.214 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_109_24_109_38_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_109_24_109_38_false:
+        %tmp.216 = getv ? :wuReValue;
+        %tmp.217 = 0;
+        %tmp.218 = lt %tmp.216 %tmp.217;
+        %tmp.219 = or %tmp.213 %tmp.218;
+        push %tmp.219;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_109_24_109_38_end:
+        %tmp.220 = phi [%tmp.214 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_109_38_begin] [%tmp.219 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_109_24_109_38_false] [%tmp.220 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_109_24_109_38_end];
+        %tmp.221 = dup %tmp.220;
+        bt %tmp.221 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_110_24_110_38_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_110_24_110_38_false:
+        %tmp.223 = getv ? :ruExValue;
+        %tmp.224 = 0;
+        %tmp.225 = lt %tmp.223 %tmp.224;
+        %tmp.226 = or %tmp.220 %tmp.225;
+        push %tmp.226;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_110_24_110_38_end:
+        %tmp.227 = phi [%tmp.221 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_110_38_begin] [%tmp.226 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_110_24_110_38_false] [%tmp.227 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_110_24_110_38_end];
+        %tmp.228 = dup %tmp.227;
+        bt %tmp.228 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_111_24_111_38_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_111_24_111_38_false:
+        %tmp.230 = getv ? :ruReValue;
+        %tmp.231 = 0;
+        %tmp.232 = lt %tmp.230 %tmp.231;
+        %tmp.233 = or %tmp.227 %tmp.232;
+        push %tmp.233;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_111_24_111_38_end:
+        %tmp.234 = phi [%tmp.228 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_111_38_begin] [%tmp.233 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_111_24_111_38_false] [%tmp.234 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_111_24_111_38_end];
+        %tmp.235 = dup %tmp.234;
+        bt %tmp.235 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_112_24_112_38_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_112_24_112_38_false:
+        %tmp.237 = getv ? :cdExValue;
+        %tmp.238 = 0;
+        %tmp.239 = lt %tmp.237 %tmp.238;
+        %tmp.240 = or %tmp.234 %tmp.239;
+        push %tmp.240;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_112_24_112_38_end:
+        %tmp.241 = phi [%tmp.235 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_112_38_begin] [%tmp.240 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_112_24_112_38_false] [%tmp.241 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_112_24_112_38_end];
+        %tmp.242 = dup %tmp.241;
+        bt %tmp.242 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_113_24_113_38_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_113_24_113_38_false:
+        %tmp.244 = getv ? :cdReValue;
+        %tmp.245 = 0;
+        %tmp.246 = lt %tmp.244 %tmp.245;
+        %tmp.247 = or %tmp.241 %tmp.246;
+        push %tmp.247;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_113_24_113_38_end:
+        %tmp.248 = phi [%tmp.242 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_113_38_begin] [%tmp.247 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_113_24_113_38_false] [%tmp.248 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_113_24_113_38_end];
+        %tmp.249 = dup %tmp.248;
+        bt %tmp.249 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_114_24_114_39_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_114_24_114_39_false:
+        %tmp.251 = getv ? :ruRepeats;
+        %tmp.252 = 0;
+        %tmp.253 = lte %tmp.251 %tmp.252;
+        %tmp.254 = or %tmp.248 %tmp.253;
+        push %tmp.254;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_114_24_114_39_end:
+        %tmp.255 = phi [%tmp.249 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_99_32_114_39_begin] [%tmp.254 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_114_24_114_39_false] [%tmp.255 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_114_24_114_39_end];
+        lputv %isSettingsError.1 %tmp.255;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 115 8 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_8_122_8_if_stmt:
+        %tmp.257 = lgetv %isSettingsError.1;
+        bf %tmp.257 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_8_122_8_if_false;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_8_122_8_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_29_117_8_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 116 12 ]
+        %tmp.258 = false;
+        ret %tmp.258;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_29_117_8_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_8_122_8_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_8_122_8_if_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_118_13_122_8_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 120 12 ]
+        %tmp.260 = getv ? :wuExType;
+        %tmp.262 = getv ? :NONE;
+        %tmp.263 = ne %tmp.260 %tmp.262;
+        putv self :isRun %tmp.263;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 121 12 ]
+        %tmp.264 = true;
+        ret %tmp.264;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_118_13_122_8_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_115_8_122_8_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_80_46_124_4_stop:
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 127; ]
+    public
+    function printStatus() as Void {
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_127_42_130_4_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 128 8 ]
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Status: state=";
+        %tmp.5 = getv ? :exState;
+        %tmp.6 = add %tmp.3 %tmp.5;
+        %tmp.7 = ", run=";
+        %tmp.8 = add %tmp.6 %tmp.7;
+        %tmp.10 = getv ? :isRun;
+        %tmp.11 = add %tmp.8 %tmp.10;
+        %tmp.12 = ", count=";
+        %tmp.13 = add %tmp.11 %tmp.12;
+        %tmp.15 = getv ? :exCount;
+        %tmp.16 = add %tmp.13 %tmp.15;
+        %tmp.17 = ", pause=";
+        %tmp.18 = add %tmp.16 %tmp.17;
+        %tmp.20 = getv ? :isPaused;
+        %tmp.21 = add %tmp.18 %tmp.20;
+        %tmp.22 = ", totT=";
+        %tmp.23 = add %tmp.21 %tmp.22;
+        %tmp.25 = getv ? :MyRunnaView;
+        %tmp.26 = getv function %tmp.25 :formatTime;
+        %tmp.28 = getv ? :totTime;
+        %tmp.29 = invoke %tmp.25 %tmp.26(%tmp.28);
+        %tmp.30 = add %tmp.23 %tmp.29;
+        %tmp.31 = ", lapT=";
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.34 = getv ? :MyRunnaView;
+        %tmp.35 = getv function %tmp.34 :formatTime;
+        %tmp.37 = getv ? :lapTime;
+        %tmp.38 = invoke %tmp.34 %tmp.35(%tmp.37);
+        %tmp.39 = add %tmp.32 %tmp.38;
+        invoke %tmp.1 %tmp.2(%tmp.39);
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_127_42_130_4_stop:
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 135; ]
+    public
+    function incrementTime(duration as Lang.Number) {
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_135_59_210_4_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 136 8 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_136_8_209_8_if_stmt:
+        %tmp.2 = getv ? :isPaused;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_136_8_209_8_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_136_8_209_8_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_136_23_209_8_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 137 12 ]
+        %tmp.4 = getv self :totTime;
+        %tmp.6 = lgetv %duration;
+        %tmp.7 = add %tmp.4 %tmp.6;
+        putv self :totTime dup %tmp.7;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 138 12 ]
+        %tmp.8 = getv self :lapTime;
+        %tmp.10 = lgetv %duration;
+        %tmp.11 = add %tmp.8 %tmp.10;
+        putv self :lapTime dup %tmp.11;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 139 12 ]
+        %tmp.13 = getv ? :exState;
+        push %tmp.13;
+        switch %tmp.13 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_switchStmtEnd;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_switchStmtBegin:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 140 16 ]
+        %tmp.14 = dup %tmp.13;
+        %tmp.16 = getv ? :WARMUP;
+        %tmp.17 = getv function %tmp.14 :equals;
+        %tmp.18 = invoke %tmp.14 %tmp.17 (%tmp.16);
+        bt %tmp.18 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_140_16_159_25_switchCase;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 160 16 ]
+        %tmp.19 = dup %tmp.13;
+        %tmp.21 = getv ? :EXERCISE;
+        %tmp.22 = getv function %tmp.19 :equals;
+        %tmp.23 = invoke %tmp.19 %tmp.22 (%tmp.21);
+        bt %tmp.23 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_160_16_188_25_switchCase;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 189 16 ]
+        %tmp.24 = dup %tmp.13;
+        %tmp.26 = getv ? :COOLDOWN;
+        %tmp.27 = getv function %tmp.24 :equals;
+        %tmp.28 = invoke %tmp.24 %tmp.27 (%tmp.26);
+        bt %tmp.28 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_189_16_205_25_switchCase;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 206 16 ]
+        %tmp.29 = dup %tmp.13;
+        %tmp.31 = getv ? :EXTEND;
+        %tmp.32 = getv function %tmp.29 :equals;
+        %tmp.33 = invoke %tmp.29 %tmp.32 (%tmp.31);
+        bt %tmp.33 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_206_16_206_27_switchCase;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 207 16 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_switchStmtDefault:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_defaultCodeBegin;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_140_16_159_25_switchCase:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 141 20 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_20_158_20_if_stmt:
+        %tmp.35 = getv ? :isRun;
+        bf %tmp.35 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_20_158_20_if_false;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_20_158_20_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_31_151_20_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 142 24 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_24_150_24_if_stmt:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_28_142_75_begin:
+        %tmp.37 = getv ? :lapTime;
+        %tmp.39 = getv ? :wuExValue;
+        %tmp.40 = gte %tmp.37 %tmp.39;
+        bf %tmp.40 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_24_150_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_54_142_75_true:
+        %tmp.42 = getv ? :wuExType;
+        %tmp.44 = getv ? :DURATION;
+        %tmp.45 = eq %tmp.42 %tmp.44;
+        push %tmp.45;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_54_142_75_end:
+        %tmp.46 = phi [%tmp.40 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_28_142_75_begin] [%tmp.45 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_54_142_75_true] [%tmp.46 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_54_142_75_end];
+        bf %tmp.46 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_24_150_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_24_150_24_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_78_150_24_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 143 28 ]
+        %tmp.47 = 0;
+        putv self :lapTime %tmp.47;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 144 28 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_28_149_28_if_stmt:
+        %tmp.49 = getv ? :wuReType;
+        %tmp.51 = getv ? :NONE;
+        %tmp.52 = ne %tmp.49 %tmp.51;
+        bf %tmp.52 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_28_149_28_if_false;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_28_149_28_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_50_146_28_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 145 32 ]
+        %tmp.53 = false;
+        putv self :isRun %tmp.53;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_50_146_28_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_28_149_28_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_28_149_28_if_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_147_33_149_28_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 148 32 ]
+        %tmp.55 = getv ? :EXERCISE;
+        putv self :exState %tmp.55;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_147_33_149_28_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_144_28_149_28_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_78_150_24_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_24_150_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_142_24_150_24_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_31_151_20_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_20_158_20_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_20_158_20_if_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_152_25_158_20_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 153 24 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_24_157_24_if_stmt:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_28_153_75_begin:
+        %tmp.57 = getv ? :lapTime;
+        %tmp.59 = getv ? :wuReValue;
+        %tmp.60 = gte %tmp.57 %tmp.59;
+        bf %tmp.60 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_24_157_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_54_153_75_true:
+        %tmp.62 = getv ? :wuReType;
+        %tmp.64 = getv ? :DURATION;
+        %tmp.65 = eq %tmp.62 %tmp.64;
+        push %tmp.65;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_54_153_75_end:
+        %tmp.66 = phi [%tmp.60 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_28_153_75_begin] [%tmp.65 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_54_153_75_true] [%tmp.66 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_54_153_75_end];
+        bf %tmp.66 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_24_157_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_24_157_24_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_78_157_24_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 154 28 ]
+        %tmp.67 = 0;
+        putv self :lapTime %tmp.67;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 155 28 ]
+        %tmp.69 = getv ? :EXERCISE;
+        putv self :exState %tmp.69;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 156 28 ]
+        %tmp.71 = getv ? :ruExType;
+        %tmp.73 = getv ? :NONE;
+        %tmp.74 = ne %tmp.71 %tmp.73;
+        putv self :isRun %tmp.74;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_78_157_24_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_24_157_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_153_24_157_24_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_152_25_158_20_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_141_20_158_20_if_end:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 159 20 ]
+        goto break @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_switchStmtEnd;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_160_16_188_25_switchCase:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 161 20 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_20_187_20_if_stmt:
+        %tmp.76 = getv ? :isRun;
+        bf %tmp.76 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_20_187_20_if_false;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_20_187_20_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_31_174_20_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 162 24 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_24_173_24_if_stmt:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_28_162_75_begin:
+        %tmp.78 = getv ? :lapTime;
+        %tmp.80 = getv ? :ruExValue;
+        %tmp.81 = gte %tmp.78 %tmp.80;
+        bf %tmp.81 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_24_173_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_54_162_75_true:
+        %tmp.83 = getv ? :ruExType;
+        %tmp.85 = getv ? :DURATION;
+        %tmp.86 = eq %tmp.83 %tmp.85;
+        push %tmp.86;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_54_162_75_end:
+        %tmp.87 = phi [%tmp.81 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_28_162_75_begin] [%tmp.86 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_54_162_75_true] [%tmp.87 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_54_162_75_end];
+        bf %tmp.87 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_24_173_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_24_173_24_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_78_173_24_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 163 28 ]
+        %tmp.88 = 0;
+        putv self :lapTime %tmp.88;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 164 28 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_28_172_28_if_stmt:
+        %tmp.90 = getv ? :ruReType;
+        %tmp.92 = getv ? :NONE;
+        %tmp.93 = ne %tmp.90 %tmp.92;
+        bf %tmp.93 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_28_172_28_if_false;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_28_172_28_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_50_166_28_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 165 32 ]
+        %tmp.94 = false;
+        putv self :isRun %tmp.94;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_50_166_28_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_28_172_28_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_28_172_28_if_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_167_33_172_28_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 168 32 ]
+        %tmp.95 = getv self :exCount;
+        %tmp.96 = 1;
+        %tmp.97 = add %tmp.95 %tmp.96;
+        putv self :exCount dup %tmp.97;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 169 32 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_169_32_171_32_if_stmt:
+        %tmp.99 = getv ? :exCount;
+        %tmp.101 = getv ? :ruRepeats;
+        %tmp.102 = eq %tmp.99 %tmp.101;
+        bf %tmp.102 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_169_32_171_32_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_169_32_171_32_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_169_58_171_32_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 170 36 ]
+        %tmp.104 = getv ? :COOLDOWN;
+        putv self :exState %tmp.104;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_169_58_171_32_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_169_32_171_32_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_169_32_171_32_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_167_33_172_28_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_164_28_172_28_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_78_173_24_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_24_173_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_162_24_173_24_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_31_174_20_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_20_187_20_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_20_187_20_if_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_175_25_187_20_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 176 24 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_24_186_24_if_stmt:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_28_176_75_begin:
+        %tmp.106 = getv ? :lapTime;
+        %tmp.108 = getv ? :ruReValue;
+        %tmp.109 = gte %tmp.106 %tmp.108;
+        bf %tmp.109 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_24_186_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_54_176_75_true:
+        %tmp.111 = getv ? :ruReType;
+        %tmp.113 = getv ? :DURATION;
+        %tmp.114 = eq %tmp.111 %tmp.113;
+        push %tmp.114;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_54_176_75_end:
+        %tmp.115 = phi [%tmp.109 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_28_176_75_begin] [%tmp.114 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_54_176_75_true] [%tmp.115 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_54_176_75_end];
+        bf %tmp.115 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_24_186_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_24_186_24_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_78_186_24_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 177 28 ]
+        %tmp.116 = 0;
+        putv self :lapTime %tmp.116;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 178 28 ]
+        %tmp.117 = getv self :exCount;
+        %tmp.118 = 1;
+        %tmp.119 = add %tmp.117 %tmp.118;
+        putv self :exCount dup %tmp.119;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 179 28 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_28_185_28_if_stmt:
+        %tmp.121 = getv ? :exCount;
+        %tmp.123 = getv ? :ruRepeats;
+        %tmp.124 = eq %tmp.121 %tmp.123;
+        bf %tmp.124 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_28_185_28_if_false;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_28_185_28_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_54_182_28_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 180 32 ]
+        %tmp.126 = getv ? :COOLDOWN;
+        putv self :exState %tmp.126;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 181 32 ]
+        %tmp.128 = getv ? :cdExType;
+        %tmp.130 = getv ? :NONE;
+        %tmp.131 = ne %tmp.128 %tmp.130;
+        putv self :isRun %tmp.131;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_54_182_28_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_28_185_28_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_28_185_28_if_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_183_33_185_28_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 184 32 ]
+        %tmp.133 = getv ? :ruExType;
+        %tmp.135 = getv ? :NONE;
+        %tmp.136 = ne %tmp.133 %tmp.135;
+        putv self :isRun %tmp.136;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_183_33_185_28_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_179_28_185_28_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_78_186_24_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_24_186_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_176_24_186_24_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_175_25_187_20_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_161_20_187_20_if_end:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 188 20 ]
+        goto break @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_switchStmtEnd;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_189_16_205_25_switchCase:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 190 20 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_20_204_20_if_stmt:
+        %tmp.138 = getv ? :isRun;
+        bf %tmp.138 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_20_204_20_if_false;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_20_204_20_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_31_198_20_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 191 24 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_24_197_24_if_stmt:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_28_191_75_begin:
+        %tmp.140 = getv ? :lapTime;
+        %tmp.142 = getv ? :cdExValue;
+        %tmp.143 = gte %tmp.140 %tmp.142;
+        bf %tmp.143 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_24_197_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_54_191_75_true:
+        %tmp.145 = getv ? :cdExType;
+        %tmp.147 = getv ? :DURATION;
+        %tmp.148 = eq %tmp.145 %tmp.147;
+        push %tmp.148;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_54_191_75_end:
+        %tmp.149 = phi [%tmp.143 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_28_191_75_begin] [%tmp.148 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_54_191_75_true] [%tmp.149 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_54_191_75_end];
+        bf %tmp.149 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_24_197_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_24_197_24_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_78_197_24_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 192 28 ]
+        %tmp.150 = 0;
+        putv self :lapTime %tmp.150;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 193 28 ]
+        %tmp.151 = false;
+        putv self :isRun %tmp.151;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 194 28 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_194_28_196_28_if_stmt:
+        %tmp.153 = getv ? :cdReType;
+        %tmp.155 = getv ? :NONE;
+        %tmp.156 = eq %tmp.153 %tmp.155;
+        bf %tmp.156 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_194_28_196_28_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_194_28_196_28_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_194_50_196_28_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 195 32 ]
+        %tmp.158 = getv ? :EXTEND;
+        putv self :exState %tmp.158;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_194_50_196_28_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_194_28_196_28_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_194_28_196_28_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_78_197_24_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_24_197_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_191_24_197_24_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_31_198_20_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_20_204_20_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_20_204_20_if_false:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_199_25_204_20_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 200 24 ]
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_24_203_24_if_stmt:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_28_200_75_begin:
+        %tmp.160 = getv ? :lapTime;
+        %tmp.162 = getv ? :cdReValue;
+        %tmp.163 = gte %tmp.160 %tmp.162;
+        bf %tmp.163 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_24_203_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_54_200_75_true:
+        %tmp.165 = getv ? :cdReType;
+        %tmp.167 = getv ? :DURATION;
+        %tmp.168 = eq %tmp.165 %tmp.167;
+        push %tmp.168;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_54_200_75_end:
+        %tmp.169 = phi [%tmp.163 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_28_200_75_begin] [%tmp.168 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_54_200_75_true] [%tmp.169 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_54_200_75_end];
+        bf %tmp.169 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_24_203_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_24_203_24_if_true:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_78_203_24_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 201 28 ]
+        %tmp.170 = 0;
+        putv self :lapTime %tmp.170;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 202 28 ]
+        %tmp.172 = getv ? :EXTEND;
+        putv self :exState %tmp.172;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_78_203_24_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_24_203_24_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_200_24_203_24_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_199_25_204_20_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_190_20_204_20_if_end:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 205 20 ]
+        goto break @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_switchStmtEnd;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_206_16_206_27_switchCase:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_207_16_207_23_switchCase:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_defaultCodeBegin:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_139_12_208_12_switchStmtEnd:
+        pop;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_136_23_209_8_stop:
+        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_136_8_209_8_if_end;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_136_8_209_8_if_end:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_135_59_210_4_stop:
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 214; ]
+    public
+    function updatePosition(position as Position.Info) {
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 220; ]
+    public
+    function startPauseExercise() {
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_220_41_222_4_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc" 221 8 ]
+        %tmp.2 = getv ? :isPaused;
+        %tmp.3 = not %tmp.2;
+        putv self :isPaused %tmp.3;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseeStatus_mc_220_41_222_4_stop:
+    }
+}
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseeStatus.mc"; @line = 1; ]
+<init> {
+}
