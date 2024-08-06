@@ -1,0 +1,272 @@
+{
+  "settings" : [ {
+    "key" : "wuExType",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "exTypeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "typeDur",
+      "value" : 1
+    }, {
+      "display" : "typeDist",
+      "value" : 2
+    }, {
+      "display" : "typeNone",
+      "value" : 0
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "wuExValue",
+    "valueType" : "number",
+    "defaultValue" : 10,
+    "configTitle" : "$literal0$",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "wuReType",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "reTypeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "typeDur",
+      "value" : 1
+    }, {
+      "display" : "typeDist",
+      "value" : 2
+    }, {
+      "display" : "typeNone",
+      "value" : 0
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "wuReValue",
+    "valueType" : "number",
+    "defaultValue" : 10,
+    "configTitle" : "$literal1$",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ruExType",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "exTypeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "typeDur",
+      "value" : 1
+    }, {
+      "display" : "typeDist",
+      "value" : 2
+    }, {
+      "display" : "typeNone",
+      "value" : 0
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ruExValue",
+    "valueType" : "number",
+    "defaultValue" : 10,
+    "configTitle" : "$literal0$",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ruReType",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "reTypeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "typeDur",
+      "value" : 1
+    }, {
+      "display" : "typeDist",
+      "value" : 2
+    }, {
+      "display" : "typeNone",
+      "value" : 0
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ruReValue",
+    "valueType" : "number",
+    "defaultValue" : 10,
+    "configTitle" : "$literal1$",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ruRepeats",
+    "valueType" : "number",
+    "defaultValue" : 3,
+    "configTitle" : "$literal2$",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "cdExType",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "exTypeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "typeDur",
+      "value" : 1
+    }, {
+      "display" : "typeDist",
+      "value" : 2
+    }, {
+      "display" : "typeNone",
+      "value" : 0
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "cdExValue",
+    "valueType" : "number",
+    "defaultValue" : 10,
+    "configTitle" : "$literal0$",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "cdReType",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "reTypeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "typeDur",
+      "value" : 1
+    }, {
+      "display" : "typeDist",
+      "value" : 2
+    }, {
+      "display" : "typeNone",
+      "value" : 0
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "cdReValue",
+    "valueType" : "number",
+    "defaultValue" : 10,
+    "configTitle" : "$literal1$",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "valyrian" : {
+      "typeDur" : "Duration (s)",
+      "exTypeTitle" : "Run value type",
+      "typeDist" : "Distance (m)",
+      "reValueTitle" : "Rest value (m or s)",
+      "repeatsTitle" : "Repeats",
+      "AppName" : "MyRunna",
+      "$literal1$" : "Strings.reValueTitle",
+      "$literal0$" : "Strings.exValueTitle",
+      "reTypeTitle" : "Rest value type",
+      "$literal2$" : "Strings.repeatsTitle",
+      "menu_label_1" : "Item 1",
+      "menu_label_2" : "Item 2",
+      "exValueTitle" : "Run value (m or s)",
+      "prompt" : "SETTINGS INVALID",
+      "typeNone" : "None"
+    }
+  }
+}
