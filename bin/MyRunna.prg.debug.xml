@@ -409,7 +409,7 @@
 <entry arg="true" endPc="268440275" name="evt" stackId="1" startPc="268440237"/>
 <entry arg="true" endPc="268440371" name="dc" stackId="1" startPc="268440276"/>
 <entry arg="true" endPc="268440710" name="dc" stackId="1" startPc="268440396"/>
-<entry endPc="268440710" name="rez_cmp_local_text_1679689230" stackId="2" startPc="268440408"/>
+<entry endPc="268440710" name="rez_cmp_local_text_2279989658" stackId="2" startPc="268440408"/>
 <entry endPc="268440710" name="rez_cmp_local_bitmap_id_monkey" stackId="3" startPc="268440408"/>
 </localVars>
 <deviceInfo partNumber="006-B2700-00"/>
