@@ -1,6 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
+import Toybox.Position;
 
 class MyRunnaView extends WatchUi.View {
 
@@ -34,21 +35,21 @@ class MyRunnaView extends WatchUi.View {
     static public function formatTime(time as Number) as String {
         var hours = time/3600;
         var minutes = (time%3600)/60;
-        var seconds = (time%3600)%60;
+        var seconds = time%60;
         return  Lang.format("$1$:$2$:$3$", [hours.format("%1u"), minutes.format("%02u"), seconds.format("%02u")]);
     }
 
 
     // formats the pace from seconds to M:SS
     static public function formatPace(pace as Number) as String {
-        var minutes = (pace%3600)/60;
-        var seconds = (pace%3600)%60;
+        var minutes = pace/60;
+        var seconds = pace%60;
         return  Lang.format("$1$:$2$", [minutes, seconds.format("%02u")]);
     }
 
 
     // formats the distance from meters in kilometers
-    static public function formatDistance(meters as Number) as String {
+    static public function formatDistance(meters as Double) as String {
         var kilometers = meters/1000.0;
         return kilometers.format("%1.2f");
     }
@@ -71,19 +72,19 @@ class MyRunnaView extends WatchUi.View {
         var stateText;
         switch (state) {
             case WARMUP:
-                stateText = " WARM ";
+                stateText = "WARM";
                 break;
             case EXERCISE:
-                stateText = "   EX" + count.format("%2u") + "   ";
+                stateText = "EX" + count.format("%2u");
                 break;
             case COOLDOWN:
-                stateText = " COOL ";
+                stateText = "COOL";
                 break;
             case EXTEND:
-                stateText = " DONE ";
+                stateText = "DONE";
                 break;
             default:
-                stateText = "  ???  ";
+                stateText = "???";
         }
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.drawText(STATE_H_POS, STATE_V_POS, Graphics.FONT_MEDIUM, stateText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -91,12 +92,17 @@ class MyRunnaView extends WatchUi.View {
 
 
     // display formatted lapsed distance in km
-    private function displayDistance(distance as Number, isPriority, dc as Dc) as Void {
-        if (isPriority) {
-            dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+    private function displayDistance(distance as Double, isPriority, showLap as Boolean, dc as Dc) as Void {
+        if (showLap) {
+            if (isPriority) {
+                dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
+            }
+            else {
+                dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            }
         }
         else {
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
         }
         dc.drawText(DIST_H_POS, DIST_V_POS, Graphics.FONT_NUMBER_HOT, formatDistance(distance), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(DIST_H_POS, DIST_UNIT_V_POS, Graphics.FONT_TINY, "km", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -104,40 +110,68 @@ class MyRunnaView extends WatchUi.View {
 
 
     // display formatted lapsed time
-    private function displayTime(time as Number, isPriority as Boolean, dc as Dc) as Void {
-        if (isPriority) {
-            dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+    private function displayTime(time as Number, isPriority as Boolean, showLap as Boolean, dc as Dc) as Void {
+        if (showLap) {
+            if (isPriority) {
+                dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
+            }
+            else {
+                dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            }
         }
         else {
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+                dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
         }
         dc.drawText(TIME_H_POS, TIME_V_POS, Graphics.FONT_NUMBER_HOT, formatTime(time), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 
     // display formatted pace in min/km
-    private function displayPace(pace as Number, dc as Dc) {
+    private function displayPace(speed as Float, dc as Dc) {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        dc.drawText(PACE_H_POS, PACE_V_POS, Graphics.FONT_NUMBER_HOT, formatPace(pace), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        if (speed>(1.0/360.0)) {
+            var pace = 1000.0/speed;
+            dc.drawText(PACE_H_POS, PACE_V_POS, Graphics.FONT_NUMBER_HOT, formatPace(pace.toNumber()), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
+        else {
+            dc.drawText(PACE_H_POS, PACE_V_POS, Graphics.FONT_NUMBER_HOT, "99:59", Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
         dc.drawText(PACE_H_POS, PACE_UNIT_V_POS, Graphics.FONT_TINY, "/km", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 
     // display substate (RUN, WALK or PAUSE)
-    private function displaySubState(isRun as Boolean, isPaused as Boolean, dc as Dc) {
+    private function displaySubState(isRun as Boolean, isPaused as Boolean, gpsAccuracy as Position.Quality,  dc as Dc) {
         var subStateText;
         if (isPaused) {
-            subStateText = " STOP ";
+            if (gpsAccuracy >= Position.QUALITY_POOR) {
+                subStateText = "PSE";
+            }
+            else {
+                subStateText = "GPS";
+            }
         }
         else {
             if (isRun) {
-                subStateText = "  RUN  ";
+                subStateText = "RUN";
             }
             else {
-                subStateText = " WALK ";
+                subStateText = "WALK";
             }
         }
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        switch (gpsAccuracy) {
+            case Position.QUALITY_GOOD:
+                dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+                break;
+            case Position.QUALITY_USABLE:
+                dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+                break;
+            case Position.QUALITY_POOR:
+                dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+                break;
+            default:
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+        }
         dc.drawText(SUBSTATE_H_POS, SUBSTATE_V_POS, Graphics.FONT_MEDIUM, subStateText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
@@ -201,11 +235,21 @@ class MyRunnaView extends WatchUi.View {
         // Call the parent onUpdate function to redraw the layout
         //View.onUpdate(dc);
 
-        displayPace(_status.pace, dc);
-        displayTime(_status.lapTime, _status.isPriority(DURATION), dc);
-        displayDistance(_status.lapDist, _status.isPriority(DISTANCE), dc);
+        // clear screen
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.clear();
+
+        displayPace(_status.speed, dc);
+        if (_status.showLap) {
+            displayTime(_status.lapTime, _status.isPriority(DURATION), true, dc);
+            displayDistance(_status.lapDist, _status.isPriority(DISTANCE), true, dc);
+        }
+        else {
+            displayTime(_status.totTime, _status.isPriority(NONE), false, dc);
+            displayDistance(_status.totDist, _status.isPriority(NONE), false, dc);
+        }
         displayState(_status.exState, _status.exCount+1, dc);
-        displaySubState(_status.isRun, _status.isPaused, dc);
+        displaySubState(_status.isRun, _status.isPaused, _status.gpsAccuracy, dc);
     }
 
 

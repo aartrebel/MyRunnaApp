@@ -2,6 +2,8 @@ import Toybox.System;
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.Position;
+import Toybox.Math;
+import Toybox.Attention;
 
 public enum ExState {
     WARMUP = 1,
@@ -41,16 +43,35 @@ class ExerciseStatus {
     
     // state variabls
     public var totTime as Lang.Number = 0;
-    public var totDist as Lang.Number = 0;
+    public var totDist as Lang.Double = 0.0d;
     public var lapTime as Lang.Number = 0;
-    public var lapDist as Lang.Number = 0;
-    public var pace as Lang.Number = 0;
+    public var lapDist as Lang.Double = 0.0d;
+    public var speed as Lang.Float = 0.0;
 
     public var exState as ExState = WARMUP;
     public var isRun as Lang.Boolean = true;
     public var isPaused as Lang.Boolean = true;
 
     public var exCount as Lang.Number = 0;
+
+    private var prevLocation as Position.Location?;
+    public var gpsAccuracy as Position.Quality = Position.QUALITY_NOT_AVAILABLE;
+    private const LAT = 0;
+    private const LON = 1;
+
+    // vibration profiles
+    private var vibeProfile = [
+        new Attention.VibeProfile(100,300),
+        new Attention.VibeProfile(0,600),
+        new Attention.VibeProfile(100,300),
+        new Attention.VibeProfile(0,600),
+        new Attention.VibeProfile(100,300),
+        new Attention.VibeProfile(0,500)
+    ];
+
+    // other variables
+    public var showLap as Boolean = true;
+
 
     public function initialise() {
     }
@@ -61,7 +82,7 @@ class ExerciseStatus {
         Properties.setValue("wuExType",DURATION);
         Properties.setValue("wuExValue",20);
         Properties.setValue("wuReType",DISTANCE);
-        Properties.setValue("wuReValue",10);
+        Properties.setValue("wuReValue",200);
 
         Properties.setValue("ruExType",DURATION);
         Properties.setValue("ruExValue",21);
@@ -125,9 +146,11 @@ class ExerciseStatus {
     }
 
 
-    public function printStatus() as Void {
-        System.println ("Status: state=" + exState + ", run=" + isRun + ", count=" + exCount + ", pause=" + isPaused + 
-            ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime));
+    public function printStatus(caller as Lang.String) as Void {
+        System.println ("Status[" + caller +"]: state=" + exState + ", run=" + isRun + ", count=" + exCount + ", pause=" + isPaused + 
+            ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime) +
+            ", totD=" + totDist.format("%1.0f") + ", lapD=" + lapDist.format("%1.0f") + ", speed=" + speed.format("%1.2f") +
+            ", gps=" + gpsAccuracy);
     }
 
 
@@ -162,9 +185,24 @@ class ExerciseStatus {
     }
 
 
+    // calculates the distance travelled from location A to location B in meters
+    private function calcDistance(locationA as Position.Location, locationB as Position.Location) as Lang.Double {
+        var locA = locationA.toRadians();
+        var locB = locationB.toRadians();
+        var dLoc = [ (locB[LAT]-locA[LAT]), (locB[LON]-locA[LON]) ];
+
+        var a = Math.sin(dLoc[LAT]/2.0) * Math.sin(dLoc[LAT]/2.0) +
+            Math.sin(dLoc[LON]/2.0) * Math.sin(dLoc[LON]/2.0) * Math.cos(locA[LAT]) * Math.cos(locB[LAT]); 
+        var c = 2.0 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return 6371000.0*c;
+    }
+
+
     // increments the total and exercise time with duration
     // duration is in seconds
     public function incrementTime(duration as Lang.Number) {
+        var curState = exState;
+        var curSubstate = isRun;
         if (!isPaused) {
             totTime += duration;
             lapTime += duration;
@@ -173,6 +211,7 @@ class ExerciseStatus {
                     if (isRun) {
                         if ((lapTime >= wuExValue) && (wuExType == DURATION)) {
                             lapTime = 0;
+                            lapDist = 0.0d;
                             if (wuReType != NONE) {
                                 isRun = false;
                             }
@@ -184,6 +223,7 @@ class ExerciseStatus {
                     else {
                         if ((lapTime >= wuReValue) && (wuReType == DURATION)) {
                             lapTime = 0;
+                            lapDist = 0.0d;
                             exState = EXERCISE;
                             isRun = (ruExType != NONE);
                         }
@@ -193,6 +233,7 @@ class ExerciseStatus {
                     if (isRun) {
                         if ((lapTime >= ruExValue) && (ruExType == DURATION)) {
                             lapTime = 0;
+                            lapDist = 0.0d;
                             if (ruReType != NONE) {
                                 isRun = false;
                             }
@@ -207,6 +248,7 @@ class ExerciseStatus {
                     else {
                         if ((lapTime >= ruReValue) && (ruReType == DURATION)) {
                             lapTime = 0;
+                            lapDist = 0.0d;
                             exCount += 1;
                             if (exCount == ruRepeats) {
                                 exState = COOLDOWN;
@@ -222,6 +264,7 @@ class ExerciseStatus {
                     if (isRun) {
                         if ((lapTime >= cdExValue) && (cdExType == DURATION)) {
                             lapTime = 0;
+                            lapDist = 0.0d;
                             isRun = false;
                             if (cdReType == NONE) {
                                 exState = EXTEND;
@@ -231,6 +274,7 @@ class ExerciseStatus {
                     else {
                         if ((lapTime >= cdReValue) && (cdReType == DURATION)) {
                             lapTime = 0;
+                            lapDist = 0.0d;
                             exState = EXTEND;
                         }
                     }
@@ -239,12 +283,122 @@ class ExerciseStatus {
                 default: 
             }
         }
+
+        // notify runner if state change
+        if ((curState != exState) || (curSubstate != isRun)) {
+            Attention.vibrate(vibeProfile);
+        }
     }
 
 
     // updates the distance and pace based on an updated coordinate
-    public function updatePosition(position as Position.Info) {
+    public function updatePosition(gpsInfo as Position.Info) {
+        var curState = exState;
+        var curSubstate = isRun;
 
+        //update speed
+        speed = gpsInfo.speed;
+
+        //update GPS quality
+        gpsAccuracy = gpsInfo.accuracy;
+
+        if (!isPaused) {
+            // update distance travelled
+            if (prevLocation != null) {
+                var deltaDist = calcDistance(prevLocation, gpsInfo.position);
+                lapDist += deltaDist;
+                totDist += deltaDist;
+            }
+            prevLocation = gpsInfo.position;
+
+            switch (exState) {
+                case WARMUP:
+                    if (isRun) {
+                        if ((lapDist >= wuExValue) && (wuExType == DISTANCE)) {
+                            lapTime = 0;
+                            lapDist = 0.0d;
+                            if (wuReType != NONE) {
+                                isRun = false;
+                            }
+                            else {
+                                exState = EXERCISE;
+                            }
+                        }
+                    }
+                    else {
+                        if ((lapDist >= wuReValue) && (wuReType == DISTANCE)) {
+                            lapTime = 0;
+                            lapDist = 0.0d;
+                            exState = EXERCISE;
+                            isRun = (ruExType != NONE);
+                        }
+                    }
+                    break;
+                case EXERCISE: 
+                    if (isRun) {
+                        if ((lapDist >= ruExValue) && (ruExType == DISTANCE)) {
+                            lapTime = 0;
+                            lapDist = 0.0d;
+                            if (ruReType != NONE) {
+                                isRun = false;
+                            }
+                            else {
+                                exCount += 1;
+                                if (exCount == ruRepeats) {
+                                    exState = COOLDOWN;
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        if ((lapDist >= ruReValue) && (ruReType == DISTANCE)) {
+                            lapTime = 0;
+                            lapDist = 0.0d;
+                            exCount += 1;
+                            if (exCount == ruRepeats) {
+                                exState = COOLDOWN;
+                                isRun = (cdExType != NONE);
+                            }
+                            else {
+                                isRun = (ruExType != NONE);
+                            }
+                        }
+                    }
+                    break;
+                case COOLDOWN: 
+                    if (isRun) {
+                        if ((lapDist >= cdExValue) && (cdExType == DISTANCE)) {
+                            lapTime = 0;
+                            lapDist = 0.0d;
+                            isRun = false;
+                            if (cdReType == NONE) {
+                                exState = EXTEND;
+                            }
+                        }
+                    }
+                    else {
+                        if ((lapDist >= cdReValue) && (cdReType == DISTANCE)) {
+                            lapTime = 0;
+                            lapDist = 0.0d;
+                            exState = EXTEND;
+                        }
+                    }
+                    break;
+                case EXTEND:
+                default: 
+            }
+        }
+        else { // if paused
+        
+            //update previous location to new
+            prevLocation = gpsInfo.position;
+
+        }
+
+        // notify runner if state change
+        if ((curState != exState) || (curSubstate != isRun)) {
+            Attention.vibrate(vibeProfile);
+        }
     }
 
 

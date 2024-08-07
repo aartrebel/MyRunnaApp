@@ -41,21 +41,26 @@ class MyRunnaApp extends Application.AppBase {
 
     // function that is called each second
     function onSecond () as Void {
-        System.println("1 second");
+        //var gpsInfo = Position.getInfo();
+        //System.println("Position 2 = " + gpsInfo.position.toGeoString( Position.GEO_DM ));
+        //System.println("GPS quality = " + gpsInfo.accuracy);
         _exStatus.incrementTime(1);
-        _exStatus.printStatus();
+        _exStatus.printStatus("TMR");
         WatchUi.requestUpdate();
+
     }
 
 
     // function that is called for each GPS update
     function onPosition( info as Position.Info ) as Void {
-        System.println( "Position " + info.position.toGeoString( Position.GEO_DM ) );
+        _exStatus.updatePosition(info);
+        _exStatus.printStatus("GPS");
+        WatchUi.requestUpdate();
     }
 
-    // function that is call when the button is pressed
+
+    // function that is called when the button is pressed
     function onButton() as Void {
-        System.println("Button pressed");
         if (_exStatus.isPaused) {
             _timer.start(method(:onSecond), 1000, true); 
         }
@@ -64,7 +69,14 @@ class MyRunnaApp extends Application.AppBase {
         }
         _exStatus.startPauseExercise();
         
-        _exStatus.printStatus();
+        _exStatus.printStatus("BUT");
+        WatchUi.requestUpdate();
+    }
+
+
+    // function is called when the display is tapped
+    function onTap() as Void {
+        _exStatus.showLap = !_exStatus.showLap;
         WatchUi.requestUpdate();
     }
 
@@ -86,9 +98,9 @@ class MyRunnaApp extends Application.AppBase {
             _myRunnaView = new MyRunnaView();
             _myRunnaView.setExerciseStatus(_exStatus);
             _myRunnaDelegate = new MyRunnaDelegate();
-            _myRunnaDelegate.setButtonHandler(method(:onButton));
+            _myRunnaDelegate.setHandlers(method(:onButton), method(:onTap));
 
-            _exStatus.printStatus();
+            _exStatus.printStatus("STR");
         }
         else { // if settings invalid
             _myRunnaView = new SettingsErrorView();
@@ -96,11 +108,13 @@ class MyRunnaApp extends Application.AppBase {
         }
     }
 
+
     // onStop() is called when your application is exiting
     function onStop(state as Dictionary?) as Void {
         Position.enableLocationEvents(Position.LOCATION_DISABLE, method(:onPosition));
         //_timer.stop();
     }
+
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
