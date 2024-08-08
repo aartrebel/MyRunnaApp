@@ -4,6 +4,7 @@ import Toybox.System;
 
 class MyRunnaDelegate extends WatchUi.BehaviorDelegate {
     var _buttonHandler as Lang.Method?;
+    var _tapHandler as Lang.Method?;
 
     function initialize() {
         BehaviorDelegate.initialize();
@@ -11,8 +12,9 @@ class MyRunnaDelegate extends WatchUi.BehaviorDelegate {
 
 
     // function sets the handler when the watch button is pressed
-    public function setButtonHandler(handler as Lang.Method) as Void {
-        _buttonHandler = handler;
+    public function setHandlers(buttonHandler as Lang.Method, tapHandler as Lang.Method) as Void {
+        _buttonHandler = buttonHandler;
+        _tapHandler = tapHandler;
     }
 
 
@@ -27,6 +29,14 @@ class MyRunnaDelegate extends WatchUi.BehaviorDelegate {
             _buttonHandler.invoke();
         }
        return true;
+    }
+
+    // Handler the screen being tapper
+    public function onTap(click as ClickEvent) as Boolean {
+        if (_tapHandler != null) {
+            _tapHandler.invoke();
+        }
+        return true;
     }
 
 }
