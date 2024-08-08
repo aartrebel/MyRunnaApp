@@ -19,61 +19,61 @@ class MyRunnaDelegate extends WatchUi.BehaviorDelegate{
     var _tapHandler as Lang.Method or Null;
     [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 8; @position = 8; ]
     var _pressHandler as Lang.Method or Null;
-    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 10; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 11; ]
     function initialize(buttonHandler as Lang.Method, tapHandler as Lang.Method, pressHandler as Lang.Method) as Void {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_10_110_15_4_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 11 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_11_110_16_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 12 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 12 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 13 8 ]
         %tmp.5 = lgetv %buttonHandler;
         putv self :_buttonHandler %tmp.5;
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 13 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 14 8 ]
         %tmp.7 = lgetv %tapHandler;
         putv self :_tapHandler %tmp.7;
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 14 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 15 8 ]
         %tmp.9 = lgetv %pressHandler;
         putv self :_pressHandler %tmp.9;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_10_110_15_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_11_110_16_4_stop:
     }
-    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 19; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 20; ]
     public
     function onKeyPressed(evt as KeyEvent) as Boolean {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_19_61_24_4_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 20 8 ]
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_8_22_8_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_61_25_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 21 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_21_8_23_8_if_stmt:
         %tmp.2 = getv ? :_buttonHandler;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_8_22_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_8_22_8_if_true:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_36_22_8_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 21 12 ]
+        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_21_8_23_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_21_8_23_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_21_36_23_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 22 12 ]
         %tmp.6 = getv ? :_buttonHandler;
         %tmp.7 = as %tmp.6 { (!Null) };
         %tmp.8 = getv function %tmp.7 :invoke;
         invoke %tmp.7 %tmp.8();
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_36_22_8_stop:
-        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_8_22_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_8_22_8_if_end:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 23 7 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_21_36_23_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_21_8_23_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_21_8_23_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 24 7 ]
         %tmp.9 = true;
         ret %tmp.9;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_19_61_24_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_20_61_25_4_stop:
     }
-    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 28; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 29; ]
     public
     function onTap(click as ClickEvent) as Boolean {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_28_58_33_4_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 29 8 ]
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_8_31_8_if_stmt:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_12_29_79_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_58_34_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 30 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_8_32_8_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_12_30_79_begin:
         %tmp.2 = getv ? :_tapHandler;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_8_31_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_37_29_79_true:
+        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_8_32_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_37_30_79_true:
         %tmp.5 = lgetv %click;
         %tmp.6 = getv function %tmp.5 :getType;
         %tmp.7 = invoke %tmp.5 %tmp.6();
@@ -81,28 +81,28 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_
         %tmp.9 = getv %tmp.8 :CLICK_TYPE_TAP;
         %tmp.10 = eq %tmp.7 %tmp.9;
         push %tmp.10;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_37_29_79_end:
-        %tmp.11 = phi [%tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_12_29_79_begin] [%tmp.10 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_37_29_79_true] [%tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_37_29_79_end];
-        bf %tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_8_31_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_8_31_8_if_true:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_82_31_8_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 30 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_37_30_79_end:
+        %tmp.11 = phi [%tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_12_30_79_begin] [%tmp.10 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_37_30_79_true] [%tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_37_30_79_end];
+        bf %tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_8_32_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_8_32_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_82_32_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 31 12 ]
         %tmp.13 = getv ? :_tapHandler;
         %tmp.14 = getv function %tmp.13 :invoke;
         invoke %tmp.13 %tmp.14();
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_82_31_8_stop:
-        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_8_31_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_8_31_8_if_end:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 32 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_82_32_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_8_32_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_30_8_32_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 33 8 ]
         %tmp.15 = true;
         ret %tmp.15;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_28_58_33_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_29_58_34_4_stop:
     }
-    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 37; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 38; ]
     public
     function onSwipe(swipe as SwipeEvent) as Boolean {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_37_61_40_4_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 38 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_38_61_41_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 39 8 ]
         %tmp.1 = getm $.Toybox.System;
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = "Swipe ";
@@ -111,23 +111,23 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_37_
         %tmp.6 = invoke %tmp.4 %tmp.5();
         %tmp.7 = add %tmp.3 %tmp.6;
         invoke %tmp.1 %tmp.2(%tmp.7);
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 39 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 40 8 ]
         %tmp.8 = true;
         ret %tmp.8;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_37_61_40_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_38_61_41_4_stop:
     }
-    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 44; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 45; ]
     public
     function onHold(click as ClickEvent) as Boolean {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_44_60_49_4_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 45 8 ]
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_8_47_8_if_stmt:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_12_45_82_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_60_50_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 46 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_8_48_8_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_12_46_82_begin:
         %tmp.2 = getv ? :_pressHandler;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_8_47_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_39_45_82_true:
+        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_8_48_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_39_46_82_true:
         %tmp.5 = lgetv %click;
         %tmp.6 = getv function %tmp.5 :getType;
         %tmp.7 = invoke %tmp.5 %tmp.6();
@@ -135,22 +135,22 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_
         %tmp.9 = getv %tmp.8 :CLICK_TYPE_HOLD;
         %tmp.10 = eq %tmp.7 %tmp.9;
         push %tmp.10;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_39_45_82_end:
-        %tmp.11 = phi [%tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_12_45_82_begin] [%tmp.10 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_39_45_82_true] [%tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_39_45_82_end];
-        bf %tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_8_47_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_8_47_8_if_true:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_85_47_8_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 46 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_39_46_82_end:
+        %tmp.11 = phi [%tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_12_46_82_begin] [%tmp.10 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_39_46_82_true] [%tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_39_46_82_end];
+        bf %tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_8_48_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_8_48_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_85_48_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 47 12 ]
         %tmp.13 = getv ? :_pressHandler;
         %tmp.14 = getv function %tmp.13 :invoke;
         invoke %tmp.13 %tmp.14();
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_85_47_8_stop:
-        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_8_47_8_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_8_47_8_if_end:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 48 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_85_48_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_8_48_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_46_8_48_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 49 8 ]
         %tmp.15 = true;
         ret %tmp.15;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_44_60_49_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_45_60_50_4_stop:
     }
 }
 [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc"; @line = 1; ]
