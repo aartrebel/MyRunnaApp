@@ -3,7 +3,6 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.Position;
 import Toybox.Math;
-import Toybox.Attention;
 
 public enum ExState {
     WARMUP = 1,
@@ -58,16 +57,6 @@ class ExerciseStatus {
     public var gpsAccuracy as Position.Quality = Position.QUALITY_NOT_AVAILABLE;
     private const LAT = 0;
     private const LON = 1;
-
-    // vibration profiles
-    private var vibeProfile = [
-        new Attention.VibeProfile(100,300),
-        new Attention.VibeProfile(0,600),
-        new Attention.VibeProfile(100,300),
-        new Attention.VibeProfile(0,600),
-        new Attention.VibeProfile(100,300),
-        new Attention.VibeProfile(0,500)
-    ];
 
     // other variables
     public var showLap as Boolean = true;
@@ -200,7 +189,7 @@ class ExerciseStatus {
 
     // increments the total and exercise time with duration
     // duration is in seconds
-    public function incrementTime(duration as Lang.Number) {
+    public function incrementTime(duration as Lang.Number) as Boolean {
         var curState = exState;
         var curSubstate = isRun;
         if (!isPaused) {
@@ -284,10 +273,8 @@ class ExerciseStatus {
             }
         }
 
-        // notify runner if state change
-        if ((curState != exState) || (curSubstate != isRun)) {
-            Attention.vibrate(vibeProfile);
-        }
+        // return state change
+        return ((curState != exState) || (curSubstate != isRun));
     }
 
 
@@ -395,10 +382,8 @@ class ExerciseStatus {
 
         }
 
-        // notify runner if state change
-        if ((curState != exState) || (curSubstate != isRun)) {
-            Attention.vibrate(vibeProfile);
-        }
+        // return state change
+        return ((curState != exState) || (curSubstate != isRun));
     }
 
 

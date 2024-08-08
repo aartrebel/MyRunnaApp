@@ -1,0 +1,65 @@
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 3; ]
+import Toybox.ActivityRecording;
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 6; ]
+class DiscardConfirmationDelegate extends WatchUi.ConfirmationDelegate{
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 8; @position = 16; ]
+    private
+    var _discardMethod as Lang.Method or Null;
+    //! Constructor
+    //! @param view The app view
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 12; ]
+    public
+    function initialize(discardMethod as Lang.Method) as Void {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_12_61_15_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc" 13 8 ]
+        %tmp.2 = getv ? :ConfirmationDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc" 14 8 ]
+        %tmp.5 = lgetv %discardMethod;
+        putv self :_discardMethod %tmp.5;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_12_61_15_4_stop:
+    }
+    //! Handle a confirmation selection
+    //! @param value The confirmation value
+    //! @return true if handled, false otherwise
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 20; ]
+    public
+    function onResponse(value as WatchUi.Confirm) as Boolean {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_20_68_25_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc" 21 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_21_8_23_8_if_stmt:
+        %tmp.2 = lgetv %value;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :CONFIRM_YES;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_21_8_23_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_21_8_23_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_21_42_23_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc" 22 12 ]
+        %tmp.7 = getv ? :_discardMethod;
+        %tmp.8 = getv function %tmp.7 :invoke;
+        invoke %tmp.7 %tmp.8();
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_21_42_23_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_21_8_23_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_21_8_23_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc" 24 8 ]
+        %tmp.9 = true;
+        ret %tmp.9;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_DiscardConfirmationDelegate_mc_20_68_25_4_stop:
+    }
+}
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\DiscardConfirmationDelegate.mc"; @line = 1; ]
+<init> {
+}

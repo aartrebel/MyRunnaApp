@@ -178,48 +178,8 @@ class MyRunnaView extends WatchUi.View {
 
     // creates initial layout of the screen
     function onLayout(dc as Dc) as Void {
-        //System.println("Width = " + dc.getWidth()); //240
-        //System.println("height = " + dc.getHeight()); //240
-
-        //var distUnit = "km";
-        //var distUnitSize = dc.getTextDimensions(distUnit, Graphics.FONT_MEDIUM);
-        //var timeText = "0:00:00";
-        //var timeTextSize = dc.getTextDimensions(timeText, Graphics.FONT_NUMBER_HOT);
-        //var paceUnit = "/km";
-        //var paceUnitSize = dc.getTextDimensions(paceUnit, Graphics.FONT_MEDIUM);
-        //var paceText = "00:00";
-        //var paceTextSize = dc.getTextDimensions(paceText, Graphics.FONT_NUMBER_HOT);
-        //var distText = "0.00";
-        //var distTextSize = dc.getTextDimensions(distText, Graphics.FONT_NUMBER_HOT);
-
-        //var paceTextSize = dc.getTextDimensions("00:00", Graphics.FONT_NUMBER_HOT);
-        //System.println("Pace text size =" + paceTextSize[0] + ";" + paceTextSize[1]); //144;76
-        //var paceUnitSize = dc.getTextDimensions("/km", Graphics.FONT_TINY);
-        //System.println("Pace unit text size =" + paceUnitSize[0] + ";" + paceUnitSize[1]); //57;34
-
-
-        //var distUnitSize = dc.getTextDimensions("km", Graphics.FONT_TINY);
-        //var distTextSize = dc.getTextDimensions("00.00", Graphics.FONT_NUMBER_HOT);
-        //System.println("Dist text size =" + distTextSize[0] + ";" + distTextSize[1]); //144;76
-        //System.println("Dist unit text size =" + distUnitSize[0] + ";" + distUnitSize[1]); //47;34
-
-        //System.println("Time text size =" + timeTextSize[0] + ";" + timeTextSize[1]); //192;76
-        //System.println("Pace text size =" + paceTextSize[0] + ";" + paceTextSize[1]); //144;76
-        //System.println("Pace unit text size =" + paceUnitSize[0] + ";" + paceUnitSize[1]); //51;34
-        //System.println("Dist text size =" + distTextSize[0] + ";" + distTextSize[1]); //112;76
-        //System.println("Dist unit text size =" + distUnitSize[0] + ";" + distUnitSize[1]); //41;34
-        
-        // clear screen
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
-
-        // set colour for text 
-        //dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-
-        // display units
-        //dc.drawText(DIST_H_POS, DIST_UNIT_V_POS, Graphics.FONT_TINY, "km", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
-        //dc.drawText(PACE_H_POS, PACE_UNIT_V_POS, Graphics.FONT_TINY, "/km", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
-
     }
 
 
@@ -232,9 +192,6 @@ class MyRunnaView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        // Call the parent onUpdate function to redraw the layout
-        //View.onUpdate(dc);
-
         // clear screen
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
