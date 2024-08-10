@@ -58,8 +58,8 @@ class MyRunnaApp extends Application.AppBase {
     }
 
 
-    // function that is called when the button is pressed
-    function onButton() as Void {
+    // function handles the request or cancellation of an exercise pause
+    function handlePause() as Void {
 
         // check if activity recording session exists and initialise if not
         if (_session == null) {
@@ -92,15 +92,22 @@ class MyRunnaApp extends Application.AppBase {
     }
 
 
-    // function is called when the display is tapped
-    function onTap() as Void {
-        _exStatus.showLap = !_exStatus.showLap;
+    // function handles the a display mode change
+    // cycles through DISPLAY_REMAINDER, DISPLAY_TOTALS, DISPLAY_LAP
+    function handleDisplayModeChange(isNext as Boolean) as Void {
+        if (isNext) {
+            (_myRunnaView as MyRunnaView).nextDisplayMode();
+        }
+        else {
+            (_myRunnaView as MyRunnaView).previousDisplayMode();
+        }
         WatchUi.requestUpdate();
     }
 
 
-    // function is called when the display is pressed
-    function onPress() as Void {
+    // function handles a request to discard the session
+    // opens a dialogue to confirm to discard
+    function handleDiscardSession() as Void {
         if ((_session != null) && (_exStatus.isPaused)) {
             // confirm if the activity recording must be discarded
             var dialog = new WatchUi.Confirmation("Discard activity?");
@@ -110,6 +117,7 @@ class MyRunnaApp extends Application.AppBase {
 
 
     // function is called when the session has to be discarded
+    // called by the dialogue that confirms to discard
     function discardSession() as Void {
         _session.stop();
         _session.discard();
@@ -119,6 +127,7 @@ class MyRunnaApp extends Application.AppBase {
 
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
+        System.println("onStart() called");
 
         // initialise GPS 
         Position.enableLocationEvents( Position.LOCATION_CONTINUOUS, method( :onPosition ) );
@@ -131,9 +140,8 @@ class MyRunnaApp extends Application.AppBase {
             _timer = new Timer.Timer();
 
             // initialise view and delegate
-            _myRunnaView = new MyRunnaView();
-            _myRunnaView.setExerciseStatus(_exStatus);
-            _myRunnaDelegate = new MyRunnaDelegate(method(:onButton), method(:onTap), method(:onPress));
+            _myRunnaView = new MyRunnaView(_exStatus);
+            _myRunnaDelegate = new MyRunnaDelegate(method(:handlePause), method(:handleDisplayModeChange), method(:handleDiscardSession));
 
             // initialise the heart rate sensor
             Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
@@ -149,6 +157,7 @@ class MyRunnaApp extends Application.AppBase {
 
     // onStop() is called when your application is exiting
     function onStop(state as Dictionary?) as Void {
+        System.println("onStop() called");
 
         // stop the timer if initialised
         if (_timer != null) {

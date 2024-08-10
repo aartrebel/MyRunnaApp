@@ -3,50 +3,60 @@ import Toybox.WatchUi;
 import Toybox.System;
 
 class MyRunnaDelegate extends WatchUi.BehaviorDelegate {
-    var _buttonHandler as Lang.Method?;
-    var _tapHandler as Lang.Method?;
-    var _pressHandler as Lang.Method?;
+    var _pauseHandler as Lang.Method?;
+    var _displayModeChangeHandler as Lang.Method?;
+    var _discardSessionHandler as Lang.Method?;
 
 
-    function initialize(buttonHandler as Lang.Method, tapHandler as Lang.Method, pressHandler as Lang.Method) {
+    function initialize(pauseHandler as Lang.Method, displayModeChangeHandler as Lang.Method, discardSessionHandler as Lang.Method) {
         BehaviorDelegate.initialize();
-        _buttonHandler = buttonHandler;
-        _tapHandler = tapHandler;
-        _pressHandler = pressHandler;
+        _pauseHandler = pauseHandler;
+        _displayModeChangeHandler = displayModeChangeHandler;
+        _discardSessionHandler = discardSessionHandler;
     }
 
 
-    // Handle the button being pressed
-    public function onKeyPressed(evt as KeyEvent) as Boolean {
-        if (_buttonHandler != null) {
-            _buttonHandler.invoke();
+    // Handle the menu behavious
+    public function onMenu() as Boolean {
+        if (_discardSessionHandler != null) {
+            _discardSessionHandler.invoke();
+        }       return true;
+    }
+
+
+    // Handle the select behaviour
+    public function onSelect() as Boolean {
+        if (_pauseHandler != null) {
+            _pauseHandler.invoke();
         }
        return true;
     }
 
 
-    // Handle the screen being tapper
-    public function onTap(click as ClickEvent) as Boolean {
-        if ((_tapHandler != null) && (click.getType() == WatchUi.CLICK_TYPE_TAP)) {
-            _tapHandler.invoke();
+    // Handle the next page behaviour
+    public function onNextPage() as Boolean {
+        if (_displayModeChangeHandler != null) {
+            _displayModeChangeHandler.invoke(true);
         }
         return true;
     }
 
 
-    // Handle the screen being swiped
-    public function onSwipe (swipe as SwipeEvent) as Boolean {
-        System.println("Swipe " + swipe.getDirection());
-        return true;
-    }
-
-
-    // Handle the screen being pressed
-    public function onHold (click as ClickEvent) as Boolean {
-        if ((_pressHandler != null) && (click.getType() == WatchUi.CLICK_TYPE_HOLD)) {
-            _pressHandler.invoke();
+    // Handle the previous page behaviour
+    public function onPreviousPage() as Boolean {
+        if (_displayModeChangeHandler != null) {
+            _displayModeChangeHandler.invoke(true);
         }
         return true;
     }
+
+
+    // Handle the back behaviour
+    //public function onBack() as Boolean {
+    //    if (_discardSessionHandler != null) {
+    //        _discardSessionHandler.invoke();
+    //    }
+    //    return true;
+    //}
     
 }

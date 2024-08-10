@@ -5,6 +5,12 @@ import Toybox.Position;
 
 class MyRunnaView extends WatchUi.View {
 
+    enum DisplayMode {
+        DISPLAY_TOTALS,
+        DISPLAY_REMAINDER,
+        DISPLAY_LAP
+    }
+
     private const SCR_H_SIZE = 240;
     private const SCR_V_SIZE = 240;
     private const PACE_VAL_SIZE = 144;
@@ -25,9 +31,11 @@ class MyRunnaView extends WatchUi.View {
     private const PACE_UNIT_V_POS = PACE_V_POS-10;
 
     private var _status as ExerciseStatus?;
+    private var _displayMode as DisplayMode = DISPLAY_REMAINDER;
 
-    function initialize() {
+    function initialize(status as ExerciseStatus) {
         View.initialize();
+        _status = status;
     }
 
 
@@ -52,18 +60,6 @@ class MyRunnaView extends WatchUi.View {
     static public function formatDistance(meters as Double) as String {
         var kilometers = meters/1000.0;
         return kilometers.format("%1.2f");
-    }
-
-
-    // sets the exercise status reference
-    public function setExerciseStatus(status as ExerciseStatus) as Void {
-        _status = status;
-    }
-
-
-    // Callback for timer
-    public function callback() as Void {
-        WatchUi.requestUpdate();
     }
 
 
@@ -92,37 +88,44 @@ class MyRunnaView extends WatchUi.View {
 
 
     // display formatted lapsed distance in km
-    private function displayDistance(distance as Double, isPriority, showLap as Boolean, dc as Dc) as Void {
-        if (showLap) {
-            if (isPriority) {
-                dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
-            }
-            else {
+    private function displayDistance(totDist as Double, finDist as Double, lapDist as Double, isPriority as Boolean, dc as Dc) as Void {
+        if ((!isPriority) || (_displayMode == DISPLAY_TOTALS)) {
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-            }
+                dc.drawText(DIST_H_POS, DIST_V_POS, Graphics.FONT_NUMBER_HOT, formatDistance(totDist), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         }
         else {
-            dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+            if (_displayMode == DISPLAY_LAP) {
+                dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+                dc.drawText(DIST_H_POS, DIST_V_POS, Graphics.FONT_NUMBER_HOT, formatDistance(lapDist), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+            }
+            else {
+                _displayMode = DISPLAY_REMAINDER;
+                dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
+                dc.drawText(DIST_H_POS, DIST_V_POS, Graphics.FONT_NUMBER_HOT, formatDistance(finDist-lapDist), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+            }
         }
-        dc.drawText(DIST_H_POS, DIST_V_POS, Graphics.FONT_NUMBER_HOT, formatDistance(distance), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(DIST_H_POS, DIST_UNIT_V_POS, Graphics.FONT_TINY, "km", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 
     // display formatted lapsed time
-    private function displayTime(time as Number, isPriority as Boolean, showLap as Boolean, dc as Dc) as Void {
-        if (showLap) {
-            if (isPriority) {
-                dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
-            }
-            else {
+    private function displayTime(totTime as Number, finTime as Number, lapTime as Number, isPriority as Boolean, dc as Dc) as Void {
+        if ((!isPriority) || (_displayMode == DISPLAY_TOTALS)) {
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-            }
+                dc.drawText(TIME_H_POS, TIME_V_POS, Graphics.FONT_NUMBER_HOT, formatTime(totTime), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
         else {
+            if (_displayMode == DISPLAY_LAP) {
                 dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+                dc.drawText(TIME_H_POS, TIME_V_POS, Graphics.FONT_NUMBER_HOT, formatTime(lapTime), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            }
+            else {
+                _displayMode = DISPLAY_REMAINDER;
+                dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
+                dc.drawText(TIME_H_POS, TIME_V_POS, Graphics.FONT_NUMBER_HOT, formatTime(finTime-lapTime), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            }
         }
-        dc.drawText(TIME_H_POS, TIME_V_POS, Graphics.FONT_NUMBER_HOT, formatTime(time), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(DIST_H_POS, DIST_UNIT_V_POS, Graphics.FONT_TINY, "km", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 
@@ -176,6 +179,38 @@ class MyRunnaView extends WatchUi.View {
     }
 
 
+    // changes the display mode to the next
+    public function nextDisplayMode() as Void {
+        switch (_displayMode) {
+            case DISPLAY_TOTALS:
+                _displayMode = DISPLAY_LAP;
+                break;
+            case DISPLAY_REMAINDER:
+                _displayMode = DISPLAY_TOTALS;
+                break;
+            case DISPLAY_LAP:
+            default:
+                _displayMode = DISPLAY_REMAINDER;
+        }
+    }
+    
+
+    // changes the display mode to the previous
+    public function previousDisplayMode() as Void {
+        switch (_displayMode) {
+            case DISPLAY_LAP:
+                _displayMode = DISPLAY_TOTALS;
+                break;
+            case DISPLAY_REMAINDER:
+                _displayMode = DISPLAY_LAP;
+                break;
+            case DISPLAY_TOTALS:
+            default:
+                _displayMode = DISPLAY_REMAINDER;
+        }
+    }
+    
+
     // creates initial layout of the screen
     function onLayout(dc as Dc) as Void {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
@@ -197,14 +232,8 @@ class MyRunnaView extends WatchUi.View {
         dc.clear();
 
         displayPace(_status.speed, dc);
-        if (_status.showLap) {
-            displayTime(_status.lapTime, _status.isPriority(DURATION), true, dc);
-            displayDistance(_status.lapDist, _status.isPriority(DISTANCE), true, dc);
-        }
-        else {
-            displayTime(_status.totTime, _status.isPriority(NONE), false, dc);
-            displayDistance(_status.totDist, _status.isPriority(NONE), false, dc);
-        }
+        displayTime(_status.totTime, _status.finish, _status.lapTime, _status.isPriority(DURATION), dc);
+        displayDistance(_status.totDist, _status.finish.toDouble(), _status.lapDist, _status.isPriority(DISTANCE), dc);
         displayState(_status.exState, _status.exCount+1, dc);
         displaySubState(_status.isRun, _status.isPaused, _status.gpsAccuracy, dc);
     }

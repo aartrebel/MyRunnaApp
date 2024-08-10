@@ -45,6 +45,9 @@ class ExerciseStatus {
     public var totDist as Lang.Double = 0.0d;
     public var lapTime as Lang.Number = 0;
     public var lapDist as Lang.Double = 0.0d;
+    public var remTime as Lang.Number = 0;
+    public var remDist as Lang.Double = 0.0d;
+    public var finish as Lang.Number = 0;
     public var speed as Lang.Float = 0.0;
 
     public var exState as ExState = WARMUP;
@@ -59,7 +62,7 @@ class ExerciseStatus {
     private const LON = 1;
 
     // other variables
-    public var showLap as Boolean = true;
+    //public var showLap as Boolean = true;
 
 
     public function initialise() {
@@ -128,7 +131,14 @@ class ExerciseStatus {
         }
         else {
             // Start at run or rest for warmup
-            isRun = (wuExType != NONE);
+            if (wuExType != NONE) {
+                finish = wuExValue;
+                isRun = true;
+            }
+            else {
+                finish = wuReValue;
+                isRun = false;
+            }
             return true;
         }
      
@@ -187,90 +197,138 @@ class ExerciseStatus {
     }
 
 
+    // updates the state
+    private function updateState(testValue as Double, testType as ExType) as Void {
+        switch (exState) {
+            case WARMUP:
+                if (isRun) {
+                    if ((testValue >= wuExValue) && (wuExType == testType)) {
+                        lapTime = 0;
+                        lapDist = 0.0d;
+                        if (wuReType != NONE) {
+                            isRun = false;
+                            finish = wuReValue;
+                        }
+                        else {
+                            exState = EXERCISE;
+                            if (ruExType != NONE) {
+                                finish = ruExValue;
+                            }
+                            else {
+                                isRun = false;
+                                finish = ruReValue;
+                            }
+                        }
+                    }
+                }
+                else {
+                    if ((testValue >= wuReValue) && (wuReType == testType)) {
+                        lapTime = 0;
+                        lapDist = 0.0d;
+                        exState = EXERCISE;
+                        if (ruExType != NONE) {
+                            isRun = true;
+                            finish = ruExValue;
+                        }
+                        else {
+                            finish = ruReValue;
+                        }
+                    }
+                }
+                break;
+            case EXERCISE: 
+                if (isRun) {
+                    if ((testValue >= ruExValue) && (ruExType == testType)) {
+                        lapTime = 0;
+                        lapDist = 0.0d;
+                        if (ruReType != NONE) {
+                            isRun = false;
+                            finish = ruReValue;
+                        }
+                        else {
+                            exCount += 1;
+                            if (exCount == ruRepeats) {
+                                exState = COOLDOWN;
+                                if (cdExType != NONE) {
+                                    finish = cdExValue;
+                                }
+                                else {
+                                    isRun = false;
+                                    finish = cdReValue;
+                                }
+                            }
+                        }
+                    }
+                }
+                else {
+                    if ((testValue >= ruReValue) && (ruReType == testType)) {
+                        lapTime = 0;
+                        lapDist = 0.0d;
+                        exCount += 1;
+                        if (exCount == ruRepeats) {
+                            exState = COOLDOWN;
+                            if (cdExType != NONE) {
+                                isRun = true;
+                                finish = cdExValue;
+                            }
+                            else {
+                                finish = cdReValue;
+                            }
+                        }
+                        else {
+                            if (ruExType != NONE) {
+                                isRun = true;
+                                finish = ruExValue;
+                            }
+                            else {
+                                finish = ruReValue;
+                            }
+                        }
+                    }
+                }
+                break;
+            case COOLDOWN: 
+                if (isRun) {
+                    if ((testValue >= cdExValue) && (cdExType == testType)) {
+                        lapTime = 0;
+                        lapDist = 0.0d;
+                        isRun = false;
+                        if (cdReType != NONE) {
+                            finish = cdReValue;
+                        }
+                        else {
+                            exState = EXTEND;
+                            finish = 0;
+                        }
+                    }
+                }
+                else {
+                    if ((testValue >= cdReValue) && (cdReType == testType)) {
+                        lapTime = 0;
+                        lapDist = 0.0d;
+                        finish = 0;
+                        exState = EXTEND;
+                    }
+                }
+                break;
+            case EXTEND:
+            default: 
+        }
+    }
+
+
     // increments the total and exercise time with duration
     // duration is in seconds
     public function incrementTime(duration as Lang.Number) as Boolean {
         var curState = exState;
         var curSubstate = isRun;
+
         if (!isPaused) {
             totTime += duration;
             lapTime += duration;
-            switch (exState) {
-                case WARMUP:
-                    if (isRun) {
-                        if ((lapTime >= wuExValue) && (wuExType == DURATION)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            if (wuReType != NONE) {
-                                isRun = false;
-                            }
-                            else {
-                                exState = EXERCISE;
-                            }
-                        }
-                    }
-                    else {
-                        if ((lapTime >= wuReValue) && (wuReType == DURATION)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            exState = EXERCISE;
-                            isRun = (ruExType != NONE);
-                        }
-                    }
-                    break;
-                case EXERCISE: 
-                    if (isRun) {
-                        if ((lapTime >= ruExValue) && (ruExType == DURATION)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            if (ruReType != NONE) {
-                                isRun = false;
-                            }
-                            else {
-                                exCount += 1;
-                                if (exCount == ruRepeats) {
-                                    exState = COOLDOWN;
-                                }
-                            }
-                        }
-                    }
-                    else {
-                        if ((lapTime >= ruReValue) && (ruReType == DURATION)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            exCount += 1;
-                            if (exCount == ruRepeats) {
-                                exState = COOLDOWN;
-                                isRun = (cdExType != NONE);
-                            }
-                            else {
-                                isRun = (ruExType != NONE);
-                            }
-                        }
-                    }
-                    break;
-                case COOLDOWN: 
-                    if (isRun) {
-                        if ((lapTime >= cdExValue) && (cdExType == DURATION)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            isRun = false;
-                            if (cdReType == NONE) {
-                                exState = EXTEND;
-                            }
-                        }
-                    }
-                    else {
-                        if ((lapTime >= cdReValue) && (cdReType == DURATION)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            exState = EXTEND;
-                        }
-                    }
-                    break;
-                case EXTEND:
-                default: 
-            }
+
+            // test progress and update state
+            updateState(lapTime.toDouble(), DURATION);
         }
 
         // return state change
@@ -298,82 +356,8 @@ class ExerciseStatus {
             }
             prevLocation = gpsInfo.position;
 
-            switch (exState) {
-                case WARMUP:
-                    if (isRun) {
-                        if ((lapDist >= wuExValue) && (wuExType == DISTANCE)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            if (wuReType != NONE) {
-                                isRun = false;
-                            }
-                            else {
-                                exState = EXERCISE;
-                            }
-                        }
-                    }
-                    else {
-                        if ((lapDist >= wuReValue) && (wuReType == DISTANCE)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            exState = EXERCISE;
-                            isRun = (ruExType != NONE);
-                        }
-                    }
-                    break;
-                case EXERCISE: 
-                    if (isRun) {
-                        if ((lapDist >= ruExValue) && (ruExType == DISTANCE)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            if (ruReType != NONE) {
-                                isRun = false;
-                            }
-                            else {
-                                exCount += 1;
-                                if (exCount == ruRepeats) {
-                                    exState = COOLDOWN;
-                                }
-                            }
-                        }
-                    }
-                    else {
-                        if ((lapDist >= ruReValue) && (ruReType == DISTANCE)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            exCount += 1;
-                            if (exCount == ruRepeats) {
-                                exState = COOLDOWN;
-                                isRun = (cdExType != NONE);
-                            }
-                            else {
-                                isRun = (ruExType != NONE);
-                            }
-                        }
-                    }
-                    break;
-                case COOLDOWN: 
-                    if (isRun) {
-                        if ((lapDist >= cdExValue) && (cdExType == DISTANCE)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            isRun = false;
-                            if (cdReType == NONE) {
-                                exState = EXTEND;
-                            }
-                        }
-                    }
-                    else {
-                        if ((lapDist >= cdReValue) && (cdReType == DISTANCE)) {
-                            lapTime = 0;
-                            lapDist = 0.0d;
-                            exState = EXTEND;
-                        }
-                    }
-                    break;
-                case EXTEND:
-                default: 
-            }
+            // test progress and update state
+            updateState(lapDist, DISTANCE);
         }
         else { // if paused
         
