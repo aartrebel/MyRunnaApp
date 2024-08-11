@@ -59,7 +59,7 @@ class MyRunnaApp extends Application.AppBase {
 
 
     // function handles the request or cancellation of an exercise pause
-    function handlePause() as Void {
+    public function handlePause() as Void {
 
         // check if activity recording session exists and initialise if not
         if (_session == null) {
@@ -94,7 +94,7 @@ class MyRunnaApp extends Application.AppBase {
 
     // function handles the a display mode change
     // cycles through DISPLAY_REMAINDER, DISPLAY_TOTALS, DISPLAY_LAP
-    function handleDisplayModeChange(isNext as Boolean) as Void {
+    public function handleDisplayModeChange(isNext as Boolean) as Void {
         if (isNext) {
             (_myRunnaView as MyRunnaView).nextDisplayMode();
         }
@@ -107,9 +107,8 @@ class MyRunnaApp extends Application.AppBase {
 
     // function handles a request to discard the session
     // opens a dialogue to confirm to discard
-    function handleDiscardSession() as Void {
+    public function handleDiscardSession() as Void {
         if ((_session != null) && (_exStatus.isPaused)) {
-            // confirm if the activity recording must be discarded
             var dialog = new WatchUi.Confirmation("Discard activity?");
             WatchUi.pushView(dialog, new DiscardConfirmationDelegate(method(:discardSession)), WatchUi.SLIDE_IMMEDIATE);
         }
@@ -118,10 +117,27 @@ class MyRunnaApp extends Application.AppBase {
 
     // function is called when the session has to be discarded
     // called by the dialogue that confirms to discard
-    function discardSession() as Void {
+    public function discardSession() as Void {
         _session.stop();
         _session.discard();
         _session = null;
+    }
+
+
+    // function handles a request to end the activity
+    // opens a dialogue to confirm to end
+    public function handleEndActivity() as Void {
+        if (_exStatus.isPaused) {
+            var dialog = new WatchUi.Confirmation("End activity?");
+            WatchUi.pushView(dialog, new DiscardConfirmationDelegate(method(:endActivity)), WatchUi.SLIDE_IMMEDIATE);
+        }
+    }
+
+
+    // function is called when the activity is ended
+    // called by the dialogue that confirms to end
+    public function endActivity() as Void {
+        System.exit();
     }
 
 
@@ -141,7 +157,8 @@ class MyRunnaApp extends Application.AppBase {
 
             // initialise view and delegate
             _myRunnaView = new MyRunnaView(_exStatus);
-            _myRunnaDelegate = new MyRunnaDelegate(method(:handlePause), method(:handleDisplayModeChange), method(:handleDiscardSession));
+            _myRunnaDelegate = new MyRunnaDelegate(method(:handlePause), method(:handleDisplayModeChange), 
+                method(:handleDiscardSession), method(:handleEndActivity));
 
             // initialise the heart rate sensor
             Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);

@@ -2,15 +2,15 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 
 // Input handler for the confirmation dialog
-class DiscardConfirmationDelegate extends WatchUi.ConfirmationDelegate {
+class ExitConfirmationDelegate extends WatchUi.ConfirmationDelegate {
 
-    private var _discardMethod as Lang.Method?;
+    private var _exitMethod as Lang.Method?;
 
     //! Constructor
     //! @param view The app view
-    public function initialize(discardMethod as Lang.Method) {
+    public function initialize(exitMethod as Lang.Method) {
         ConfirmationDelegate.initialize();
-        _discardMethod = discardMethod;
+        _exitMethod = exitMethod;
     }
 
     //! Handle a confirmation selection
@@ -18,7 +18,7 @@ class DiscardConfirmationDelegate extends WatchUi.ConfirmationDelegate {
     //! @return true if handled, false otherwise
     public function onResponse(value as WatchUi.Confirm) as Boolean {
         if (value == WatchUi.CONFIRM_YES) {
-            _discardMethod.invoke();
+            _exitMethod.invoke();
         }
         return true;
     }

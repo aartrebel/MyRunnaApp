@@ -12,8 +12,8 @@ class SettingsErrorView extends WatchUi.View {
     function onLayout(dc as Dc) as Void {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(120, 120, Graphics.FONT_MEDIUM, "INVALID\nSETTINGS", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
+        dc.drawText(120, 120, Graphics.FONT_LARGE, "INVALID\nSETTINGS", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 
