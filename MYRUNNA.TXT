@@ -1,0 +1,34 @@
+Status[GPS]: state=1, run=false, count=0, pause=false, totT=0:01:07, lapT=0:00:47, totD=26, lapD=13, speed=0.03, gps=4
+Status[TMR]: state=1, run=false, count=0, pause=false, totT=0:01:08, lapT=0:00:48, totD=26, lapD=13, speed=0.03, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=false, totT=0:01:08, lapT=0:00:48, totD=27, lapD=13, speed=0.05, gps=4
+Status[TMR]: state=1, run=false, count=0, pause=false, totT=0:01:09, lapT=0:00:49, totD=27, lapD=13, speed=0.05, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=false, totT=0:01:09, lapT=0:00:49, totD=27, lapD=14, speed=0.04, gps=4
+Status[TMR]: state=1, run=false, count=0, pause=false, totT=0:01:10, lapT=0:00:50, totD=27, lapD=14, speed=0.04, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=false, totT=0:01:10, lapT=0:00:50, totD=27, lapD=14, speed=0.01, gps=4
+Status[TMR]: state=1, run=false, count=0, pause=false, totT=0:01:11, lapT=0:00:51, totD=27, lapD=14, speed=0.01, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=false, totT=0:01:11, lapT=0:00:51, totD=27, lapD=14, speed=0.05, gps=4
+Status[TMR]: state=1, run=false, count=0, pause=false, totT=0:01:12, lapT=0:00:52, totD=27, lapD=14, speed=0.05, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=false, totT=0:01:12, lapT=0:00:52, totD=28, lapD=15, speed=0.09, gps=4
+Status[TMR]: state=1, run=false, count=0, pause=false, totT=0:01:13, lapT=0:00:53, totD=28, lapD=15, speed=0.09, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=false, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.11, gps=4
+onKey=4
+Status[BUT]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.11, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.12, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.14, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.11, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.10, gps=4
+onRelease
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.11, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.13, gps=4
+onRelease
+onBack
+onKey=5
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.12, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.10, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.05, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.03, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.04, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.08, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.07, gps=4
+Status[GPS]: state=1, run=false, count=0, pause=true, totT=0:01:13, lapT=0:00:53, totD=29, lapD=16, speed=0.02, gps=4
+onStop() called

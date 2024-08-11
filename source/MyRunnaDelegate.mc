@@ -118,9 +118,9 @@ class MyRunnaDelegate extends WatchUi.BehaviorDelegate {
                 }
                 break;
             case KEY_ESC:
-                if (_endActivityHandler != null) {
-                    _endActivityHandler.invoke();
-                }
+                //if (_endActivityHandler != null) {
+                //    _endActivityHandler.invoke();
+                //}
                 break;
             default:
         }

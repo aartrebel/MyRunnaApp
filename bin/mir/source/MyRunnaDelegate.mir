@@ -329,22 +329,6 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_116
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 119 16 ]
         goto break @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_114_8_126_8_switchStmtEnd;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_120_12_124_21_switchCase:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 121 16 ]
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_121_16_123_16_if_stmt:
-        %tmp.30 = getv ? :_endActivityHandler;
-        %tmp.31 = null;
-        %tmp.32 = ne %tmp.30 %tmp.31;
-        bf %tmp.32 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_121_16_123_16_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_121_16_123_16_if_true:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_121_49_123_16_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 122 20 ]
-        %tmp.34 = getv ? :_endActivityHandler;
-        %tmp.35 = as %tmp.34 { (!Null) };
-        %tmp.36 = getv function %tmp.35 :invoke;
-        invoke %tmp.35 %tmp.36();
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_121_49_123_16_stop:
-        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_121_16_123_16_if_end;
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_121_16_123_16_if_end:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 124 16 ]
         goto break @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_114_8_126_8_switchStmtEnd;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_125_12_125_19_switchCase:
@@ -352,8 +336,8 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_114
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_114_8_126_8_switchStmtEnd:
         pop;
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\MyRunnaDelegate.mc" 128 8 ]
-        %tmp.37 = true;
-        ret %tmp.37;
+        %tmp.29 = true;
+        ret %tmp.29;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_MyRunnaDelegate_mc_111_54_129_4_stop:
     }
 }

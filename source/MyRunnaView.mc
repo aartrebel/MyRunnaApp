@@ -132,7 +132,8 @@ class MyRunnaView extends WatchUi.View {
     // display formatted pace in min/km
     private function displayPace(speed as Float, dc as Dc) {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        if (speed>(1.0/360.0)) {
+        
+        if (speed > (1.0/6.0)) {
             var pace = 1000.0/speed;
             dc.drawText(PACE_H_POS, PACE_V_POS, Graphics.FONT_NUMBER_HOT, formatPace(pace.toNumber()), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         }
