@@ -71,21 +71,21 @@ class ExerciseStatus {
 
     public function presetSettings() {
         // initialise settings for debugging only - should be set vir Garmin Connect
-        Properties.setValue("wuExType",DURATION);
-        Properties.setValue("wuExValue",20);
+        Properties.setValue("wuExType",DISTANCE);
+        Properties.setValue("wuExValue",100);
         Properties.setValue("wuReType",DISTANCE);
-        Properties.setValue("wuReValue",200);
+        Properties.setValue("wuReValue",110);
 
-        Properties.setValue("ruExType",DURATION);
-        Properties.setValue("ruExValue",21);
-        Properties.setValue("ruReType",DURATION);
-        Properties.setValue("ruReValue",11);
+        Properties.setValue("ruExType",DISTANCE);
+        Properties.setValue("ruExValue",120);
+        Properties.setValue("ruReType",DISTANCE);
+        Properties.setValue("ruReValue",130);
         Properties.setValue("ruRepeats",2);
 
-        Properties.setValue("cdExType",DURATION);
-        Properties.setValue("cdExValue",22);
-        Properties.setValue("cdReType",DURATION);
-        Properties.setValue("cdReValue",12);
+        Properties.setValue("cdExType",DISTANCE);
+        Properties.setValue("cdExValue",140);
+        Properties.setValue("cdReType",DISTANCE);
+        Properties.setValue("cdReValue",150);
 
         System.println("Setting preset");
     }
@@ -198,7 +198,11 @@ class ExerciseStatus {
 
 
     // updates the state
-    private function updateState(testValue as Double, testType as ExType) as Void {
+    private function updateState(testValue as Double, testType as ExType) as Boolean {
+        var curState = exState;
+        var curSubstate = isRun;
+        var curExCount = exCount;
+
         switch (exState) {
             case WARMUP:
                 if (isRun) {
@@ -314,33 +318,32 @@ class ExerciseStatus {
             case EXTEND:
             default: 
         }
+
+        // return state change
+        return ((curState != exState) || (curSubstate != isRun) || (curExCount != exCount));
+
     }
 
 
     // increments the total and exercise time with duration
     // duration is in seconds
     public function incrementTime(duration as Lang.Number) as Boolean {
-        var curState = exState;
-        var curSubstate = isRun;
-
         if (!isPaused) {
             totTime += duration;
             lapTime += duration;
 
             // test progress and update state
-            updateState(lapTime.toDouble(), DURATION);
+            return updateState(lapTime.toDouble(), DURATION);
+        }
+        else {
+            return false;
         }
 
-        // return state change
-        return ((curState != exState) || (curSubstate != isRun));
     }
 
 
     // updates the distance and pace based on an updated coordinate
     public function updatePosition(gpsInfo as Position.Info) {
-        var curState = exState;
-        var curSubstate = isRun;
-
         //update speed
         speed = gpsInfo.speed;
 
@@ -357,17 +360,16 @@ class ExerciseStatus {
             prevLocation = gpsInfo.position;
 
             // test progress and update state
-            updateState(lapDist, DISTANCE);
+            return updateState(lapDist, DISTANCE);
         }
         else { // if paused
         
             //update previous location to new
             prevLocation = gpsInfo.position;
 
-        }
+            return false;
 
-        // return state change
-        return ((curState != exState) || (curSubstate != isRun));
+        }
     }
 
 

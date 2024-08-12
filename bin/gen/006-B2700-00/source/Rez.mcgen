@@ -12,12 +12,12 @@ module Rez {
 
     module Layouts {
         function mainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_text_1138179951 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(240 * 0.5), :locY=>5, :text=>$.Rez.Strings.prompt, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
+            var rez_cmp_local_text_1695064358 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(240 * 0.5), :locY=>5, :text=>$.Rez.Strings.prompt, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
 
             var rez_cmp_local_bitmap_id_monkey = new WatchUi.Bitmap({:identifier=>"id_monkey", :rezId=>$.Rez.Drawables.id_monkey, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>30});
             rez_cmp_local_bitmap_id_monkey.setLocation(((240 - rez_cmp_local_bitmap_id_monkey.width) * 0.5), rez_cmp_local_bitmap_id_monkey.locY);
 
-            return [rez_cmp_local_text_1138179951, rez_cmp_local_bitmap_id_monkey] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_text_1695064358, rez_cmp_local_bitmap_id_monkey] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
@@ -33,16 +33,22 @@ module Rez {
 
     module Strings {
         (:initialized) var typeDur as ResourceId;
-        (:initialized) var reTypeTitle as ResourceId;
+        (:initialized) var ruGroupDescr as ResourceId;
         (:initialized) var exTypeTitle as ResourceId;
-        (:initialized) var menu_label_1 as ResourceId;
         (:initialized) var typeDist as ResourceId;
         (:initialized) var reValueTitle as ResourceId;
-        (:initialized) var menu_label_2 as ResourceId;
         (:initialized) var repeatsTitle as ResourceId;
+        (:initialized) var wuGroupTitle as ResourceId;
+        (:initialized) var cdGroupDescr as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var reTypeTitle as ResourceId;
+        (:initialized) var cdGroupTitle as ResourceId;
+        (:initialized) var menu_label_1 as ResourceId;
+        (:initialized) var ruGroupTitle as ResourceId;
+        (:initialized) var menu_label_2 as ResourceId;
+        (:initialized) var wuGroupDescr as ResourceId;
         (:initialized) var exValueTitle as ResourceId;
         (:initialized) var prompt as ResourceId;
-        (:initialized) var AppName as ResourceId;
         (:initialized) var typeNone as ResourceId;
     } // Strings
 } // Rez

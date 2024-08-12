@@ -5,12 +5,25 @@
     <string id="menu_label_1">Item 1</string>
     <string id="menu_label_2">Item 2</string>
 
+    <!-- strings for groupings -->
+    <string id="wuGroupTitle">Warmup Settings</string>
+    <string id="wuGroupDescr">Setting to configure the warmup part of the activity</string>
+    
+    <string id="ruGroupTitle">Run Settings</string>
+    <string id="ruGroupDescr">Setting to configure the run part of the activity</string>
+
+    <string id="cdGroupTitle">Cooldown Settings</string>
+    <string id="cdGroupDescr">Setting to configure the cooldown part of the activity</string>
+
+
     <!-- strings for the exercise type settings -->
     <string id="exTypeTitle">Run value type</string>
     <string id="reTypeTitle">Rest value type</string>
+
     <string id="typeDur">Duration (s)</string>
     <string id="typeDist">Distance (m)</string>
     <string id="typeNone">None</string>
+
 
     <!-- string for the exercise value settings -->
     <string id="exValueTitle">Run value (m or s)</string>
