@@ -155,7 +155,6 @@ class MyRunnaView extends WatchUi.View {
     private function displaySpeed(speed as Float, dc as Dc) {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         
-        var scaledSpeed = speed*3.6;
         dc.drawText(PACE_H_POS, PACE_V_POS, Graphics.FONT_NUMBER_HOT, formatSpeed(speed), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(PACE_H_POS, PACE_UNIT_V_POS, Graphics.FONT_TINY, "kph", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }

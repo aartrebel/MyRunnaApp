@@ -19,12 +19,13 @@ class MyRunnaApp extends Application.AppBase {
 
     // vibration profiles
     private var vibeProfile = [
-        new Attention.VibeProfile(100,300),
-        new Attention.VibeProfile(0,600),
-        new Attention.VibeProfile(100,300),
-        new Attention.VibeProfile(0,600),
-        new Attention.VibeProfile(100,300),
-        new Attention.VibeProfile(0,500)
+        new Attention.VibeProfile(100,250),
+        new Attention.VibeProfile(0,250),
+        new Attention.VibeProfile(100,250),
+        new Attention.VibeProfile(0,250),
+        new Attention.VibeProfile(100,250),
+        new Attention.VibeProfile(0,250),
+        new Attention.VibeProfile(100,250)
     ];
 
 
