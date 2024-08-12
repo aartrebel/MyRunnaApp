@@ -56,6 +56,13 @@ class MyRunnaView extends WatchUi.View {
     }
 
 
+    // formats the speed from m/s to km/h
+    static public function formatSpeed(speed as Float) as String {
+        var kph = speed*3.6;
+        return kph.format("%1.1f");
+    }
+
+
     // formats the distance from meters in kilometers
     static public function formatDistance(meters as Double) as String {
         var kilometers = meters/1000.0;
@@ -140,7 +147,17 @@ class MyRunnaView extends WatchUi.View {
         else {
             dc.drawText(PACE_H_POS, PACE_V_POS, Graphics.FONT_NUMBER_HOT, "99:59", Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         }
-        dc.drawText(PACE_H_POS, PACE_UNIT_V_POS, Graphics.FONT_TINY, "/km", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(PACE_H_POS, PACE_UNIT_V_POS, Graphics.FONT_TINY, "kph", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+
+    // display formatted speed in km/h
+    private function displaySpeed(speed as Float, dc as Dc) {
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        
+        var scaledSpeed = speed*3.6;
+        dc.drawText(PACE_H_POS, PACE_V_POS, Graphics.FONT_NUMBER_HOT, formatSpeed(speed), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(PACE_H_POS, PACE_UNIT_V_POS, Graphics.FONT_TINY, "kph", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 
@@ -232,7 +249,7 @@ class MyRunnaView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
-        displayPace(_status.speed, dc);
+        displaySpeed(_status.speed, dc);
         displayTime(_status.totTime, _status.finish, _status.lapTime, _status.isPriority(DURATION), dc);
         displayDistance(_status.totDist, _status.finish.toDouble(), _status.lapDist, _status.isPriority(DISTANCE), dc);
         displayState(_status.exState, _status.exCount+1, dc);
