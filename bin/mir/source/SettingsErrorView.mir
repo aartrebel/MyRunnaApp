@@ -1,29 +1,29 @@
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 1; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 1; ]
 import Toybox.Graphics;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 2; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 2; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 4; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 4; ]
 class SettingsErrorView extends WatchUi.View{
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 4; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 4; ]
     <init> {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 4; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 4; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 6; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 6; ]
     function initialize() as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_SettingsErrorView_mc_6_26_8_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc" 7 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_SettingsErrorView_mc_6_26_8_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc" 7 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_SettingsErrorView_mc_6_26_8_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_SettingsErrorView_mc_6_26_8_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 12; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 12; ]
     function onLayout(dc as Dc) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_SettingsErrorView_mc_12_40_17_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc" 13 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_SettingsErrorView_mc_12_40_17_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc" 13 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -31,11 +31,11 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_S
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_BLACK;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc" 14 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc" 14 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :clear;
         invoke %tmp.7 %tmp.8();
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc" 15 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc" 15 8 ]
         %tmp.9 = lgetv %dc;
         %tmp.10 = getv function %tmp.9 :setColor;
         %tmp.11 = getm $.Toybox.Graphics;
@@ -43,7 +43,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_S
         %tmp.13 = getm $.Toybox.Graphics;
         %tmp.14 = getv %tmp.13 :COLOR_BLACK;
         invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc" 16 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc" 16 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :drawText;
         %tmp.17 = 120;
@@ -57,18 +57,18 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_S
         %tmp.25 = getv %tmp.24 :TEXT_JUSTIFY_VCENTER;
         %tmp.26 = bitor %tmp.23 %tmp.25;
         invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18, %tmp.20, %tmp.21, %tmp.26);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_SettingsErrorView_mc_12_40_17_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_SettingsErrorView_mc_12_40_17_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 23; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 23; ]
     function onShow() as Void {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 28; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 28; ]
     function onUpdate(dc as Dc) as Void {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 37; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 37; ]
     function onHide() as Void {
     }
 }
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\SettingsErrorView.mc"; @line = 1; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\SettingsErrorView.mc"; @line = 1; ]
 <init> {
 }

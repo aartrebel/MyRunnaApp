@@ -71,14 +71,14 @@ class MyRunnaView extends WatchUi.View {
 
 
     // display formatted exercise state
-    private function displayState(state as ExState, count as Number, dc as Dc) as Void {
+    private function displayState(state as ExState, count as Number, target as Number, dc as Dc) as Void {
         var stateText;
         switch (state) {
             case WARMUP:
                 stateText = "WARM";
                 break;
             case EXERCISE:
-                stateText = "EX" + count.format("%2u");
+                stateText = "EX " + count.format("%1u") + "/" + target.format("%1u");
                 break;
             case COOLDOWN:
                 stateText = "COOL";
@@ -251,7 +251,7 @@ class MyRunnaView extends WatchUi.View {
         displaySpeed(_status.speed, dc);
         displayTime(_status.totTime, _status.finish, _status.lapTime, _status.isPriority(DURATION), dc);
         displayDistance(_status.totDist, _status.finish.toDouble(), _status.lapDist, _status.isPriority(DISTANCE), dc);
-        displayState(_status.exState, _status.exCount+1, dc);
+        displayState(_status.exState, _status.exCount+1, _status.ruRepeats, dc);
         displaySubState(_status.isRun, _status.isPaused, _status.gpsAccuracy, dc);
     }
 

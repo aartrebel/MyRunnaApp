@@ -71,21 +71,21 @@ class ExerciseStatus {
 
     public function presetSettings() {
         // initialise settings for debugging only - should be set vir Garmin Connect
-        Properties.setValue("wuExType",DISTANCE);
-        Properties.setValue("wuExValue",100);
-        Properties.setValue("wuReType",DISTANCE);
-        Properties.setValue("wuReValue",110);
+        Properties.setValue("wuExType",NONE);
+        Properties.setValue("wuExValue",19);
+        Properties.setValue("wuReType",DURATION);
+        Properties.setValue("wuReValue",20);
 
-        Properties.setValue("ruExType",DISTANCE);
-        Properties.setValue("ruExValue",120);
-        Properties.setValue("ruReType",DISTANCE);
-        Properties.setValue("ruReValue",130);
-        Properties.setValue("ruRepeats",2);
+        Properties.setValue("ruExType",DURATION);
+        Properties.setValue("ruExValue",21);
+        Properties.setValue("ruReType",DURATION);
+        Properties.setValue("ruReValue",22);
+        Properties.setValue("ruRepeats",20);
 
-        Properties.setValue("cdExType",DISTANCE);
-        Properties.setValue("cdExValue",140);
-        Properties.setValue("cdReType",DISTANCE);
-        Properties.setValue("cdReValue",150);
+        Properties.setValue("cdExType",NONE);
+        Properties.setValue("cdExValue",23);
+        Properties.setValue("cdReType",DURATION);
+        Properties.setValue("cdReValue",24);
 
         System.println("Setting preset");
     }
