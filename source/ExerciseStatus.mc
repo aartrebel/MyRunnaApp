@@ -62,30 +62,31 @@ class ExerciseStatus {
     private const LON = 1;
 
     // other variables
-    //public var showLap as Boolean = true;
+    private var _filter as FIRFilter?;
 
 
-    public function initialise() {
+    public function initialize() {
+        _filter = new FIRFilter(FIR_AVERAGE_OFF_10_FILTER);
     }
 
 
     public function presetSettings() {
         // initialise settings for debugging only - should be set vir Garmin Connect
         Properties.setValue("wuExType",NONE);
-        Properties.setValue("wuExValue",19);
+        Properties.setValue("wuExValue",0);
         Properties.setValue("wuReType",DURATION);
-        Properties.setValue("wuReValue",20);
+        Properties.setValue("wuReValue",300);
 
         Properties.setValue("ruExType",DURATION);
-        Properties.setValue("ruExValue",21);
+        Properties.setValue("ruExValue",240);
         Properties.setValue("ruReType",DURATION);
-        Properties.setValue("ruReValue",22);
-        Properties.setValue("ruRepeats",20);
+        Properties.setValue("ruReValue",60);
+        Properties.setValue("ruRepeats",5);
 
         Properties.setValue("cdExType",NONE);
-        Properties.setValue("cdExValue",23);
+        Properties.setValue("cdExValue",0);
         Properties.setValue("cdReType",DURATION);
-        Properties.setValue("cdReValue",24);
+        Properties.setValue("cdReValue",300);
 
         System.println("Setting preset");
     }
@@ -328,6 +329,7 @@ class ExerciseStatus {
     // increments the total and exercise time with duration
     // duration is in seconds
     public function incrementTime(duration as Lang.Number) as Boolean {
+
         if (!isPaused) {
             totTime += duration;
             lapTime += duration;
@@ -344,11 +346,13 @@ class ExerciseStatus {
 
     // updates the distance and pace based on an updated coordinate
     public function updatePosition(gpsInfo as Position.Info) {
-        //update speed
-        speed = gpsInfo.speed;
-
         //update GPS quality
         gpsAccuracy = gpsInfo.accuracy;
+
+        //update speed
+        if (gpsAccuracy >= Position.QUALITY_POOR) {
+            speed = _filter.process(gpsInfo.speed);
+        }
 
         if (!isPaused) {
             // update distance travelled
