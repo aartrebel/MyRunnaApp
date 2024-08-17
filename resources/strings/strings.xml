@@ -17,8 +17,8 @@
 
 
     <!-- strings for the exercise type settings -->
-    <string id="exTypeTitle">Run value type</string>
-    <string id="reTypeTitle">Rest value type</string>
+    <string id="exTypeTitle">Exercise length type</string>
+    <string id="reTypeTitle">Rest length type</string>
 
     <string id="typeDur">Duration (s)</string>
     <string id="typeDist">Distance (m)</string>
@@ -26,8 +26,8 @@
 
 
     <!-- string for the exercise value settings -->
-    <string id="exValueTitle">Run value (m or s)</string>
-    <string id="reValueTitle">Rest value (m or s)</string>
+    <string id="exValueTitle">Exercise length (meters or seconds)</string>
+    <string id="reValueTitle">Rest length (meters or seconds)</string>
     
     <!-- string for the repeats settings -->
     <string id="repeatsTitle">Repeats</string>

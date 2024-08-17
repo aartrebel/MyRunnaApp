@@ -151,7 +151,7 @@ class MyRunnaApp extends Application.AppBase {
 
         // initialise exercise status
         _exStatus = new ExerciseStatus();    
-        _exStatus.presetSettings();   
+        //_exStatus.presetSettings();   
         if (_exStatus.loadSettings()) {
             // initialise timer
             _timer = new Timer.Timer();

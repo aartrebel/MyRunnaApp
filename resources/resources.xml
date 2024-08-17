@@ -34,7 +34,7 @@
                 </settingConfig>
             </setting>
 
-            <setting propertyKey="@Properties.wuExValue" title="Strings.exValueTitle">
+            <setting propertyKey="@Properties.wuExValue" title="@Strings.exValueTitle">
                 <settingConfig type="numeric"/>
             </setting>
 
@@ -46,7 +46,7 @@
                 </settingConfig>
             </setting>
 
-            <setting propertyKey="@Properties.wuReValue" title="Strings.reValueTitle">
+            <setting propertyKey="@Properties.wuReValue" title="@Strings.reValueTitle">
                 <settingConfig type="numeric"/>
             </setting>
 
@@ -63,7 +63,7 @@
                 </settingConfig>
             </setting>
 
-            <setting propertyKey="@Properties.ruExValue" title="Strings.exValueTitle">
+            <setting propertyKey="@Properties.ruExValue" title="@Strings.exValueTitle">
                 <settingConfig type="numeric"/>
             </setting>
 
@@ -75,11 +75,11 @@
                 </settingConfig>
             </setting>
 
-            <setting propertyKey="@Properties.ruReValue" title="Strings.reValueTitle">
+            <setting propertyKey="@Properties.ruReValue" title="@Strings.reValueTitle">
                 <settingConfig type="numeric"/>
             </setting>
 
-            <setting propertyKey="@Properties.ruRepeats" title="Strings.repeatsTitle">
+            <setting propertyKey="@Properties.ruRepeats" title="@Strings.repeatsTitle">
                 <settingConfig type="numeric"/>
             </setting>
 
@@ -96,7 +96,7 @@
                 </settingConfig>
             </setting>
 
-            <setting propertyKey="@Properties.cdExValue" title="Strings.exValueTitle">
+            <setting propertyKey="@Properties.cdExValue" title="@Strings.exValueTitle">
                 <settingConfig type="numeric"/>
             </setting>
 
@@ -108,7 +108,7 @@
                 </settingConfig>
             </setting>
 
-            <setting propertyKey="@Properties.cdReValue" title="Strings.reValueTitle">
+            <setting propertyKey="@Properties.cdReValue" title="@Strings.reValueTitle">
                 <settingConfig type="numeric"/>
             </setting>
 

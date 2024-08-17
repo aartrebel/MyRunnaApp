@@ -706,7 +706,7 @@
 <entry arg="true" endPc="268444462" name="value" stackId="1" startPc="268444426"/>
 <entry arg="true" endPc="268444493" name="exitMethod" stackId="1" startPc="268444463"/>
 <entry arg="true" endPc="268444808" name="dc" stackId="1" startPc="268444494"/>
-<entry endPc="268444808" name="rez_cmp_local_text_1066305731" stackId="2" startPc="268444506"/>
+<entry endPc="268444808" name="rez_cmp_local_text_1113138316" stackId="2" startPc="268444506"/>
 <entry endPc="268444808" name="rez_cmp_local_bitmap_id_monkey" stackId="3" startPc="268444506"/>
 </localVars>
 <deviceInfo partNumber="006-B2700-00"/>
