@@ -2,23 +2,23 @@
     <properties>
 
         <!-- properties for the warm-up -->
-        <property id="wuExType" type="number">1</property>
-        <property id="wuExValue" type="number">10</property>
-        <property id="wuReType" type="number">0</property>
-        <property id="wuReValue" type="number">10</property>
+        <property id="wuExType" type="number">0</property>
+        <property id="wuExValue" type="number">0</property>
+        <property id="wuReType" type="number">1</property>
+        <property id="wuReValue" type="number">60</property>
 
         <!-- properties for the exercise -->
         <property id="ruExType" type="number">01</property>
-        <property id="ruExValue" type="number">10</property>
+        <property id="ruExValue" type="number">300</property>
         <property id="ruReType" type="number">1</property>
-        <property id="ruReValue" type="number">10</property>
+        <property id="ruReValue" type="number">60</property>
         <property id="ruRepeats" type="number">3</property>
 
         <!-- properties for the warm-down -->
-        <property id="cdExType" type="number">1</property>
-        <property id="cdExValue" type="number">10</property>
-        <property id="cdReType" type="number">0</property>
-        <property id="cdReValue" type="number">10</property>
+        <property id="cdExType" type="number">0</property>
+        <property id="cdExValue" type="number">0</property>
+        <property id="cdReType" type="number">1</property>
+        <property id="cdReValue" type="number">60</property>
     </properties>
 
     <settings>

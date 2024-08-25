@@ -3,6 +3,9 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.Position;
 import Toybox.Math;
+import Toybox.UserProfile;
+//import Toybox.Sensor;
+import Toybox.Activity;
 
 public enum ExState {
     WARMUP = 1,
@@ -49,6 +52,7 @@ class ExerciseStatus {
     public var remDist as Lang.Double = 0.0d;
     public var finish as Lang.Number = 0;
     public var speed as Lang.Float = 0.0;
+    public var heartRate as Number = 0;
 
     public var exState as ExState = WARMUP;
     public var isRun as Lang.Boolean = true;
@@ -63,10 +67,14 @@ class ExerciseStatus {
 
     // other variables
     private var _filter as FIRFilter?;
+    public var heartRateZones as Array<Number>;
 
 
     public function initialize() {
         _filter = new FIRFilter(FIR_AVERAGE_OFF_10_FILTER);
+        heartRateZones = UserProfile.getHeartRateZones(UserProfile.HR_ZONE_SPORT_RUNNING);
+        //heartRateZones = [87, 104, 121, 138, 156, 173];
+        //heartRateZones = [0, 104, 121, 138, 156, 173];
     }
 
 
@@ -330,17 +338,21 @@ class ExerciseStatus {
     // duration is in seconds
     public function incrementTime(duration as Lang.Number) as Boolean {
 
-        if (!isPaused) {
-            totTime += duration;
-            lapTime += duration;
+        // update lap time and total duration
+        totTime += duration;
+        lapTime += duration;
 
-            // test progress and update state
-            return updateState(lapTime.toDouble(), DURATION);
-        }
-        else {
-            return false;
-        }
+        // test progress and update state
+        return updateState(lapTime.toDouble(), DURATION);
+    }
 
+
+    // updates the activity data
+    public function updateActivity(info as Activity.Info) as Void {
+        // update heart rate
+        if (info.currentHeartRate != null) {
+            heartRate = info.currentHeartRate;
+        }
     }
 
 

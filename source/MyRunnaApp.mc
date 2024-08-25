@@ -8,10 +8,12 @@ import Toybox.Attention;
 import Toybox.Sensor;
 import Toybox.ActivityRecording;
 import Toybox.WatchUi;
+import Toybox.Activity;
 
 
 class MyRunnaApp extends Application.AppBase {
     private var _timer as Timer.Timer?;
+    //private var _updateTimer as Timer.Timer?;
     private var _exStatus as ExerciseStatus?;
     private var _myRunnaView as WatchUi.View?;
     private var _myRunnaDelegate as WatchUi.InputDelegate?;
@@ -36,10 +38,16 @@ class MyRunnaApp extends Application.AppBase {
 
     // function that is called each second
     function onSecond () as Void {
-        if (_exStatus.incrementTime(1)) { // state change
-            Attention.vibrate(vibeProfile);
-            _session.addLap();
+        // update duration if not paused 
+        if (!_exStatus.isPaused) {
+            if (_exStatus.incrementTime(1)) { // state change
+                Attention.vibrate(vibeProfile);
+                _session.addLap();
+            }
         }
+
+        // update activity data
+        _exStatus.updateActivity(Activity.getActivityInfo());
 
         _exStatus.printStatus("TMR");
         WatchUi.requestUpdate();
@@ -50,38 +58,42 @@ class MyRunnaApp extends Application.AppBase {
     // function that is called for each GPS update
     function onPosition( info as Position.Info ) as Void {
         if (_exStatus.updatePosition(info)) {
+            WatchUi.requestUpdate();
             Attention.vibrate(vibeProfile);
             _session.addLap();
         }
 
         _exStatus.printStatus("GPS");
-        WatchUi.requestUpdate();
     }
 
 
     // function handles the request or cancellation of an exercise pause
     public function handlePause() as Void {
 
-        // check if activity recording session exists and initialise if not
-        if (_session == null) {
-            _session = ActivityRecording.createSession(
-                {          
-                    :name=>"Interval Running",
-                    :sport=>Activity.SPORT_RUNNING,
-                    :subSport=>Activity.SUB_SPORT_GENERIC
-                }
-            );
-        }
-
         // handle the pause button
         if (_exStatus.isPaused) {
-            _timer.start(method(:onSecond), 1000, true);
+            // check if activity recording session exists and initialise if not
+            if (_session == null) {
+                _session = ActivityRecording.createSession(
+                    {          
+                        :name=>"Interval Running",
+                        :sport=>Activity.SPORT_RUNNING,
+                        :subSport=>Activity.SUB_SPORT_GENERIC
+                    }
+                );
+            }
+
+            // start/restart recording
             if (!_session.isRecording()) {
                 _session.start();
             } 
+
+            // restart timer
+            _timer.stop(); 
+            _timer.start(method(:onSecond), 1000, true);
         }
         else {
-            _timer.stop();
+            // pause recording
             if (_session.isRecording()) {
                 _session.stop();
             }
@@ -97,10 +109,10 @@ class MyRunnaApp extends Application.AppBase {
     // cycles through DISPLAY_REMAINDER, DISPLAY_TOTALS, DISPLAY_LAP
     public function handleDisplayModeChange(isNext as Boolean) as Void {
         if (isNext) {
-            (_myRunnaView as MyRunnaView).nextDisplayMode();
+            (_myRunnaView as MyRunnaView).toggleSpeedOrHR();
         }
         else {
-            (_myRunnaView as MyRunnaView).previousDisplayMode();
+            (_myRunnaView as MyRunnaView).nextDisplayMode();
         }
         WatchUi.requestUpdate();
     }
@@ -129,7 +141,12 @@ class MyRunnaApp extends Application.AppBase {
     // opens a dialogue to confirm to end
     public function handleEndActivity() as Void {
         if (_exStatus.isPaused) {
-            var dialog = new WatchUi.Confirmation("End activity?");
+            var dialog;
+            if (_session != null) {
+                dialog = new WatchUi.Confirmation("End and save activity?");
+            } else {
+                dialog = new WatchUi.Confirmation("End activity?\n(nothing to save)");
+            }
             WatchUi.pushView(dialog, new DiscardConfirmationDelegate(method(:endActivity)), WatchUi.SLIDE_IMMEDIATE);
         }
     }
@@ -155,6 +172,7 @@ class MyRunnaApp extends Application.AppBase {
         if (_exStatus.loadSettings()) {
             // initialise timer
             _timer = new Timer.Timer();
+            _timer.start(method(:onSecond), 1000, true);
 
             // initialise view and delegate
             _myRunnaView = new MyRunnaView(_exStatus);
