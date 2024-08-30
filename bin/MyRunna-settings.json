@@ -8,7 +8,7 @@
       "entries" : [ {
         "key" : "wuExType",
         "valueType" : "number",
-        "defaultValue" : 1,
+        "defaultValue" : 0,
         "configTitle" : "exTypeTitle",
         "configPrompt" : null,
         "configType" : "list",
@@ -32,7 +32,7 @@
       }, {
         "key" : "wuExValue",
         "valueType" : "number",
-        "defaultValue" : 10,
+        "defaultValue" : 0,
         "configTitle" : "exValueTitle",
         "configPrompt" : null,
         "configType" : "numeric",
@@ -47,7 +47,7 @@
       }, {
         "key" : "wuReType",
         "valueType" : "number",
-        "defaultValue" : 0,
+        "defaultValue" : 1,
         "configTitle" : "reTypeTitle",
         "configPrompt" : null,
         "configType" : "list",
@@ -71,7 +71,7 @@
       }, {
         "key" : "wuReValue",
         "valueType" : "number",
-        "defaultValue" : 10,
+        "defaultValue" : 60,
         "configTitle" : "reValueTitle",
         "configPrompt" : null,
         "configType" : "numeric",
@@ -118,7 +118,7 @@
       }, {
         "key" : "ruExValue",
         "valueType" : "number",
-        "defaultValue" : 10,
+        "defaultValue" : 300,
         "configTitle" : "exValueTitle",
         "configPrompt" : null,
         "configType" : "numeric",
@@ -157,7 +157,7 @@
       }, {
         "key" : "ruReValue",
         "valueType" : "number",
-        "defaultValue" : 10,
+        "defaultValue" : 60,
         "configTitle" : "reValueTitle",
         "configPrompt" : null,
         "configType" : "numeric",
@@ -195,7 +195,7 @@
       "entries" : [ {
         "key" : "cdExType",
         "valueType" : "number",
-        "defaultValue" : 1,
+        "defaultValue" : 0,
         "configTitle" : "exTypeTitle",
         "configPrompt" : null,
         "configType" : "list",
@@ -219,7 +219,7 @@
       }, {
         "key" : "cdExValue",
         "valueType" : "number",
-        "defaultValue" : 10,
+        "defaultValue" : 0,
         "configTitle" : "exValueTitle",
         "configPrompt" : null,
         "configType" : "numeric",
@@ -234,7 +234,7 @@
       }, {
         "key" : "cdReType",
         "valueType" : "number",
-        "defaultValue" : 0,
+        "defaultValue" : 1,
         "configTitle" : "reTypeTitle",
         "configPrompt" : null,
         "configType" : "list",
@@ -258,7 +258,7 @@
       }, {
         "key" : "cdReValue",
         "valueType" : "number",
-        "defaultValue" : 10,
+        "defaultValue" : 60,
         "configTitle" : "reValueTitle",
         "configPrompt" : null,
         "configType" : "numeric",

@@ -34,26 +34,26 @@ class ExerciseInputView extends ValueInputView {
     //private var _innerRadius as Float = 0.0;
     //private var _indexOf0 as Number = 0;
 
-    private var _currentExType as ExType?;
+    private var _currentExType as ExerciseSettings.ExType?;
     private var _currentTitle as String?;
 
 
-    function initialize(currentExType as ExType, delegate as ExerciseInputDelegate) {
+    function initialize(currentExType as ExerciseSettings.ExType, delegate as ExerciseInputDelegate) {
         _currentExType = currentExType;
 
         switch (_currentExType) {
-            case DURATION:
+            case ExerciseSettings.TYPE_DURATION:
                 _currentTitle = DUR_TITLE;
                 ValueInputView.initialize(ValueInputView.INPUT_TIME, DUR_TITLE, DUR_UNIT, DUR_MAX, method(:onDone), delegate);
                 break;
-            case DISTANCE:
+            case ExerciseSettings.TYPE_DISTANCE:
                 _currentTitle = DIST_TITLE;
                 ValueInputView.initialize(ValueInputView.INPUT_NUMBER, DIST_TITLE, DIST_UNIT, DIST_MAX, method(:onDone), delegate);
                 break;
-            case NONE:
+            case ExerciseSettings.TYPE_NONE:
             default:
                 _currentTitle = NONE_TITLE;
-                _currentExType = NONE;
+                _currentExType = ExerciseSettings.TYPE_NONE;
                 //ValueInputView.initialize(null, null, null, delegate);
         }
 
@@ -64,17 +64,17 @@ class ExerciseInputView extends ValueInputView {
     // function changes the input mode to the next
     public function onNextPage() as Void {
         switch (_currentExType) {
-            case DURATION:
-                _currentExType = DISTANCE;
+            case ExerciseSettings.TYPE_DURATION:
+                _currentExType = ExerciseSettings.TYPE_DISTANCE;
                 ValueInputView.updateParams(ValueInputView.INPUT_TIME, DIST_TITLE, DIST_UNIT, DIST_MAX);
                 break;
-            case DISTANCE:
-                _currentExType = NONE;
+            case ExerciseSettings.TYPE_DISTANCE:
+                _currentExType = ExerciseSettings.TYPE_NONE;
                 //ValueInputView.updateParams(null, null, null);
                 break;
-            case NONE:
+            case ExerciseSettings.TYPE_NONE:
             default:
-                _currentExType = DURATION;
+                _currentExType = ExerciseSettings.TYPE_DURATION;
                 ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, DUR_TITLE, DUR_UNIT, DUR_MAX);
         }
     }
@@ -83,17 +83,17 @@ class ExerciseInputView extends ValueInputView {
     // function changes the input mode to the previous
     public function onPreviousPage() as Void {
         switch (_currentExType) {
-            case DURATION:
-                _currentExType = NONE;
+            case ExerciseSettings.TYPE_DURATION:
+                _currentExType = ExerciseSettings.TYPE_NONE;
                 //ValueInputView.updateParams(null, null, null);
                 break;
-            case DISTANCE:
-                _currentExType = DURATION;
+            case ExerciseSettings.TYPE_DISTANCE:
+                _currentExType = ExerciseSettings.TYPE_DURATION;
                 ValueInputView.updateParams(ValueInputView.INPUT_TIME, DUR_TITLE, DUR_UNIT, DUR_MAX);
                 break;
-            case NONE:
+            case ExerciseSettings.TYPE_NONE:
             default:
-                _currentExType = DISTANCE;
+                _currentExType = ExerciseSettings.TYPE_DISTANCE;
                 ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, DIST_TITLE, DIST_UNIT, DIST_MAX);
         }
     }
@@ -146,13 +146,13 @@ class ExerciseInputView extends ValueInputView {
         //}
 
         switch (_currentExType) {
-            case DURATION:
+            case ExerciseSettings.TYPE_DURATION:
                 ValueInputView.onLayout(dc);
                 break;
-            case DISTANCE:
+            case ExerciseSettings.TYPE_DISTANCE:
                 ValueInputView.onLayout(dc);
                 break;
-            case NONE:
+            case ExerciseSettings.TYPE_NONE:
             default: {
                 
             }

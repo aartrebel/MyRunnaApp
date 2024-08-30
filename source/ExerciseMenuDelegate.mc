@@ -27,7 +27,7 @@ class ExerciseMenuDelegate extends WatchUi.Menu2InputDelegate {
         if (menuItem.equals(DISCARD_ITEM)) {
         } else if (menuItem.equals(WARMUP_RUN_ITEM)) {
             var delegate = new ExerciseInputDelegate();
-            var view = new ExerciseInputView(DISTANCE, delegate);
+            var view = new ExerciseInputView(ExerciseSettings.TYPE_DISTANCE, delegate);
             WatchUi.pushView(view, delegate, WatchUi.SLIDE_UP);
         } else if (menuItem.equals(WARMUP_WALK_ITEM)) {
 

@@ -1,0 +1,533 @@
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 2; ]
+import Toybox.Application;
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 4; ]
+class ExerciseSettings{
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 4; ]
+    <init> {
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 13 15 ]
+        %tmp.2 = getv ? :TYPE_NONE;
+        putv self :wuExType %tmp.2;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 15 15 ]
+        %tmp.4 = getv ? :TYPE_NONE;
+        putv self :wuReType %tmp.4;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 18 15 ]
+        %tmp.6 = getv ? :TYPE_NONE;
+        putv self :ruExType %tmp.6;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 20 15 ]
+        %tmp.8 = getv ? :TYPE_NONE;
+        putv self :ruReType %tmp.8;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 24 15 ]
+        %tmp.10 = getv ? :TYPE_NONE;
+        putv self :cdExType %tmp.10;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 26 15 ]
+        %tmp.12 = getv ? :TYPE_NONE;
+        putv self :cdReType %tmp.12;
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 6; ]
+    public static
+    enum ExType {
+        [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 7; @position = 8; ]
+        TYPE_NONE = 0,
+        [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 8; @position = 8; ]
+        TYPE_DURATION = 1,
+        [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 9; @position = 8; ]
+        TYPE_DISTANCE = 2
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 13; @position = 15; ]
+    public
+    var wuExType as ExType;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 14; @position = 15; ]
+    public
+    var wuExValue as Number = 0;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 15; @position = 15; ]
+    public
+    var wuReType as ExType;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 16; @position = 15; ]
+    public
+    var wuReValue as Number = 0;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 18; @position = 15; ]
+    public
+    var ruExType as ExType;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 19; @position = 15; ]
+    public
+    var ruExValue as Number = 0;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 20; @position = 15; ]
+    public
+    var ruReType as ExType;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 21; @position = 15; ]
+    public
+    var ruReValue as Number = 0;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 22; @position = 15; ]
+    public
+    var ruRepeats as Number = 0;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 24; @position = 15; ]
+    public
+    var cdExType as ExType;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 25; @position = 15; ]
+    public
+    var cdExValue as Number = 0;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 26; @position = 15; ]
+    public
+    var cdReType as ExType;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 27; @position = 15; ]
+    public
+    var cdReValue as Number = 0;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 31; ]
+    public
+    function presetSettings() {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_31_37_48_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 33 8 ]
+        %tmp.2 = getv ? :Properties;
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.4 = "wuExType";
+        %tmp.6 = getv ? :TYPE_NONE;
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.6);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 34 8 ]
+        %tmp.8 = getv ? :Properties;
+        %tmp.9 = getv function %tmp.8 :setValue;
+        %tmp.10 = "wuExValue";
+        %tmp.11 = 0;
+        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 35 8 ]
+        %tmp.13 = getv ? :Properties;
+        %tmp.14 = getv function %tmp.13 :setValue;
+        %tmp.15 = "wuReType";
+        %tmp.17 = getv ? :TYPE_DURATION;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.17);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 36 8 ]
+        %tmp.19 = getv ? :Properties;
+        %tmp.20 = getv function %tmp.19 :setValue;
+        %tmp.21 = "wuReValue";
+        %tmp.22 = 300;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 38 8 ]
+        %tmp.24 = getv ? :Properties;
+        %tmp.25 = getv function %tmp.24 :setValue;
+        %tmp.26 = "ruExType";
+        %tmp.28 = getv ? :TYPE_DURATION;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.28);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 39 8 ]
+        %tmp.30 = getv ? :Properties;
+        %tmp.31 = getv function %tmp.30 :setValue;
+        %tmp.32 = "ruExValue";
+        %tmp.33 = 240;
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.33);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 40 8 ]
+        %tmp.35 = getv ? :Properties;
+        %tmp.36 = getv function %tmp.35 :setValue;
+        %tmp.37 = "ruReType";
+        %tmp.39 = getv ? :TYPE_DURATION;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.39);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 41 8 ]
+        %tmp.41 = getv ? :Properties;
+        %tmp.42 = getv function %tmp.41 :setValue;
+        %tmp.43 = "ruReValue";
+        %tmp.44 = 60;
+        invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 42 8 ]
+        %tmp.46 = getv ? :Properties;
+        %tmp.47 = getv function %tmp.46 :setValue;
+        %tmp.48 = "ruRepeats";
+        %tmp.49 = 5;
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 44 8 ]
+        %tmp.51 = getv ? :Properties;
+        %tmp.52 = getv function %tmp.51 :setValue;
+        %tmp.53 = "cdExType";
+        %tmp.55 = getv ? :TYPE_NONE;
+        invoke %tmp.51 %tmp.52(%tmp.53, %tmp.55);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 45 8 ]
+        %tmp.57 = getv ? :Properties;
+        %tmp.58 = getv function %tmp.57 :setValue;
+        %tmp.59 = "cdExValue";
+        %tmp.60 = 0;
+        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.60);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 46 8 ]
+        %tmp.62 = getv ? :Properties;
+        %tmp.63 = getv function %tmp.62 :setValue;
+        %tmp.64 = "cdReType";
+        %tmp.66 = getv ? :TYPE_DURATION;
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.66);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 47 8 ]
+        %tmp.68 = getv ? :Properties;
+        %tmp.69 = getv function %tmp.68 :setValue;
+        %tmp.70 = "cdReValue";
+        %tmp.71 = 300;
+        invoke %tmp.68 %tmp.69(%tmp.70, %tmp.71);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_31_37_48_4_stop:
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 52; ]
+    public
+    function loadSettings() as Boolean {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_52_46_88_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 54 8 ]
+        %tmp.2 = getv ? :Properties;
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "wuExType";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = as %tmp.5 ExType;
+        putv self :wuExType %tmp.6;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 55 8 ]
+        %tmp.8 = getv ? :Properties;
+        %tmp.9 = getv function %tmp.8 :getValue;
+        %tmp.10 = "wuExValue";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        putv self :wuExValue %tmp.11;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 56 8 ]
+        %tmp.13 = getv ? :Properties;
+        %tmp.14 = getv function %tmp.13 :getValue;
+        %tmp.15 = "wuReType";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = as %tmp.16 ExType;
+        putv self :wuReType %tmp.17;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 57 8 ]
+        %tmp.19 = getv ? :Properties;
+        %tmp.20 = getv function %tmp.19 :getValue;
+        %tmp.21 = "wuReValue";
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        putv self :wuReValue %tmp.22;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 59 8 ]
+        %tmp.24 = getv ? :Properties;
+        %tmp.25 = getv function %tmp.24 :getValue;
+        %tmp.26 = "ruExType";
+        %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
+        %tmp.28 = as %tmp.27 ExType;
+        putv self :ruExType %tmp.28;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 60 8 ]
+        %tmp.30 = getv ? :Properties;
+        %tmp.31 = getv function %tmp.30 :getValue;
+        %tmp.32 = "ruExValue";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        putv self :ruExValue %tmp.33;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 61 8 ]
+        %tmp.35 = getv ? :Properties;
+        %tmp.36 = getv function %tmp.35 :getValue;
+        %tmp.37 = "ruReType";
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        %tmp.39 = as %tmp.38 ExType;
+        putv self :ruReType %tmp.39;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 62 8 ]
+        %tmp.41 = getv ? :Properties;
+        %tmp.42 = getv function %tmp.41 :getValue;
+        %tmp.43 = "ruReValue";
+        %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+        putv self :ruReValue %tmp.44;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 63 8 ]
+        %tmp.46 = getv ? :Properties;
+        %tmp.47 = getv function %tmp.46 :getValue;
+        %tmp.48 = "ruRepeats";
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        putv self :ruRepeats %tmp.49;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 65 8 ]
+        %tmp.51 = getv ? :Properties;
+        %tmp.52 = getv function %tmp.51 :getValue;
+        %tmp.53 = "cdExType";
+        %tmp.54 = invoke %tmp.51 %tmp.52(%tmp.53);
+        %tmp.55 = as %tmp.54 ExType;
+        putv self :cdExType %tmp.55;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 66 8 ]
+        %tmp.57 = getv ? :Properties;
+        %tmp.58 = getv function %tmp.57 :getValue;
+        %tmp.59 = "cdExValue";
+        %tmp.60 = invoke %tmp.57 %tmp.58(%tmp.59);
+        putv self :cdExValue %tmp.60;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 67 8 ]
+        %tmp.62 = getv ? :Properties;
+        %tmp.63 = getv function %tmp.62 :getValue;
+        %tmp.64 = "cdReType";
+        %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+        %tmp.66 = as %tmp.65 ExType;
+        putv self :cdReType %tmp.66;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 68 8 ]
+        %tmp.68 = getv ? :Properties;
+        %tmp.69 = getv function %tmp.68 :getValue;
+        %tmp.70 = "cdReValue";
+        %tmp.71 = invoke %tmp.68 %tmp.69(%tmp.70);
+        putv self :cdReValue %tmp.71;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 71 8 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_52_46_88_4_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_52_46_88_4_stop" ]
+        %isSettingsError.1 = local;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_86_39_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_85_38_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_84_38_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_83_38_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_82_38_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_81_38_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_80_38_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_79_68_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_78_68_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_77_68_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_76_68_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_75_68_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_74_68_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_73_75_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_72_75_begin:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_33_71_82_begin:
+        %tmp.73 = getv ? :wuExType;
+        %tmp.75 = getv ? :TYPE_NONE;
+        %tmp.76 = eq %tmp.73 %tmp.75;
+        %tmp.77 = dup %tmp.76;
+        bf %tmp.77 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_60_71_82_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_60_71_82_true:
+        %tmp.79 = getv ? :wuReType;
+        %tmp.81 = getv ? :TYPE_NONE;
+        %tmp.82 = eq %tmp.79 %tmp.81;
+        %tmp.83 = and %tmp.76 %tmp.82;
+        push %tmp.83;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_60_71_82_end:
+        %tmp.84 = phi [%tmp.77 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_33_71_82_begin] [%tmp.83 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_60_71_82_true] [%tmp.84 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_60_71_82_end];
+        %tmp.85 = dup %tmp.84;
+        bt %tmp.85 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_24_72_75_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_24_72_75_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_25_72_74_begin:
+        %tmp.87 = getv ? :ruExType;
+        %tmp.89 = getv ? :TYPE_NONE;
+        %tmp.90 = eq %tmp.87 %tmp.89;
+        %tmp.91 = dup %tmp.90;
+        bf %tmp.91 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_52_72_74_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_52_72_74_true:
+        %tmp.93 = getv ? :ruReType;
+        %tmp.95 = getv ? :TYPE_NONE;
+        %tmp.96 = eq %tmp.93 %tmp.95;
+        %tmp.97 = and %tmp.90 %tmp.96;
+        push %tmp.97;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_52_72_74_end:
+        %tmp.98 = phi [%tmp.91 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_25_72_74_begin] [%tmp.97 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_52_72_74_true] [%tmp.98 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_52_72_74_end];
+        %tmp.99 = or %tmp.84 %tmp.98;
+        push %tmp.99;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_24_72_75_end:
+        %tmp.100 = phi [%tmp.85 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_72_75_begin] [%tmp.99 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_24_72_75_false] [%tmp.100 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_72_24_72_75_end];
+        %tmp.101 = dup %tmp.100;
+        bt %tmp.101 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_24_73_75_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_24_73_75_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_25_73_74_begin:
+        %tmp.103 = getv ? :cdExType;
+        %tmp.105 = getv ? :TYPE_NONE;
+        %tmp.106 = eq %tmp.103 %tmp.105;
+        %tmp.107 = dup %tmp.106;
+        bf %tmp.107 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_52_73_74_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_52_73_74_true:
+        %tmp.109 = getv ? :cdReType;
+        %tmp.111 = getv ? :TYPE_NONE;
+        %tmp.112 = eq %tmp.109 %tmp.111;
+        %tmp.113 = and %tmp.106 %tmp.112;
+        push %tmp.113;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_52_73_74_end:
+        %tmp.114 = phi [%tmp.107 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_25_73_74_begin] [%tmp.113 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_52_73_74_true] [%tmp.114 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_52_73_74_end];
+        %tmp.115 = or %tmp.100 %tmp.114;
+        push %tmp.115;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_24_73_75_end:
+        %tmp.116 = phi [%tmp.101 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_73_75_begin] [%tmp.115 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_24_73_75_false] [%tmp.116 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_73_24_73_75_end];
+        %tmp.117 = dup %tmp.116;
+        bt %tmp.117 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_24_74_68_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_24_74_68_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_25_74_67_begin:
+        %tmp.119 = getv ? :wuExType;
+        %tmp.121 = getv ? :TYPE_NONE;
+        %tmp.122 = ne %tmp.119 %tmp.121;
+        %tmp.123 = dup %tmp.122;
+        bf %tmp.123 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_52_74_67_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_52_74_67_true:
+        %tmp.125 = getv ? :wuExValue;
+        %tmp.126 = 0;
+        %tmp.127 = eq %tmp.125 %tmp.126;
+        %tmp.128 = and %tmp.122 %tmp.127;
+        push %tmp.128;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_52_74_67_end:
+        %tmp.129 = phi [%tmp.123 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_25_74_67_begin] [%tmp.128 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_52_74_67_true] [%tmp.129 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_52_74_67_end];
+        %tmp.130 = or %tmp.116 %tmp.129;
+        push %tmp.130;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_24_74_68_end:
+        %tmp.131 = phi [%tmp.117 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_74_68_begin] [%tmp.130 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_24_74_68_false] [%tmp.131 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_74_24_74_68_end];
+        %tmp.132 = dup %tmp.131;
+        bt %tmp.132 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_24_75_68_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_24_75_68_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_25_75_67_begin:
+        %tmp.134 = getv ? :wuReType;
+        %tmp.136 = getv ? :TYPE_NONE;
+        %tmp.137 = ne %tmp.134 %tmp.136;
+        %tmp.138 = dup %tmp.137;
+        bf %tmp.138 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_52_75_67_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_52_75_67_true:
+        %tmp.140 = getv ? :wuReValue;
+        %tmp.141 = 0;
+        %tmp.142 = eq %tmp.140 %tmp.141;
+        %tmp.143 = and %tmp.137 %tmp.142;
+        push %tmp.143;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_52_75_67_end:
+        %tmp.144 = phi [%tmp.138 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_25_75_67_begin] [%tmp.143 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_52_75_67_true] [%tmp.144 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_52_75_67_end];
+        %tmp.145 = or %tmp.131 %tmp.144;
+        push %tmp.145;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_24_75_68_end:
+        %tmp.146 = phi [%tmp.132 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_75_68_begin] [%tmp.145 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_24_75_68_false] [%tmp.146 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_75_24_75_68_end];
+        %tmp.147 = dup %tmp.146;
+        bt %tmp.147 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_24_76_68_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_24_76_68_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_25_76_67_begin:
+        %tmp.149 = getv ? :ruExType;
+        %tmp.151 = getv ? :TYPE_NONE;
+        %tmp.152 = ne %tmp.149 %tmp.151;
+        %tmp.153 = dup %tmp.152;
+        bf %tmp.153 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_52_76_67_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_52_76_67_true:
+        %tmp.155 = getv ? :ruExValue;
+        %tmp.156 = 0;
+        %tmp.157 = eq %tmp.155 %tmp.156;
+        %tmp.158 = and %tmp.152 %tmp.157;
+        push %tmp.158;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_52_76_67_end:
+        %tmp.159 = phi [%tmp.153 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_25_76_67_begin] [%tmp.158 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_52_76_67_true] [%tmp.159 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_52_76_67_end];
+        %tmp.160 = or %tmp.146 %tmp.159;
+        push %tmp.160;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_24_76_68_end:
+        %tmp.161 = phi [%tmp.147 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_76_68_begin] [%tmp.160 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_24_76_68_false] [%tmp.161 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_76_24_76_68_end];
+        %tmp.162 = dup %tmp.161;
+        bt %tmp.162 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_24_77_68_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_24_77_68_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_25_77_67_begin:
+        %tmp.164 = getv ? :ruReType;
+        %tmp.166 = getv ? :TYPE_NONE;
+        %tmp.167 = ne %tmp.164 %tmp.166;
+        %tmp.168 = dup %tmp.167;
+        bf %tmp.168 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_52_77_67_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_52_77_67_true:
+        %tmp.170 = getv ? :ruReValue;
+        %tmp.171 = 0;
+        %tmp.172 = eq %tmp.170 %tmp.171;
+        %tmp.173 = and %tmp.167 %tmp.172;
+        push %tmp.173;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_52_77_67_end:
+        %tmp.174 = phi [%tmp.168 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_25_77_67_begin] [%tmp.173 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_52_77_67_true] [%tmp.174 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_52_77_67_end];
+        %tmp.175 = or %tmp.161 %tmp.174;
+        push %tmp.175;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_24_77_68_end:
+        %tmp.176 = phi [%tmp.162 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_77_68_begin] [%tmp.175 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_24_77_68_false] [%tmp.176 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_77_24_77_68_end];
+        %tmp.177 = dup %tmp.176;
+        bt %tmp.177 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_24_78_68_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_24_78_68_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_25_78_67_begin:
+        %tmp.179 = getv ? :cdExType;
+        %tmp.181 = getv ? :TYPE_NONE;
+        %tmp.182 = ne %tmp.179 %tmp.181;
+        %tmp.183 = dup %tmp.182;
+        bf %tmp.183 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_52_78_67_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_52_78_67_true:
+        %tmp.185 = getv ? :cdExValue;
+        %tmp.186 = 0;
+        %tmp.187 = eq %tmp.185 %tmp.186;
+        %tmp.188 = and %tmp.182 %tmp.187;
+        push %tmp.188;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_52_78_67_end:
+        %tmp.189 = phi [%tmp.183 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_25_78_67_begin] [%tmp.188 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_52_78_67_true] [%tmp.189 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_52_78_67_end];
+        %tmp.190 = or %tmp.176 %tmp.189;
+        push %tmp.190;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_24_78_68_end:
+        %tmp.191 = phi [%tmp.177 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_78_68_begin] [%tmp.190 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_24_78_68_false] [%tmp.191 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_78_24_78_68_end];
+        %tmp.192 = dup %tmp.191;
+        bt %tmp.192 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_24_79_68_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_24_79_68_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_25_79_67_begin:
+        %tmp.194 = getv ? :cdReType;
+        %tmp.196 = getv ? :TYPE_NONE;
+        %tmp.197 = ne %tmp.194 %tmp.196;
+        %tmp.198 = dup %tmp.197;
+        bf %tmp.198 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_52_79_67_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_52_79_67_true:
+        %tmp.200 = getv ? :cdReValue;
+        %tmp.201 = 0;
+        %tmp.202 = eq %tmp.200 %tmp.201;
+        %tmp.203 = and %tmp.197 %tmp.202;
+        push %tmp.203;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_52_79_67_end:
+        %tmp.204 = phi [%tmp.198 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_25_79_67_begin] [%tmp.203 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_52_79_67_true] [%tmp.204 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_52_79_67_end];
+        %tmp.205 = or %tmp.191 %tmp.204;
+        push %tmp.205;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_24_79_68_end:
+        %tmp.206 = phi [%tmp.192 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_79_68_begin] [%tmp.205 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_24_79_68_false] [%tmp.206 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_79_24_79_68_end];
+        %tmp.207 = dup %tmp.206;
+        bt %tmp.207 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_80_24_80_38_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_80_24_80_38_false:
+        %tmp.209 = getv ? :wuExValue;
+        %tmp.210 = 0;
+        %tmp.211 = lt %tmp.209 %tmp.210;
+        %tmp.212 = or %tmp.206 %tmp.211;
+        push %tmp.212;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_80_24_80_38_end:
+        %tmp.213 = phi [%tmp.207 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_80_38_begin] [%tmp.212 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_80_24_80_38_false] [%tmp.213 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_80_24_80_38_end];
+        %tmp.214 = dup %tmp.213;
+        bt %tmp.214 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_81_24_81_38_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_81_24_81_38_false:
+        %tmp.216 = getv ? :wuReValue;
+        %tmp.217 = 0;
+        %tmp.218 = lt %tmp.216 %tmp.217;
+        %tmp.219 = or %tmp.213 %tmp.218;
+        push %tmp.219;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_81_24_81_38_end:
+        %tmp.220 = phi [%tmp.214 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_81_38_begin] [%tmp.219 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_81_24_81_38_false] [%tmp.220 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_81_24_81_38_end];
+        %tmp.221 = dup %tmp.220;
+        bt %tmp.221 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_82_24_82_38_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_82_24_82_38_false:
+        %tmp.223 = getv ? :ruExValue;
+        %tmp.224 = 0;
+        %tmp.225 = lt %tmp.223 %tmp.224;
+        %tmp.226 = or %tmp.220 %tmp.225;
+        push %tmp.226;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_82_24_82_38_end:
+        %tmp.227 = phi [%tmp.221 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_82_38_begin] [%tmp.226 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_82_24_82_38_false] [%tmp.227 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_82_24_82_38_end];
+        %tmp.228 = dup %tmp.227;
+        bt %tmp.228 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_83_24_83_38_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_83_24_83_38_false:
+        %tmp.230 = getv ? :ruReValue;
+        %tmp.231 = 0;
+        %tmp.232 = lt %tmp.230 %tmp.231;
+        %tmp.233 = or %tmp.227 %tmp.232;
+        push %tmp.233;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_83_24_83_38_end:
+        %tmp.234 = phi [%tmp.228 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_83_38_begin] [%tmp.233 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_83_24_83_38_false] [%tmp.234 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_83_24_83_38_end];
+        %tmp.235 = dup %tmp.234;
+        bt %tmp.235 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_84_24_84_38_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_84_24_84_38_false:
+        %tmp.237 = getv ? :cdExValue;
+        %tmp.238 = 0;
+        %tmp.239 = lt %tmp.237 %tmp.238;
+        %tmp.240 = or %tmp.234 %tmp.239;
+        push %tmp.240;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_84_24_84_38_end:
+        %tmp.241 = phi [%tmp.235 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_84_38_begin] [%tmp.240 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_84_24_84_38_false] [%tmp.241 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_84_24_84_38_end];
+        %tmp.242 = dup %tmp.241;
+        bt %tmp.242 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_85_24_85_38_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_85_24_85_38_false:
+        %tmp.244 = getv ? :cdReValue;
+        %tmp.245 = 0;
+        %tmp.246 = lt %tmp.244 %tmp.245;
+        %tmp.247 = or %tmp.241 %tmp.246;
+        push %tmp.247;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_85_24_85_38_end:
+        %tmp.248 = phi [%tmp.242 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_85_38_begin] [%tmp.247 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_85_24_85_38_false] [%tmp.248 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_85_24_85_38_end];
+        %tmp.249 = dup %tmp.248;
+        bt %tmp.249 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_86_24_86_39_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_86_24_86_39_false:
+        %tmp.251 = getv ? :ruRepeats;
+        %tmp.252 = 0;
+        %tmp.253 = lte %tmp.251 %tmp.252;
+        %tmp.254 = or %tmp.248 %tmp.253;
+        push %tmp.254;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_86_24_86_39_end:
+        %tmp.255 = phi [%tmp.249 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_71_32_86_39_begin] [%tmp.254 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_86_24_86_39_false] [%tmp.255 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_86_24_86_39_end];
+        lputv %isSettingsError.1 %tmp.255;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc" 87 8 ]
+        %tmp.257 = lgetv %isSettingsError.1;
+        %tmp.258 = not %tmp.257;
+        ret %tmp.258;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseSettings_mc_52_46_88_4_stop:
+    }
+}
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseSettings.mc"; @line = 1; ]
+<init> {
+}
