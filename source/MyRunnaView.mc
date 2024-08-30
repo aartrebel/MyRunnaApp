@@ -286,22 +286,6 @@ class MyRunnaView extends WatchUi.View {
     }
     
 
-    // changes the display mode to the previous
-    //public function previousDisplayMode() as Void {
-    //    switch (_displayMode) {
-    //        case DISPLAY_LAP:
-    //            _displayMode = DISPLAY_TOTALS;
-    //            break;
-    //        case DISPLAY_REMAINDER:
-    //            _displayMode = DISPLAY_LAP;
-    //            break;
-    //        case DISPLAY_TOTALS:
-    //        default:
-    //            _displayMode = DISPLAY_REMAINDER;
-    //    }
-    //}
-
-
     // toggles the display between pace and heartrate
     public function toggleSpeedOrHR () as Void {
         _isDisplaySpeed = !_isDisplaySpeed;

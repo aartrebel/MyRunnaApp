@@ -159,6 +159,45 @@ class MyRunnaApp extends Application.AppBase {
     }
 
 
+    // function formats the submenu text
+    // uses the exercise type and value
+    private function subMenuText(exType as ExType, value as Number) as String{
+        switch (exType) {
+            case NONE:
+                return ExerciseInputView.NONE_TITLE;
+            case DURATION:
+                // format duration
+                var seconds = value%60;
+                var minutes = (value/60)%60;
+                var hours = value/3600;
+                return ExerciseInputView.DUR_TITLE + " = " + hours.toString() + ":" + minutes.format("%02u") +
+                    ":" + seconds.format("%02u");
+            case DISTANCE:
+            default:
+                return ExerciseInputView.DIST_TITLE + " = " + value.toString() + ExerciseInputView.DIST_UNIT;
+        }
+    }
+
+
+    // function opens the menu to configure the exercise
+    // called by the onMenu function in the delegate
+    public function menuHandler() as Void {
+        // Generate a new menu
+        var menu = new WatchUi.Menu2({:title=>"Exercise Details"});
+
+        // Add menu items for the configurables
+        menu.addItem(new WatchUi.MenuItem("Discard activity", null, ExerciseMenuDelegate.DISCARD_ITEM, null));
+        menu.addItem(new WatchUi.MenuItem("Warmup - run", subMenuText(_exStatus.wuExType, _exStatus.wuExValue), ExerciseMenuDelegate.WARMUP_RUN_ITEM, null));
+        menu.addItem(new WatchUi.MenuItem("Warmup - walk", subMenuText(_exStatus.wuReType, _exStatus.wuReValue), ExerciseMenuDelegate.WARMUP_WALK_ITEM, null));
+        menu.addItem(new WatchUi.MenuItem("Exercise - run", subMenuText(_exStatus.ruExType, _exStatus.ruExValue), ExerciseMenuDelegate.EXERCISE_RUN_ITEM, null));
+        menu.addItem(new WatchUi.MenuItem("Exercise - walk", subMenuText(_exStatus.ruReType, _exStatus.ruReValue), ExerciseMenuDelegate.EXERCISE_WALK_ITEM, null));
+        menu.addItem(new WatchUi.MenuItem("Exercise - repeats", _exStatus.ruRepeats.toString(), ExerciseMenuDelegate.EXERCISE_REPEATS_ITEM, null));
+        menu.addItem(new WatchUi.MenuItem("Cooldown - run", subMenuText(_exStatus.cdExType, _exStatus.cdExValue), ExerciseMenuDelegate.COOLDOWN_RUN_ITEM, null));
+        menu.addItem(new WatchUi.MenuItem("Cooldown - walk", subMenuText(_exStatus.cdReType, _exStatus.cdReValue), ExerciseMenuDelegate.COOLDOWN_WALK_ITEM, null));
+        WatchUi.pushView(menu, new ExerciseMenuDelegate(), WatchUi.SLIDE_UP);
+    }
+
+
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         System.println("onStart() called");
@@ -177,7 +216,7 @@ class MyRunnaApp extends Application.AppBase {
             // initialise view and delegate
             _myRunnaView = new MyRunnaView(_exStatus);
             _myRunnaDelegate = new MyRunnaDelegate(method(:handlePause), method(:handleDisplayModeChange), 
-                method(:handleDiscardSession), method(:handleEndActivity));
+                method(:handleEndActivity), method(:menuHandler));
 
             // initialise the heart rate sensor
             Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);

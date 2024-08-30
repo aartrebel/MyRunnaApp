@@ -3,26 +3,26 @@ import Toybox.WatchUi;
 import Toybox.System;
 
 class MyRunnaDelegate extends WatchUi.BehaviorDelegate {
-    var _pauseHandler as Lang.Method?;
-    var _displayModeChangeHandler as Lang.Method?;
-    var _discardSessionHandler as Lang.Method?;
-    var _endActivityHandler as Lang.Method?;
+    var _pauseHandler as Method?;
+    var _displayModeChangeHandler as Method?;
+    var _discardSessionHandler as Method?;
+    var _endActivityHandler as Method?;
+    var _menuHandler as Method?;
 
 
-    function initialize(pauseHandler as Lang.Method, displayModeChangeHandler as Lang.Method, 
-            discardSessionHandler as Lang.Method, endActivityHandler as Lang.Method) {
+    function initialize(pauseHandler as Method, displayModeChangeHandler as Method, endActivityHandler as Method, menuHandler as Method) {
         BehaviorDelegate.initialize();
         _pauseHandler = pauseHandler;
         _displayModeChangeHandler = displayModeChangeHandler;
-        _discardSessionHandler = discardSessionHandler;
         _endActivityHandler = endActivityHandler;
+        _menuHandler = menuHandler;
     }
 
 
     // Handle the menu behavious
     public function onMenu() as Boolean {
-        if (_discardSessionHandler != null) {
-            _discardSessionHandler.invoke();
+        if (_menuHandler != null) {
+            _menuHandler.invoke();
         }       
         return false;
     }

@@ -73,8 +73,6 @@ class ExerciseStatus {
     public function initialize() {
         _filter = new FIRFilter(FIR_AVERAGE_OFF_10_FILTER);
         heartRateZones = UserProfile.getHeartRateZones(UserProfile.HR_ZONE_SPORT_RUNNING);
-        //heartRateZones = [87, 104, 121, 138, 156, 173];
-        //heartRateZones = [0, 104, 121, 138, 156, 173];
     }
 
 

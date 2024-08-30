@@ -1,0 +1,28 @@
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 3; ]
+import Toybox.Math;
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 5; ]
+class ExerciseInputDelegate extends ValueInputDelegate{
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 20; ]
+    function initialize() as Void {
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseInputDelegate_mc_20_26_22_4_start:
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc" 21 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseInputDelegate_mc_20_26_22_4_stop:
+    }
+}
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseInputDelegate.mc"; @line = 1; ]
+<init> {
+}

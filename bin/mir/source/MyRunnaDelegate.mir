@@ -14,16 +14,18 @@ class MyRunnaDelegate extends WatchUi.BehaviorDelegate{
     <init> {
     }
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 6; @position = 8; ]
-    var _pauseHandler as Lang.Method or Null;
+    var _pauseHandler as Method or Null;
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 7; @position = 8; ]
-    var _displayModeChangeHandler as Lang.Method or Null;
+    var _displayModeChangeHandler as Method or Null;
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 8; @position = 8; ]
-    var _discardSessionHandler as Lang.Method or Null;
+    var _discardSessionHandler as Method or Null;
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 9; @position = 8; ]
-    var _endActivityHandler as Lang.Method or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 12; ]
-    function initialize(pauseHandler as Lang.Method, displayModeChangeHandler as Lang.Method, discardSessionHandler as Lang.Method, endActivityHandler as Lang.Method) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_13_85_19_4_start:
+    var _endActivityHandler as Method or Null;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 10; @position = 8; ]
+    var _menuHandler as Method or Null;
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 13; ]
+    function initialize(pauseHandler as Method, displayModeChangeHandler as Method, endActivityHandler as Method, menuHandler as Method) as Void {
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_13_137_19_4_start:
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc" 14 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
@@ -35,12 +37,12 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
         %tmp.7 = lgetv %displayModeChangeHandler;
         putv self :_displayModeChangeHandler %tmp.7;
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc" 17 8 ]
-        %tmp.9 = lgetv %discardSessionHandler;
-        putv self :_discardSessionHandler %tmp.9;
+        %tmp.9 = lgetv %endActivityHandler;
+        putv self :_endActivityHandler %tmp.9;
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc" 18 8 ]
-        %tmp.11 = lgetv %endActivityHandler;
-        putv self :_endActivityHandler %tmp.11;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_13_85_19_4_stop:
+        %tmp.11 = lgetv %menuHandler;
+        putv self :_menuHandler %tmp.11;
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_13_137_19_4_stop:
     }
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc"; @line = 23; ]
     public
@@ -48,18 +50,18 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_M
 C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_23_40_28_4_start:
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc" 24 8 ]
 C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_8_26_8_if_stmt:
-        %tmp.2 = getv ? :_discardSessionHandler;
+        %tmp.2 = getv ? :_menuHandler;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
         bf %tmp.4 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_8_26_8_if_end;
 C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_8_26_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_44_26_8_start:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_34_26_8_start:
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc" 25 12 ]
-        %tmp.6 = getv ? :_discardSessionHandler;
+        %tmp.6 = getv ? :_menuHandler;
         %tmp.7 = as %tmp.6 { (!Null) };
         %tmp.8 = getv function %tmp.7 :invoke;
         invoke %tmp.7 %tmp.8();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_44_26_8_stop:
+C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_34_26_8_stop:
         goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_8_26_8_if_end;
 C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_MyRunnaDelegate_mc_24_8_26_8_if_end:
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\MyRunnaDelegate.mc" 27 8 ]
