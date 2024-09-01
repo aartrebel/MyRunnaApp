@@ -1,5 +1,6 @@
 import Toybox.Lang;
 import Toybox.Application;
+import Toybox.System;
 
 class ExerciseSettings {
 
@@ -25,32 +26,38 @@ class ExerciseSettings {
     public var cdExValue as Number = 0;
     public var cdReType as ExType = TYPE_NONE;
     public var cdReValue as Number = 0;
+
+
+    // constricts the class instance and loads the settings from properties
+    public function initialize() {
+        load();
+    }
     
 
     // function presets the settings
-    public function presetSettings() {
-        // initialise settings for debugging only - should be set vir Garmin Connect
-        Properties.setValue("wuExType",TYPE_NONE);
-        Properties.setValue("wuExValue",0);
-        Properties.setValue("wuReType",TYPE_DURATION);
-        Properties.setValue("wuReValue",300);
+    // initialise settings for debugging only
+    public function preset() {
+        wuExType = TYPE_NONE;
+        wuExValue = 0;
+        wuReType = TYPE_DURATION;
+        wuReValue = 300;
 
-        Properties.setValue("ruExType",TYPE_DURATION);
-        Properties.setValue("ruExValue",240);
-        Properties.setValue("ruReType",TYPE_DURATION);
-        Properties.setValue("ruReValue",60);
-        Properties.setValue("ruRepeats",5);
+        ruExType = TYPE_DISTANCE;
+        ruExValue = 1234;
+        ruReType = TYPE_DURATION;
+        ruReValue = 60;
+        ruRepeats = 3;
 
-        Properties.setValue("cdExType",TYPE_NONE);
-        Properties.setValue("cdExValue",0);
-        Properties.setValue("cdReType",TYPE_DURATION);
-        Properties.setValue("cdReValue",300);
-    }
+        cdExType = TYPE_NONE;
+        cdExValue = 0;
+        cdReType = TYPE_DURATION;
+        cdReValue = 300;
+   }
 
 
-    // function loads the settings and checks that they are valid
-    public function loadSettings() as Boolean {
-       // load settings from Properties
+    // function loads the settings from storage in properties
+    public function load() as Void {
+        // load settings from Properties
         wuExType = Properties.getValue("wuExType") as ExType;
         wuExValue = Properties.getValue("wuExValue");
         wuReType = Properties.getValue("wuReType") as ExType;
@@ -66,7 +73,11 @@ class ExerciseSettings {
         cdExValue = Properties.getValue("cdExValue");
         cdReType = Properties.getValue("cdReType") as ExType;
         cdReValue = Properties.getValue("cdReValue");
+    }
 
+
+    // function checks that the settings are valie
+    public function areValid() as Boolean {
         // check settings
         var isSettingsError =   ((wuExType == TYPE_NONE) && (wuReType == TYPE_NONE)) ||
                         ((ruExType == TYPE_NONE) && (ruReType == TYPE_NONE)) ||
@@ -85,6 +96,27 @@ class ExerciseSettings {
                         (cdReValue < 0) ||
                         (ruRepeats <= 0);
         return !isSettingsError;
+    }
+
+
+    // function saves the settings to storage in the properties
+    public function save() as Void {
+        System.println("save settings ...");
+        Properties.setValue("wuExType",wuExType);
+        Properties.setValue("wuExValue",wuExValue);
+        Properties.setValue("wuReType",wuReType);
+        Properties.setValue("wuReValue",wuReValue);
+
+        Properties.setValue("ruExType",ruExType);
+        Properties.setValue("ruExValue",ruExValue);
+        Properties.setValue("ruReType",ruReType);
+        Properties.setValue("ruReValue",ruReValue);
+        Properties.setValue("ruRepeats",ruRepeats);
+
+        Properties.setValue("cdExType",cdExType);
+        Properties.setValue("cdExValue",cdExValue);
+        Properties.setValue("cdReType",cdReType);
+        Properties.setValue("cdReValue",cdReValue);
     }
 
 }

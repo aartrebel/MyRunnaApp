@@ -10,6 +10,14 @@ import Toybox.ActivityRecording;
 import Toybox.WatchUi;
 import Toybox.Activity;
 
+// to do:
+//  page through ex type on ExerciseInputView
+//  replace NONE wth no run or no walk
+//  clean out commented out code
+//  remove overriding functions that are redundant
+//  vibration patterns - increase volume
+//  vibration patterns - start run quick buzzes, start walk long buzz
+//  use digits with spaces (blocks) for value entry (test first)
 
 class MyRunnaApp extends Application.AppBase {
     private var _timer as Timer.Timer?;
@@ -119,22 +127,19 @@ class MyRunnaApp extends Application.AppBase {
     }
 
 
-    // function handles a request to discard the session
-    // opens a dialogue to confirm to discard
-    public function handleDiscardSession() as Void {
-        if ((_session != null) && (_status.isPaused)) {
-            var dialog = new WatchUi.Confirmation("Discard activity?");
-            WatchUi.pushView(dialog, new DiscardConfirmationDelegate(method(:discardSession)), WatchUi.SLIDE_IMMEDIATE);
-        }
-    }
-
-
     // function is called when the session has to be discarded
     // called by the dialogue that confirms to discard
     public function discardSession() as Void {
         _session.stop();
         _session.discard();
         _session = null;
+        WatchUi.requestUpdate();
+    }
+
+
+    // function checks is a session is open and returns true if so
+    public function isSessionOpen() as Boolean {
+        return (_session != null);
     }
 
 
@@ -143,12 +148,12 @@ class MyRunnaApp extends Application.AppBase {
     public function handleEndActivity() as Void {
         if (_status.isPaused) {
             var dialog;
-            if (_session != null) {
+            if (isSessionOpen()) {
                 dialog = new WatchUi.Confirmation("End and save activity?");
             } else {
                 dialog = new WatchUi.Confirmation("End activity?\n(nothing to save)");
             }
-            WatchUi.pushView(dialog, new DiscardConfirmationDelegate(method(:endActivity)), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.pushView(dialog, new MyRunnaConfirmationDelegate(method(:endActivity)), WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
@@ -160,42 +165,13 @@ class MyRunnaApp extends Application.AppBase {
     }
 
 
-    // function formats the submenu text
-    // uses the exercise type and value
-    private function subMenuText(exType as ExerciseSettings.ExType, value as Number) as String{
-        switch (exType) {
-            case ExerciseSettings.TYPE_NONE:
-                return ExerciseInputView.NONE_TITLE;
-            case ExerciseSettings.TYPE_DURATION:
-                // format duration
-                var seconds = value%60;
-                var minutes = (value/60)%60;
-                var hours = value/3600;
-                return ExerciseInputView.DUR_TITLE + " = " + hours.toString() + ":" + minutes.format("%02u") +
-                    ":" + seconds.format("%02u");
-            case ExerciseSettings.TYPE_DISTANCE:
-            default:
-                return ExerciseInputView.DIST_TITLE + " = " + value.toString() + ExerciseInputView.DIST_UNIT;
-        }
-    }
-
-
     // function opens the menu to configure the exercise
     // called by the onMenu function in the delegate
     public function menuHandler() as Void {
-        // Generate a new menu
-        var menu = new WatchUi.Menu2({:title=>"Exercise Details"});
-
-        // Add menu items for the configurables
-        menu.addItem(new WatchUi.MenuItem("Discard activity", null, ExerciseMenuDelegate.DISCARD_ITEM, null));
-        menu.addItem(new WatchUi.MenuItem("Warmup - run", subMenuText(_settings.wuExType, _settings.wuExValue), ExerciseMenuDelegate.WARMUP_RUN_ITEM, null));
-        menu.addItem(new WatchUi.MenuItem("Warmup - walk", subMenuText(_settings.wuReType, _settings.wuReValue), ExerciseMenuDelegate.WARMUP_WALK_ITEM, null));
-        menu.addItem(new WatchUi.MenuItem("Exercise - run", subMenuText(_settings.ruExType, _settings.ruExValue), ExerciseMenuDelegate.EXERCISE_RUN_ITEM, null));
-        menu.addItem(new WatchUi.MenuItem("Exercise - walk", subMenuText(_settings.ruReType, _settings.ruReValue), ExerciseMenuDelegate.EXERCISE_WALK_ITEM, null));
-        menu.addItem(new WatchUi.MenuItem("Exercise - repeats", _settings.ruRepeats.toString(), ExerciseMenuDelegate.EXERCISE_REPEATS_ITEM, null));
-        menu.addItem(new WatchUi.MenuItem("Cooldown - run", subMenuText(_settings.cdExType, _settings.cdExValue), ExerciseMenuDelegate.COOLDOWN_RUN_ITEM, null));
-        menu.addItem(new WatchUi.MenuItem("Cooldown - walk", subMenuText(_settings.cdReType, _settings.cdReValue), ExerciseMenuDelegate.COOLDOWN_WALK_ITEM, null));
-        WatchUi.pushView(menu, new ExerciseMenuDelegate(), WatchUi.SLIDE_UP);
+        if (_status.isPaused) {
+            var delegate = new ExerciseMenuDelegate();
+            WatchUi.pushView(new ExerciseMenuView(_settings, method(:discardSession), method(:isSessionOpen), delegate), delegate, WatchUi.SLIDE_UP);
+        } 
     }
 
 
@@ -208,8 +184,8 @@ class MyRunnaApp extends Application.AppBase {
 
         // initialise exercise settings
         _settings = new ExerciseSettings();
-        //_settings.presetSettings();   
-        if (_settings.loadSettings()) {
+        _settings.preset();   
+        if (_settings.areValid()) {
             // initialise exercise status
             _status = new ExerciseStatus(_settings);    
 

@@ -90,7 +90,7 @@ class ValueInputDelegate extends WatchUi.BehaviorDelegate {
     }
 
 
-     // Handle the touch screen swipe event
+    // Handle the touch screen swipe event
     public function onSwipe(evt as SwipeEvent) as Boolean {
         if (evt.getDirection() == SWIPE_LEFT) {
             _onBackSpace.invoke();

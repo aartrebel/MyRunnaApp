@@ -117,7 +117,7 @@ class ValueInputView extends WatchUi.View{
     var _title as String or Null;
     [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc"; @line = 34; @position = 16; ]
     private
-    var _onDone as Method or Null;
+    var _onDoneHandler as Method or Null;
     [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc"; @line = 36; @position = 16; ]
     private
     var _entry as String = "";
@@ -129,8 +129,8 @@ class ValueInputView extends WatchUi.View{
     var innerRadius as Float = 0.0;
     [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc"; @line = 41; ]
     public
-    function initialize(entryType as InputType, title as String or Null, unit as String or Null, max as Number, onDone as Method, delegate as ValueInputDelegate) as Void {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_155_66_3_start:
+    function initialize(entryType as InputType, title as String or Null, unit as String or Null, max as Number, onDoneHandler as Method, delegate as ValueInputDelegate) as Void {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_162_66_3_start:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 42 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
@@ -151,10 +151,10 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_1
         %tmp.13 = lgetv %max;
         putv self :_max %tmp.13;
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 48 8 ]
-        %tmp.15 = lgetv %onDone;
-        putv self :_onDone %tmp.15;
+        %tmp.15 = lgetv %onDoneHandler;
+        putv self :_onDoneHandler %tmp.15;
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 51 8 ]
-        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_155_66_3_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_155_66_3_stop" ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_162_66_3_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_162_66_3_stop" ]
         %fontDiameter.1 = local;
         %tmp.16 = getm $.Toybox.Math;
         %tmp.17 = getv function %tmp.16 :sqrt;
@@ -295,7 +295,7 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_53_8
         %tmp.141 = const :onBackSpace;
         %tmp.142 = invoke %tmp.138 %tmp.139(%tmp.141);
         invoke %tmp.115 %tmp.116(%tmp.123, %tmp.125, %tmp.127, %tmp.132, %tmp.137, %tmp.142);
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_155_66_3_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_41_162_66_3_stop:
     }
     [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc"; @line = 69; ]
     protected
@@ -537,28 +537,28 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_114_
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_114_39_119_16_start:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 115 20 ]
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_20_117_20_if_stmt:
-        %tmp.25 = getv ? :_onDone;
+        %tmp.25 = getv ? :_onDoneHandler;
         %tmp.26 = null;
         %tmp.27 = ne %tmp.25 %tmp.26;
         bf %tmp.27 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_20_117_20_if_end;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_20_117_20_if_true:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_41_117_20_start:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_48_117_20_start:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 116 24 ]
-        %tmp.29 = getv ? :_onDone;
+        %tmp.29 = getv ? :_onDoneHandler;
         %tmp.30 = as %tmp.29 { (!Null) };
         %tmp.31 = getv function %tmp.30 :invoke;
         %tmp.33 = getv ? :_entry;
         %tmp.34 = getv function %tmp.33 :toNumber;
         %tmp.35 = invoke %tmp.33 %tmp.34();
         invoke %tmp.30 %tmp.31(%tmp.35);
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_41_117_20_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_48_117_20_stop:
         goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_20_117_20_if_end;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_115_20_117_20_if_end:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 118 20 ]
         %tmp.36 = getm $.Toybox.WatchUi;
         %tmp.37 = getv function %tmp.36 :popView;
         %tmp.38 = getm $.Toybox.WatchUi;
-        %tmp.39 = getv %tmp.38 :SLIDE_DOWN;
+        %tmp.39 = getv %tmp.38 :SLIDE_RIGHT;
         invoke %tmp.36 %tmp.37(%tmp.39);
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_114_39_119_16_stop:
         goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_114_16_122_16_if_end;
@@ -634,26 +634,26 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_125_
         lputv %duration.4 %tmp.85;
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 131 20 ]
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_20_133_20_if_stmt:
-        %tmp.87 = getv ? :_onDone;
+        %tmp.87 = getv ? :_onDoneHandler;
         %tmp.88 = null;
         %tmp.89 = ne %tmp.87 %tmp.88;
         bf %tmp.89 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_20_133_20_if_end;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_20_133_20_if_true:
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_41_133_20_start:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_48_133_20_start:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 132 24 ]
-        %tmp.91 = getv ? :_onDone;
+        %tmp.91 = getv ? :_onDoneHandler;
         %tmp.92 = as %tmp.91 { (!Null) };
         %tmp.93 = getv function %tmp.92 :invoke;
         %tmp.95 = lgetv %duration.4;
         invoke %tmp.92 %tmp.93(%tmp.95);
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_41_133_20_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_48_133_20_stop:
         goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_20_133_20_if_end;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_131_20_133_20_if_end:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 134 20 ]
         %tmp.96 = getm $.Toybox.WatchUi;
         %tmp.97 = getv function %tmp.96 :popView;
         %tmp.98 = getm $.Toybox.WatchUi;
-        %tmp.99 = getv %tmp.98 :SLIDE_DOWN;
+        %tmp.99 = getv %tmp.98 :SLIDE_RIGHT;
         invoke %tmp.96 %tmp.97(%tmp.99);
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_125_42_135_16_stop:
         goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_125_16_138_16_if_end;
@@ -711,9 +711,9 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_144_
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_143_42_149_4_stop:
     }
     [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc"; @line = 153; ]
-    public
+    protected
     function drawDigits(enabledDigits as String, dc as Dc) {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_153_66_170_4_start:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_153_69_170_4_start:
 [ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc" 154 8 ]
         for @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_154_8_163_8_for_test @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_154_8_163_8_for_incr @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_154_8_163_8_for_end;
 C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_154_8_163_8_for_init:
@@ -832,7 +832,7 @@ C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_154_
         %tmp.91 = 1;
         %tmp.92 = sub %tmp.90 %tmp.91;
         invoke %tmp.79 %tmp.80(%tmp.84, %tmp.88, %tmp.92);
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_153_66_170_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ValueInputView_mc_153_69_170_4_stop:
     }
     [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ValueInputView.mc"; @line = 173; ]
     function onLayout(dc as Dc) as Void {

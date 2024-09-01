@@ -7,6 +7,7 @@ import Toybox.Lang;
 class ExerciseInputView extends ValueInputView {
 
     static public const NONE_TITLE = "NONE";
+    static public const NONE_ENTRY = "----------";
     static public const DIST_TITLE = "Distance";
     static public const DIST_UNIT = "m";
     static private const DIST_MAX = 99999;
@@ -29,35 +30,34 @@ class ExerciseInputView extends ValueInputView {
     //private var _max as Number?;
     //private var _entry as String = "";
     //private var _entryXPos as Number = 0;
-    private var _titleYPos as Number = 0;
+    //private var _titleYPos as Number = 0;
     //private var _error as String = NO_ERROR;
     //private var _innerRadius as Float = 0.0;
     //private var _indexOf0 as Number = 0;
 
     private var _currentExType as ExerciseSettings.ExType?;
-    private var _currentTitle as String?;
+    //private var _currentTitle as String?;
+    private var _updateSettingsHandler as Method?;
+    private var _delegate as ExerciseInputDelegate?;
 
 
-    function initialize(currentExType as ExerciseSettings.ExType, delegate as ExerciseInputDelegate) {
+    function initialize(currentExType as ExerciseSettings.ExType, currentValue as Number, updateSettingsHandler as Method, delegate as ExerciseInputDelegate) {
         _currentExType = currentExType;
+        _updateSettingsHandler = updateSettingsHandler;
+        _delegate = delegate;
 
         switch (_currentExType) {
             case ExerciseSettings.TYPE_DURATION:
-                _currentTitle = DUR_TITLE;
                 ValueInputView.initialize(ValueInputView.INPUT_TIME, DUR_TITLE, DUR_UNIT, DUR_MAX, method(:onDone), delegate);
                 break;
             case ExerciseSettings.TYPE_DISTANCE:
-                _currentTitle = DIST_TITLE;
                 ValueInputView.initialize(ValueInputView.INPUT_NUMBER, DIST_TITLE, DIST_UNIT, DIST_MAX, method(:onDone), delegate);
                 break;
             case ExerciseSettings.TYPE_NONE:
             default:
-                _currentTitle = NONE_TITLE;
                 _currentExType = ExerciseSettings.TYPE_NONE;
-                //ValueInputView.initialize(null, null, null, delegate);
+                ValueInputView.initialize(ValueInputView.INPUT_NUMBER, null, null, 0, method(:onDone), delegate);
         }
-
-        _titleYPos = (SCR_SIZE - innerRadius.toNumber())/2; 
     }
 
 
@@ -98,9 +98,12 @@ class ExerciseInputView extends ValueInputView {
         }
     }
 
+
     // function that is called when done
-    public function onDone (result as Number) as Void {
-        System.println("Result = " + result);
+    public function onDone (value as Number) as Void {
+        if (_updateSettingsHandler != null) {
+            _updateSettingsHandler.invoke(_currentExType, value as Number);
+        }
     } 
 
 
@@ -145,18 +148,20 @@ class ExerciseInputView extends ValueInputView {
         //    dc.drawLine(xi, yi, xo, yo);
         //}
 
-        switch (_currentExType) {
-            case ExerciseSettings.TYPE_DURATION:
-                ValueInputView.onLayout(dc);
-                break;
-            case ExerciseSettings.TYPE_DISTANCE:
-                ValueInputView.onLayout(dc);
-                break;
-            case ExerciseSettings.TYPE_NONE:
-            default: {
-                
-            }
-        }
+        //switch (_currentExType) {
+        //    case ExerciseSettings.TYPE_DURATION:
+        //        ValueInputView.onLayout(dc);
+        //        break;
+        //    case ExerciseSettings.TYPE_DISTANCE:
+        //        ValueInputView.onLayout(dc);
+        //        break;
+        //    case ExerciseSettings.TYPE_NONE:
+        //    default: {
+        //        
+        //    }
+        //}
+
+        ValueInputView.onLayout(dc);
 
         // calculate the position of the title text
         //_entryXPos = (SCR_SIZE + dc.getTextWidthInPixels(_max.toString() + _unit, ENTRY_FONT))/2;
@@ -195,7 +200,23 @@ class ExerciseInputView extends ValueInputView {
         //var displayText = EMPTY_ENTRY.substring(0, (_max.toString().length() - _entry.length())*2) + _entry;
         //dc.drawText(_entryXPos, SCR_SIZE/2, ENTRY_FONT, displayText + _unit, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        ValueInputView.onUpdate(dc);
+        if (_currentExType == ExerciseSettings.TYPE_NONE) {
+ 
+            // display digitis (all disabled)
+            drawDigits("", dc);
+
+            // display title
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            var titleYPos = (SCR_SIZE - innerRadius.toNumber())/2; 
+            dc.drawText(SCR_SIZE/2, titleYPos, TITLE_FONT, NONE_TITLE, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+            // display nil value
+            var entryXPos = (SCR_SIZE + dc.getTextWidthInPixels(NONE_ENTRY, ENTRY_FONT))/2;
+            dc.drawText(entryXPos, SCR_SIZE/2, ENTRY_FONT, NONE_ENTRY, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        } else {
+            ValueInputView.onUpdate(dc);
+        }
 
     }
 

@@ -17,6 +17,8 @@ class ExerciseInputDelegate extends ValueInputDelegate {
     //private var _onEnter as Method?;
     //private var _onBackSpace as Method?;
 
+    private var _inputModeChangeHandler as Method?;
+
     function initialize() {
         BehaviorDelegate.initialize();
     }
@@ -99,6 +101,24 @@ class ExerciseInputDelegate extends ValueInputDelegate {
         //}
     //    return ValueInputDelegate.onSwipe(evt);
     //}
+
+
+    // Handle the next page behaviour
+    public function onNextPage() as Boolean {
+        if (_inputModeChangeHandler != null) {
+            _inputModeChangeHandler.invoke(true);
+        }
+        return true;
+    }
+
+
+    // Handle the previous page behaviour
+    public function onPreviousPage() as Boolean {
+        if (_inputModeChangeHandler != null) {
+            _inputModeChangeHandler.invoke(false);
+        }
+        return true;
+    }
 
 
 }

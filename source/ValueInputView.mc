@@ -31,21 +31,21 @@ class ValueInputView extends WatchUi.View {
     private var _max as Number?;
     private var _entryType as InputType = INPUT_TIME;
     private var _title as String?;
-    private var _onDone as Method?;
+    private var _onDoneHandler as Method?;
 
     private var _entry as String = "";
     private var _error as String?;
     protected var innerRadius as Float = 0.0;
 
     // initialises the class instance
-    public function initialize(entryType as InputType, title as String?, unit as String?, max as Number, onDone as Method, delegate as ValueInputDelegate) {
+    public function initialize(entryType as InputType, title as String?, unit as String?, max as Number, onDoneHandler as Method, delegate as ValueInputDelegate) {
         View.initialize();
         _delegate = delegate;
         _entryType = entryType;
         _title = title;
         _unit = unit;
         _max = max;
-        _onDone = onDone;
+        _onDoneHandler = onDoneHandler;
 
         // calculate coordinates of digits
         var fontDiameter = Math.sqrt(FONT_WIDTH*FONT_WIDTH + FONT_HEIGHT*FONT_HEIGHT);
@@ -112,10 +112,10 @@ class ValueInputView extends WatchUi.View {
             case INPUT_NUMBER:
             case INPUT_DECIMAL:
                 if (_entry.length()>0) {
-                    if (_onDone != null) {
-                        _onDone.invoke(_entry.toNumber());
+                    if (_onDoneHandler != null) {
+                        _onDoneHandler.invoke(_entry.toNumber());
                     }
-                    WatchUi.popView(WatchUi.SLIDE_DOWN);
+                    WatchUi.popView(WatchUi.SLIDE_RIGHT);
                 } else {
                     _error = NIL_ERROR;
                     WatchUi.requestUpdate();
@@ -128,10 +128,10 @@ class ValueInputView extends WatchUi.View {
                     var minutes = _entry.substring(1, 3).toNumber();
                     var hours = _entry.substring(0, 1).toNumber();
                     var duration = hours*3600 + minutes*60 + seconds;
-                    if (_onDone != null) {
-                        _onDone.invoke(duration);
+                    if (_onDoneHandler != null) {
+                        _onDoneHandler.invoke(duration);
                     }
-                    WatchUi.popView(WatchUi.SLIDE_DOWN);
+                    WatchUi.popView(WatchUi.SLIDE_RIGHT);
                 } else {
                     _error = NIL_ERROR;
                     WatchUi.requestUpdate();
@@ -150,7 +150,7 @@ class ValueInputView extends WatchUi.View {
 
 
     // function draws the digits
-    public function drawDigits(enabledDigits as String, dc as Dc) {
+    protected function drawDigits(enabledDigits as String, dc as Dc) {
         for (var n=0; n<10; n++) {
             var coord = _coords[n] as Array<Number>;
             if (enabledDigits.find(DIGITS[n]) == null) {

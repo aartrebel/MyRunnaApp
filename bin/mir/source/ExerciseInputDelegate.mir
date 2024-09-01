@@ -13,14 +13,69 @@ class ExerciseInputDelegate extends ValueInputDelegate{
     static
     <init> {
     }
-    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc"; @line = 20; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc"; @line = 20; @position = 16; ]
+    private
+    var _inputModeChangeHandler as Method or Null;
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc"; @line = 22; ]
     function initialize() as Void {
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_20_26_22_4_start:
-[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 21 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_22_26_24_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 23 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_20_26_22_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_22_26_24_4_stop:
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc"; @line = 107; ]
+    public
+    function onNextPage() as Boolean {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_107_44_112_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 108 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_108_8_110_8_if_stmt:
+        %tmp.2 = getv ? :_inputModeChangeHandler;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_108_8_110_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_108_8_110_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_108_45_110_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 109 12 ]
+        %tmp.6 = getv ? :_inputModeChangeHandler;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = getv function %tmp.7 :invoke;
+        %tmp.9 = true;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_108_45_110_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_108_8_110_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_108_8_110_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 111 8 ]
+        %tmp.10 = true;
+        ret %tmp.10;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_107_44_112_4_stop:
+    }
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc"; @line = 116; ]
+    public
+    function onPreviousPage() as Boolean {
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_116_48_121_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 117 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_117_8_119_8_if_stmt:
+        %tmp.2 = getv ? :_inputModeChangeHandler;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_117_8_119_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_117_8_119_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_117_45_119_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 118 12 ]
+        %tmp.6 = getv ? :_inputModeChangeHandler;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = getv function %tmp.7 :invoke;
+        %tmp.9 = false;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_117_45_119_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_117_8_119_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_117_8_119_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc" 120 8 ]
+        %tmp.10 = true;
+        ret %tmp.10;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseInputDelegate_mc_116_48_121_4_stop:
     }
 }
 [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseInputDelegate.mc"; @line = 1; ]
