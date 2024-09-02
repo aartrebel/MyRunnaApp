@@ -17,10 +17,16 @@ class ExerciseInputDelegate extends ValueInputDelegate {
     //private var _onEnter as Method?;
     //private var _onBackSpace as Method?;
 
-    private var _inputModeChangeHandler as Method?;
+    private var _pageChangeHandler as Method?;
 
     function initialize() {
-        BehaviorDelegate.initialize();
+        ValueInputDelegate.initialize();
+    }
+
+
+    // functions sets the handler for the next and previous page
+    public function setHandlers(pageChangeHandler as Method) {
+        _pageChangeHandler = pageChangeHandler;
     }
 
     //public function setViewParams(innerRadius as Double, coords as Array, digits as Array, onDigit as Method, 
@@ -53,7 +59,7 @@ class ExerciseInputDelegate extends ValueInputDelegate {
     //   return false;
     //}
 
-
+ 
     // handle the tap action
     //public function onTap(click as ClickEvent) as Boolean {
     //    var tapCoord = click.getCoordinates();
@@ -105,8 +111,8 @@ class ExerciseInputDelegate extends ValueInputDelegate {
 
     // Handle the next page behaviour
     public function onNextPage() as Boolean {
-        if (_inputModeChangeHandler != null) {
-            _inputModeChangeHandler.invoke(true);
+        if (_pageChangeHandler != null) {
+            _pageChangeHandler.invoke(true);
         }
         return true;
     }
@@ -114,8 +120,8 @@ class ExerciseInputDelegate extends ValueInputDelegate {
 
     // Handle the previous page behaviour
     public function onPreviousPage() as Boolean {
-        if (_inputModeChangeHandler != null) {
-            _inputModeChangeHandler.invoke(false);
+        if (_pageChangeHandler != null) {
+            _pageChangeHandler.invoke(false);
         }
         return true;
     }

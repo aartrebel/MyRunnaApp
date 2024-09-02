@@ -27,6 +27,21 @@ class ExerciseSettings {
     public var cdReType as ExType = TYPE_NONE;
     public var cdReValue as Number = 0;
 
+    // backup of settings
+    private var prevWuExType as ExType = TYPE_NONE;
+    private var prevWuExValue as Number = 0;
+    private var prevWuReType as ExType = TYPE_NONE;
+    private var prevWuReValue as Number = 0;
+    private var prevRuExType as ExType = TYPE_NONE;
+    private var prevRuExValue as Number = 0;
+    private var prevRuReType as ExType = TYPE_NONE;
+    private var prevRuReValue as Number = 0;
+    private var prevRuRepeats as Number = 0;
+    private var prevCdExType as ExType = TYPE_NONE;
+    private var prevCdExValue as Number = 0;
+    private var prevCdReType as ExType = TYPE_NONE;
+    private var prevCdReValue as Number = 0;
+
 
     // constricts the class instance and loads the settings from properties
     public function initialize() {
@@ -118,5 +133,43 @@ class ExerciseSettings {
         Properties.setValue("cdReType",cdReType);
         Properties.setValue("cdReValue",cdReValue);
     }
+
+
+    // function creates a back copy of the settings
+    // enables the restoration to a previous state
+    public function backup() {
+        prevWuExType = wuExType;
+        prevWuExValue = wuExValue;
+        prevWuReType = wuReType;
+        prevWuReValue = wuReValue;
+        prevRuExType = ruExType;
+        prevRuExValue = ruExValue;
+        prevRuReType = ruReType;
+        prevRuReValue = ruReValue;
+        prevRuRepeats = ruRepeats;
+        prevCdExType = cdExType;
+        prevCdExValue = cdExValue;
+        prevCdReType = cdReType;
+        prevCdReValue = cdReValue;
+    }
+
+
+    // function restores the settings to a previous backup
+    public function restore() {
+        wuExType = prevWuExType;
+        wuExValue = prevWuExValue;
+        wuReType = prevWuReType;
+        wuReValue = prevWuReValue;
+        ruExType = prevRuExType;
+        ruExValue = prevRuExValue;
+        ruReType = prevRuReType;
+        ruReValue = prevRuReValue;
+        ruRepeats = prevRuRepeats;
+        cdExType = prevCdExType;
+        cdExValue = prevCdExValue;
+        cdReType = prevCdReType;
+        cdReValue = prevCdReValue;
+    } 
+
 
 }

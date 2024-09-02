@@ -115,7 +115,6 @@ class ValueInputView extends WatchUi.View {
                     if (_onDoneHandler != null) {
                         _onDoneHandler.invoke(_entry.toNumber());
                     }
-                    WatchUi.popView(WatchUi.SLIDE_RIGHT);
                 } else {
                     _error = NIL_ERROR;
                     WatchUi.requestUpdate();
@@ -131,7 +130,6 @@ class ValueInputView extends WatchUi.View {
                     if (_onDoneHandler != null) {
                         _onDoneHandler.invoke(duration);
                     }
-                    WatchUi.popView(WatchUi.SLIDE_RIGHT);
                 } else {
                     _error = NIL_ERROR;
                     WatchUi.requestUpdate();

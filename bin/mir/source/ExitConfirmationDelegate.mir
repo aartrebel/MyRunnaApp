@@ -1,7 +1,7 @@
-[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExitConfirmationDelegate.mc"; @line = 1; ]
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExitConfirmationDelegate.mc"; @line = 1; ]
 import Toybox.Lang;
-[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExitConfirmationDelegate.mc"; @line = 2; ]
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExitConfirmationDelegate.mc"; @line = 2; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExitConfirmationDelegate.mc"; @line = 1; ]
+[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExitConfirmationDelegate.mc"; @line = 1; ]
 <init> {
 }

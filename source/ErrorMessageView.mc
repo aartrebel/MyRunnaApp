@@ -1,19 +1,28 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
+import Toybox.Lang;
 
-class SettingsErrorView extends WatchUi.View {
+class ErrorMessageView extends WatchUi.View {
 
-    function initialize() {
+    // instruction under error message
+    static private const ACTION_MSG = "tap to\ncontinue"; 
+
+    // error message to display
+    private var _errorMsg as String?;
+
+
+    function initialize(errorMsg as String) {
         View.initialize();
+        _errorMsg = errorMsg;
     }
 
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.clear();
         dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
-        dc.drawText(120, 120, Graphics.FONT_LARGE, "INVALID\nSETTINGS", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.clear();
+        var message = _errorMsg + "\n" + ACTION_MSG;
+        dc.drawText(120, 120, Graphics.FONT_LARGE, message, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
 
@@ -26,8 +35,6 @@ class SettingsErrorView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        // Call the parent onUpdate function to redraw the layout
-        //View.onUpdate(dc);
     }
 
 

@@ -46,6 +46,7 @@ class ExerciseInputView extends ValueInputView {
         _updateSettingsHandler = updateSettingsHandler;
         _delegate = delegate;
 
+        // initialise the view according to the exercise type
         switch (_currentExType) {
             case ExerciseSettings.TYPE_DURATION:
                 ValueInputView.initialize(ValueInputView.INPUT_TIME, DUR_TITLE, DUR_UNIT, DUR_MAX, method(:onDone), delegate);
@@ -58,43 +59,52 @@ class ExerciseInputView extends ValueInputView {
                 _currentExType = ExerciseSettings.TYPE_NONE;
                 ValueInputView.initialize(ValueInputView.INPUT_NUMBER, null, null, 0, method(:onDone), delegate);
         }
+
+        // initialise the handler
+        delegate.setHandlers(method(:onPageChange));
     }
 
 
     // function changes the input mode to the next
-    public function onNextPage() as Void {
+    public function onPageChange(isNext as Boolean) as Void {
         switch (_currentExType) {
             case ExerciseSettings.TYPE_DURATION:
-                _currentExType = ExerciseSettings.TYPE_DISTANCE;
-                ValueInputView.updateParams(ValueInputView.INPUT_TIME, DIST_TITLE, DIST_UNIT, DIST_MAX);
+                if (isNext) {
+                    _currentExType = ExerciseSettings.TYPE_DISTANCE;
+                    ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, DIST_TITLE, DIST_UNIT, DIST_MAX);
+                } else {
+                    _currentExType = ExerciseSettings.TYPE_NONE;
+                    ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, null, null, 0);
+                }
                 break;
             case ExerciseSettings.TYPE_DISTANCE:
-                _currentExType = ExerciseSettings.TYPE_NONE;
-                //ValueInputView.updateParams(null, null, null);
+                if (isNext) {
+                    _currentExType = ExerciseSettings.TYPE_NONE;
+                    ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, null, null, 0);
+                } else {
+                    _currentExType = ExerciseSettings.TYPE_DURATION;
+                    ValueInputView.updateParams(ValueInputView.INPUT_TIME, DUR_TITLE, DUR_UNIT, DUR_MAX);
+                }
                 break;
             case ExerciseSettings.TYPE_NONE:
             default:
-                _currentExType = ExerciseSettings.TYPE_DURATION;
-                ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, DUR_TITLE, DUR_UNIT, DUR_MAX);
+                if (isNext) {
+                    _currentExType = ExerciseSettings.TYPE_DURATION;
+                    ValueInputView.updateParams(ValueInputView.INPUT_TIME, DUR_TITLE, DUR_UNIT, DUR_MAX);
+                } else {
+                    _currentExType = ExerciseSettings.TYPE_DISTANCE;
+                    ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, DIST_TITLE, DIST_UNIT, DIST_MAX);
+                }
         }
     }
 
 
-    // function changes the input mode to the previous
-    public function onPreviousPage() as Void {
-        switch (_currentExType) {
-            case ExerciseSettings.TYPE_DURATION:
-                _currentExType = ExerciseSettings.TYPE_NONE;
-                //ValueInputView.updateParams(null, null, null);
-                break;
-            case ExerciseSettings.TYPE_DISTANCE:
-                _currentExType = ExerciseSettings.TYPE_DURATION;
-                ValueInputView.updateParams(ValueInputView.INPUT_TIME, DUR_TITLE, DUR_UNIT, DUR_MAX);
-                break;
-            case ExerciseSettings.TYPE_NONE:
-            default:
-                _currentExType = ExerciseSettings.TYPE_DISTANCE;
-                ValueInputView.updateParams(ValueInputView.INPUT_NUMBER, DIST_TITLE, DIST_UNIT, DIST_MAX);
+    // function is called when the value is tapped
+    public function onEnter() as Void {
+        if (_currentExType == ExerciseSettings.TYPE_NONE) {
+            onDone(0);
+        } else {
+            ValueInputView.onEnter();
         }
     }
 

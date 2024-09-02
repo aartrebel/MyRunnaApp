@@ -11,9 +11,16 @@ import Toybox.WatchUi;
 import Toybox.Activity;
 
 // to do:
-//  page through ex type on ExerciseInputView
+//  page through ex type on ExerciseInputView [done]
+//  check settings validity after config [done]
 //  replace NONE wth no run or no walk
+//  enable WU, RU and CD all to be set to NONE - change status/substatus (DONE) to different language (blank?)
+//  change error message - tap to continue in different colour
+//  reset settings to default if invalid on startup - fix error message
+//  error message if attempting to clear empty activity log
+//  timed error message if attempting open menu while running
 //  clean out commented out code
+//  clean out println statements
 //  remove overriding functions that are redundant
 //  vibration patterns - increase volume
 //  vibration patterns - start run quick buzzes, start walk long buzz
@@ -204,8 +211,8 @@ class MyRunnaApp extends Application.AppBase {
             _status.printStatus("STR");
         }
         else { // if settings invalid
-            _myRunnaView = new SettingsErrorView();
-            _myRunnaDelegate = null;
+            _myRunnaView = new ErrorMessageView("SETTINGS\nARE INVALID\n and have been reset");
+            _myRunnaDelegate = new ErrorMessageDelegate();
         }
     }
 

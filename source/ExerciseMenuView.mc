@@ -162,39 +162,74 @@ class ExerciseMenuView extends WatchUi.Menu2 {
     }
 
 
+    // function sets the menu sublabels in accordance with the settings
+    private function updateSubLabels() {
+            _wuExItem.setSubLabel(subMenuText(_settings.wuExType, _settings.wuExValue));
+            _wuReItem.setSubLabel(subMenuText(_settings.wuReType, _settings.wuReValue));
+            _ruExItem.setSubLabel(subMenuText(_settings.ruExType, _settings.ruExValue));
+            _ruReItem.setSubLabel(subMenuText(_settings.ruReType, _settings.ruReValue));
+            _cdExItem.setSubLabel(subMenuText(_settings.cdExType, _settings.cdExValue));
+            _cdReItem.setSubLabel(subMenuText(_settings.cdReType, _settings.cdReValue));
+    } 
+
+
     // function handles the update to the settings
     // it is call when the setting has been entered
     public function updateSettings(exType as ExerciseSettings.ExType, value as Number) as Void {
         System.println("updateSettings called " + exType + ", " + value);
         System.println("lastMenuItem " + _lastMenuItemId);
 
+        // backup settings for restore if required
+        _settings.backup();
+
         // update setting according to menu item
         if (_lastMenuItemId.equals(WARMUP_RUN_ITEM)) {
             _settings.wuExType = exType;
             _settings.wuExValue = value;
-            _wuExItem.setSubLabel(subMenuText(_settings.wuExType, _settings.wuExValue));
         } else if (_lastMenuItemId.equals(WARMUP_WALK_ITEM)) {
             _settings.wuReType = exType;
             _settings.wuReValue = value;
-            _wuReItem.setSubLabel(subMenuText(_settings.wuReType, _settings.wuReValue));
         } else if (_lastMenuItemId.equals(EXERCISE_RUN_ITEM)) {
             _settings.ruExType = exType;
             _settings.ruExValue = value;
-            _ruExItem.setSubLabel(subMenuText(_settings.ruExType, _settings.ruExValue));
         } else if (_lastMenuItemId.equals(EXERCISE_WALK_ITEM)) {
             _settings.ruReType = exType;
             _settings.ruReValue = value;
-            _ruReItem.setSubLabel(subMenuText(_settings.ruReType, _settings.ruReValue));
         } else if (_lastMenuItemId.equals(COOLDOWN_RUN_ITEM)) {
             _settings.cdExType = exType;
             _settings.cdExValue = value;
-            _cdExItem.setSubLabel(subMenuText(_settings.cdExType, _settings.cdExValue));
         } else if (_lastMenuItemId.equals(COOLDOWN_WALK_ITEM)) {
             _settings.cdReType = exType;
             _settings.cdReValue = value;
-            _cdReItem.setSubLabel(subMenuText(_settings.cdReType, _settings.cdReValue));
         }
-        _isSettingsUpdated = true;
+
+        // check if settings as are valid and restore if not
+        if (_settings.areValid()) {
+            _isSettingsUpdated = true;
+
+            // update menu subtitle
+            updateSubLabels(); 
+
+            // pop input view
+            WatchUi.popView(WatchUi.SLIDE_RIGHT);
+        } else {
+            // restore settings
+            _settings.restore();
+
+            // pop input view
+            WatchUi.popView(WatchUi.SLIDE_RIGHT);
+
+            // display error message
+            WatchUi.pushView(new ErrorMessageView("INVALID\nSETTING\n and not applied"), new ErrorMessageDelegate(), WatchUi.SLIDE_IMMEDIATE);
+        }
+
+    }
+
+
+    // function closes the error view and settings view
+    // it is called by the ErrorMessageDialogue when the user acknoledges the error
+    public function closeErrorMessage() {
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
     }
 
 
@@ -207,6 +242,10 @@ class ExerciseMenuView extends WatchUi.Menu2 {
         _settings.ruRepeats = value;
         _isSettingsUpdated = true;
         _ruRepeatsItem.setSubLabel(_settings.ruRepeats.toString());
+
+        // pop input view
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
+
     } 
 
 
