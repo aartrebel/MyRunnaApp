@@ -51,21 +51,21 @@ class ValueInputView extends WatchUi.View{
         %tmp.32 = dup %tmp.30;
         %tmp.33 = aputv %tmp.32 9 %tmp.31;
         putv self :DIGITS %tmp.33;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc" 21 10 ]
-        %tmp.34 = getm $.Toybox.Graphics;
-        %tmp.35 = getv %tmp.34 :FONT_LARGE;
-        putv self :ENTRY_FONT %tmp.35;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc" 25 10 ]
-        %tmp.36 = getm $.Toybox.Graphics;
-        %tmp.37 = getv %tmp.36 :FONT_XTINY;
-        putv self :TITLE_FONT %tmp.37;
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc" 32 16 ]
-        %tmp.39 = getv ? :INPUT_TIME;
-        putv self :_entryType %tmp.39;
+        %tmp.35 = getv ? :INPUT_TIME;
+        putv self :_entryType %tmp.35;
     }
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 8; ]
     static
     <init> {
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc" 21 24 ]
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :FONT_LARGE;
+        putv self :ENTRY_FONT %tmp.37;
+[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc" 25 24 ]
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :FONT_XTINY;
+        putv self :TITLE_FONT %tmp.39;
     }
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 10; ]
     public static
@@ -87,7 +87,8 @@ class ValueInputView extends WatchUi.View{
     const DIGIT_FONT;
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 20; @position = 10; ]
     const DIGITS;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 21; @position = 10; ]
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 21; @position = 24; ]
+    public static
     const ENTRY_FONT;
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 22; @position = 10; ]
     const EMPTY_ENTRY = " _ _ _ _ _ _ _ _ _ _ ";
@@ -95,7 +96,8 @@ class ValueInputView extends WatchUi.View{
     const NIL_ERROR = "VALUE";
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 24; @position = 10; ]
     const MAX_ERROR = "> MAX";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 25; @position = 10; ]
+    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 25; @position = 24; ]
+    public static
     const TITLE_FONT;
     [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc"; @line = 28; @position = 16; ]
     private
@@ -1109,7 +1111,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_V
         %tmp.59 = getm $.Toybox.Graphics;
         %tmp.60 = getv %tmp.59 :COLOR_WHITE;
         %tmp.61 = getm $.Toybox.Graphics;
-        %tmp.62 = getv %tmp.61 :COLOR_BLACK;
+        %tmp.62 = getv %tmp.61 :COLOR_TRANSPARENT;
         invoke %tmp.57 %tmp.58(%tmp.60, %tmp.62);
 [ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ValueInputView.mc" 223 8 ]
 C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ValueInputView_mc_223_8_226_8_if_stmt:

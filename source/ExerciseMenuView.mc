@@ -6,13 +6,13 @@ class ExerciseMenuView extends WatchUi.Menu2 {
 
     // menu item IDs
     static public const DISCARD_ITEM = "discard";
-    static public const WARMUP_RUN_ITEM = "wuru";
-    static public const WARMUP_WALK_ITEM = "wure";
-    static public const EXERCISE_RUN_ITEM = "exru";
-    static public const EXERCISE_WALK_ITEM = "exre";
-    static public const EXERCISE_REPEATS_ITEM = "repeats";
-    static public const COOLDOWN_RUN_ITEM = "cdru";
-    static public const COOLDOWN_WALK_ITEM = "cdre";
+    static public const WARMUP_RUN_ITEM = "WU-run";
+    static public const WARMUP_WALK_ITEM = "WU-walk";
+    static public const EXERCISE_RUN_ITEM = "EX-run";
+    static public const EXERCISE_WALK_ITEM = "EX-walk";
+    static public const EXERCISE_REPEATS_ITEM = "Repeats";
+    static public const COOLDOWN_RUN_ITEM = "CD-run";
+    static public const COOLDOWN_WALK_ITEM = "CD-walk";
 
     // exercise repeat defaults
     static private const REPEATS_MAX = 100;
@@ -21,6 +21,11 @@ class ExerciseMenuView extends WatchUi.Menu2 {
     // preset menu subtext
     static private const SUBTITLE_SESSION_OPEN = "logging activity";
     static private const SUBTITLE_SESSION_CLOSED = "activity log empty";
+    static private const PREFIX_DUR = "";
+    static private const PREFIX_DIST = "";
+    static private const SUBTILE_NONE = "disabled";
+    static private const TYPE_LOCK_TEXT = "(type locked)";
+    static private const REPEATS_LOCK_TEXT = "(locked)"; 
 
     // menu items
     private var _discardActivityItem as MenuItem?;
@@ -35,6 +40,9 @@ class ExerciseMenuView extends WatchUi.Menu2 {
     // exercise settings
     private var _settings as ExerciseSettings?;
 
+    // exercise status
+    private var _status as ExerciseStatus?;
+
     // exercise menu delegate
     private var _delegate as ExerciseMenuDelegate?;
 
@@ -47,10 +55,11 @@ class ExerciseMenuView extends WatchUi.Menu2 {
     private var _isSettingsUpdated as Boolean = false;
 
     // Constructor
-    public function initialize(settings as ExerciseSettings, discardSessionHandler as Method, isSessionOpenHandler as Method, 
-            delegate as ExerciseMenuDelegate) {
+    public function initialize(settings as ExerciseSettings, status as ExerciseStatus, discardSessionHandler as Method, 
+            isSessionOpenHandler as Method, delegate as ExerciseMenuDelegate) {
 
         _settings = settings;
+        _status = status;
         _discardSessionHandler = discardSessionHandler;
         _isSessionOpenHandler = isSessionOpenHandler;
         _delegate = delegate;
@@ -66,39 +75,60 @@ class ExerciseMenuView extends WatchUi.Menu2 {
             _discardActivityItem = new WatchUi.MenuItem("Discard activity", SUBTITLE_SESSION_CLOSED, DISCARD_ITEM, null);
         }
         addItem(_discardActivityItem);
-        _wuExItem = new WatchUi.MenuItem("Warmup - run", subMenuText(_settings.wuExType, _settings.wuExValue), WARMUP_RUN_ITEM, null);
+        _wuExItem = new WatchUi.MenuItem("Warmup - run", subMenuText(_settings.wuExType, _settings.wuExValue, 
+            (_status.exState == ExerciseStatus.STATE_WARMUP_RUN)), WARMUP_RUN_ITEM, null);
         addItem(_wuExItem);
-        _wuReItem = new WatchUi.MenuItem("Warmup - walk", subMenuText(_settings.wuReType, _settings.wuReValue), WARMUP_WALK_ITEM, null);
+        _wuReItem = new WatchUi.MenuItem("Warmup - walk", subMenuText(_settings.wuReType, _settings.wuReValue, 
+            (_status.exState == ExerciseStatus.STATE_WARMUP_WALK)), WARMUP_WALK_ITEM, null);
         addItem(_wuReItem);
-        _ruExItem = new WatchUi.MenuItem("Exercise - run", subMenuText(_settings.ruExType, _settings.ruExValue), EXERCISE_RUN_ITEM, null);
+        _ruExItem = new WatchUi.MenuItem("Exercise - run", subMenuText(_settings.ruExType, _settings.ruExValue, 
+            (_status.exState == ExerciseStatus.STATE_EXERCISE_RUN)), EXERCISE_RUN_ITEM, null);
         addItem(_ruExItem);
-        _ruReItem = new WatchUi.MenuItem("Exercise - walk", subMenuText(_settings.ruReType, _settings.ruReValue), EXERCISE_WALK_ITEM, null);
+        _ruReItem = new WatchUi.MenuItem("Exercise - walk", subMenuText(_settings.ruReType, _settings.ruReValue, 
+            (_status.exState == ExerciseStatus.STATE_EXERCISE_WALK)), EXERCISE_WALK_ITEM, null);
         addItem(_ruReItem);
-        _ruRepeatsItem = new WatchUi.MenuItem("Exercise - repeats", _settings.ruRepeats.toString(), EXERCISE_REPEATS_ITEM, null);
+        if ((_status.exCount >= (_settings.ruRepeats-1)) && ((_status.exState == ExerciseStatus.STATE_EXERCISE_RUN) || 
+                        (_status.exState == ExerciseStatus.STATE_EXERCISE_WALK))) {
+            _ruRepeatsItem = new WatchUi.MenuItem("Exercise - repeats", _settings.ruRepeats.toString() + " " + REPEATS_LOCK_TEXT, 
+                EXERCISE_REPEATS_ITEM, null);
+        } else {
+            _ruRepeatsItem = new WatchUi.MenuItem("Exercise - repeats", _settings.ruRepeats.toString(), EXERCISE_REPEATS_ITEM, null);
+        }
         addItem(_ruRepeatsItem);
-        _cdExItem = new WatchUi.MenuItem("Cooldown - run", subMenuText(_settings.cdExType, _settings.cdExValue), COOLDOWN_RUN_ITEM, null);
+        _cdExItem = new WatchUi.MenuItem("Cooldown - run", subMenuText(_settings.cdExType, _settings.cdExValue, 
+            (_status.exState == ExerciseStatus.STATE_COOLDOWN_RUN)), COOLDOWN_RUN_ITEM, null);
         addItem(_cdExItem);
-        _cdReItem = new WatchUi.MenuItem("Cooldown - walk", subMenuText(_settings.cdReType, _settings.cdReValue), COOLDOWN_WALK_ITEM, null);
+        _cdReItem = new WatchUi.MenuItem("Cooldown - walk", subMenuText(_settings.cdReType, _settings.cdReValue, 
+            (_status.exState == ExerciseStatus.STATE_COOLDOWN_WALK)), COOLDOWN_WALK_ITEM, null);
         addItem(_cdReItem);
     }
 
 
     // function formats the submenu text
     // uses the exercise type and value
-    private function subMenuText(exType as ExerciseSettings.ExType, value as Number) as String{
+    private function subMenuText(exType as ExerciseSettings.ExType, value as Number, typeLocked as Boolean) as String{
         switch (exType) {
             case ExerciseSettings.TYPE_NONE:
-                return ExerciseInputView.NONE_TITLE;
+                return ExerciseInputView.NONE_ENTRY;
             case ExerciseSettings.TYPE_DURATION:
                 // format duration
                 var seconds = value%60;
                 var minutes = (value/60)%60;
                 var hours = value/3600;
-                return ExerciseInputView.DUR_TITLE + " = " + hours.toString() + ":" + minutes.format("%02u") +
-                    ":" + seconds.format("%02u");
+                if (!typeLocked) {
+                    return PREFIX_DUR + hours.toString() + ":" + minutes.format("%02u") +
+                        ":" + seconds.format("%02u");
+                } else {
+                    return PREFIX_DUR + hours.toString() + ":" + minutes.format("%02u") +
+                        ":" + seconds.format("%02u") + " " + TYPE_LOCK_TEXT;
+                }
             case ExerciseSettings.TYPE_DISTANCE:
             default:
-                return ExerciseInputView.DIST_TITLE + " = " + value.toString() + ExerciseInputView.DIST_UNIT;
+                if (!typeLocked) {
+                    return PREFIX_DIST + value.toString() + ExerciseInputView.DIST_UNIT;
+                } else {
+                    return PREFIX_DIST + value.toString() + ExerciseInputView.DIST_UNIT + " " + TYPE_LOCK_TEXT;
+                }
         }
     }
 
@@ -131,31 +161,40 @@ class ExerciseMenuView extends WatchUi.Menu2 {
         } else {
             if (_lastMenuItemId.equals(WARMUP_RUN_ITEM)) {
                 var delegate = new ExerciseInputDelegate();
-                var view = new ExerciseInputView(_settings.wuExType, 0, method(:updateSettings), delegate);
+                var view = new ExerciseInputView(WARMUP_RUN_ITEM,_settings.wuExType, 0, (_status.exState == ExerciseStatus.STATE_WARMUP_RUN), 
+                    method(:updateSettings), delegate);
                 WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
             } else if (_lastMenuItemId.equals(WARMUP_WALK_ITEM)) {
                 var delegate = new ExerciseInputDelegate();
-                var view = new ExerciseInputView(_settings.wuReType, 0, method(:updateSettings), delegate);
+                var view = new ExerciseInputView(WARMUP_WALK_ITEM, _settings.wuReType, 0, (_status.exState == ExerciseStatus.STATE_WARMUP_WALK), 
+                    method(:updateSettings), delegate);
                 WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
             } else if (_lastMenuItemId.equals(EXERCISE_RUN_ITEM)) {
                 var delegate = new ExerciseInputDelegate();
-                var view = new ExerciseInputView(_settings.ruExType, 0, method(:updateSettings), delegate);
+                var view = new ExerciseInputView(EXERCISE_RUN_ITEM, _settings.ruExType, 0, (_status.exState == ExerciseStatus.STATE_EXERCISE_RUN), 
+                    method(:updateSettings), delegate);
                 WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
             } else if (_lastMenuItemId.equals(EXERCISE_WALK_ITEM)) {
                 var delegate = new ExerciseInputDelegate();
-                var view = new ExerciseInputView(_settings.ruReType, 0, method(:updateSettings), delegate);
+                var view = new ExerciseInputView(EXERCISE_WALK_ITEM, _settings.ruReType, 0, (_status.exState == ExerciseStatus.STATE_EXERCISE_WALK), 
+                    method(:updateSettings), delegate);
                 WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
             } else if (_lastMenuItemId.equals(EXERCISE_REPEATS_ITEM)) {
-                var delegate = new ValueInputDelegate();
-                var view = new ValueInputView(ValueInputView.INPUT_NUMBER, REPEATS_TITLE, null, REPEATS_MAX, method(:updateRepeats), delegate);
-                WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
+                if (!((_status.exCount >= (_settings.ruRepeats-1)) && ((_status.exState == ExerciseStatus.STATE_EXERCISE_RUN) || 
+                        (_status.exState == ExerciseStatus.STATE_EXERCISE_WALK)))) {
+                    var delegate = new ValueInputDelegate();
+                    var view = new ValueInputView(ValueInputView.INPUT_NUMBER, REPEATS_TITLE, null, REPEATS_MAX, method(:updateRepeats), delegate);
+                    WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
+                }
             } else if (_lastMenuItemId.equals(COOLDOWN_RUN_ITEM)) {
                 var delegate = new ExerciseInputDelegate();
-                var view = new ExerciseInputView(_settings.cdExType, 0, method(:updateSettings), delegate);
+                var view = new ExerciseInputView(COOLDOWN_RUN_ITEM, _settings.cdExType, 0, (_status.exState == ExerciseStatus.STATE_COOLDOWN_RUN), 
+                    method(:updateSettings), delegate);
                 WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
             } else if (_lastMenuItemId.equals(COOLDOWN_WALK_ITEM)) {
                 var delegate = new ExerciseInputDelegate();
-                var view = new ExerciseInputView(_settings.cdReType, 0, method(:updateSettings), delegate);
+                var view = new ExerciseInputView(COOLDOWN_WALK_ITEM, _settings.cdReType, 0, (_status.exState == ExerciseStatus.STATE_COOLDOWN_WALK), 
+                    method(:updateSettings), delegate);
                 WatchUi.pushView(view, delegate, WatchUi.SLIDE_LEFT);
             }
         }
@@ -164,12 +203,12 @@ class ExerciseMenuView extends WatchUi.Menu2 {
 
     // function sets the menu sublabels in accordance with the settings
     private function updateSubLabels() {
-            _wuExItem.setSubLabel(subMenuText(_settings.wuExType, _settings.wuExValue));
-            _wuReItem.setSubLabel(subMenuText(_settings.wuReType, _settings.wuReValue));
-            _ruExItem.setSubLabel(subMenuText(_settings.ruExType, _settings.ruExValue));
-            _ruReItem.setSubLabel(subMenuText(_settings.ruReType, _settings.ruReValue));
-            _cdExItem.setSubLabel(subMenuText(_settings.cdExType, _settings.cdExValue));
-            _cdReItem.setSubLabel(subMenuText(_settings.cdReType, _settings.cdReValue));
+            _wuExItem.setSubLabel(subMenuText(_settings.wuExType, _settings.wuExValue, (_status.exState == ExerciseStatus.STATE_WARMUP_RUN)));
+            _wuReItem.setSubLabel(subMenuText(_settings.wuReType, _settings.wuReValue, (_status.exState == ExerciseStatus.STATE_WARMUP_WALK)));
+            _ruExItem.setSubLabel(subMenuText(_settings.ruExType, _settings.ruExValue, (_status.exState == ExerciseStatus.STATE_EXERCISE_RUN)));
+            _ruReItem.setSubLabel(subMenuText(_settings.ruReType, _settings.ruReValue, (_status.exState == ExerciseStatus.STATE_EXERCISE_WALK)));
+            _cdExItem.setSubLabel(subMenuText(_settings.cdExType, _settings.cdExValue, (_status.exState == ExerciseStatus.STATE_COOLDOWN_RUN)));
+            _cdReItem.setSubLabel(subMenuText(_settings.cdReType, _settings.cdReValue, (_status.exState == ExerciseStatus.STATE_COOLDOWN_WALK)));
     } 
 
 
@@ -253,6 +292,7 @@ class ExerciseMenuView extends WatchUi.Menu2 {
     public function saveSettings() {
         if (_isSettingsUpdated) {
             _settings.save();
+            _status.resetRemaining();
         }
     }
 

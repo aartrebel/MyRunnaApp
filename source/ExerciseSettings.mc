@@ -7,7 +7,8 @@ class ExerciseSettings {
     public enum ExType {
         TYPE_NONE = 0,
         TYPE_DURATION = 1,
-        TYPE_DISTANCE = 2
+        TYPE_DISTANCE = 2,
+        TYPE_ANY = 3
     }
 
     // settings variables
@@ -52,21 +53,21 @@ class ExerciseSettings {
     // function presets the settings
     // initialise settings for debugging only
     public function preset() {
-        wuExType = TYPE_NONE;
-        wuExValue = 0;
-        wuReType = TYPE_DURATION;
-        wuReValue = 300;
+        wuExType = TYPE_DISTANCE;
+        wuExValue = 10;
+        wuReType = TYPE_DISTANCE;
+        wuReValue = 10;
 
         ruExType = TYPE_DISTANCE;
-        ruExValue = 1234;
-        ruReType = TYPE_DURATION;
-        ruReValue = 60;
-        ruRepeats = 3;
+        ruExValue = 10;
+        ruReType = TYPE_DISTANCE;
+        ruReValue = 10;
+        ruRepeats = 2;
 
-        cdExType = TYPE_NONE;
-        cdExValue = 0;
-        cdReType = TYPE_DURATION;
-        cdReValue = 300;
+        cdExType = TYPE_DISTANCE;
+        cdExValue = 10;
+        cdReType = TYPE_DISTANCE;
+        cdReValue = 10;
    }
 
 
@@ -94,9 +95,7 @@ class ExerciseSettings {
     // function checks that the settings are valie
     public function areValid() as Boolean {
         // check settings
-        var isSettingsError =   ((wuExType == TYPE_NONE) && (wuReType == TYPE_NONE)) ||
-                        ((ruExType == TYPE_NONE) && (ruReType == TYPE_NONE)) ||
-                        ((cdExType == TYPE_NONE) && (cdReType == TYPE_NONE)) ||
+        var isSettingsError =   
                         ((wuExType != TYPE_NONE) && (wuExValue == 0)) ||
                         ((wuReType != TYPE_NONE) && (wuReValue == 0)) ||
                         ((ruExType != TYPE_NONE) && (ruExValue == 0)) ||

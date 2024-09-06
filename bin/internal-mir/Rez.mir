@@ -33,7 +33,7 @@ module Rez {
 c_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_bin_gen_006_B2700_00_source_Rez_mcgen_14_74_21_8_start:
 [ "c:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\bin\gen\006-B2700-00\source\Rez.mcgen" 15 12 ]
             [ "c_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_bin_gen_006_B2700_00_source_Rez_mcgen_14_74_21_8_start" "c_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_bin_gen_006_B2700_00_source_Rez_mcgen_14_74_21_8_stop" ]
-            %rez_cmp_local_text_1030919965.1 = local;
+            %rez_cmp_local_text_9145059703.1 = local;
             %tmp.3 = getm $.Toybox.WatchUi;
             %tmp.4 = getv function ? %tmp.3 :Text;
             %tmp.5 = newd 6;
@@ -70,7 +70,7 @@ c_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_bin_gen_
             %tmp.42 = dup %tmp.37;
             %tmp.43 = aputv %tmp.42 %tmp.39 %tmp.41;
             %tmp.1 = newc %tmp.4 (%tmp.43);
-            lputv %rez_cmp_local_text_1030919965.1 %tmp.1;
+            lputv %rez_cmp_local_text_9145059703.1 %tmp.1;
 [ "c:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\bin\gen\006-B2700-00\source\Rez.mcgen" 17 12 ]
             [ "c_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_bin_gen_006_B2700_00_source_Rez_mcgen_14_74_21_8_start" "c_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_bin_gen_006_B2700_00_source_Rez_mcgen_14_74_21_8_stop" ]
             %rez_cmp_local_bitmap_id_monkey.2 = local;
@@ -113,7 +113,7 @@ c_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_bin_gen_
             invoke %tmp.73 %tmp.74(%tmp.80, %tmp.82);
 [ "c:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\bin\gen\006-B2700-00\source\Rez.mcgen" 20 12 ]
             %tmp.83 = newa 2 Array<WatchUi.Drawable>;
-            %tmp.85 = lgetv %rez_cmp_local_text_1030919965.1;
+            %tmp.85 = lgetv %rez_cmp_local_text_9145059703.1;
             %tmp.86 = dup %tmp.83;
             %tmp.87 = aputv %tmp.86 0 %tmp.85;
             %tmp.89 = lgetv %rez_cmp_local_bitmap_id_monkey.2;

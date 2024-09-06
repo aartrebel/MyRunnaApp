@@ -10,11 +10,21 @@ class ExerciseStatus {
 
     // exercise state values
     public enum ExState {
-        STATE_WARMUP = 1,
-        STATE_EXERCISE = 2,
-        STATE_COOLDOWN = 3,
-        STATE_EXTEND = 4
+        STATE_INITIAL,
+        STATE_WARMUP_RUN,
+        STATE_WARMUP_WALK,
+        STATE_EXERCISE_RUN,
+        STATE_EXERCISE_WALK,
+        STATE_COOLDOWN_RUN,
+        STATE_COOLDOWN_WALK,
+        STATE_EXTEND
     }
+//    public enum ExState {
+//        STATE_WARMUP = 1,
+//        STATE_EXERCISE = 2,
+//        STATE_COOLDOWN = 3,
+//        STATE_EXTEND = 4
+//    }
 
 
     // settings
@@ -22,17 +32,17 @@ class ExerciseStatus {
 
     // state variabls
     public var totTime as Lang.Number = 0;
-    public var totDist as Lang.Double = 0.0d;
+    public var totDist as Lang.Float = 0.0;
+    public var preciseTotDist as Lang.Double = 0.0d;
     public var lapTime as Lang.Number = 0;
-    public var lapDist as Lang.Double = 0.0d;
+    public var lapDist as Lang.Float = 0.0;
+    public var preciseLapDist as Lang.Double = 0.0d;
     public var remTime as Lang.Number = 0;
-    public var remDist as Lang.Double = 0.0d;
-    public var finish as Lang.Number = 0;
+    public var remDist as Lang.Float= 0.0;
     public var speed as Lang.Float = 0.0;
     public var heartRate as Number = 0;
 
-    public var exState as ExState = STATE_WARMUP;
-    public var isRun as Lang.Boolean = true;
+    public var exState as ExState = STATE_INITIAL;
     public var isPaused as Lang.Boolean = true;
 
     public var exCount as Lang.Number = 0;
@@ -56,53 +66,27 @@ class ExerciseStatus {
         heartRateZones = UserProfile.getHeartRateZones(UserProfile.HR_ZONE_SPORT_RUNNING);
 
         // set initial status
-        if (_settings.wuExType != ExerciseSettings.TYPE_NONE) {
-            finish = _settings.wuExValue;
-            isRun = true;
-        } else {
-            finish = _settings.wuReValue;
-            isRun = false;
-        }
+        totTime = 0;
+        preciseTotDist = 0.0d;
+        lapTime = 0;
+        preciseLapDist = 0.0d;
+        exState = STATE_INITIAL;
+        exCount = 0;
 
     }
 
 
     public function printStatus(caller as Lang.String) as Void {
-        System.println ("Status[" + caller +"]: state=" + exState + ", run=" + isRun + ", count=" + exCount + ", pause=" + isPaused + 
+        System.println ("Status[" + caller +"]: state=" + exState + ", count=" + exCount + ", pause=" + isPaused + 
             ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime) +
-            ", totD=" + totDist.format("%1.0f") + ", lapD=" + lapDist.format("%1.0f") + ", speed=" + speed.format("%1.2f") +
+            ", totD=" + MyRunnaView.formatDistance(totDist) + ", lapD=" + MyRunnaView.formatDistance(lapDist) + ", speed=" + speed.format("%1.2f") +
             ", gps=" + gpsAccuracy);
     }
 
 
     // test if distance or duration is a priority
     public function isPriority(exType as ExerciseSettings.ExType) as Boolean {
-        switch (exState) {
-            case STATE_WARMUP:
-                if (isRun) {
-                    return (_settings.wuExType == exType);
-                }
-                else {
-                    return (_settings.wuReType == exType);
-                }
-            case STATE_EXERCISE:
-                if (isRun) {
-                    return (_settings.ruExType == exType);
-                }
-                else {
-                    return (_settings.ruReType == exType);
-                }
-            case STATE_COOLDOWN:
-                if (isRun) {
-                    return (_settings.cdExType == exType);
-                }
-                else {
-                    return (_settings.cdReType == exType);
-                }
-            case STATE_EXTEND:
-            default:
-                return false;
-        }
+        return getCurrentTargetType() == exType;
     }
 
 
@@ -119,122 +103,188 @@ class ExerciseStatus {
     }
 
 
+    // function returns the current target type (duration, distance or none)
+    private function getCurrentTargetType() as ExerciseSettings.ExType {
+        switch(exState) {
+            case STATE_INITIAL:
+                return ExerciseSettings.TYPE_NONE;
+            case STATE_WARMUP_RUN:
+                return _settings.wuExType;
+            case STATE_WARMUP_WALK:
+                return _settings.wuReType;
+            case STATE_EXERCISE_RUN:
+                return _settings.ruExType;
+            case STATE_EXERCISE_WALK:
+                return _settings.ruReType;
+            case STATE_COOLDOWN_RUN:
+                return _settings.cdExType;
+            case STATE_COOLDOWN_WALK:
+                return _settings.cdReType;
+            case STATE_EXTEND:
+            default:
+                return ExerciseSettings.TYPE_ANY;
+        }
+    }
+
+
+    // function returns the current target (duration, distance or none)
+    private function getCurrentTarget() as Number {
+        switch(exState) {
+            case STATE_INITIAL:
+                return 0;
+            case STATE_WARMUP_RUN:
+                return _settings.wuExValue;
+            case STATE_WARMUP_WALK:
+                return _settings.wuReValue;
+            case STATE_EXERCISE_RUN:
+                return _settings.ruExValue;
+            case STATE_EXERCISE_WALK:
+                return _settings.ruReValue;
+            case STATE_COOLDOWN_RUN:
+                return _settings.cdExValue;
+            case STATE_COOLDOWN_WALK:
+                return _settings.cdReValue;
+            case STATE_EXTEND:
+            default:
+                return 0;
+        }
+    }
+
+
+    // function determines the next state based on settings
+    private function setNextState() {
+        var nextExState = exState;
+        switch (exState) {
+            case STATE_INITIAL:
+                nextExState = STATE_WARMUP_RUN;
+            case STATE_WARMUP_RUN:
+                if (nextExState != exState) {
+                    if (_settings.wuExType != ExerciseSettings.TYPE_NONE) {
+                        break;
+                    } else {
+                        nextExState = STATE_WARMUP_WALK;
+                    }
+                } else {
+                    nextExState = STATE_WARMUP_WALK;
+                }
+            case STATE_WARMUP_WALK:
+                if (nextExState != exState) {
+                    if (_settings.wuReType != ExerciseSettings.TYPE_NONE) {
+                        break;
+                    } else {
+                        nextExState = STATE_EXERCISE_RUN;
+                    }
+                } else {
+                    nextExState = STATE_EXERCISE_RUN;
+                }
+            case STATE_EXERCISE_RUN:
+                if (nextExState != exState) {
+                    if (_settings.ruExType != ExerciseSettings.TYPE_NONE) {
+                        break;
+                    } else {
+                        nextExState = STATE_EXERCISE_WALK;
+                    }
+                } else {
+                    nextExState = STATE_EXERCISE_WALK;
+                }
+            case STATE_EXERCISE_WALK:
+                if (nextExState != exState) {
+                    if (_settings.ruReType != ExerciseSettings.TYPE_NONE) {
+                        break;
+                    } else {
+                        nextExState = STATE_COOLDOWN_RUN;
+                    }
+                } else {
+                    nextExState = STATE_COOLDOWN_RUN;
+                }
+            case STATE_COOLDOWN_RUN:
+                if (nextExState != exState) {
+                    if (_settings.cdExType != ExerciseSettings.TYPE_NONE) {
+                        break;
+                    } else {
+                        nextExState = STATE_COOLDOWN_WALK;
+                    }
+                } else {
+                    nextExState = STATE_COOLDOWN_WALK;
+                }
+            case STATE_COOLDOWN_WALK:
+                if (nextExState != exState) {
+                    if (_settings.cdReType != ExerciseSettings.TYPE_NONE) {
+                        break;
+                    } else {
+                        nextExState = STATE_EXTEND;
+                    }
+                } else {
+                    nextExState = STATE_EXTEND;
+                }
+            case STATE_EXTEND:
+            default:
+        }
+        exState = nextExState;
+    }
+
     // updates the state
-    private function updateState(testValue as Double, testType as ExerciseSettings.ExType) as Boolean {
+    private function updateState(testValue as Double) as Boolean {
         var curState = exState;
-        var curSubstate = isRun;
         var curExCount = exCount;
 
         switch (exState) {
-            case STATE_WARMUP:
-                if (isRun) {
-                    if ((testValue >= _settings.wuExValue) && (_settings.wuExType == testType)) {
-                        lapTime = 0;
-                        lapDist = 0.0d;
-                        if (_settings.wuReType != ExerciseSettings.TYPE_NONE) {
-                            isRun = false;
-                            finish = _settings.wuReValue;
-                        }
-                        else {
-                            exState = STATE_EXERCISE;
-                            if (_settings.ruExType != ExerciseSettings.TYPE_NONE) {
-                                finish = _settings.ruExValue;
-                            }
-                            else {
-                                isRun = false;
-                                finish = _settings.ruReValue;
-                            }
-                        }
-                    }
-                }
-                else {
-                    if ((testValue >= _settings.wuReValue) && (_settings.wuReType == testType)) {
-                        lapTime = 0;
-                        lapDist = 0.0d;
-                        exState = STATE_EXERCISE;
-                        if (_settings.ruExType != ExerciseSettings.TYPE_NONE) {
-                            isRun = true;
-                            finish = _settings.ruExValue;
-                        }
-                        else {
-                            finish = _settings.ruReValue;
-                        }
-                    }
+            case STATE_INITIAL:
+                break;
+            case STATE_WARMUP_RUN:
+                if (testValue >= _settings.wuExValue) {
+                    lapTime = 0;
+                    preciseLapDist = 0.0d;
+                    setNextState();
                 }
                 break;
-            case STATE_EXERCISE: 
-                if (isRun) {
-                    if ((testValue >= _settings.ruExValue) && (_settings.ruExType == testType)) {
-                        lapTime = 0;
-                        lapDist = 0.0d;
-                        if (_settings.ruReType != ExerciseSettings.TYPE_NONE) {
-                            isRun = false;
-                            finish = _settings.ruReValue;
-                        }
-                        else {
-                            exCount += 1;
-                            if (exCount == _settings.ruRepeats) {
-                                exState = STATE_COOLDOWN;
-                                if (_settings.cdExType != ExerciseSettings.TYPE_NONE) {
-                                    finish = _settings.cdExValue;
-                                }
-                                else {
-                                    isRun = false;
-                                    finish = _settings.cdReValue;
-                                }
-                            }
-                        }
-                    }
+            case STATE_WARMUP_WALK:
+                if (testValue >= _settings.wuReValue) {
+                    lapTime = 0;
+                    preciseLapDist = 0.0d;
+                    setNextState();
                 }
-                else {
-                    if ((testValue >= _settings.ruReValue) && (_settings.ruReType == testType)) {
-                        lapTime = 0;
-                        lapDist = 0.0d;
+                break;
+            case STATE_EXERCISE_RUN: 
+                if (testValue >= _settings.ruExValue) {
+                    lapTime = 0;
+                    preciseLapDist = 0.0d;
+                    if (_settings.ruReType != ExerciseSettings.TYPE_NONE) {
+                            exState = STATE_EXERCISE_WALK;
+                    } else {
                         exCount += 1;
-                        if (exCount == _settings.ruRepeats) {
-                            exState = STATE_COOLDOWN;
-                            if (_settings.cdExType != ExerciseSettings.TYPE_NONE) {
-                                isRun = true;
-                                finish = _settings.cdExValue;
-                            }
-                            else {
-                                finish = _settings.cdReValue;
-                            }
-                        }
-                        else {
-                            if (_settings.ruExType != ExerciseSettings.TYPE_NONE) {
-                                isRun = true;
-                                finish = _settings.ruExValue;
-                            }
-                            else {
-                                finish = _settings.ruReValue;
-                            }
+                        if (exCount >= _settings.ruRepeats) {
+                            setNextState();
                         }
                     }
                 }
                 break;
-            case STATE_COOLDOWN: 
-                if (isRun) {
-                    if ((testValue >= _settings.cdExValue) && (_settings.cdExType == testType)) {
-                        lapTime = 0;
-                        lapDist = 0.0d;
-                        isRun = false;
-                        if (_settings.cdReType != ExerciseSettings.TYPE_NONE) {
-                            finish = _settings.cdReValue;
-                        }
-                        else {
-                            exState = STATE_EXTEND;
-                            finish = 0;
+            case STATE_EXERCISE_WALK: 
+                if (testValue >= _settings.ruReValue) {
+                    lapTime = 0;
+                    preciseLapDist = 0.0d;
+                    exCount += 1;
+                    if (exCount >= _settings.ruRepeats) {
+                        setNextState();
+                    } else {
+                        if (_settings.ruExType != ExerciseSettings.TYPE_NONE) {
+                            exState = STATE_EXERCISE_RUN;
                         }
                     }
                 }
-                else {
-                    if ((testValue >= _settings.cdReValue) && (_settings.cdReType == testType)) {
-                        lapTime = 0;
-                        lapDist = 0.0d;
-                        finish = 0;
-                        exState = STATE_EXTEND;
-                    }
+                break;
+            case STATE_COOLDOWN_RUN: 
+                if (testValue >= _settings.cdExValue) {
+                    lapTime = 0;
+                    preciseLapDist = 0.0d;
+                    setNextState();
+                }
+                break;
+            case STATE_COOLDOWN_WALK: 
+                if (testValue >= _settings.cdReValue) {
+                    lapTime = 0;
+                    preciseLapDist = 0.0d;
+                    setNextState();;
                 }
                 break;
             case STATE_EXTEND:
@@ -242,8 +292,27 @@ class ExerciseStatus {
         }
 
         // return state change
-        return ((curState != exState) || (curSubstate != isRun) || (curExCount != exCount));
+        return ((curState != exState) || (curExCount != exCount));
 
+    }
+
+
+    // function resets the remaining time and distance
+    public function resetRemaining() as Void {
+        if (getCurrentTargetType() == ExerciseSettings.TYPE_DURATION) {
+            remTime = getCurrentTarget() - lapTime;
+            remDist = 0.0;
+        } else {
+            remTime = 0;
+            remDist = getCurrentTarget().toFloat() - lapDist;
+        }
+    }
+
+
+    // function starts the activity
+    public function startExercise() as Void {
+        setNextState();
+        resetRemaining();
     }
 
 
@@ -256,7 +325,19 @@ class ExerciseStatus {
         lapTime += duration;
 
         // test progress and update state
-        return updateState(lapTime.toDouble(), ExerciseSettings.TYPE_DURATION);
+        var isStateChange = false;
+        if (getCurrentTargetType() == ExerciseSettings.TYPE_DURATION) {
+            isStateChange = updateState(lapTime.toDouble());
+        }
+
+        // update remaining time (only if type has not changed due to state change)
+        if (getCurrentTargetType() == ExerciseSettings.TYPE_DURATION) {
+            remTime = getCurrentTarget() - lapTime;
+        } else {
+            remTime = 0;
+        }
+
+        return isStateChange;
     }
 
 
@@ -266,6 +347,14 @@ class ExerciseStatus {
         if (info.currentHeartRate != null) {
             heartRate = info.currentHeartRate;
         }
+    }
+
+
+    // function rounds down the double to the nearest multiple
+    // and converts to a Float
+    public function roundDown(value as Double, multiple as Number) as Float {
+        var intDist = ((value*1000.0d).toLong());
+        return ((intDist - (intDist%(1000l*multiple)))/1000l).toFloat();
     }
 
 
@@ -283,13 +372,27 @@ class ExerciseStatus {
             // update distance travelled
             if (prevLocation != null) {
                 var deltaDist = calcDistance(prevLocation, gpsInfo.position);
-                lapDist += deltaDist;
-                totDist += deltaDist;
+                preciseLapDist += deltaDist;
+                preciseTotDist += deltaDist;
             }
             prevLocation = gpsInfo.position;
 
             // test progress and update state
-            return updateState(lapDist, ExerciseSettings.TYPE_DISTANCE);
+            var isStateChange = false;
+            if (getCurrentTargetType() == ExerciseSettings.TYPE_DISTANCE) {
+                isStateChange = updateState(preciseLapDist);
+            }
+
+            // update display distances
+            lapDist = roundDown(preciseLapDist, 10);
+            totDist = roundDown(preciseTotDist, 10);
+            if (getCurrentTargetType() == ExerciseSettings.TYPE_DISTANCE) {
+                remDist = getCurrentTarget() - lapDist;
+            } else {
+                remDist = 0.0;
+            }
+
+            return isStateChange; 
         }
         else { // if paused
         

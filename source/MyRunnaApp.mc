@@ -13,8 +13,11 @@ import Toybox.Activity;
 // to do:
 //  page through ex type on ExerciseInputView [done]
 //  check settings validity after config [done]
-//  replace NONE wth no run or no walk
-//  enable WU, RU and CD all to be set to NONE - change status/substatus (DONE) to different language (blank?)
+//  replace NONE wth no run or no walk [done]
+//  enable WU, RU and CD all to be set to NONE - change status/substatus (DONE) to different language (blank?) [done]
+//  round up remaining distance and round down lap and total distance [done]
+//  prevent changing of type for an active state [done]
+//  potential bug - whenmeasuring distance and pausing then distance will continue due pause - reset preLocation on unpause [done]
 //  change error message - tap to continue in different colour
 //  reset settings to default if invalid on startup - fix error message
 //  error message if attempting to clear empty activity log
@@ -25,10 +28,10 @@ import Toybox.Activity;
 //  vibration patterns - increase volume
 //  vibration patterns - start run quick buzzes, start walk long buzz
 //  use digits with spaces (blocks) for value entry (test first)
+//  cycle through speed, pace and heartrate
 
 class MyRunnaApp extends Application.AppBase {
     private var _timer as Timer.Timer?;
-    //private var _updateTimer as Timer.Timer?;
     private var _status as ExerciseStatus?;
     private var _settings as ExerciseSettings?;
     private var _myRunnaView as WatchUi.View?;
@@ -88,6 +91,11 @@ class MyRunnaApp extends Application.AppBase {
 
         // handle the pause button
         if (_status.isPaused) {
+            // check if in initial state and start if so
+            if (_status.exState == ExerciseStatus.STATE_INITIAL) {
+                _status.startExercise();
+            }
+
             // check if activity recording session exists and initialise if not
             if (_session == null) {
                 _session = ActivityRecording.createSession(
@@ -177,7 +185,8 @@ class MyRunnaApp extends Application.AppBase {
     public function menuHandler() as Void {
         if (_status.isPaused) {
             var delegate = new ExerciseMenuDelegate();
-            WatchUi.pushView(new ExerciseMenuView(_settings, method(:discardSession), method(:isSessionOpen), delegate), delegate, WatchUi.SLIDE_UP);
+            WatchUi.pushView(new ExerciseMenuView(_settings, _status, method(:discardSession), method(:isSessionOpen), delegate), 
+                delegate, WatchUi.SLIDE_UP);
         } 
     }
 
@@ -191,7 +200,7 @@ class MyRunnaApp extends Application.AppBase {
 
         // initialise exercise settings
         _settings = new ExerciseSettings();
-        _settings.preset();   
+        //_settings.preset();   
         if (_settings.areValid()) {
             // initialise exercise status
             _status = new ExerciseStatus(_settings);    

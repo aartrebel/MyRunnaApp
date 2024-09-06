@@ -18,11 +18,11 @@ class ValueInputView extends WatchUi.View {
     const FONT_HEIGHT = 43;
     const DIGIT_FONT = Graphics.FONT_NUMBER_MEDIUM;
     const DIGITS  =  ["7", "6", "5", "4", "3", "2", "1", "0", "9", "8"];
-    const ENTRY_FONT = Graphics.FONT_LARGE;
+    public static const ENTRY_FONT = Graphics.FONT_LARGE;
     const EMPTY_ENTRY = " _ _ _ _ _ _ _ _ _ _ ";
     const NIL_ERROR = "VALUE";
     const MAX_ERROR = "> MAX";
-    const TITLE_FONT = Graphics.FONT_XTINY;
+    public static const TITLE_FONT = Graphics.FONT_XTINY;
 
 
     private var _coords as Lang.Array?;
@@ -219,7 +219,7 @@ class ValueInputView extends WatchUi.View {
         }
 
         // display title
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         if (_title != null) {
             var titleYPos = (SCR_SIZE - innerRadius.toNumber())/2; 
             dc.drawText(SCR_SIZE/2, titleYPos, TITLE_FONT, _title, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
