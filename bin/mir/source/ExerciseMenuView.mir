@@ -1,134 +1,134 @@
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 1; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 1; ]
 import Toybox.Graphics;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 2; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 2; ]
 import Toybox.Lang;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 3; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 3; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 5; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 5; ]
 class ExerciseMenuView extends WatchUi.Menu2{
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 5; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 5; ]
     <init> {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 5; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 5; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 8; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 8; @position = 24; ]
     public static
     const DISCARD_ITEM = "discard";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 9; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 9; @position = 24; ]
     public static
     const WARMUP_RUN_ITEM = "WU-run";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 10; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 10; @position = 24; ]
     public static
     const WARMUP_WALK_ITEM = "WU-walk";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 11; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 11; @position = 24; ]
     public static
     const EXERCISE_RUN_ITEM = "EX-run";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 12; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 12; @position = 24; ]
     public static
     const EXERCISE_WALK_ITEM = "EX-walk";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 13; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 13; @position = 24; ]
     public static
     const EXERCISE_REPEATS_ITEM = "Repeats";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 14; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 14; @position = 24; ]
     public static
     const COOLDOWN_RUN_ITEM = "CD-run";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 15; @position = 24; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 15; @position = 24; ]
     public static
     const COOLDOWN_WALK_ITEM = "CD-walk";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 18; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 18; @position = 25; ]
     private static
     const REPEATS_MAX = 100;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 19; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 19; @position = 25; ]
     private static
     const REPEATS_TITLE = "Repeats";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 22; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 22; @position = 25; ]
     private static
     const SUBTITLE_SESSION_OPEN = "logging activity";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 23; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 23; @position = 25; ]
     private static
     const SUBTITLE_SESSION_CLOSED = "activity log empty";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 24; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 24; @position = 25; ]
     private static
     const PREFIX_DUR = "";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 25; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 25; @position = 25; ]
     private static
     const PREFIX_DIST = "";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 26; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 26; @position = 25; ]
     private static
     const SUBTILE_NONE = "disabled";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 27; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 27; @position = 25; ]
     private static
     const TYPE_LOCK_TEXT = "(type locked)";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 28; @position = 25; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 28; @position = 25; ]
     private static
     const REPEATS_LOCK_TEXT = "(locked)";
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 31; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 31; @position = 16; ]
     private
     var _discardActivityItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 32; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 32; @position = 16; ]
     private
     var _wuExItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 33; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 33; @position = 16; ]
     private
     var _wuReItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 34; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 34; @position = 16; ]
     private
     var _ruExItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 35; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 35; @position = 16; ]
     private
     var _ruReItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 36; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 36; @position = 16; ]
     private
     var _ruRepeatsItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 37; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 37; @position = 16; ]
     private
     var _cdExItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 38; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 38; @position = 16; ]
     private
     var _cdReItem as MenuItem or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 41; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 41; @position = 16; ]
     private
     var _settings as ExerciseSettings or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 44; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 44; @position = 16; ]
     private
     var _status as ExerciseStatus or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 47; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 47; @position = 16; ]
     private
     var _delegate as ExerciseMenuDelegate or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 50; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 50; @position = 16; ]
     private
     var _discardSessionHandler as Method or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 51; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 51; @position = 16; ]
     private
     var _isSessionOpenHandler as Method or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 54; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 54; @position = 16; ]
     private
     var _lastMenuItemId as String or Null;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 55; @position = 16; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 55; @position = 16; ]
     private
     var _isSettingsUpdated as Boolean = false;
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 58; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 58; ]
     public
     function initialize(settings as ExerciseSettings, status as ExerciseStatus, discardSessionHandler as Method, isSessionOpenHandler as Method, delegate as ExerciseMenuDelegate) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_59_78_104_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 61 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_59_78_104_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 61 8 ]
         %tmp.2 = lgetv %settings;
         putv self :_settings %tmp.2;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 62 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 62 8 ]
         %tmp.4 = lgetv %status;
         putv self :_status %tmp.4;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 63 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 63 8 ]
         %tmp.6 = lgetv %discardSessionHandler;
         putv self :_discardSessionHandler %tmp.6;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 64 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 64 8 ]
         %tmp.8 = lgetv %isSessionOpenHandler;
         putv self :_isSessionOpenHandler %tmp.8;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 65 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 65 8 ]
         %tmp.10 = lgetv %delegate;
         putv self :_delegate %tmp.10;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 66 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 66 8 ]
         %tmp.12 = getv ? :_delegate;
         %tmp.13 = getv function %tmp.12 :setCallbackMethods;
         %tmp.14 = self;
@@ -140,7 +140,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.22 = const :saveSettings;
         %tmp.23 = invoke %tmp.19 %tmp.20(%tmp.22);
         invoke %tmp.12 %tmp.13(%tmp.18, %tmp.23);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 69 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 69 8 ]
         %tmp.25 = getv ? :Menu2;
         %tmp.26 = getv function %tmp.25 :initialize;
         %tmp.27 = newd 1;
@@ -149,15 +149,15 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.31 = dup %tmp.27;
         %tmp.32 = aputv %tmp.31 %tmp.29 %tmp.30;
         invoke %tmp.25 %tmp.26(%tmp.32);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 72 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_8_76_8_if_stmt:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 72 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_8_76_8_if_stmt:
         %tmp.34 = getv ? :_isSessionOpenHandler;
         %tmp.35 = getv function %tmp.34 :invoke;
         %tmp.36 = invoke %tmp.34 %tmp.35();
-        bf %tmp.36 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_8_76_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_8_76_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_44_74_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 73 12 ]
+        bf %tmp.36 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_8_76_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_8_76_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_44_74_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 73 12 ]
         %tmp.39 = getm $.Toybox.WatchUi;
         %tmp.40 = getv function ? %tmp.39 :MenuItem;
         %tmp.41 = "Discard activity";
@@ -166,11 +166,11 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.46 = null;
         %tmp.37 = newc %tmp.40 (%tmp.41, %tmp.43, %tmp.45, %tmp.46);
         putv self :_discardActivityItem %tmp.37;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_44_74_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_8_76_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_8_76_8_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_74_15_76_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 75 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_44_74_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_8_76_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_8_76_8_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_74_15_76_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 75 12 ]
         %tmp.49 = getm $.Toybox.WatchUi;
         %tmp.50 = getv function ? %tmp.49 :MenuItem;
         %tmp.51 = "Discard activity";
@@ -179,14 +179,14 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.56 = null;
         %tmp.47 = newc %tmp.50 (%tmp.51, %tmp.53, %tmp.55, %tmp.56);
         putv self :_discardActivityItem %tmp.47;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_74_15_76_8_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_72_8_76_8_if_end:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 77 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_74_15_76_8_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_72_8_76_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 77 8 ]
         %tmp.57 = self;
         %tmp.58 = getv function %tmp.57 :addItem;
         %tmp.60 = getv ? :_discardActivityItem;
         invoke %tmp.57 %tmp.58(%tmp.60);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 78 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 78 8 ]
         %tmp.63 = getm $.Toybox.WatchUi;
         %tmp.64 = getv function ? %tmp.63 :MenuItem;
         %tmp.65 = "Warmup - run";
@@ -206,12 +206,12 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.84 = null;
         %tmp.61 = newc %tmp.64 (%tmp.65, %tmp.81, %tmp.83, %tmp.84);
         putv self :_wuExItem %tmp.61;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 80 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 80 8 ]
         %tmp.85 = self;
         %tmp.86 = getv function %tmp.85 :addItem;
         %tmp.88 = getv ? :_wuExItem;
         invoke %tmp.85 %tmp.86(%tmp.88);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 81 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 81 8 ]
         %tmp.91 = getm $.Toybox.WatchUi;
         %tmp.92 = getv function ? %tmp.91 :MenuItem;
         %tmp.93 = "Warmup - walk";
@@ -231,12 +231,12 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.112 = null;
         %tmp.89 = newc %tmp.92 (%tmp.93, %tmp.109, %tmp.111, %tmp.112);
         putv self :_wuReItem %tmp.89;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 83 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 83 8 ]
         %tmp.113 = self;
         %tmp.114 = getv function %tmp.113 :addItem;
         %tmp.116 = getv ? :_wuReItem;
         invoke %tmp.113 %tmp.114(%tmp.116);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 84 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 84 8 ]
         %tmp.119 = getm $.Toybox.WatchUi;
         %tmp.120 = getv function ? %tmp.119 :MenuItem;
         %tmp.121 = "Exercise - run";
@@ -256,12 +256,12 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.140 = null;
         %tmp.117 = newc %tmp.120 (%tmp.121, %tmp.137, %tmp.139, %tmp.140);
         putv self :_ruExItem %tmp.117;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 86 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 86 8 ]
         %tmp.141 = self;
         %tmp.142 = getv function %tmp.141 :addItem;
         %tmp.144 = getv ? :_ruExItem;
         invoke %tmp.141 %tmp.142(%tmp.144);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 87 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 87 8 ]
         %tmp.147 = getm $.Toybox.WatchUi;
         %tmp.148 = getv function ? %tmp.147 :MenuItem;
         %tmp.149 = "Exercise - walk";
@@ -281,14 +281,14 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.168 = null;
         %tmp.145 = newc %tmp.148 (%tmp.149, %tmp.165, %tmp.167, %tmp.168);
         putv self :_ruReItem %tmp.145;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 89 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 89 8 ]
         %tmp.169 = self;
         %tmp.170 = getv function %tmp.169 :addItem;
         %tmp.172 = getv ? :_ruReItem;
         invoke %tmp.169 %tmp.170(%tmp.172);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 90 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_stmt:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_12_91_79_begin:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 90 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_12_91_79_begin:
         %tmp.174 = getv ? :_status;
         %tmp.175 = getv %tmp.174 :exCount;
         %tmp.177 = getv ? :_settings;
@@ -296,31 +296,31 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.179 = 1;
         %tmp.180 = sub %tmp.178 %tmp.179;
         %tmp.181 = gte %tmp.175 %tmp.180;
-        bf %tmp.181 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_60_91_79_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_61_91_78_begin:
+        bf %tmp.181 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_60_91_79_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_61_91_78_begin:
         %tmp.183 = getv ? :_status;
         %tmp.184 = getv %tmp.183 :exState;
         %tmp.186 = getv ? :ExerciseStatus;
         %tmp.187 = getv %tmp.186 :STATE_EXERCISE_RUN;
         %tmp.188 = eq %tmp.184 %tmp.187;
-        bt %tmp.188 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_true;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_91_24_91_78_false:
+        bt %tmp.188 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_true;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_91_24_91_78_false:
         %tmp.190 = getv ? :_status;
         %tmp.191 = getv %tmp.190 :exState;
         %tmp.193 = getv ? :ExerciseStatus;
         %tmp.194 = getv %tmp.193 :STATE_EXERCISE_WALK;
         %tmp.195 = eq %tmp.191 %tmp.194;
         push %tmp.195;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_91_24_91_78_end:
-        %tmp.196 = phi [%tmp.188 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_61_91_78_begin] [%tmp.195 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_91_24_91_78_false] [%tmp.196 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_91_24_91_78_end];
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_91_24_91_78_end:
+        %tmp.196 = phi [%tmp.188 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_61_91_78_begin] [%tmp.195 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_91_24_91_78_false] [%tmp.196 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_91_24_91_78_end];
         push %tmp.196;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_60_91_79_end:
-        %tmp.197 = phi [%tmp.181 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_12_91_79_begin] [%tmp.196 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_60_91_79_true] [%tmp.197 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_60_91_79_end];
-        bf %tmp.197 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_91_82_94_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 92 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_60_91_79_end:
+        %tmp.197 = phi [%tmp.181 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_12_91_79_begin] [%tmp.196 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_60_91_79_true] [%tmp.197 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_60_91_79_end];
+        bf %tmp.197 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_91_82_94_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 92 12 ]
         %tmp.200 = getm $.Toybox.WatchUi;
         %tmp.201 = getv function ? %tmp.200 :MenuItem;
         %tmp.202 = "Exercise - repeats";
@@ -336,11 +336,11 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.215 = null;
         %tmp.198 = newc %tmp.201 (%tmp.202, %tmp.212, %tmp.214, %tmp.215);
         putv self :_ruRepeatsItem %tmp.198;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_91_82_94_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_94_15_96_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 95 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_91_82_94_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_94_15_96_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 95 12 ]
         %tmp.218 = getm $.Toybox.WatchUi;
         %tmp.219 = getv function ? %tmp.218 :MenuItem;
         %tmp.220 = "Exercise - repeats";
@@ -352,14 +352,14 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.228 = null;
         %tmp.216 = newc %tmp.219 (%tmp.220, %tmp.225, %tmp.227, %tmp.228);
         putv self :_ruRepeatsItem %tmp.216;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_94_15_96_8_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_90_8_96_8_if_end:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 97 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_94_15_96_8_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_90_8_96_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 97 8 ]
         %tmp.229 = self;
         %tmp.230 = getv function %tmp.229 :addItem;
         %tmp.232 = getv ? :_ruRepeatsItem;
         invoke %tmp.229 %tmp.230(%tmp.232);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 98 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 98 8 ]
         %tmp.235 = getm $.Toybox.WatchUi;
         %tmp.236 = getv function ? %tmp.235 :MenuItem;
         %tmp.237 = "Cooldown - run";
@@ -379,12 +379,12 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.256 = null;
         %tmp.233 = newc %tmp.236 (%tmp.237, %tmp.253, %tmp.255, %tmp.256);
         putv self :_cdExItem %tmp.233;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 100 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 100 8 ]
         %tmp.257 = self;
         %tmp.258 = getv function %tmp.257 :addItem;
         %tmp.260 = getv ? :_cdExItem;
         invoke %tmp.257 %tmp.258(%tmp.260);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 101 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 101 8 ]
         %tmp.263 = getm $.Toybox.WatchUi;
         %tmp.264 = getv function ? %tmp.263 :MenuItem;
         %tmp.265 = "Cooldown - walk";
@@ -404,61 +404,61 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.284 = null;
         %tmp.261 = newc %tmp.264 (%tmp.265, %tmp.281, %tmp.283, %tmp.284);
         putv self :_cdReItem %tmp.261;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 103 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 103 8 ]
         %tmp.285 = self;
         %tmp.286 = getv function %tmp.285 :addItem;
         %tmp.288 = getv ? :_cdReItem;
         invoke %tmp.285 %tmp.286(%tmp.288);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_59_78_104_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_59_78_104_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 109; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 109; ]
     private
     function subMenuText(exType as ExerciseSettings.ExType, value as Number, typeLocked as Boolean) as String {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_109_117_133_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 110 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_109_117_133_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 110 8 ]
         %tmp.2 = lgetv %exType;
         push %tmp.2;
-        switch %tmp.2 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 111 12 ]
+        switch %tmp.2 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 111 12 ]
         %tmp.3 = dup %tmp.2;
         %tmp.5 = getv ? :ExerciseSettings;
         %tmp.6 = getv %tmp.5 :TYPE_NONE;
         %tmp.7 = getv function %tmp.3 :equals;
         %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
-        bt %tmp.8 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_111_12_112_51_switchCase;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 113 12 ]
+        bt %tmp.8 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_111_12_112_51_switchCase;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 113 12 ]
         %tmp.9 = dup %tmp.2;
         %tmp.11 = getv ? :ExerciseSettings;
         %tmp.12 = getv %tmp.11 :TYPE_DURATION;
         %tmp.13 = getv function %tmp.9 :equals;
         %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
-        bt %tmp.14 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_113_12_124_16_switchCase;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 125 12 ]
+        bt %tmp.14 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_113_12_124_16_switchCase;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 125 12 ]
         %tmp.15 = dup %tmp.2;
         %tmp.17 = getv ? :ExerciseSettings;
         %tmp.18 = getv %tmp.17 :TYPE_DISTANCE;
         %tmp.19 = getv function %tmp.15 :equals;
         %tmp.20 = invoke %tmp.15 %tmp.19 (%tmp.18);
-        bt %tmp.20 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_125_12_125_47_switchCase;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 126 12 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtDefault:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_defaultCodeBegin;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_111_12_112_51_switchCase:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 112 16 ]
+        bt %tmp.20 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_125_12_125_47_switchCase;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 126 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtDefault:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_defaultCodeBegin;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_111_12_112_51_switchCase:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 112 16 ]
         %tmp.22 = getv ? :ExerciseInputView;
         %tmp.23 = getv %tmp.22 :NONE_ENTRY;
         ret %tmp.23;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_113_12_124_16_switchCase:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 115 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd" ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_113_12_124_16_switchCase:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 115 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd" ]
         %seconds.1 = local;
         %tmp.25 = lgetv %value;
         %tmp.26 = 60;
         %tmp.27 = mod %tmp.25 %tmp.26;
         lputv %seconds.1 %tmp.27;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 116 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd" ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 116 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd" ]
         %minutes.2 = local;
         %tmp.29 = lgetv %value;
         %tmp.30 = 60;
@@ -466,21 +466,21 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.32 = 60;
         %tmp.33 = mod %tmp.31 %tmp.32;
         lputv %minutes.2 %tmp.33;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 117 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd" ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 117 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtBegin" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd" ]
         %hours.3 = local;
         %tmp.35 = lgetv %value;
         %tmp.36 = 3600;
         %tmp.37 = div %tmp.35 %tmp.36;
         lputv %hours.3 %tmp.37;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 118 16 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_16_124_16_if_stmt:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 118 16 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_16_124_16_if_stmt:
         %tmp.39 = lgetv %typeLocked;
         %tmp.40 = not %tmp.39;
-        bf %tmp.40 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_16_124_16_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_16_124_16_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_33_121_16_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 119 20 ]
+        bf %tmp.40 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_16_124_16_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_16_124_16_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_33_121_16_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 119 20 ]
         %tmp.42 = getv ? :PREFIX_DUR;
         %tmp.43 = lgetv %hours.3;
         %tmp.44 = getv function %tmp.43 :toString;
@@ -501,11 +501,11 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.59 = invoke %tmp.56 %tmp.57(%tmp.58);
         %tmp.60 = add %tmp.55 %tmp.59;
         ret %tmp.60;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_33_121_16_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_16_124_16_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_16_124_16_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_121_23_124_16_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 122 20 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_33_121_16_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_16_124_16_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_16_124_16_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_121_23_124_16_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 122 20 ]
         %tmp.62 = getv ? :PREFIX_DUR;
         %tmp.63 = lgetv %hours.3;
         %tmp.64 = getv function %tmp.63 :toString;
@@ -530,19 +530,19 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.84 = getv ? :TYPE_LOCK_TEXT;
         %tmp.85 = add %tmp.82 %tmp.84;
         ret %tmp.85;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_121_23_124_16_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_118_16_124_16_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_125_12_125_47_switchCase:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_126_12_131_16_switchCase:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_defaultCodeBegin:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 127 16 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_16_131_16_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_121_23_124_16_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_118_16_124_16_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_125_12_125_47_switchCase:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_126_12_131_16_switchCase:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_defaultCodeBegin:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 127 16 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_16_131_16_if_stmt:
         %tmp.87 = lgetv %typeLocked;
         %tmp.88 = not %tmp.87;
-        bf %tmp.88 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_16_131_16_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_16_131_16_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_33_129_16_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 128 20 ]
+        bf %tmp.88 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_16_131_16_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_16_131_16_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_33_129_16_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 128 20 ]
         %tmp.90 = getv ? :PREFIX_DIST;
         %tmp.91 = lgetv %value;
         %tmp.92 = getv function %tmp.91 :toString;
@@ -552,11 +552,11 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.97 = getv %tmp.96 :DIST_UNIT;
         %tmp.98 = add %tmp.94 %tmp.97;
         ret %tmp.98;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_33_129_16_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_16_131_16_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_16_131_16_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_129_23_131_16_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 130 20 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_33_129_16_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_16_131_16_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_16_131_16_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_129_23_131_16_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 130 20 ]
         %tmp.100 = getv ? :PREFIX_DIST;
         %tmp.101 = lgetv %value;
         %tmp.102 = getv function %tmp.101 :toString;
@@ -570,33 +570,33 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.112 = getv ? :TYPE_LOCK_TEXT;
         %tmp.113 = add %tmp.110 %tmp.112;
         ret %tmp.113;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_129_23_131_16_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_127_16_131_16_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_129_23_131_16_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_127_16_131_16_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_110_8_132_8_switchStmtEnd:
         pop;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_109_117_133_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_109_117_133_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 138; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 138; ]
     public
     function confirmDiscardSession() as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_138_52_143_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 139 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_8_142_8_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_138_52_143_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 139 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_8_142_8_if_stmt:
         %tmp.2 = getv ? :_isSessionOpenHandler;
         %tmp.3 = getv function %tmp.2 :invoke;
         %tmp.4 = invoke %tmp.2 %tmp.3();
-        bf %tmp.4 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_8_142_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_8_142_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_44_142_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 140 12 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_44_142_8_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_44_142_8_stop" ]
+        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_8_142_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_8_142_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_44_142_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 140 12 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_44_142_8_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_44_142_8_stop" ]
         %dialog.1 = local;
         %tmp.7 = getm $.Toybox.WatchUi;
         %tmp.8 = getv function ? %tmp.7 :Confirmation;
         %tmp.9 = "Discard activity?";
         %tmp.5 = newc %tmp.8 (%tmp.9);
         lputv %dialog.1 %tmp.5;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 141 12 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 141 12 ]
         %tmp.10 = getm $.Toybox.WatchUi;
         %tmp.11 = getv function %tmp.10 :pushView;
         %tmp.13 = lgetv %dialog.1;
@@ -609,435 +609,428 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.23 = getm $.Toybox.WatchUi;
         %tmp.24 = getv %tmp.23 :SLIDE_LEFT;
         invoke %tmp.10 %tmp.11(%tmp.13, %tmp.14, %tmp.24);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_44_142_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_8_142_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_139_8_142_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_138_52_143_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_44_142_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_8_142_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_139_8_142_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_138_52_143_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 147; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 147; ]
     public
     function discardSession() as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_147_45_150_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 148 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_147_45_150_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 148 8 ]
         %tmp.2 = getv ? :_discardActivityItem;
         %tmp.3 = getv function %tmp.2 :setSubLabel;
         %tmp.5 = getv ? :SUBTITLE_SESSION_CLOSED;
         invoke %tmp.2 %tmp.3(%tmp.5);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 149 8 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 149 8 ]
         %tmp.7 = getv ? :_discardSessionHandler;
         %tmp.8 = getv function %tmp.7 :invoke;
         invoke %tmp.7 %tmp.8();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_147_45_150_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_147_45_150_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 154; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 154; ]
     public
     function openMenuItem(item as MenuItem) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_154_59_201_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 155 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_154_59_200_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 155 8 ]
         %tmp.1 = lgetv %item;
         %tmp.2 = getv function %tmp.1 :getId;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         %tmp.4 = as %tmp.3 String;
         putv self :_lastMenuItemId %tmp.4;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 156 8 ]
-        %tmp.6 = getv ? :System;
-        %tmp.7 = getv function %tmp.6 :println;
-        %tmp.8 = "selected ";
-        %tmp.10 = getv ? :_lastMenuItemId;
-        %tmp.11 = add %tmp.8 %tmp.10;
-        invoke %tmp.6 %tmp.7(%tmp.11);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 159 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_8_200_8_if_stmt:
-        %tmp.13 = getv ? :_lastMenuItemId;
-        %tmp.14 = getv function %tmp.13 :equals;
-        %tmp.16 = getv ? :DISCARD_ITEM;
-        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
-        bf %tmp.17 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_8_200_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_8_200_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_50_161_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 160 12 ]
-        %tmp.18 = self;
-        %tmp.19 = getv function %tmp.18 :confirmDiscardSession;
-        invoke %tmp.18 %tmp.19();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_50_161_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_8_200_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_8_200_8_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_161_15_200_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 162 12 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_12_199_12_if_stmt:
-        %tmp.21 = getv ? :_lastMenuItemId;
-        %tmp.22 = getv function %tmp.21 :equals;
-        %tmp.24 = getv ? :WARMUP_RUN_ITEM;
-        %tmp.25 = invoke %tmp.21 %tmp.22(%tmp.24);
-        bf %tmp.25 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_12_199_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_12_199_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_57_167_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 163 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_57_167_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_57_167_12_stop" ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 158 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_8_199_8_if_stmt:
+        %tmp.6 = getv ? :_lastMenuItemId;
+        %tmp.7 = getv function %tmp.6 :equals;
+        %tmp.9 = getv ? :DISCARD_ITEM;
+        %tmp.10 = invoke %tmp.6 %tmp.7(%tmp.9);
+        bf %tmp.10 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_8_199_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_8_199_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_50_160_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 159 12 ]
+        %tmp.11 = self;
+        %tmp.12 = getv function %tmp.11 :confirmDiscardSession;
+        invoke %tmp.11 %tmp.12();
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_50_160_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_8_199_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_8_199_8_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_160_15_199_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 161 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_12_198_12_if_stmt:
+        %tmp.14 = getv ? :_lastMenuItemId;
+        %tmp.15 = getv function %tmp.14 :equals;
+        %tmp.17 = getv ? :WARMUP_RUN_ITEM;
+        %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
+        bf %tmp.18 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_12_198_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_12_198_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_57_166_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 162 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_57_166_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_57_166_12_stop" ]
         %delegate.1 = local;
-        %tmp.29 = getv ? :ExerciseInputDelegate;
-        %tmp.26 = newc %tmp.29 ();
-        lputv %delegate.1 %tmp.26;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 164 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_57_167_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_57_167_12_stop" ]
+        %tmp.22 = getv ? :ExerciseInputDelegate;
+        %tmp.19 = newc %tmp.22 ();
+        lputv %delegate.1 %tmp.19;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 163 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_57_166_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_57_166_12_stop" ]
         %view.2 = local;
-        %tmp.33 = getv ? :ExerciseInputView;
-        %tmp.35 = getv ? :WARMUP_RUN_ITEM;
-        %tmp.37 = getv ? :_settings;
-        %tmp.38 = getv %tmp.37 :wuExType;
-        %tmp.39 = 0;
-        %tmp.41 = getv ? :_status;
-        %tmp.42 = getv %tmp.41 :exState;
-        %tmp.44 = getv ? :ExerciseStatus;
-        %tmp.45 = getv %tmp.44 :STATE_WARMUP_RUN;
-        %tmp.46 = eq %tmp.42 %tmp.45;
-        %tmp.47 = self;
-        %tmp.48 = getv function %tmp.47 :method;
-        %tmp.50 = const :updateSettings;
-        %tmp.51 = invoke %tmp.47 %tmp.48(%tmp.50);
-        %tmp.53 = lgetv %delegate.1;
-        %tmp.30 = newc %tmp.33 (%tmp.35, %tmp.38, %tmp.39, %tmp.46, %tmp.51, %tmp.53);
-        lputv %view.2 %tmp.30;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 166 16 ]
-        %tmp.54 = getm $.Toybox.WatchUi;
-        %tmp.55 = getv function %tmp.54 :pushView;
-        %tmp.57 = lgetv %view.2;
-        %tmp.59 = lgetv %delegate.1;
-        %tmp.60 = getm $.Toybox.WatchUi;
-        %tmp.61 = getv %tmp.60 :SLIDE_LEFT;
-        invoke %tmp.54 %tmp.55(%tmp.57, %tmp.59, %tmp.61);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_57_167_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_12_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_12_199_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 167 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_19_199_12_if_stmt:
-        %tmp.63 = getv ? :_lastMenuItemId;
-        %tmp.64 = getv function %tmp.63 :equals;
-        %tmp.66 = getv ? :WARMUP_WALK_ITEM;
-        %tmp.67 = invoke %tmp.63 %tmp.64(%tmp.66);
-        bf %tmp.67 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_19_199_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_19_199_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_65_172_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 168 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_65_172_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_65_172_12_stop" ]
+        %tmp.26 = getv ? :ExerciseInputView;
+        %tmp.28 = getv ? :WARMUP_RUN_ITEM;
+        %tmp.30 = getv ? :_settings;
+        %tmp.31 = getv %tmp.30 :wuExType;
+        %tmp.32 = 0;
+        %tmp.34 = getv ? :_status;
+        %tmp.35 = getv %tmp.34 :exState;
+        %tmp.37 = getv ? :ExerciseStatus;
+        %tmp.38 = getv %tmp.37 :STATE_WARMUP_RUN;
+        %tmp.39 = eq %tmp.35 %tmp.38;
+        %tmp.40 = self;
+        %tmp.41 = getv function %tmp.40 :method;
+        %tmp.43 = const :updateSettings;
+        %tmp.44 = invoke %tmp.40 %tmp.41(%tmp.43);
+        %tmp.46 = lgetv %delegate.1;
+        %tmp.23 = newc %tmp.26 (%tmp.28, %tmp.31, %tmp.32, %tmp.39, %tmp.44, %tmp.46);
+        lputv %view.2 %tmp.23;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 165 16 ]
+        %tmp.47 = getm $.Toybox.WatchUi;
+        %tmp.48 = getv function %tmp.47 :pushView;
+        %tmp.50 = lgetv %view.2;
+        %tmp.52 = lgetv %delegate.1;
+        %tmp.53 = getm $.Toybox.WatchUi;
+        %tmp.54 = getv %tmp.53 :SLIDE_LEFT;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52, %tmp.54);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_57_166_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_12_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_12_198_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 166 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_19_198_12_if_stmt:
+        %tmp.56 = getv ? :_lastMenuItemId;
+        %tmp.57 = getv function %tmp.56 :equals;
+        %tmp.59 = getv ? :WARMUP_WALK_ITEM;
+        %tmp.60 = invoke %tmp.56 %tmp.57(%tmp.59);
+        bf %tmp.60 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_19_198_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_19_198_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_65_171_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 167 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_65_171_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_65_171_12_stop" ]
         %delegate.3 = local;
-        %tmp.71 = getv ? :ExerciseInputDelegate;
-        %tmp.68 = newc %tmp.71 ();
-        lputv %delegate.3 %tmp.68;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 169 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_65_172_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_65_172_12_stop" ]
+        %tmp.64 = getv ? :ExerciseInputDelegate;
+        %tmp.61 = newc %tmp.64 ();
+        lputv %delegate.3 %tmp.61;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 168 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_65_171_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_65_171_12_stop" ]
         %view.4 = local;
-        %tmp.75 = getv ? :ExerciseInputView;
-        %tmp.77 = getv ? :WARMUP_WALK_ITEM;
-        %tmp.79 = getv ? :_settings;
-        %tmp.80 = getv %tmp.79 :wuReType;
-        %tmp.81 = 0;
-        %tmp.83 = getv ? :_status;
-        %tmp.84 = getv %tmp.83 :exState;
-        %tmp.86 = getv ? :ExerciseStatus;
-        %tmp.87 = getv %tmp.86 :STATE_WARMUP_WALK;
-        %tmp.88 = eq %tmp.84 %tmp.87;
-        %tmp.89 = self;
-        %tmp.90 = getv function %tmp.89 :method;
-        %tmp.92 = const :updateSettings;
-        %tmp.93 = invoke %tmp.89 %tmp.90(%tmp.92);
-        %tmp.95 = lgetv %delegate.3;
-        %tmp.72 = newc %tmp.75 (%tmp.77, %tmp.80, %tmp.81, %tmp.88, %tmp.93, %tmp.95);
-        lputv %view.4 %tmp.72;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 171 16 ]
-        %tmp.96 = getm $.Toybox.WatchUi;
-        %tmp.97 = getv function %tmp.96 :pushView;
-        %tmp.99 = lgetv %view.4;
-        %tmp.101 = lgetv %delegate.3;
-        %tmp.102 = getm $.Toybox.WatchUi;
-        %tmp.103 = getv %tmp.102 :SLIDE_LEFT;
-        invoke %tmp.96 %tmp.97(%tmp.99, %tmp.101, %tmp.103);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_65_172_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_19_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_19_199_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 172 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_19_199_12_if_stmt:
-        %tmp.105 = getv ? :_lastMenuItemId;
-        %tmp.106 = getv function %tmp.105 :equals;
-        %tmp.108 = getv ? :EXERCISE_RUN_ITEM;
-        %tmp.109 = invoke %tmp.105 %tmp.106(%tmp.108);
-        bf %tmp.109 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_19_199_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_19_199_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_66_177_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 173 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_66_177_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_66_177_12_stop" ]
+        %tmp.68 = getv ? :ExerciseInputView;
+        %tmp.70 = getv ? :WARMUP_WALK_ITEM;
+        %tmp.72 = getv ? :_settings;
+        %tmp.73 = getv %tmp.72 :wuReType;
+        %tmp.74 = 0;
+        %tmp.76 = getv ? :_status;
+        %tmp.77 = getv %tmp.76 :exState;
+        %tmp.79 = getv ? :ExerciseStatus;
+        %tmp.80 = getv %tmp.79 :STATE_WARMUP_WALK;
+        %tmp.81 = eq %tmp.77 %tmp.80;
+        %tmp.82 = self;
+        %tmp.83 = getv function %tmp.82 :method;
+        %tmp.85 = const :updateSettings;
+        %tmp.86 = invoke %tmp.82 %tmp.83(%tmp.85);
+        %tmp.88 = lgetv %delegate.3;
+        %tmp.65 = newc %tmp.68 (%tmp.70, %tmp.73, %tmp.74, %tmp.81, %tmp.86, %tmp.88);
+        lputv %view.4 %tmp.65;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 170 16 ]
+        %tmp.89 = getm $.Toybox.WatchUi;
+        %tmp.90 = getv function %tmp.89 :pushView;
+        %tmp.92 = lgetv %view.4;
+        %tmp.94 = lgetv %delegate.3;
+        %tmp.95 = getm $.Toybox.WatchUi;
+        %tmp.96 = getv %tmp.95 :SLIDE_LEFT;
+        invoke %tmp.89 %tmp.90(%tmp.92, %tmp.94, %tmp.96);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_65_171_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_19_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_19_198_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 171 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_19_198_12_if_stmt:
+        %tmp.98 = getv ? :_lastMenuItemId;
+        %tmp.99 = getv function %tmp.98 :equals;
+        %tmp.101 = getv ? :EXERCISE_RUN_ITEM;
+        %tmp.102 = invoke %tmp.98 %tmp.99(%tmp.101);
+        bf %tmp.102 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_19_198_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_19_198_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_66_176_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 172 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_66_176_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_66_176_12_stop" ]
         %delegate.5 = local;
-        %tmp.113 = getv ? :ExerciseInputDelegate;
-        %tmp.110 = newc %tmp.113 ();
-        lputv %delegate.5 %tmp.110;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 174 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_66_177_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_66_177_12_stop" ]
+        %tmp.106 = getv ? :ExerciseInputDelegate;
+        %tmp.103 = newc %tmp.106 ();
+        lputv %delegate.5 %tmp.103;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 173 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_66_176_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_66_176_12_stop" ]
         %view.6 = local;
-        %tmp.117 = getv ? :ExerciseInputView;
-        %tmp.119 = getv ? :EXERCISE_RUN_ITEM;
-        %tmp.121 = getv ? :_settings;
-        %tmp.122 = getv %tmp.121 :ruExType;
-        %tmp.123 = 0;
-        %tmp.125 = getv ? :_status;
-        %tmp.126 = getv %tmp.125 :exState;
-        %tmp.128 = getv ? :ExerciseStatus;
-        %tmp.129 = getv %tmp.128 :STATE_EXERCISE_RUN;
-        %tmp.130 = eq %tmp.126 %tmp.129;
-        %tmp.131 = self;
-        %tmp.132 = getv function %tmp.131 :method;
-        %tmp.134 = const :updateSettings;
-        %tmp.135 = invoke %tmp.131 %tmp.132(%tmp.134);
-        %tmp.137 = lgetv %delegate.5;
-        %tmp.114 = newc %tmp.117 (%tmp.119, %tmp.122, %tmp.123, %tmp.130, %tmp.135, %tmp.137);
-        lputv %view.6 %tmp.114;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 176 16 ]
-        %tmp.138 = getm $.Toybox.WatchUi;
-        %tmp.139 = getv function %tmp.138 :pushView;
-        %tmp.141 = lgetv %view.6;
-        %tmp.143 = lgetv %delegate.5;
-        %tmp.144 = getm $.Toybox.WatchUi;
-        %tmp.145 = getv %tmp.144 :SLIDE_LEFT;
-        invoke %tmp.138 %tmp.139(%tmp.141, %tmp.143, %tmp.145);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_66_177_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_19_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_19_199_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 177 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_19_199_12_if_stmt:
-        %tmp.147 = getv ? :_lastMenuItemId;
-        %tmp.148 = getv function %tmp.147 :equals;
-        %tmp.150 = getv ? :EXERCISE_WALK_ITEM;
-        %tmp.151 = invoke %tmp.147 %tmp.148(%tmp.150);
-        bf %tmp.151 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_19_199_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_19_199_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_67_182_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 178 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_67_182_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_67_182_12_stop" ]
+        %tmp.110 = getv ? :ExerciseInputView;
+        %tmp.112 = getv ? :EXERCISE_RUN_ITEM;
+        %tmp.114 = getv ? :_settings;
+        %tmp.115 = getv %tmp.114 :ruExType;
+        %tmp.116 = 0;
+        %tmp.118 = getv ? :_status;
+        %tmp.119 = getv %tmp.118 :exState;
+        %tmp.121 = getv ? :ExerciseStatus;
+        %tmp.122 = getv %tmp.121 :STATE_EXERCISE_RUN;
+        %tmp.123 = eq %tmp.119 %tmp.122;
+        %tmp.124 = self;
+        %tmp.125 = getv function %tmp.124 :method;
+        %tmp.127 = const :updateSettings;
+        %tmp.128 = invoke %tmp.124 %tmp.125(%tmp.127);
+        %tmp.130 = lgetv %delegate.5;
+        %tmp.107 = newc %tmp.110 (%tmp.112, %tmp.115, %tmp.116, %tmp.123, %tmp.128, %tmp.130);
+        lputv %view.6 %tmp.107;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 175 16 ]
+        %tmp.131 = getm $.Toybox.WatchUi;
+        %tmp.132 = getv function %tmp.131 :pushView;
+        %tmp.134 = lgetv %view.6;
+        %tmp.136 = lgetv %delegate.5;
+        %tmp.137 = getm $.Toybox.WatchUi;
+        %tmp.138 = getv %tmp.137 :SLIDE_LEFT;
+        invoke %tmp.131 %tmp.132(%tmp.134, %tmp.136, %tmp.138);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_66_176_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_19_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_19_198_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 176 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_19_198_12_if_stmt:
+        %tmp.140 = getv ? :_lastMenuItemId;
+        %tmp.141 = getv function %tmp.140 :equals;
+        %tmp.143 = getv ? :EXERCISE_WALK_ITEM;
+        %tmp.144 = invoke %tmp.140 %tmp.141(%tmp.143);
+        bf %tmp.144 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_19_198_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_19_198_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_67_181_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 177 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_67_181_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_67_181_12_stop" ]
         %delegate.7 = local;
-        %tmp.155 = getv ? :ExerciseInputDelegate;
-        %tmp.152 = newc %tmp.155 ();
-        lputv %delegate.7 %tmp.152;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 179 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_67_182_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_67_182_12_stop" ]
+        %tmp.148 = getv ? :ExerciseInputDelegate;
+        %tmp.145 = newc %tmp.148 ();
+        lputv %delegate.7 %tmp.145;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 178 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_67_181_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_67_181_12_stop" ]
         %view.8 = local;
-        %tmp.159 = getv ? :ExerciseInputView;
-        %tmp.161 = getv ? :EXERCISE_WALK_ITEM;
-        %tmp.163 = getv ? :_settings;
-        %tmp.164 = getv %tmp.163 :ruReType;
-        %tmp.165 = 0;
-        %tmp.167 = getv ? :_status;
-        %tmp.168 = getv %tmp.167 :exState;
-        %tmp.170 = getv ? :ExerciseStatus;
-        %tmp.171 = getv %tmp.170 :STATE_EXERCISE_WALK;
-        %tmp.172 = eq %tmp.168 %tmp.171;
-        %tmp.173 = self;
-        %tmp.174 = getv function %tmp.173 :method;
-        %tmp.176 = const :updateSettings;
-        %tmp.177 = invoke %tmp.173 %tmp.174(%tmp.176);
-        %tmp.179 = lgetv %delegate.7;
-        %tmp.156 = newc %tmp.159 (%tmp.161, %tmp.164, %tmp.165, %tmp.172, %tmp.177, %tmp.179);
-        lputv %view.8 %tmp.156;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 181 16 ]
-        %tmp.180 = getm $.Toybox.WatchUi;
-        %tmp.181 = getv function %tmp.180 :pushView;
-        %tmp.183 = lgetv %view.8;
-        %tmp.185 = lgetv %delegate.7;
-        %tmp.186 = getm $.Toybox.WatchUi;
-        %tmp.187 = getv %tmp.186 :SLIDE_LEFT;
-        invoke %tmp.180 %tmp.181(%tmp.183, %tmp.185, %tmp.187);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_67_182_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_19_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_19_199_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 182 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_19_199_12_if_stmt:
-        %tmp.189 = getv ? :_lastMenuItemId;
-        %tmp.190 = getv function %tmp.189 :equals;
-        %tmp.192 = getv ? :EXERCISE_REPEATS_ITEM;
-        %tmp.193 = invoke %tmp.189 %tmp.190(%tmp.192);
-        bf %tmp.193 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_19_199_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_19_199_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_70_189_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 183 16 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_16_188_16_if_stmt:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_22_184_79_begin:
-        %tmp.195 = getv ? :_status;
-        %tmp.196 = getv %tmp.195 :exCount;
-        %tmp.198 = getv ? :_settings;
-        %tmp.199 = getv %tmp.198 :ruRepeats;
-        %tmp.200 = 1;
-        %tmp.201 = sub %tmp.199 %tmp.200;
-        %tmp.202 = gte %tmp.196 %tmp.201;
-        %tmp.203 = dup %tmp.202;
-        bf %tmp.203 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_70_184_79_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_70_184_79_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_71_184_78_begin:
-        %tmp.205 = getv ? :_status;
-        %tmp.206 = getv %tmp.205 :exState;
-        %tmp.208 = getv ? :ExerciseStatus;
-        %tmp.209 = getv %tmp.208 :STATE_EXERCISE_RUN;
-        %tmp.210 = eq %tmp.206 %tmp.209;
-        %tmp.211 = dup %tmp.210;
-        bt %tmp.211 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_24_184_78_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_24_184_78_false:
-        %tmp.213 = getv ? :_status;
-        %tmp.214 = getv %tmp.213 :exState;
-        %tmp.216 = getv ? :ExerciseStatus;
-        %tmp.217 = getv %tmp.216 :STATE_EXERCISE_WALK;
-        %tmp.218 = eq %tmp.214 %tmp.217;
-        %tmp.219 = or %tmp.210 %tmp.218;
-        push %tmp.219;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_24_184_78_end:
-        %tmp.220 = phi [%tmp.211 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_71_184_78_begin] [%tmp.219 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_24_184_78_false] [%tmp.220 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_24_184_78_end];
-        %tmp.221 = and %tmp.202 %tmp.220;
-        push %tmp.221;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_70_184_79_end:
-        %tmp.222 = phi [%tmp.203 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_22_184_79_begin] [%tmp.221 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_70_184_79_true] [%tmp.222 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_70_184_79_end];
-        %tmp.223 = not %tmp.222;
-        bf %tmp.223 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_16_188_16_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_16_188_16_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_83_188_16_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 185 20 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_83_188_16_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_83_188_16_stop" ]
+        %tmp.152 = getv ? :ExerciseInputView;
+        %tmp.154 = getv ? :EXERCISE_WALK_ITEM;
+        %tmp.156 = getv ? :_settings;
+        %tmp.157 = getv %tmp.156 :ruReType;
+        %tmp.158 = 0;
+        %tmp.160 = getv ? :_status;
+        %tmp.161 = getv %tmp.160 :exState;
+        %tmp.163 = getv ? :ExerciseStatus;
+        %tmp.164 = getv %tmp.163 :STATE_EXERCISE_WALK;
+        %tmp.165 = eq %tmp.161 %tmp.164;
+        %tmp.166 = self;
+        %tmp.167 = getv function %tmp.166 :method;
+        %tmp.169 = const :updateSettings;
+        %tmp.170 = invoke %tmp.166 %tmp.167(%tmp.169);
+        %tmp.172 = lgetv %delegate.7;
+        %tmp.149 = newc %tmp.152 (%tmp.154, %tmp.157, %tmp.158, %tmp.165, %tmp.170, %tmp.172);
+        lputv %view.8 %tmp.149;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 180 16 ]
+        %tmp.173 = getm $.Toybox.WatchUi;
+        %tmp.174 = getv function %tmp.173 :pushView;
+        %tmp.176 = lgetv %view.8;
+        %tmp.178 = lgetv %delegate.7;
+        %tmp.179 = getm $.Toybox.WatchUi;
+        %tmp.180 = getv %tmp.179 :SLIDE_LEFT;
+        invoke %tmp.173 %tmp.174(%tmp.176, %tmp.178, %tmp.180);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_67_181_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_19_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_19_198_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 181 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_19_198_12_if_stmt:
+        %tmp.182 = getv ? :_lastMenuItemId;
+        %tmp.183 = getv function %tmp.182 :equals;
+        %tmp.185 = getv ? :EXERCISE_REPEATS_ITEM;
+        %tmp.186 = invoke %tmp.182 %tmp.183(%tmp.185);
+        bf %tmp.186 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_19_198_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_19_198_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_70_188_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 182 16 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_16_187_16_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_22_183_79_begin:
+        %tmp.188 = getv ? :_status;
+        %tmp.189 = getv %tmp.188 :exCount;
+        %tmp.191 = getv ? :_settings;
+        %tmp.192 = getv %tmp.191 :ruRepeats;
+        %tmp.193 = 1;
+        %tmp.194 = sub %tmp.192 %tmp.193;
+        %tmp.195 = gte %tmp.189 %tmp.194;
+        %tmp.196 = dup %tmp.195;
+        bf %tmp.196 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_70_183_79_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_70_183_79_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_71_183_78_begin:
+        %tmp.198 = getv ? :_status;
+        %tmp.199 = getv %tmp.198 :exState;
+        %tmp.201 = getv ? :ExerciseStatus;
+        %tmp.202 = getv %tmp.201 :STATE_EXERCISE_RUN;
+        %tmp.203 = eq %tmp.199 %tmp.202;
+        %tmp.204 = dup %tmp.203;
+        bt %tmp.204 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_24_183_78_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_24_183_78_false:
+        %tmp.206 = getv ? :_status;
+        %tmp.207 = getv %tmp.206 :exState;
+        %tmp.209 = getv ? :ExerciseStatus;
+        %tmp.210 = getv %tmp.209 :STATE_EXERCISE_WALK;
+        %tmp.211 = eq %tmp.207 %tmp.210;
+        %tmp.212 = or %tmp.203 %tmp.211;
+        push %tmp.212;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_24_183_78_end:
+        %tmp.213 = phi [%tmp.204 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_71_183_78_begin] [%tmp.212 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_24_183_78_false] [%tmp.213 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_24_183_78_end];
+        %tmp.214 = and %tmp.195 %tmp.213;
+        push %tmp.214;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_70_183_79_end:
+        %tmp.215 = phi [%tmp.196 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_22_183_79_begin] [%tmp.214 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_70_183_79_true] [%tmp.215 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_70_183_79_end];
+        %tmp.216 = not %tmp.215;
+        bf %tmp.216 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_16_187_16_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_16_187_16_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_83_187_16_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 184 20 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_83_187_16_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_83_187_16_stop" ]
         %delegate.9 = local;
-        %tmp.227 = getv ? :ValueInputDelegate;
-        %tmp.224 = newc %tmp.227 ();
-        lputv %delegate.9 %tmp.224;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 186 20 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_83_188_16_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_83_188_16_stop" ]
+        %tmp.220 = getv ? :ValueInputDelegate;
+        %tmp.217 = newc %tmp.220 ();
+        lputv %delegate.9 %tmp.217;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 185 20 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_83_187_16_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_83_187_16_stop" ]
         %view.10 = local;
-        %tmp.231 = getv ? :ValueInputView;
-        %tmp.233 = getv ? :ValueInputView;
-        %tmp.234 = getv %tmp.233 :INPUT_NUMBER;
-        %tmp.236 = getv ? :REPEATS_TITLE;
-        %tmp.237 = null;
-        %tmp.239 = getv ? :REPEATS_MAX;
-        %tmp.240 = self;
-        %tmp.241 = getv function %tmp.240 :method;
-        %tmp.243 = const :updateRepeats;
-        %tmp.244 = invoke %tmp.240 %tmp.241(%tmp.243);
-        %tmp.246 = lgetv %delegate.9;
-        %tmp.228 = newc %tmp.231 (%tmp.234, %tmp.236, %tmp.237, %tmp.239, %tmp.244, %tmp.246);
-        lputv %view.10 %tmp.228;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 187 20 ]
-        %tmp.247 = getm $.Toybox.WatchUi;
-        %tmp.248 = getv function %tmp.247 :pushView;
-        %tmp.250 = lgetv %view.10;
-        %tmp.252 = lgetv %delegate.9;
-        %tmp.253 = getm $.Toybox.WatchUi;
-        %tmp.254 = getv %tmp.253 :SLIDE_LEFT;
-        invoke %tmp.247 %tmp.248(%tmp.250, %tmp.252, %tmp.254);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_184_83_188_16_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_16_188_16_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_183_16_188_16_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_70_189_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_19_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_19_199_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 189 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_19_199_12_if_stmt:
-        %tmp.256 = getv ? :_lastMenuItemId;
-        %tmp.257 = getv function %tmp.256 :equals;
-        %tmp.259 = getv ? :COOLDOWN_RUN_ITEM;
-        %tmp.260 = invoke %tmp.256 %tmp.257(%tmp.259);
-        bf %tmp.260 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_19_199_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_19_199_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_66_194_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 190 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_66_194_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_66_194_12_stop" ]
+        %tmp.224 = getv ? :ValueInputView;
+        %tmp.226 = getv ? :ValueInputView;
+        %tmp.227 = getv %tmp.226 :INPUT_NUMBER;
+        %tmp.229 = getv ? :REPEATS_TITLE;
+        %tmp.230 = null;
+        %tmp.232 = getv ? :REPEATS_MAX;
+        %tmp.233 = self;
+        %tmp.234 = getv function %tmp.233 :method;
+        %tmp.236 = const :updateRepeats;
+        %tmp.237 = invoke %tmp.233 %tmp.234(%tmp.236);
+        %tmp.239 = lgetv %delegate.9;
+        %tmp.221 = newc %tmp.224 (%tmp.227, %tmp.229, %tmp.230, %tmp.232, %tmp.237, %tmp.239);
+        lputv %view.10 %tmp.221;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 186 20 ]
+        %tmp.240 = getm $.Toybox.WatchUi;
+        %tmp.241 = getv function %tmp.240 :pushView;
+        %tmp.243 = lgetv %view.10;
+        %tmp.245 = lgetv %delegate.9;
+        %tmp.246 = getm $.Toybox.WatchUi;
+        %tmp.247 = getv %tmp.246 :SLIDE_LEFT;
+        invoke %tmp.240 %tmp.241(%tmp.243, %tmp.245, %tmp.247);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_183_83_187_16_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_16_187_16_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_182_16_187_16_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_70_188_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_19_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_19_198_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 188 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_19_198_12_if_stmt:
+        %tmp.249 = getv ? :_lastMenuItemId;
+        %tmp.250 = getv function %tmp.249 :equals;
+        %tmp.252 = getv ? :COOLDOWN_RUN_ITEM;
+        %tmp.253 = invoke %tmp.249 %tmp.250(%tmp.252);
+        bf %tmp.253 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_19_198_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_19_198_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_66_193_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 189 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_66_193_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_66_193_12_stop" ]
         %delegate.11 = local;
-        %tmp.264 = getv ? :ExerciseInputDelegate;
-        %tmp.261 = newc %tmp.264 ();
-        lputv %delegate.11 %tmp.261;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 191 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_66_194_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_66_194_12_stop" ]
+        %tmp.257 = getv ? :ExerciseInputDelegate;
+        %tmp.254 = newc %tmp.257 ();
+        lputv %delegate.11 %tmp.254;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 190 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_66_193_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_66_193_12_stop" ]
         %view.12 = local;
-        %tmp.268 = getv ? :ExerciseInputView;
-        %tmp.270 = getv ? :COOLDOWN_RUN_ITEM;
-        %tmp.272 = getv ? :_settings;
-        %tmp.273 = getv %tmp.272 :cdExType;
-        %tmp.274 = 0;
-        %tmp.276 = getv ? :_status;
-        %tmp.277 = getv %tmp.276 :exState;
-        %tmp.279 = getv ? :ExerciseStatus;
-        %tmp.280 = getv %tmp.279 :STATE_COOLDOWN_RUN;
-        %tmp.281 = eq %tmp.277 %tmp.280;
-        %tmp.282 = self;
-        %tmp.283 = getv function %tmp.282 :method;
-        %tmp.285 = const :updateSettings;
-        %tmp.286 = invoke %tmp.282 %tmp.283(%tmp.285);
-        %tmp.288 = lgetv %delegate.11;
-        %tmp.265 = newc %tmp.268 (%tmp.270, %tmp.273, %tmp.274, %tmp.281, %tmp.286, %tmp.288);
-        lputv %view.12 %tmp.265;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 193 16 ]
-        %tmp.289 = getm $.Toybox.WatchUi;
-        %tmp.290 = getv function %tmp.289 :pushView;
-        %tmp.292 = lgetv %view.12;
-        %tmp.294 = lgetv %delegate.11;
-        %tmp.295 = getm $.Toybox.WatchUi;
-        %tmp.296 = getv %tmp.295 :SLIDE_LEFT;
-        invoke %tmp.289 %tmp.290(%tmp.292, %tmp.294, %tmp.296);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_66_194_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_19_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_19_199_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 194 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_19_199_12_if_stmt:
-        %tmp.298 = getv ? :_lastMenuItemId;
-        %tmp.299 = getv function %tmp.298 :equals;
-        %tmp.301 = getv ? :COOLDOWN_WALK_ITEM;
-        %tmp.302 = invoke %tmp.298 %tmp.299(%tmp.301);
-        bf %tmp.302 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_19_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_19_199_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_67_199_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 195 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_67_199_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_67_199_12_stop" ]
+        %tmp.261 = getv ? :ExerciseInputView;
+        %tmp.263 = getv ? :COOLDOWN_RUN_ITEM;
+        %tmp.265 = getv ? :_settings;
+        %tmp.266 = getv %tmp.265 :cdExType;
+        %tmp.267 = 0;
+        %tmp.269 = getv ? :_status;
+        %tmp.270 = getv %tmp.269 :exState;
+        %tmp.272 = getv ? :ExerciseStatus;
+        %tmp.273 = getv %tmp.272 :STATE_COOLDOWN_RUN;
+        %tmp.274 = eq %tmp.270 %tmp.273;
+        %tmp.275 = self;
+        %tmp.276 = getv function %tmp.275 :method;
+        %tmp.278 = const :updateSettings;
+        %tmp.279 = invoke %tmp.275 %tmp.276(%tmp.278);
+        %tmp.281 = lgetv %delegate.11;
+        %tmp.258 = newc %tmp.261 (%tmp.263, %tmp.266, %tmp.267, %tmp.274, %tmp.279, %tmp.281);
+        lputv %view.12 %tmp.258;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 192 16 ]
+        %tmp.282 = getm $.Toybox.WatchUi;
+        %tmp.283 = getv function %tmp.282 :pushView;
+        %tmp.285 = lgetv %view.12;
+        %tmp.287 = lgetv %delegate.11;
+        %tmp.288 = getm $.Toybox.WatchUi;
+        %tmp.289 = getv %tmp.288 :SLIDE_LEFT;
+        invoke %tmp.282 %tmp.283(%tmp.285, %tmp.287, %tmp.289);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_66_193_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_19_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_19_198_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 193 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_19_198_12_if_stmt:
+        %tmp.291 = getv ? :_lastMenuItemId;
+        %tmp.292 = getv function %tmp.291 :equals;
+        %tmp.294 = getv ? :COOLDOWN_WALK_ITEM;
+        %tmp.295 = invoke %tmp.291 %tmp.292(%tmp.294);
+        bf %tmp.295 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_19_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_19_198_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_67_198_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 194 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_67_198_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_67_198_12_stop" ]
         %delegate.13 = local;
-        %tmp.306 = getv ? :ExerciseInputDelegate;
-        %tmp.303 = newc %tmp.306 ();
-        lputv %delegate.13 %tmp.303;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 196 16 ]
-        [ "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_67_199_12_start" "C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_67_199_12_stop" ]
+        %tmp.299 = getv ? :ExerciseInputDelegate;
+        %tmp.296 = newc %tmp.299 ();
+        lputv %delegate.13 %tmp.296;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 195 16 ]
+        [ "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_67_198_12_start" "C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_67_198_12_stop" ]
         %view.14 = local;
-        %tmp.310 = getv ? :ExerciseInputView;
-        %tmp.312 = getv ? :COOLDOWN_WALK_ITEM;
-        %tmp.314 = getv ? :_settings;
-        %tmp.315 = getv %tmp.314 :cdReType;
-        %tmp.316 = 0;
-        %tmp.318 = getv ? :_status;
-        %tmp.319 = getv %tmp.318 :exState;
-        %tmp.321 = getv ? :ExerciseStatus;
-        %tmp.322 = getv %tmp.321 :STATE_COOLDOWN_WALK;
-        %tmp.323 = eq %tmp.319 %tmp.322;
-        %tmp.324 = self;
-        %tmp.325 = getv function %tmp.324 :method;
-        %tmp.327 = const :updateSettings;
-        %tmp.328 = invoke %tmp.324 %tmp.325(%tmp.327);
-        %tmp.330 = lgetv %delegate.13;
-        %tmp.307 = newc %tmp.310 (%tmp.312, %tmp.315, %tmp.316, %tmp.323, %tmp.328, %tmp.330);
-        lputv %view.14 %tmp.307;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 198 16 ]
-        %tmp.331 = getm $.Toybox.WatchUi;
-        %tmp.332 = getv function %tmp.331 :pushView;
-        %tmp.334 = lgetv %view.14;
-        %tmp.336 = lgetv %delegate.13;
-        %tmp.337 = getm $.Toybox.WatchUi;
-        %tmp.338 = getv %tmp.337 :SLIDE_LEFT;
-        invoke %tmp.331 %tmp.332(%tmp.334, %tmp.336, %tmp.338);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_67_199_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_19_199_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_194_19_199_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_189_19_199_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_182_19_199_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_177_19_199_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_172_19_199_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_167_19_199_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_162_12_199_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_161_15_200_8_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_159_8_200_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_154_59_201_4_stop:
+        %tmp.303 = getv ? :ExerciseInputView;
+        %tmp.305 = getv ? :COOLDOWN_WALK_ITEM;
+        %tmp.307 = getv ? :_settings;
+        %tmp.308 = getv %tmp.307 :cdReType;
+        %tmp.309 = 0;
+        %tmp.311 = getv ? :_status;
+        %tmp.312 = getv %tmp.311 :exState;
+        %tmp.314 = getv ? :ExerciseStatus;
+        %tmp.315 = getv %tmp.314 :STATE_COOLDOWN_WALK;
+        %tmp.316 = eq %tmp.312 %tmp.315;
+        %tmp.317 = self;
+        %tmp.318 = getv function %tmp.317 :method;
+        %tmp.320 = const :updateSettings;
+        %tmp.321 = invoke %tmp.317 %tmp.318(%tmp.320);
+        %tmp.323 = lgetv %delegate.13;
+        %tmp.300 = newc %tmp.303 (%tmp.305, %tmp.308, %tmp.309, %tmp.316, %tmp.321, %tmp.323);
+        lputv %view.14 %tmp.300;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 197 16 ]
+        %tmp.324 = getm $.Toybox.WatchUi;
+        %tmp.325 = getv function %tmp.324 :pushView;
+        %tmp.327 = lgetv %view.14;
+        %tmp.329 = lgetv %delegate.13;
+        %tmp.330 = getm $.Toybox.WatchUi;
+        %tmp.331 = getv %tmp.330 :SLIDE_LEFT;
+        invoke %tmp.324 %tmp.325(%tmp.327, %tmp.329, %tmp.331);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_67_198_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_19_198_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_193_19_198_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_188_19_198_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_181_19_198_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_176_19_198_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_171_19_198_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_166_19_198_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_161_12_198_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_160_15_199_8_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_158_8_199_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_154_59_200_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 205; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 204; ]
     private
     function updateSubLabels() {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_205_39_212_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 206 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_204_39_211_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 205 12 ]
         %tmp.2 = getv ? :_wuExItem;
         %tmp.3 = getv function %tmp.2 :setSubLabel;
         %tmp.4 = self;
@@ -1053,7 +1046,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.18 = eq %tmp.14 %tmp.17;
         %tmp.19 = invoke %tmp.4 %tmp.5(%tmp.8, %tmp.11, %tmp.18);
         invoke %tmp.2 %tmp.3(%tmp.19);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 207 12 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 206 12 ]
         %tmp.21 = getv ? :_wuReItem;
         %tmp.22 = getv function %tmp.21 :setSubLabel;
         %tmp.23 = self;
@@ -1069,7 +1062,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.37 = eq %tmp.33 %tmp.36;
         %tmp.38 = invoke %tmp.23 %tmp.24(%tmp.27, %tmp.30, %tmp.37);
         invoke %tmp.21 %tmp.22(%tmp.38);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 208 12 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 207 12 ]
         %tmp.40 = getv ? :_ruExItem;
         %tmp.41 = getv function %tmp.40 :setSubLabel;
         %tmp.42 = self;
@@ -1085,7 +1078,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.56 = eq %tmp.52 %tmp.55;
         %tmp.57 = invoke %tmp.42 %tmp.43(%tmp.46, %tmp.49, %tmp.56);
         invoke %tmp.40 %tmp.41(%tmp.57);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 209 12 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 208 12 ]
         %tmp.59 = getv ? :_ruReItem;
         %tmp.60 = getv function %tmp.59 :setSubLabel;
         %tmp.61 = self;
@@ -1101,7 +1094,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.75 = eq %tmp.71 %tmp.74;
         %tmp.76 = invoke %tmp.61 %tmp.62(%tmp.65, %tmp.68, %tmp.75);
         invoke %tmp.59 %tmp.60(%tmp.76);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 210 12 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 209 12 ]
         %tmp.78 = getv ? :_cdExItem;
         %tmp.79 = getv function %tmp.78 :setSubLabel;
         %tmp.80 = self;
@@ -1117,7 +1110,7 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.94 = eq %tmp.90 %tmp.93;
         %tmp.95 = invoke %tmp.80 %tmp.81(%tmp.84, %tmp.87, %tmp.94);
         invoke %tmp.78 %tmp.79(%tmp.95);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 211 12 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 210 12 ]
         %tmp.97 = getv ? :_cdReItem;
         %tmp.98 = getv function %tmp.97 :setSubLabel;
         %tmp.99 = self;
@@ -1133,465 +1126,428 @@ C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_E
         %tmp.113 = eq %tmp.109 %tmp.112;
         %tmp.114 = invoke %tmp.99 %tmp.100(%tmp.103, %tmp.106, %tmp.113);
         invoke %tmp.97 %tmp.98(%tmp.114);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_205_39_212_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_204_39_211_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 217; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 216; ]
     public
     function updateSettings(exType as ExerciseSettings.ExType, value as Number) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_217_95_265_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 218 8 ]
-        %tmp.2 = getv ? :System;
-        %tmp.3 = getv function %tmp.2 :println;
-        %tmp.4 = "updateSettings called ";
-        %tmp.6 = lgetv %exType;
-        %tmp.7 = add %tmp.4 %tmp.6;
-        %tmp.8 = ", ";
-        %tmp.9 = add %tmp.7 %tmp.8;
-        %tmp.11 = lgetv %value;
-        %tmp.12 = add %tmp.9 %tmp.11;
-        invoke %tmp.2 %tmp.3(%tmp.12);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 219 8 ]
-        %tmp.14 = getv ? :System;
-        %tmp.15 = getv function %tmp.14 :println;
-        %tmp.16 = "lastMenuItem ";
-        %tmp.18 = getv ? :_lastMenuItemId;
-        %tmp.19 = add %tmp.16 %tmp.18;
-        invoke %tmp.14 %tmp.15(%tmp.19);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 222 8 ]
-        %tmp.21 = getv ? :_settings;
-        %tmp.22 = getv function %tmp.21 :backup;
-        invoke %tmp.21 %tmp.22();
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 225 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_8_243_8_if_stmt:
-        %tmp.24 = getv ? :_lastMenuItemId;
-        %tmp.25 = getv function %tmp.24 :equals;
-        %tmp.27 = getv ? :WARMUP_RUN_ITEM;
-        %tmp.28 = invoke %tmp.24 %tmp.25(%tmp.27);
-        bf %tmp.28 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_8_243_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_8_243_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_53_228_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 226 12 ]
-        %tmp.29 = getv self :_settings;
-        %tmp.31 = lgetv %exType;
-        putv %tmp.29 :wuExType %tmp.31;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 227 12 ]
-        %tmp.32 = getv self :_settings;
-        %tmp.34 = lgetv %value;
-        putv %tmp.32 :wuExValue %tmp.34;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_53_228_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_8_243_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_8_243_8_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 228 15 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_15_243_8_if_stmt:
-        %tmp.36 = getv ? :_lastMenuItemId;
-        %tmp.37 = getv function %tmp.36 :equals;
-        %tmp.39 = getv ? :WARMUP_WALK_ITEM;
-        %tmp.40 = invoke %tmp.36 %tmp.37(%tmp.39);
-        bf %tmp.40 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_15_243_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_15_243_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_61_231_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 229 12 ]
-        %tmp.41 = getv self :_settings;
-        %tmp.43 = lgetv %exType;
-        putv %tmp.41 :wuReType %tmp.43;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 230 12 ]
-        %tmp.44 = getv self :_settings;
-        %tmp.46 = lgetv %value;
-        putv %tmp.44 :wuReValue %tmp.46;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_61_231_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_15_243_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_15_243_8_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 231 15 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_15_243_8_if_stmt:
-        %tmp.48 = getv ? :_lastMenuItemId;
-        %tmp.49 = getv function %tmp.48 :equals;
-        %tmp.51 = getv ? :EXERCISE_RUN_ITEM;
-        %tmp.52 = invoke %tmp.48 %tmp.49(%tmp.51);
-        bf %tmp.52 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_15_243_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_15_243_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_62_234_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 232 12 ]
-        %tmp.53 = getv self :_settings;
-        %tmp.55 = lgetv %exType;
-        putv %tmp.53 :ruExType %tmp.55;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 233 12 ]
-        %tmp.56 = getv self :_settings;
-        %tmp.58 = lgetv %value;
-        putv %tmp.56 :ruExValue %tmp.58;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_62_234_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_15_243_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_15_243_8_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 234 15 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_15_243_8_if_stmt:
-        %tmp.60 = getv ? :_lastMenuItemId;
-        %tmp.61 = getv function %tmp.60 :equals;
-        %tmp.63 = getv ? :EXERCISE_WALK_ITEM;
-        %tmp.64 = invoke %tmp.60 %tmp.61(%tmp.63);
-        bf %tmp.64 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_15_243_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_15_243_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_63_237_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 235 12 ]
-        %tmp.65 = getv self :_settings;
-        %tmp.67 = lgetv %exType;
-        putv %tmp.65 :ruReType %tmp.67;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 236 12 ]
-        %tmp.68 = getv self :_settings;
-        %tmp.70 = lgetv %value;
-        putv %tmp.68 :ruReValue %tmp.70;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_63_237_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_15_243_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_15_243_8_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 237 15 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_15_243_8_if_stmt:
-        %tmp.72 = getv ? :_lastMenuItemId;
-        %tmp.73 = getv function %tmp.72 :equals;
-        %tmp.75 = getv ? :COOLDOWN_RUN_ITEM;
-        %tmp.76 = invoke %tmp.72 %tmp.73(%tmp.75);
-        bf %tmp.76 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_15_243_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_15_243_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_62_240_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 238 12 ]
-        %tmp.77 = getv self :_settings;
-        %tmp.79 = lgetv %exType;
-        putv %tmp.77 :cdExType %tmp.79;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 239 12 ]
-        %tmp.80 = getv self :_settings;
-        %tmp.82 = lgetv %value;
-        putv %tmp.80 :cdExValue %tmp.82;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_62_240_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_15_243_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_15_243_8_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 240 15 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_240_15_243_8_if_stmt:
-        %tmp.84 = getv ? :_lastMenuItemId;
-        %tmp.85 = getv function %tmp.84 :equals;
-        %tmp.87 = getv ? :COOLDOWN_WALK_ITEM;
-        %tmp.88 = invoke %tmp.84 %tmp.85(%tmp.87);
-        bf %tmp.88 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_240_15_243_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_240_15_243_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_240_63_243_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 241 12 ]
-        %tmp.89 = getv self :_settings;
-        %tmp.91 = lgetv %exType;
-        putv %tmp.89 :cdReType %tmp.91;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 242 12 ]
-        %tmp.92 = getv self :_settings;
-        %tmp.94 = lgetv %value;
-        putv %tmp.92 :cdReValue %tmp.94;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_240_63_243_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_240_15_243_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_240_15_243_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_237_15_243_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_234_15_243_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_231_15_243_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_228_15_243_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_225_8_243_8_if_end:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 246 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_8_263_8_if_stmt:
-        %tmp.96 = getv ? :_settings;
-        %tmp.97 = getv function %tmp.96 :areValid;
-        %tmp.98 = invoke %tmp.96 %tmp.97();
-        bf %tmp.98 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_8_263_8_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_8_263_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_34_254_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 247 12 ]
-        %tmp.99 = true;
-        putv self :_isSettingsUpdated %tmp.99;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 250 12 ]
-        %tmp.100 = self;
-        %tmp.101 = getv function %tmp.100 :updateSubLabels;
-        invoke %tmp.100 %tmp.101();
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 253 12 ]
-        %tmp.102 = getm $.Toybox.WatchUi;
-        %tmp.103 = getv function %tmp.102 :popView;
-        %tmp.104 = getm $.Toybox.WatchUi;
-        %tmp.105 = getv %tmp.104 :SLIDE_RIGHT;
-        invoke %tmp.102 %tmp.103(%tmp.105);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_34_254_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_8_263_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_8_263_8_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_254_15_263_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 256 12 ]
-        %tmp.107 = getv ? :_settings;
-        %tmp.108 = getv function %tmp.107 :restore;
-        invoke %tmp.107 %tmp.108();
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 259 12 ]
-        %tmp.109 = getm $.Toybox.WatchUi;
-        %tmp.110 = getv function %tmp.109 :popView;
-        %tmp.111 = getm $.Toybox.WatchUi;
-        %tmp.112 = getv %tmp.111 :SLIDE_RIGHT;
-        invoke %tmp.109 %tmp.110(%tmp.112);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 262 12 ]
-        %tmp.113 = getm $.Toybox.WatchUi;
-        %tmp.114 = getv function %tmp.113 :pushView;
-        %tmp.118 = getv ? :ErrorMessageView;
-        %tmp.119 = "INVALID\nSETTING\n and not applied";
-        %tmp.115 = newc %tmp.118 (%tmp.119);
-        %tmp.123 = getv ? :ErrorMessageDelegate;
-        %tmp.120 = newc %tmp.123 ();
-        %tmp.124 = getm $.Toybox.WatchUi;
-        %tmp.125 = getv %tmp.124 :SLIDE_IMMEDIATE;
-        invoke %tmp.113 %tmp.114(%tmp.115, %tmp.120, %tmp.125);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_254_15_263_8_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_246_8_263_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_217_95_265_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_216_95_262_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 219 8 ]
+        %tmp.2 = getv ? :_settings;
+        %tmp.3 = getv function %tmp.2 :backup;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 222 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_8_240_8_if_stmt:
+        %tmp.5 = getv ? :_lastMenuItemId;
+        %tmp.6 = getv function %tmp.5 :equals;
+        %tmp.8 = getv ? :WARMUP_RUN_ITEM;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        bf %tmp.9 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_8_240_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_8_240_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_53_225_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 223 12 ]
+        %tmp.10 = getv self :_settings;
+        %tmp.12 = lgetv %exType;
+        putv %tmp.10 :wuExType %tmp.12;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 224 12 ]
+        %tmp.13 = getv self :_settings;
+        %tmp.15 = lgetv %value;
+        putv %tmp.13 :wuExValue %tmp.15;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_53_225_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_8_240_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_8_240_8_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 225 15 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_15_240_8_if_stmt:
+        %tmp.17 = getv ? :_lastMenuItemId;
+        %tmp.18 = getv function %tmp.17 :equals;
+        %tmp.20 = getv ? :WARMUP_WALK_ITEM;
+        %tmp.21 = invoke %tmp.17 %tmp.18(%tmp.20);
+        bf %tmp.21 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_15_240_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_15_240_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_61_228_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 226 12 ]
+        %tmp.22 = getv self :_settings;
+        %tmp.24 = lgetv %exType;
+        putv %tmp.22 :wuReType %tmp.24;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 227 12 ]
+        %tmp.25 = getv self :_settings;
+        %tmp.27 = lgetv %value;
+        putv %tmp.25 :wuReValue %tmp.27;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_61_228_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_15_240_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_15_240_8_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 228 15 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_15_240_8_if_stmt:
+        %tmp.29 = getv ? :_lastMenuItemId;
+        %tmp.30 = getv function %tmp.29 :equals;
+        %tmp.32 = getv ? :EXERCISE_RUN_ITEM;
+        %tmp.33 = invoke %tmp.29 %tmp.30(%tmp.32);
+        bf %tmp.33 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_15_240_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_15_240_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_62_231_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 229 12 ]
+        %tmp.34 = getv self :_settings;
+        %tmp.36 = lgetv %exType;
+        putv %tmp.34 :ruExType %tmp.36;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 230 12 ]
+        %tmp.37 = getv self :_settings;
+        %tmp.39 = lgetv %value;
+        putv %tmp.37 :ruExValue %tmp.39;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_62_231_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_15_240_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_15_240_8_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 231 15 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_15_240_8_if_stmt:
+        %tmp.41 = getv ? :_lastMenuItemId;
+        %tmp.42 = getv function %tmp.41 :equals;
+        %tmp.44 = getv ? :EXERCISE_WALK_ITEM;
+        %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.44);
+        bf %tmp.45 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_15_240_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_15_240_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_63_234_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 232 12 ]
+        %tmp.46 = getv self :_settings;
+        %tmp.48 = lgetv %exType;
+        putv %tmp.46 :ruReType %tmp.48;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 233 12 ]
+        %tmp.49 = getv self :_settings;
+        %tmp.51 = lgetv %value;
+        putv %tmp.49 :ruReValue %tmp.51;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_63_234_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_15_240_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_15_240_8_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 234 15 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_15_240_8_if_stmt:
+        %tmp.53 = getv ? :_lastMenuItemId;
+        %tmp.54 = getv function %tmp.53 :equals;
+        %tmp.56 = getv ? :COOLDOWN_RUN_ITEM;
+        %tmp.57 = invoke %tmp.53 %tmp.54(%tmp.56);
+        bf %tmp.57 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_15_240_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_15_240_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_62_237_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 235 12 ]
+        %tmp.58 = getv self :_settings;
+        %tmp.60 = lgetv %exType;
+        putv %tmp.58 :cdExType %tmp.60;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 236 12 ]
+        %tmp.61 = getv self :_settings;
+        %tmp.63 = lgetv %value;
+        putv %tmp.61 :cdExValue %tmp.63;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_62_237_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_15_240_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_15_240_8_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 237 15 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_237_15_240_8_if_stmt:
+        %tmp.65 = getv ? :_lastMenuItemId;
+        %tmp.66 = getv function %tmp.65 :equals;
+        %tmp.68 = getv ? :COOLDOWN_WALK_ITEM;
+        %tmp.69 = invoke %tmp.65 %tmp.66(%tmp.68);
+        bf %tmp.69 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_237_15_240_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_237_15_240_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_237_63_240_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 238 12 ]
+        %tmp.70 = getv self :_settings;
+        %tmp.72 = lgetv %exType;
+        putv %tmp.70 :cdReType %tmp.72;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 239 12 ]
+        %tmp.73 = getv self :_settings;
+        %tmp.75 = lgetv %value;
+        putv %tmp.73 :cdReValue %tmp.75;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_237_63_240_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_237_15_240_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_237_15_240_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_234_15_240_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_231_15_240_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_228_15_240_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_225_15_240_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_222_8_240_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 243 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_8_260_8_if_stmt:
+        %tmp.77 = getv ? :_settings;
+        %tmp.78 = getv function %tmp.77 :areValid;
+        %tmp.79 = invoke %tmp.77 %tmp.78();
+        bf %tmp.79 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_8_260_8_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_8_260_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_34_251_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 244 12 ]
+        %tmp.80 = true;
+        putv self :_isSettingsUpdated %tmp.80;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 247 12 ]
+        %tmp.81 = self;
+        %tmp.82 = getv function %tmp.81 :updateSubLabels;
+        invoke %tmp.81 %tmp.82();
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 250 12 ]
+        %tmp.83 = getm $.Toybox.WatchUi;
+        %tmp.84 = getv function %tmp.83 :popView;
+        %tmp.85 = getm $.Toybox.WatchUi;
+        %tmp.86 = getv %tmp.85 :SLIDE_RIGHT;
+        invoke %tmp.83 %tmp.84(%tmp.86);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_34_251_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_8_260_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_8_260_8_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_251_15_260_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 253 12 ]
+        %tmp.88 = getv ? :_settings;
+        %tmp.89 = getv function %tmp.88 :restore;
+        invoke %tmp.88 %tmp.89();
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 256 12 ]
+        %tmp.90 = getm $.Toybox.WatchUi;
+        %tmp.91 = getv function %tmp.90 :popView;
+        %tmp.92 = getm $.Toybox.WatchUi;
+        %tmp.93 = getv %tmp.92 :SLIDE_IMMEDIATE;
+        invoke %tmp.90 %tmp.91(%tmp.93);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 259 12 ]
+        %tmp.94 = getm $.Toybox.WatchUi;
+        %tmp.95 = getv function %tmp.94 :pushView;
+        %tmp.99 = getv ? :ErrorMessageView;
+        %tmp.100 = "INVALID\nSETTING\n and not applied";
+        %tmp.96 = newc %tmp.99 (%tmp.100);
+        %tmp.104 = getv ? :ErrorMessageDelegate;
+        %tmp.101 = newc %tmp.104 ();
+        %tmp.105 = getm $.Toybox.WatchUi;
+        %tmp.106 = getv %tmp.105 :SLIDE_IMMEDIATE;
+        invoke %tmp.94 %tmp.95(%tmp.96, %tmp.101, %tmp.106);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_251_15_260_8_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_243_8_260_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_216_95_262_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 270; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 267; ]
     public
     function closeErrorMessage() {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_270_40_272_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 271 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_267_40_269_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 268 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :popView;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
         invoke %tmp.1 %tmp.2(%tmp.4);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_270_40_272_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_267_40_269_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 276; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 273; ]
     public
     function updateRepeats(value as Number) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_276_60_288_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 277 8 ]
-        %tmp.2 = getv ? :System;
-        %tmp.3 = getv function %tmp.2 :println;
-        %tmp.4 = "updateRepeats called ";
-        %tmp.6 = lgetv %value;
-        %tmp.7 = add %tmp.4 %tmp.6;
-        invoke %tmp.2 %tmp.3(%tmp.7);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 278 8 ]
-        %tmp.9 = getv ? :System;
-        %tmp.10 = getv function %tmp.9 :println;
-        %tmp.11 = "lastMenuItem ";
-        %tmp.13 = getv ? :_lastMenuItemId;
-        %tmp.14 = add %tmp.11 %tmp.13;
-        invoke %tmp.9 %tmp.10(%tmp.14);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 281 8 ]
-        %tmp.15 = getv self :_settings;
-        %tmp.17 = lgetv %value;
-        putv %tmp.15 :ruRepeats %tmp.17;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 282 8 ]
-        %tmp.18 = true;
-        putv self :_isSettingsUpdated %tmp.18;
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 283 8 ]
-        %tmp.20 = getv ? :_ruRepeatsItem;
-        %tmp.21 = getv function %tmp.20 :setSubLabel;
-        %tmp.23 = getv ? :_settings;
-        %tmp.24 = getv %tmp.23 :ruRepeats;
-        %tmp.25 = getv function %tmp.24 :toString;
-        %tmp.26 = invoke %tmp.24 %tmp.25();
-        invoke %tmp.20 %tmp.21(%tmp.26);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 286 8 ]
-        %tmp.27 = getm $.Toybox.WatchUi;
-        %tmp.28 = getv function %tmp.27 :popView;
-        %tmp.29 = getm $.Toybox.WatchUi;
-        %tmp.30 = getv %tmp.29 :SLIDE_RIGHT;
-        invoke %tmp.27 %tmp.28(%tmp.30);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_276_60_288_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_273_60_283_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 276 8 ]
+        %tmp.1 = getv self :_settings;
+        %tmp.3 = lgetv %value;
+        putv %tmp.1 :ruRepeats %tmp.3;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 277 8 ]
+        %tmp.4 = true;
+        putv self :_isSettingsUpdated %tmp.4;
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 278 8 ]
+        %tmp.6 = getv ? :_ruRepeatsItem;
+        %tmp.7 = getv function %tmp.6 :setSubLabel;
+        %tmp.9 = getv ? :_settings;
+        %tmp.10 = getv %tmp.9 :ruRepeats;
+        %tmp.11 = getv function %tmp.10 :toString;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        invoke %tmp.6 %tmp.7(%tmp.12);
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 281 8 ]
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv function %tmp.13 :popView;
+        %tmp.15 = getm $.Toybox.WatchUi;
+        %tmp.16 = getv %tmp.15 :SLIDE_RIGHT;
+        invoke %tmp.13 %tmp.14(%tmp.16);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_273_60_283_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 292; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 287; ]
     public
     function saveSettings() {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_292_35_297_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 293 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_293_8_296_8_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_287_35_292_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 288 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_288_8_291_8_if_stmt:
         %tmp.2 = getv ? :_isSettingsUpdated;
-        bf %tmp.2 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_293_8_296_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_293_8_296_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_293_32_296_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 294 12 ]
+        bf %tmp.2 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_288_8_291_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_288_8_291_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_288_32_291_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 289 12 ]
         %tmp.4 = getv ? :_settings;
         %tmp.5 = getv function %tmp.4 :save;
         invoke %tmp.4 %tmp.5();
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 295 12 ]
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 290 12 ]
         %tmp.7 = getv ? :_status;
         %tmp.8 = getv function %tmp.7 :resetRemaining;
         invoke %tmp.7 %tmp.8();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_293_32_296_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_293_8_296_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_293_8_296_8_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_292_35_297_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_288_32_291_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_288_8_291_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_288_8_291_8_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_287_35_292_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 301; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 296; ]
     public
     function onLayout(dc as Dc) {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_301_39_303_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 302 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_296_39_298_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 297 8 ]
         %tmp.2 = getv ? :Menu2;
         %tmp.3 = getv function %tmp.2 :onLayout;
         %tmp.5 = lgetv %dc;
         invoke %tmp.2 %tmp.3(%tmp.5);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_301_39_303_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_296_39_298_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 309; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 304; ]
     public
     function onShow() as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_309_37_311_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 310 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_304_37_306_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 305 8 ]
         %tmp.2 = getv ? :Menu2;
         %tmp.3 = getv function %tmp.2 :onShow;
         invoke %tmp.2 %tmp.3();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_309_37_311_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_304_37_306_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 315; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 310; ]
     public
     function onUpdate(dc as Dc) as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_315_47_337_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 316 8 ]
-        %tmp.2 = getv ? :System;
-        %tmp.3 = getv function %tmp.2 :println;
-        %tmp.4 = "ExercisemenuView.onUpdate";
-        invoke %tmp.2 %tmp.3(%tmp.4);
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 318 8 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_318_8_333_8_if_stmt:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_310_47_331_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 312 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_312_8_327_8_if_stmt:
+        %tmp.2 = getv ? :_lastMenuItemId;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_312_8_327_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_312_8_327_8_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_312_37_327_8_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 313 12 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_12_326_12_if_stmt:
         %tmp.6 = getv ? :_lastMenuItemId;
-        %tmp.7 = null;
-        %tmp.8 = ne %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_318_8_333_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_318_8_333_8_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_318_37_333_8_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 319 12 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_12_332_12_if_stmt:
-        %tmp.10 = getv ? :_lastMenuItemId;
-        %tmp.11 = as %tmp.10 { (!Null) };
-        %tmp.12 = getv function %tmp.11 :equals;
-        %tmp.14 = getv ? :DISCARD_ITEM;
-        %tmp.15 = invoke %tmp.11 %tmp.12(%tmp.14);
-        bf %tmp.15 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_12_332_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_12_332_12_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_54_325_12_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 320 16 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_16_324_16_if_stmt:
-        %tmp.17 = getv ? :_isSessionOpenHandler;
-        %tmp.18 = getv function %tmp.17 :invoke;
-        %tmp.19 = invoke %tmp.17 %tmp.18();
-        bf %tmp.19 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_16_324_16_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_16_324_16_if_true:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_52_322_16_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 321 20 ]
-        %tmp.21 = getv ? :_discardActivityItem;
-        %tmp.22 = getv function %tmp.21 :setSubLabel;
-        %tmp.24 = getv ? :SUBTITLE_SESSION_OPEN;
-        invoke %tmp.21 %tmp.22(%tmp.24);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_52_322_16_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_16_324_16_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_16_324_16_if_false:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_322_23_324_16_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 323 20 ]
-        %tmp.26 = getv ? :_discardActivityItem;
-        %tmp.27 = getv function %tmp.26 :setSubLabel;
-        %tmp.29 = getv ? :SUBTITLE_SESSION_CLOSED;
-        invoke %tmp.26 %tmp.27(%tmp.29);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_322_23_324_16_stop:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_320_16_324_16_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_54_325_12_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_12_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_12_332_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 325 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_325_19_332_12_if_stmt:
-        %tmp.31 = getv ? :_lastMenuItemId;
-        %tmp.32 = as %tmp.31 { (!Null) };
-        %tmp.33 = getv function %tmp.32 :equals;
-        %tmp.35 = getv ? :WARMUP_RUN_ITEM;
-        %tmp.36 = invoke %tmp.32 %tmp.33(%tmp.35);
-        bf %tmp.36 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_325_19_332_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_325_19_332_12_if_true:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_325_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_325_19_332_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 326 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_326_19_332_12_if_stmt:
-        %tmp.38 = getv ? :_lastMenuItemId;
-        %tmp.39 = as %tmp.38 { (!Null) };
-        %tmp.40 = getv function %tmp.39 :equals;
-        %tmp.42 = getv ? :WARMUP_WALK_ITEM;
-        %tmp.43 = invoke %tmp.39 %tmp.40(%tmp.42);
-        bf %tmp.43 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_326_19_332_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_326_19_332_12_if_true:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_326_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_326_19_332_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 327 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_327_19_332_12_if_stmt:
-        %tmp.45 = getv ? :_lastMenuItemId;
-        %tmp.46 = as %tmp.45 { (!Null) };
-        %tmp.47 = getv function %tmp.46 :equals;
-        %tmp.49 = getv ? :EXERCISE_RUN_ITEM;
-        %tmp.50 = invoke %tmp.46 %tmp.47(%tmp.49);
-        bf %tmp.50 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_327_19_332_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_327_19_332_12_if_true:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_327_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_327_19_332_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 328 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_328_19_332_12_if_stmt:
-        %tmp.52 = getv ? :_lastMenuItemId;
-        %tmp.53 = as %tmp.52 { (!Null) };
-        %tmp.54 = getv function %tmp.53 :equals;
-        %tmp.56 = getv ? :EXERCISE_WALK_ITEM;
-        %tmp.57 = invoke %tmp.53 %tmp.54(%tmp.56);
-        bf %tmp.57 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_328_19_332_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_328_19_332_12_if_true:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_328_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_328_19_332_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 329 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_329_19_332_12_if_stmt:
-        %tmp.59 = getv ? :_lastMenuItemId;
-        %tmp.60 = as %tmp.59 { (!Null) };
-        %tmp.61 = getv function %tmp.60 :equals;
-        %tmp.63 = getv ? :EXERCISE_REPEATS_ITEM;
-        %tmp.64 = invoke %tmp.60 %tmp.61(%tmp.63);
-        bf %tmp.64 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_329_19_332_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_329_19_332_12_if_true:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_329_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_329_19_332_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 330 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_330_19_332_12_if_stmt:
-        %tmp.66 = getv ? :_lastMenuItemId;
-        %tmp.67 = as %tmp.66 { (!Null) };
-        %tmp.68 = getv function %tmp.67 :equals;
-        %tmp.70 = getv ? :COOLDOWN_RUN_ITEM;
-        %tmp.71 = invoke %tmp.67 %tmp.68(%tmp.70);
-        bf %tmp.71 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_330_19_332_12_if_false;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_330_19_332_12_if_true:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_330_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_330_19_332_12_if_false:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 331 19 ]
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_331_19_332_12_if_stmt:
-        %tmp.73 = getv ? :_lastMenuItemId;
-        %tmp.74 = as %tmp.73 { (!Null) };
-        %tmp.75 = getv function %tmp.74 :equals;
-        %tmp.77 = getv ? :COOLDOWN_WALK_ITEM;
-        %tmp.78 = invoke %tmp.74 %tmp.75(%tmp.77);
-        bf %tmp.78 @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_331_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_331_19_332_12_if_true:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_331_19_332_12_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_331_19_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_330_19_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_329_19_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_328_19_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_327_19_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_326_19_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_325_19_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_319_12_332_12_if_end:
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_318_37_333_8_stop:
-        goto @C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_318_8_333_8_if_end;
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_318_8_333_8_if_end:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 336 8 ]
-        %tmp.80 = getv ? :Menu2;
-        %tmp.81 = getv function %tmp.80 :onUpdate;
-        %tmp.83 = lgetv %dc;
-        invoke %tmp.80 %tmp.81(%tmp.83);
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_315_47_337_4_stop:
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = getv function %tmp.7 :equals;
+        %tmp.10 = getv ? :DISCARD_ITEM;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        bf %tmp.11 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_12_326_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_12_326_12_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_54_319_12_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 314 16 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_16_318_16_if_stmt:
+        %tmp.13 = getv ? :_isSessionOpenHandler;
+        %tmp.14 = getv function %tmp.13 :invoke;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        bf %tmp.15 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_16_318_16_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_16_318_16_if_true:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_52_316_16_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 315 20 ]
+        %tmp.17 = getv ? :_discardActivityItem;
+        %tmp.18 = getv function %tmp.17 :setSubLabel;
+        %tmp.20 = getv ? :SUBTITLE_SESSION_OPEN;
+        invoke %tmp.17 %tmp.18(%tmp.20);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_52_316_16_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_16_318_16_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_16_318_16_if_false:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_316_23_318_16_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 317 20 ]
+        %tmp.22 = getv ? :_discardActivityItem;
+        %tmp.23 = getv function %tmp.22 :setSubLabel;
+        %tmp.25 = getv ? :SUBTITLE_SESSION_CLOSED;
+        invoke %tmp.22 %tmp.23(%tmp.25);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_316_23_318_16_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_314_16_318_16_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_54_319_12_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_12_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_12_326_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 319 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_319_19_326_12_if_stmt:
+        %tmp.27 = getv ? :_lastMenuItemId;
+        %tmp.28 = as %tmp.27 { (!Null) };
+        %tmp.29 = getv function %tmp.28 :equals;
+        %tmp.31 = getv ? :WARMUP_RUN_ITEM;
+        %tmp.32 = invoke %tmp.28 %tmp.29(%tmp.31);
+        bf %tmp.32 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_319_19_326_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_319_19_326_12_if_true:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_319_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_319_19_326_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 320 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_320_19_326_12_if_stmt:
+        %tmp.34 = getv ? :_lastMenuItemId;
+        %tmp.35 = as %tmp.34 { (!Null) };
+        %tmp.36 = getv function %tmp.35 :equals;
+        %tmp.38 = getv ? :WARMUP_WALK_ITEM;
+        %tmp.39 = invoke %tmp.35 %tmp.36(%tmp.38);
+        bf %tmp.39 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_320_19_326_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_320_19_326_12_if_true:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_320_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_320_19_326_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 321 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_321_19_326_12_if_stmt:
+        %tmp.41 = getv ? :_lastMenuItemId;
+        %tmp.42 = as %tmp.41 { (!Null) };
+        %tmp.43 = getv function %tmp.42 :equals;
+        %tmp.45 = getv ? :EXERCISE_RUN_ITEM;
+        %tmp.46 = invoke %tmp.42 %tmp.43(%tmp.45);
+        bf %tmp.46 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_321_19_326_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_321_19_326_12_if_true:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_321_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_321_19_326_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 322 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_322_19_326_12_if_stmt:
+        %tmp.48 = getv ? :_lastMenuItemId;
+        %tmp.49 = as %tmp.48 { (!Null) };
+        %tmp.50 = getv function %tmp.49 :equals;
+        %tmp.52 = getv ? :EXERCISE_WALK_ITEM;
+        %tmp.53 = invoke %tmp.49 %tmp.50(%tmp.52);
+        bf %tmp.53 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_322_19_326_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_322_19_326_12_if_true:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_322_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_322_19_326_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 323 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_323_19_326_12_if_stmt:
+        %tmp.55 = getv ? :_lastMenuItemId;
+        %tmp.56 = as %tmp.55 { (!Null) };
+        %tmp.57 = getv function %tmp.56 :equals;
+        %tmp.59 = getv ? :EXERCISE_REPEATS_ITEM;
+        %tmp.60 = invoke %tmp.56 %tmp.57(%tmp.59);
+        bf %tmp.60 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_323_19_326_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_323_19_326_12_if_true:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_323_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_323_19_326_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 324 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_324_19_326_12_if_stmt:
+        %tmp.62 = getv ? :_lastMenuItemId;
+        %tmp.63 = as %tmp.62 { (!Null) };
+        %tmp.64 = getv function %tmp.63 :equals;
+        %tmp.66 = getv ? :COOLDOWN_RUN_ITEM;
+        %tmp.67 = invoke %tmp.63 %tmp.64(%tmp.66);
+        bf %tmp.67 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_324_19_326_12_if_false;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_324_19_326_12_if_true:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_324_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_324_19_326_12_if_false:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 325 19 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_325_19_326_12_if_stmt:
+        %tmp.69 = getv ? :_lastMenuItemId;
+        %tmp.70 = as %tmp.69 { (!Null) };
+        %tmp.71 = getv function %tmp.70 :equals;
+        %tmp.73 = getv ? :COOLDOWN_WALK_ITEM;
+        %tmp.74 = invoke %tmp.70 %tmp.71(%tmp.73);
+        bf %tmp.74 @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_325_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_325_19_326_12_if_true:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_325_19_326_12_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_325_19_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_324_19_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_323_19_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_322_19_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_321_19_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_320_19_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_319_19_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_313_12_326_12_if_end:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_312_37_327_8_stop:
+        goto @C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_312_8_327_8_if_end;
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_312_8_327_8_if_end:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 330 8 ]
+        %tmp.76 = getv ? :Menu2;
+        %tmp.77 = getv function %tmp.76 :onUpdate;
+        %tmp.79 = lgetv %dc;
+        invoke %tmp.76 %tmp.77(%tmp.79);
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_310_47_331_4_stop:
     }
-    [ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 343; ]
+    [ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 337; ]
     public
     function onHide() as Void {
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_343_37_345_4_start:
-[ "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc" 344 8 ]
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_337_37_339_4_start:
+[ "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc" 338 8 ]
         %tmp.2 = getv ? :Menu2;
         %tmp.3 = getv function %tmp.2 :onHide;
         invoke %tmp.2 %tmp.3();
-C_Users_AartRebel_OneDrive___Informatech_Documents_Garmin_IQ_MyRunnaApp_source_ExerciseMenuView_mc_343_37_345_4_stop:
+C_Users_aartr_OneDrive_Documents_Garmin_IQ_MyRunna_source_ExerciseMenuView_mc_337_37_339_4_stop:
     }
 }
-[ @file = "C:\Users\AartRebel\OneDrive - Informatech\Documents\Garmin IQ\MyRunnaApp\source\ExerciseMenuView.mc"; @line = 1; ]
+[ @file = "C:\Users\aartr\OneDrive\Documents\Garmin IQ\MyRunna\source\ExerciseMenuView.mc"; @line = 1; ]
 <init> {
 }

@@ -10,25 +10,6 @@ import Toybox.ActivityRecording;
 import Toybox.WatchUi;
 import Toybox.Activity;
 
-// to do:
-//  page through ex type on ExerciseInputView [done]
-//  check settings validity after config [done]
-//  replace NONE wth no run or no walk [done]
-//  enable WU, RU and CD all to be set to NONE - change status/substatus (DONE) to different language (blank?) [done]
-//  round up remaining distance and round down lap and total distance [done]
-//  prevent changing of type for an active state [done]
-//  potential bug - whenmeasuring distance and pausing then distance will continue due pause - reset preLocation on unpause [done]
-//  change error message - tap to continue in different colour
-//  reset settings to default if invalid on startup - fix error message
-//  error message if attempting to clear empty activity log
-//  timed error message if attempting open menu while running
-//  clean out commented out code
-//  clean out println statements
-//  remove overriding functions that are redundant
-//  vibration patterns - increase volume
-//  vibration patterns - start run quick buzzes, start walk long buzz
-//  use digits with spaces (blocks) for value entry (test first)
-//  cycle through speed, pace and heartrate
 
 class MyRunnaApp extends Application.AppBase {
     private var _timer as Timer.Timer?;
@@ -193,7 +174,6 @@ class MyRunnaApp extends Application.AppBase {
 
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
-        System.println("onStart() called");
 
         // initialise GPS 
         Position.enableLocationEvents( Position.LOCATION_CONTINUOUS, method( :onPosition ) );
@@ -228,7 +208,6 @@ class MyRunnaApp extends Application.AppBase {
 
     // onStop() is called when your application is exiting
     function onStop(state as Dictionary?) as Void {
-        System.println("onStop() called");
 
         // stop the timer if initialised
         if (_timer != null) {

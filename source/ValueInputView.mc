@@ -232,11 +232,9 @@ class ValueInputView extends WatchUi.View {
             case INPUT_NUMBER:
             case INPUT_DECIMAL:
                     if (_unit != null) {
-                        //displayText = EMPTY_ENTRY.substring(0, (_max.toString().length() - _entry.length())*2) + _entry + _unit;
                         displayText = _entry + _unit;
                         entryXPos = (SCR_SIZE + dc.getTextWidthInPixels(_max.toString() + _unit, ENTRY_FONT))/2;
                     } else {
-                        //displayText = EMPTY_ENTRY.substring(0, (_max.toString().length() - _entry.length())*2) + _entry;
                         displayText = _entry;
                         entryXPos = (SCR_SIZE + dc.getTextWidthInPixels(_max.toString(), ENTRY_FONT))/2;
                     }

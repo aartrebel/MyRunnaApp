@@ -19,12 +19,6 @@ class ExerciseStatus {
         STATE_COOLDOWN_WALK,
         STATE_EXTEND
     }
-//    public enum ExState {
-//        STATE_WARMUP = 1,
-//        STATE_EXERCISE = 2,
-//        STATE_COOLDOWN = 3,
-//        STATE_EXTEND = 4
-//    }
 
 
     // settings
@@ -78,9 +72,9 @@ class ExerciseStatus {
 
     public function printStatus(caller as Lang.String) as Void {
         System.println ("Status[" + caller +"]: state=" + exState + ", count=" + exCount + ", pause=" + isPaused + 
-            ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime) +
-            ", totD=" + MyRunnaView.formatDistance(totDist) + ", lapD=" + MyRunnaView.formatDistance(lapDist) + ", speed=" + speed.format("%1.2f") +
-            ", gps=" + gpsAccuracy);
+            ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime) + ",remT=" + MyRunnaView.formatTime(remTime) + 
+            ", totD=" + MyRunnaView.formatDistance(totDist) + ", lapD=" + MyRunnaView.formatDistance(lapDist) + ", remD=" + MyRunnaView.formatDistance(remDist) +
+            ", speed=" + speed.format("%1.2f") + ", gps=" + gpsAccuracy);
     }
 
 

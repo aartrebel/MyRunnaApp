@@ -153,7 +153,6 @@ class ExerciseMenuView extends WatchUi.Menu2 {
     // function opens the input vie for a specific menu item
     public function openMenuItem(item as MenuItem) as Void {
         _lastMenuItemId = item.getId() as String;
-        System.println("selected " + _lastMenuItemId);
 
         // action menu iten selected
         if (_lastMenuItemId.equals(DISCARD_ITEM)) {
@@ -215,8 +214,6 @@ class ExerciseMenuView extends WatchUi.Menu2 {
     // function handles the update to the settings
     // it is call when the setting has been entered
     public function updateSettings(exType as ExerciseSettings.ExType, value as Number) as Void {
-        System.println("updateSettings called " + exType + ", " + value);
-        System.println("lastMenuItem " + _lastMenuItemId);
 
         // backup settings for restore if required
         _settings.backup();
@@ -256,7 +253,7 @@ class ExerciseMenuView extends WatchUi.Menu2 {
             _settings.restore();
 
             // pop input view
-            WatchUi.popView(WatchUi.SLIDE_RIGHT);
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
 
             // display error message
             WatchUi.pushView(new ErrorMessageView("INVALID\nSETTING\n and not applied"), new ErrorMessageDelegate(), WatchUi.SLIDE_IMMEDIATE);
@@ -274,8 +271,6 @@ class ExerciseMenuView extends WatchUi.Menu2 {
 
     // function handles the update t0 the repeats setting
     public function updateRepeats (value as Number) as Void {
-        System.println("updateRepeats called " + value);
-        System.println("lastMenuItem " + _lastMenuItemId);
 
         // update repeats settings
         _settings.ruRepeats = value;
@@ -313,7 +308,6 @@ class ExerciseMenuView extends WatchUi.Menu2 {
 
     // Update the view
     public function onUpdate(dc as Dc) as Void {
-        System.println("ExercisemenuView.onUpdate");
         // update menu subtext according to last update
         if (_lastMenuItemId != null) {
             if (_lastMenuItemId.equals(DISCARD_ITEM)) {

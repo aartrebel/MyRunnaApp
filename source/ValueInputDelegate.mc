@@ -85,7 +85,7 @@ class ValueInputDelegate extends WatchUi.BehaviorDelegate {
 
     // Handle the back behaviour
     public function onBack() as Boolean {
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
         return true;
     }
 

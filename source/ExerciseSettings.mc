@@ -115,7 +115,6 @@ class ExerciseSettings {
 
     // function saves the settings to storage in the properties
     public function save() as Void {
-        System.println("save settings ...");
         Properties.setValue("wuExType",wuExType);
         Properties.setValue("wuExValue",wuExValue);
         Properties.setValue("wuReType",wuReType);

@@ -7,8 +7,6 @@ class ExerciseMenuDelegate extends WatchUi.Menu2InputDelegate {
     // call back methods
     private var _openMenuItem as Method?;
     private var _saveSettingsHandler as Method?;
-    //private var _updateSettings as Method?;
-    //private var _discardActivity as Method?;
 
 
     //! Constructor
