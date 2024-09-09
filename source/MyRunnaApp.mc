@@ -12,15 +12,19 @@ import Toybox.Activity;
 
 
 class MyRunnaApp extends Application.AppBase {
+    // speed check interval (s)
+    static private const SPEED_CHECK_INTERVAL = 10;
+
     private var _timer as Timer.Timer?;
     private var _status as ExerciseStatus?;
     private var _settings as ExerciseSettings?;
     private var _myRunnaView as WatchUi.View?;
     private var _myRunnaDelegate as WatchUi.InputDelegate?;
     private var _session as ActivityRecording.Session?;
+    private var _longTimer as Number = 0;
 
     // vibration profiles
-    private var vibeProfile = [
+    private var _vibeProfile = [
         new Attention.VibeProfile(100,250),
         new Attention.VibeProfile(0,250),
         new Attention.VibeProfile(100,250),
@@ -29,6 +33,19 @@ class MyRunnaApp extends Application.AppBase {
         new Attention.VibeProfile(0,250),
         new Attention.VibeProfile(100,250)
     ];
+    private var _walkVibeProfile = [
+        new Attention.VibeProfile(100,1000)
+    ];
+    private var _runVibeProfile = [
+        new Attention.VibeProfile(100,150),
+        new Attention.VibeProfile(0,150),
+        new Attention.VibeProfile(100,150),
+        new Attention.VibeProfile(0,150),
+        new Attention.VibeProfile(100,150),
+        new Attention.VibeProfile(0,150),
+        new Attention.VibeProfile(100,150),
+        new Attention.VibeProfile(0,150)
+    ];
 
 
     function initialize() {
@@ -36,22 +53,66 @@ class MyRunnaApp extends Application.AppBase {
     }
 
 
+    // function checks that speed,state and the 10s timer
+    // function buzzes when not running at speed for longer than 10s or when immediate
+    private function checkSpeed (checkNow as Boolean) as Void {
+        _longTimer += 1;
+        switch(_status.exState) {
+            case ExerciseStatus.STATE_WARMUP_RUN:
+            case ExerciseStatus.STATE_EXERCISE_RUN:
+            case ExerciseStatus.STATE_COOLDOWN_RUN:
+                if (_status.isRunning()) {
+                    _longTimer = 0;
+                } else {
+                    if ((_longTimer >= SPEED_CHECK_INTERVAL) || (checkNow)) {
+                        Attention.vibrate(_runVibeProfile);
+                        _longTimer = 0;
+                    } 
+                }
+                break;
+            case ExerciseStatus.STATE_WARMUP_WALK:
+            case ExerciseStatus.STATE_EXERCISE_WALK:
+            case ExerciseStatus.STATE_COOLDOWN_WALK:
+                if (!_status.isRunning()) {
+                    _longTimer = 0;
+                } else {
+                    if ((_longTimer >= SPEED_CHECK_INTERVAL) || (checkNow)) {
+                        Attention.vibrate(_walkVibeProfile);
+                        _longTimer = 0;
+                    }
+                }
+                break;
+            case ExerciseStatus.STATE_EXTEND:
+                if (checkNow) {
+                    Attention.vibrate(_walkVibeProfile);
+                    _longTimer = 0;
+                }
+                break;
+            case ExerciseStatus.STATE_INITIAL:
+            default:
+        }
+    } 
+
+
     // function that is called each second
     function onSecond () as Void {
-        // update duration if not paused 
-        if (!_status.isPaused) {
-            if (_status.incrementTime(1)) { // state change
-                Attention.vibrate(vibeProfile);
-                _session.addLap();
-            }
-        }
-
         // update activity data
         _status.updateActivity(Activity.getActivityInfo());
 
+        // update duration if not paused 
+        if (!_status.isPaused) {
+
+            if (_status.incrementTime(1)) { // state change
+                checkSpeed(true);
+                _session.addLap();
+            } else {
+                checkSpeed(false);
+            }
+
+        }
+
         _status.printStatus("TMR");
         WatchUi.requestUpdate();
-
     }
 
 
@@ -59,7 +120,7 @@ class MyRunnaApp extends Application.AppBase {
     function onPosition( info as Position.Info ) as Void {
         if (_status.updatePosition(info)) {
             WatchUi.requestUpdate();
-            Attention.vibrate(vibeProfile);
+            checkSpeed(true);
             _session.addLap();
         }
 
@@ -96,6 +157,9 @@ class MyRunnaApp extends Application.AppBase {
             // restart timer
             _timer.stop(); 
             _timer.start(method(:onSecond), 1000, true);
+
+            // check the speed and reset the timer
+            checkSpeed(true);
         }
         else {
             // pause recording

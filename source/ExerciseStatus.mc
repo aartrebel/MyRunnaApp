@@ -20,6 +20,9 @@ class ExerciseStatus {
         STATE_EXTEND
     }
 
+    // threshold to determine running or walking speed (m/s)
+    static private var SPEED_THRESHOLD = 7.5/3.6; 
+
 
     // settings
     private var _settings as ExerciseSettings?;
@@ -71,10 +74,10 @@ class ExerciseStatus {
 
 
     public function printStatus(caller as Lang.String) as Void {
-        System.println ("Status[" + caller +"]: state=" + exState + ", count=" + exCount + ", pause=" + isPaused + 
-            ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime) + ",remT=" + MyRunnaView.formatTime(remTime) + 
-            ", totD=" + MyRunnaView.formatDistance(totDist) + ", lapD=" + MyRunnaView.formatDistance(lapDist) + ", remD=" + MyRunnaView.formatDistance(remDist) +
-            ", speed=" + speed.format("%1.2f") + ", gps=" + gpsAccuracy);
+        //System.println ("Status[" + caller +"]: state=" + exState + ", count=" + exCount + ", pause=" + isPaused + 
+        //    ", totT=" + MyRunnaView.formatTime(totTime) + ", lapT=" + MyRunnaView.formatTime(lapTime) + ",remT=" + MyRunnaView.formatTime(remTime) + 
+        //    ", totD=" + MyRunnaView.formatDistance(totDist) + ", lapD=" + MyRunnaView.formatDistance(lapDist) + ", remD=" + MyRunnaView.formatDistance(remDist) +
+        //    ", speed=" + speed.format("%1.2f") + ", gps=" + gpsAccuracy);
     }
 
 
@@ -142,6 +145,12 @@ class ExerciseStatus {
             default:
                 return 0;
         }
+    }
+
+
+    // function checks if the speed is a running speed
+    public function isRunning() {
+        return (speed > SPEED_THRESHOLD); 
     }
 
 
