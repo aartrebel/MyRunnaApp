@@ -24,27 +24,23 @@ class MyRunnaApp extends Application.AppBase {
     private var _longTimer as Number = 0;
 
     // vibration profiles
-    private var _vibeProfile = [
-        new Attention.VibeProfile(100,250),
-        new Attention.VibeProfile(0,250),
-        new Attention.VibeProfile(100,250),
-        new Attention.VibeProfile(0,250),
-        new Attention.VibeProfile(100,250),
-        new Attention.VibeProfile(0,250),
-        new Attention.VibeProfile(100,250)
-    ];
     private var _walkVibeProfile = [
-        new Attention.VibeProfile(100,1000)
+        new Attention.VibeProfile(80,500),
+        new Attention.VibeProfile(0,50),
+        new Attention.VibeProfile(80,500),
+        new Attention.VibeProfile(0,50),
+        new Attention.VibeProfile(80,500),
+        new Attention.VibeProfile(0,50),
+        new Attention.VibeProfile(80,500)
     ];
     private var _runVibeProfile = [
-        new Attention.VibeProfile(100,150),
+        new Attention.VibeProfile(80,150),
         new Attention.VibeProfile(0,150),
-        new Attention.VibeProfile(100,150),
+        new Attention.VibeProfile(80,150),
         new Attention.VibeProfile(0,150),
-        new Attention.VibeProfile(100,150),
+        new Attention.VibeProfile(80,150),
         new Attention.VibeProfile(0,150),
-        new Attention.VibeProfile(100,150),
-        new Attention.VibeProfile(0,150)
+        new Attention.VibeProfile(80,150)
     ];
 
 
@@ -109,7 +105,7 @@ class MyRunnaApp extends Application.AppBase {
                 checkSpeed(false);
             }
 
-        }
+        } 
 
         _status.printStatus("TMR");
         WatchUi.requestUpdate();
